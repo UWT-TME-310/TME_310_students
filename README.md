@@ -1,0 +1,14 @@
+Should point to 
+* syllabus
+* key resources
+
+
+## Welcome to TME 310 A - Computational Physical Modeling!
+
+![Modeling Framework by Allen Downey (CC BY-NC 4.0)](/student_site/.reference/modeling_framework.png)
+
+In this course, we'll look at the concept of physical modeling with an emphasis on civil and mechanical engineering applications. We will use Python to perform calculations on our models.
+
+Click the "Start Here" link below to begin going through some introductory material about the course.
+
+[START HERE] | ASDF | ASDF
