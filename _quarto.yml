@@ -5,9 +5,9 @@ website:
   page-navigation: true
   title: "TME 310 A - Fall 2025"
   description: "Homepage for TME 310 A - Computational Physical Modeling at UW Tacoma"
-  site-url: "https://sta210-s22.github.io/website/"
+  site-url: "https://UWT-TME-310.github.io/TME_310_students/"
 
-  repo-url: https://github.com/sta210-s22/website
+  repo-url: https://github.com/UWT-TME-310/TME_310_students
   repo-actions: [edit, issue]
 
   open-graph: true
@@ -19,7 +19,7 @@ website:
     align: center
     tools:
       - icon: github
-        href: https://github.com/sta210-s22
+        href: https://github.com/UWT-TME-310/TME_310_students
         text: "GitHub site"
        
     style: "docked"
