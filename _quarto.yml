@@ -28,7 +28,7 @@ website:
     contents:
       - section: "Course information"
         contents:
-          - href: README.qmd
+          - href: index.qmd
             text: Home
           - href: course-syllabus.qmd
             text: Syllabus
