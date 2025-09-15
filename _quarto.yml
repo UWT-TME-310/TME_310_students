@@ -30,7 +30,7 @@ website:
         contents:
           - href: index.qmd
             text: Home
-          - href: course-syllabus.qmd
+          - href: course_syllabus.qmd
             text: Syllabus
       - section: "Resources"
         contents:
@@ -38,13 +38,13 @@ website:
             text: Resources
       - section: "Project"
         contents:
-          - href: project-description.qmd
+          - href: project_description.qmd
             text: Description
       - section: "Weekly materials"
         contents:
-          - href: weeks/week-1.qmd
+          - href: weeks/week_1.qmd
             text: "Week 1"
-          - href: weeks/week-2.qmd
+          - href: weeks/week_2.qmd
             text: "Week 2"
 
 format:
