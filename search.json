@@ -26,56 +26,88 @@
     "href": "weeks/week_1.html",
     "title": "TME 310 A - Fall 2025",
     "section": "",
-    "text": "Placeholder"
+    "text": "Placeholder",
+    "crumbs": [
+      "Weekly materials",
+      "Week 1"
+    ]
   },
   {
     "objectID": "course_syllabus.html",
     "href": "course_syllabus.html",
     "title": "Course description",
     "section": "",
-    "text": "Computational methods for analyzing mathematical representations of physical systems. The concepts are practiced through examples involving differential equations and programming with computational linear algebra."
+    "text": "Computational methods for analyzing mathematical representations of physical systems. The concepts are practiced through examples involving differential equations and programming with computational linear algebra.",
+    "crumbs": [
+      "Course information",
+      "Syllabus"
+    ]
   },
   {
     "objectID": "course_syllabus.html#in-class-exercises-10",
     "href": "course_syllabus.html#in-class-exercises-10",
     "title": "Course description",
     "section": "In-Class Exercises (10%)",
-    "text": "In-Class Exercises (10%)\nMost days during class, an exercise problem will be assigned. Students are encouraged to work together to solve the problem and be willing to discuss their results in class. These exercises will help you prepare for homework. In-Class exercises (ICEs) should be your own work, but you may consult classmates and use online resources to help."
+    "text": "In-Class Exercises (10%)\nMost days during class, an exercise problem will be assigned. Students are encouraged to work together to solve the problem and be willing to discuss their results in class. These exercises will help you prepare for homework. In-Class exercises (ICEs) should be your own work, but you may consult classmates and use online resources to help.",
+    "crumbs": [
+      "Course information",
+      "Syllabus"
+    ]
   },
   {
     "objectID": "course_syllabus.html#homework-30",
     "href": "course_syllabus.html#homework-30",
     "title": "Course description",
     "section": "Homework (30%)",
-    "text": "Homework (30%)\nYou will receive a homework assignment every week. You should begin working on your assignment the day it is assigned. The description of the assignment will be posted on Canvas. Homework grades will be based on completeness and answers to reflection questions, rather than the correctness of your Python scripts. However, knowing how to create useful Python scripts is important in the course, so you’re encouraged to review homework solutions when they’re posted and compare the solutions with your own work. Homework should be your own work, but you may consult with classmates and use online resources to help. It is very important that you understand every line of code you submit."
+    "text": "Homework (30%)\nYou will receive a homework assignment every week. You should begin working on your assignment the day it is assigned. The description of the assignment will be posted on Canvas. Homework grades will be based on completeness and answers to reflection questions, rather than the correctness of your Python scripts. However, knowing how to create useful Python scripts is important in the course, so you’re encouraged to review homework solutions when they’re posted and compare the solutions with your own work. Homework should be your own work, but you may consult with classmates and use online resources to help. It is very important that you understand every line of code you submit.",
+    "crumbs": [
+      "Course information",
+      "Syllabus"
+    ]
   },
   {
     "objectID": "course_syllabus.html#quizzes-30",
     "href": "course_syllabus.html#quizzes-30",
     "title": "Course description",
     "section": "Quizzes (30%)",
-    "text": "Quizzes (30%)\nBiweekly on Thursday, we will have a quiz based on the most recently covered homework. Quiz dates are shown on the course schedule below. The lowest quiz score will be dropped at the end of the term.\nQuizzes are closed-book, closed-notes, individual activities. Consulting any external sources (internet, friend, etc.) is an academic integrity violation. Posting quiz materials or information to a website or sharing it with others is also a violation of academic integrity."
+    "text": "Quizzes (30%)\nBiweekly on Thursday, we will have a quiz based on the most recently covered homework. Quiz dates are shown on the course schedule below. The lowest quiz score will be dropped at the end of the term.\nQuizzes are closed-book, closed-notes, individual activities. Consulting any external sources (internet, friend, etc.) is an academic integrity violation. Posting quiz materials or information to a website or sharing it with others is also a violation of academic integrity.",
+    "crumbs": [
+      "Course information",
+      "Syllabus"
+    ]
   },
   {
     "objectID": "course_syllabus.html#project-30",
     "href": "course_syllabus.html#project-30",
     "title": "Course description",
     "section": "Project (30%)",
-    "text": "Project (30%)\nThe course will culminate with a group project focused on implementing the numerical methods learned.\nEach team will submit a written report and include the source code for the project."
+    "text": "Project (30%)\nThe course will culminate with a group project focused on implementing the numerical methods learned.\nEach team will submit a written report and include the source code for the project.",
+    "crumbs": [
+      "Course information",
+      "Syllabus"
+    ]
   },
   {
     "objectID": "weeks/week_2.html",
     "href": "weeks/week_2.html",
     "title": "TME 310 A - Fall 2025",
     "section": "",
-    "text": "Placeholder 2"
+    "text": "Placeholder 2",
+    "crumbs": [
+      "Weekly materials",
+      "Week 2"
+    ]
   },
   {
     "objectID": "project_description.html",
     "href": "project_description.html",
     "title": "TME 310 A - Fall 2025",
     "section": "",
-    "text": "Placeholder"
+    "text": "Placeholder",
+    "crumbs": [
+      "Project",
+      "Description"
+    ]
   },
   {
     "objectID": "examples/plotting_a_sine_wave.html",
