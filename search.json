@@ -11,18 +11,22 @@
     ]
   },
   {
-    "objectID": "project_description.html",
-    "href": "project_description.html",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Welcome to TME 310 A - Computational Physical Modeling!",
+    "section": "",
+    "text": "Welcome to TME 310 A - Computational Physical Modeling!\n\n\n\nModeling Framework by Allen Downey (CC BY-NC 4.0)\n\n\nIn this course, we’ll look at the concept of physical modeling with an emphasis on civil and mechanical engineering applications. We will use Python to perform calculations on our models.",
+    "crumbs": [
+      "Course information",
+      "Home"
+    ]
+  },
+  {
+    "objectID": "weeks/week_1.html",
+    "href": "weeks/week_1.html",
     "title": "TME 310 A - Fall 2025",
     "section": "",
     "text": "Placeholder"
-  },
-  {
-    "objectID": "weeks/week_2.html",
-    "href": "weeks/week_2.html",
-    "title": "TME 310 A - Fall 2025",
-    "section": "",
-    "text": "Placeholder 2"
   },
   {
     "objectID": "course_syllabus.html",
@@ -60,8 +64,15 @@
     "text": "Project (30%)\nThe course will culminate with a group project focused on implementing the numerical methods learned.\nEach team will submit a written report and include the source code for the project."
   },
   {
-    "objectID": "weeks/week_1.html",
-    "href": "weeks/week_1.html",
+    "objectID": "weeks/week_2.html",
+    "href": "weeks/week_2.html",
+    "title": "TME 310 A - Fall 2025",
+    "section": "",
+    "text": "Placeholder 2"
+  },
+  {
+    "objectID": "project_description.html",
+    "href": "project_description.html",
     "title": "TME 310 A - Fall 2025",
     "section": "",
     "text": "Placeholder"
