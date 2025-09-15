@@ -2,7 +2,7 @@
 
 [Python reference (Real Python)](https://realpython.com/ref/)
 
-[Python cheatsheet](/resources/python-cheat-sheet.pdf)
+[Python cheatsheet](/.reference/python-cheat-sheet.pdf)
 
 [Prompting Copilot](https://www.youtube.com/watch?v=hh1nOX14TyY&t=118s)
 
@@ -11,4 +11,3 @@
 I didn't agree with the advice to not use comments to interact with Copilot... And then the very next video I watched recommended using comments to prompt Copilot!
 
 [Copilot in Jupyter](https://www.youtube.com/watch?v=QS_bh-3qKdw&list=PLj6YeMhvp2S7rQaCLRrMnzRdkNdKnMVwg&index=106)
-

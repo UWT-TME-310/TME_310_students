@@ -1,0 +1,61 @@
+project:
+  type: website
+
+website:
+  page-navigation: true
+  title: "TME 310 A - Fall 2025"
+  description: "Homepage for TME 310 A - Computational Physical Modeling at UW Tacoma"
+  site-url: "https://sta210-s22.github.io/website/"
+
+  repo-url: https://github.com/sta210-s22/website
+  repo-actions: [edit, issue]
+
+  open-graph: true
+
+  sidebar:
+    background: "#D9E3E4"
+    logo: ".reference/modeling_framework.png"
+    pinned: true
+    align: center
+    tools:
+      - icon: github
+        href: https://github.com/sta210-s22
+        text: "GitHub site"
+       
+    style: "docked"
+    search: true
+    collapse-level: 1
+    contents:
+      - section: "Course information"
+        contents:
+          - href: README.qmd
+            text: Home
+          - href: course-syllabus.qmd
+            text: Syllabus
+      - section: "Resources"
+        contents:
+          - href: resources.qmd
+            text: Resources
+      - section: "Project"
+        contents:
+          - href: project-description.qmd
+            text: Description
+      - section: "Weekly materials"
+        contents:
+          - href: weeks/week-1.qmd
+            text: "Week 1"
+          - href: weeks/week-2.qmd
+            text: "Week 2"
+
+format:
+  html:
+    theme:
+      light: [cosmo, theme.scss]
+      dark: [cosmo, theme-dark.scss]
+    code-copy: true
+    code-overflow: wrap
+    toc: true
+
+freeze: auto
+
+editor: visual

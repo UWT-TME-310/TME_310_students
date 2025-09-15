@@ -1,0 +1,79 @@
+# Course description
+
+Computational methods for analyzing mathematical representations of physical systems. The concepts are practiced through examples involving differential equations and programming with computational linear algebra.
+
+# Learning objectives
+
+This course is designed to enable students to meet the following learning objectives:
+
+-   Create models of different kinds of systems (e.g., populations, thermal systems, mechanical systems) using multiple kinds of appropriate abstractions (e.g., free-body diagrams, differential equations), validate the predictions of models using different approaches (e.g., estimation, physical laws, analytical solutions), and use models to accomplish useful tasks (e.g., make predictions, explain behavior, evaluate design decisions).
+-   Be a critical consumer of models (e.g., by assessing a model you encounter and evaluating whether it is appropriate and useful for a given purpose).
+-   Use code-cased numerical tools to implement models, run simulations, work with data, and generate visualizations.
+-   Communicate technical and quantitative information effectively using written and graphical media.
+-   Work effectively in teams to produce technical deliverables.
+
+# Using AI tools in this course
+
+Using AI tools (which I'll generically use to mean LLMs, generative models, coding agents, etc.) to help you generate code for homework assignments, in-class exercises, and projects is encouraged in this course. As a modeler and an engineer, you are responsible for all the work you submit. Which means that: - You should be able to explain each line of code you submit, whether you used AI on the submission or not. - If you cannot understand the code you submit, you are doing yourself a major disservice.
+
+If used properly, AI tools can enhance your learning by allowing you to dig deeper into the physical significance of the models discussed in this course. If used without critically thinking about each line of code generated, AI tools can inhibit your learning by allowing you to complete assignments without understanding what it represents.
+
+Using AI tools (or any internet resource, for that matter) is not allowed during in-class quizzes! This makes it all the more important to understand course concepts and not use AI to short-circuit your learning.
+
+In short, AI is a tool. Use your tools wisely!
+
+# Course Format
+
+This course will have pre-recorded lectures and in-person instruction and exercises. Class sessions will involve a brief lecture recap followed by in-class exercises (ICEs) designed to help you with the weekly homework and/or project.\
+I encourage you to work together with your classmates on the ICEs. We will have a quiz every two weeks in class on Thursday.
+
+Office hours will be held immediately after class in the same room. I will stick around for an hour after the scheduled class time to help answer questions and work with you on assignments.
+
+# Assignments
+
+## In-Class Exercises (10%)
+
+Most days during class, an exercise problem will be assigned. Students are encouraged to work together to solve the problem and be willing to discuss their results in class. These exercises will help you prepare for homework. In-Class exercises (ICEs) should be your own work, but you may consult classmates and use online resources to help.
+
+## Homework (30%)
+
+You will receive a homework assignment every week. You should begin working on your assignment the day it is assigned. The description of the assignment will be posted on Canvas. Homework grades will be based on **completeness** and answers to **reflection** questions, rather than the correctness of your Python scripts. However, knowing how to create useful Python scripts is important in the course, so you're encouraged to review homework solutions when they're posted and compare the solutions with your own work. Homework should be your own work, but you may consult with classmates and use online resources to help. It is very important that you understand every line of code you submit.
+
+## Quizzes (30%)
+
+Biweekly on Thursday, we will have a quiz based on the most recently covered homework. Quiz dates are shown on the course schedule below. The lowest quiz score will be dropped at the end of the term.\
+Quizzes are closed-book, closed-notes, individual activities. Consulting any external sources (internet, friend, etc.) is an academic integrity violation. Posting quiz materials or information to a website or sharing it with others is also a violation of academic integrity.
+
+## Project (30%)
+
+The course will culminate with a group project focused on implementing the numerical methods learned.\
+Each team will submit a written report and include the source code for the project.
+
+# Schedule
+
+The schedule below is preliminary and subject to change without notice.
+
+| **Week** | **Tuesday** | **Thursday** | **Notes** |
+|------------------|------------------|------------------|------------------|
+| 1 | -- | Introductions, <br>Engineering modeling concept (Ch. 1) |  |
+| 2 | Program flow (notes) | Approximation and error (Ch. 3.2) <br>**Quiz 1** | Project groups formed |
+| 3 | Approximation and error (Ch. 3) | Root finding (Ch. 3) |  |
+| 4 | Root finding (Ch. 3) | Root finding (Ch. 3) <br>**Quiz 2** |  |
+| 5 | Matrices (Ch. 2, 4) | Matrices (Ch. 2, 4) |  |
+| 6 | Matrices (Ch. 2, 4) | Matrices (Ch. 2, 4) <br>**Quiz 3** |  |
+| 7 | Systems of equations (Ch. 2, 4) | Systems of equations (Ch. 2, 4) | Project Part 1 due |
+| 8 | Numerical differentiation | Numerical differentiation <br>**Quiz 4** |  |
+| 9 | Numerical differentiation (Ch. 8) | Numerical differentiation (Ch. 8) |  |
+| 10 | Numerical integration (Ch. 9) | Numerical integration (Ch. 9) <br>**Quiz 5** |  |
+| 11 | Numerical integration (Ch. 9) |  |  |
+| Finals week | **Quiz 6** |  | Project Part 2 due |
+
+# ABET Student Outcomes
+
+SO 1: an ability to identify, formulate, and solve complex engineering problems by applying principles of engineering, science, and mathematics
+
+SO 6: an ability to develop and conduct appropriate experimentation, analyze and interpret data, and use engineering judgment to draw conclusions
+
+# Resources
+
+For information on other campus and student resources, including Policies and Expectations (including religious accommodation), Academic Support, and Self & Family Resources, visit [The e-Syllabus: Campus Information, Resources, Policies and Expectations page.](https://www.tacoma.uw.edu/digital-learning/e-syllabus)
