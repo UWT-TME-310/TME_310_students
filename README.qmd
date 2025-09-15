@@ -1,6 +1,4 @@
----
-title: Welcome to TME 310 A - Computational Physical Modeling!
----
+# Welcome to TME 310 A - Computational Physical Modeling!
 
 ![Modeling Framework by Allen Downey (CC BY-NC 4.0)](/.reference/modeling_framework.png)
 

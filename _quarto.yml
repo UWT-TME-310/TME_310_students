@@ -13,7 +13,7 @@ website:
   open-graph: true
 
   sidebar:
-    background: "#D9E3E4"
+    background: "#ffffff"
     logo: ".reference/modeling_framework.png"
     pinned: true
     align: center
@@ -50,8 +50,8 @@ website:
 format:
   html:
     theme:
-      light: [cosmo, theme.scss]
-      dark: [cosmo, theme-dark.scss]
+      - cosmo
+    css: styles.css
     code-copy: true
     code-overflow: wrap
     toc: true
