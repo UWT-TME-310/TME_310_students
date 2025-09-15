@@ -8,7 +8,7 @@ website:
   site-url: "https://UWT-TME-310.github.io/TME_310_students/"
 
   repo-url: https://github.com/UWT-TME-310/TME_310_students
-  repo-actions: [edit, issue]
+  repo-actions: [source, issue]
 
   open-graph: true
 
