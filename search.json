@@ -13,7 +13,7 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Welcome to TME 310 A - Computational Physical Modeling!",
+    "title": "TME 310 A Home Page",
     "section": "",
     "text": "Welcome to TME 310 A - Computational Physical Modeling!\n\n\n\nModeling Framework by Allen Downey (CC BY-NC 4.0)\n\n\nIn this course, we’ll look at the concept of physical modeling with an emphasis on civil and mechanical engineering applications. We will use Python to perform calculations on our models.",
     "crumbs": [
