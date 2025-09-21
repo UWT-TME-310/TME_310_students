@@ -41,7 +41,7 @@ website:
           contents:
             - href: website/weeks/week_1.qmd
             - href: website/weeks/week_2.qmd
-            - href: website/examples/plotting_a_sine_wave.ipynb
+            - href: examples/plotting_a_sine_wave.ipynb
         - text: ---
         - section:
           href: website/resources.qmd
