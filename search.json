@@ -57,94 +57,111 @@
     ]
   },
   {
-    "objectID": "website/index.html",
-    "href": "website/index.html",
-    "title": "Welcome to TME 310 A - Computational Physical Modeling!",
+    "objectID": "website/start_here.html",
+    "href": "website/start_here.html",
+    "title": "Start here",
     "section": "",
-    "text": "Welcome to TME 310 A - Computational Physical Modeling!\n\n\n\nModeling Framework by Allen Downey (CC BY-NC 4.0)\n\n\nIn this course, we’ll look at the concept of physical modeling with an emphasis on civil and mechanical engineering applications. We will use Python to perform calculations on our models.\nClick the “Start Here” link below to begin going through some introductory material about the course."
-  },
-  {
-    "objectID": "website/project_description.html",
-    "href": "website/project_description.html",
-    "title": "Course Project",
-    "section": "",
-    "text": "It’s a group project.\nGroups will be assigned randomly. Groups will be 3 or 4 students.\n\n\nThe project topic is modeling the installation of driven piles with open-ended diesel hammers.\nEach team will build a jupyter notebook interactive app to predict the capacity of a driven pile based on data collected during installation.\nThere will be a baseline app to be delivered in Part 2 and then the groups will choose additional features to include to enhance their app for Part 3.\n\n\n\nThe project will have three deliverables:\n\nGroup coordination (due week 3)\nBasic pile-driving app (due week 6)\nEnhanced pile-driving app (due finals week)",
+    "text": "Start here\nGo through this short “Start here” module for information about the course, the instructor, and being a successful student. At the very least, read the syllabus!\nSyllabus\nInstructor and my role in this course\nAccessibility and accommodations\nBeing a successful student\nGrading policies\nHomework format\nCoding platforms",
     "crumbs": [
       "TME 310A",
-      "Project",
-      "Course Project"
+      "Course information",
+      "Start here"
     ]
   },
   {
-    "objectID": "website/project_description.html#topic",
-    "href": "website/project_description.html#topic",
-    "title": "Course Project",
+    "objectID": "website/project_01.html",
+    "href": "website/project_01.html",
+    "title": "Project Part 1 - group coordination",
     "section": "",
-    "text": "The project topic is modeling the installation of driven piles with open-ended diesel hammers.\nEach team will build a jupyter notebook interactive app to predict the capacity of a driven pile based on data collected during installation.\nThere will be a baseline app to be delivered in Part 2 and then the groups will choose additional features to include to enhance their app for Part 3.",
+    "text": "Project Part 1 - group coordination\nPurpose\nInstructions\nSubmission\nRubric",
     "crumbs": [
       "TME 310A",
       "Project",
-      "Course Project"
+      "Project Part 1 - group coordination"
     ]
   },
   {
-    "objectID": "website/project_description.html#deliverables",
-    "href": "website/project_description.html#deliverables",
-    "title": "Course Project",
+    "objectID": "website/weeks/week_1.html",
+    "href": "website/weeks/week_1.html",
+    "title": "Week 1",
     "section": "",
-    "text": "The project will have three deliverables:\n\nGroup coordination (due week 3)\nBasic pile-driving app (due week 6)\nEnhanced pile-driving app (due finals week)",
-    "crumbs": [
-      "TME 310A",
-      "Project",
-      "Course Project"
-    ]
-  },
-  {
-    "objectID": "website/project_02.html",
-    "href": "website/project_02.html",
-    "title": "Project Part 2 - basic pile-driving app",
-    "section": "",
-    "text": "Project Part 2 - basic pile-driving app\nPurpose\nInstructions\nSubmission\nRubric",
-    "crumbs": [
-      "TME 310A",
-      "Project",
-      "Project Part 2 - basic pile-driving app"
-    ]
-  },
-  {
-    "objectID": "website/weeks/week_2.html",
-    "href": "website/weeks/week_2.html",
-    "title": "Week 2",
-    "section": "",
-    "text": "Topic\nVideo\nSlides\nCode\n\n\n\n\nModeling framework\ntext\n\ntext\n\n\nApproaching problems\ntext\n\n\n\n\nFunctional programming\ntext\n\n\n\n\n\n\n\n\nHomework 1",
+    "text": "Topic\nVideo\nSlides\nCode\n\n\n\n\nIntroduction\nN/A\n\nN/A\n\n\nPython basics\ntext\n\n\n\n\n\n\n\n\nNone",
     "crumbs": [
       "TME 310A",
       "Weekly materials",
-      "Week 2"
+      "Week 1"
     ]
   },
   {
-    "objectID": "website/weeks/week_2.html#materials",
-    "href": "website/weeks/week_2.html#materials",
-    "title": "Week 2",
+    "objectID": "website/weeks/week_1.html#materials",
+    "href": "website/weeks/week_1.html#materials",
+    "title": "Week 1",
     "section": "",
-    "text": "Topic\nVideo\nSlides\nCode\n\n\n\n\nModeling framework\ntext\n\ntext\n\n\nApproaching problems\ntext\n\n\n\n\nFunctional programming\ntext",
+    "text": "Topic\nVideo\nSlides\nCode\n\n\n\n\nIntroduction\nN/A\n\nN/A\n\n\nPython basics\ntext",
     "crumbs": [
       "TME 310A",
       "Weekly materials",
-      "Week 2"
+      "Week 1"
     ]
   },
   {
-    "objectID": "website/weeks/week_2.html#assignments-due",
-    "href": "website/weeks/week_2.html#assignments-due",
-    "title": "Week 2",
+    "objectID": "website/weeks/week_1.html#assignments-due",
+    "href": "website/weeks/week_1.html#assignments-due",
+    "title": "Week 1",
     "section": "",
-    "text": "Homework 1",
+    "text": "None",
     "crumbs": [
       "TME 310A",
       "Weekly materials",
-      "Week 2"
+      "Week 1"
+    ]
+  },
+  {
+    "objectID": "website/project_03.html",
+    "href": "website/project_03.html",
+    "title": "Project Part 3 - enhanced pile-driving app",
+    "section": "",
+    "text": "Project Part 3 - enhanced pile-driving app",
+    "crumbs": [
+      "TME 310A",
+      "Project",
+      "Project Part 3 - enhanced pile-driving app"
+    ]
+  },
+  {
+    "objectID": "website/being_successful_student.html",
+    "href": "website/being_successful_student.html",
+    "title": "Being a Successful Student",
+    "section": "",
+    "text": "Being a Successful Student\nKeep Current with Course Notifications\nCanvas can automatically keep you informed about due dates, class changes, scheduled events, and much more through its notification system. Be sure to set them, so you are receiving each kind immediately, daily, or weekly, as you prefer.\nPeer Success Mentors\nA peer mentor can assist you in “using effective learning techniques to improve your study skills and gain confidence in your academic abilities.” Connect with one today!\nUW Tacoma Teaching & Learning Center\nHere you can schedule appointments with quantitative and writing lab tutors and access quantitative and writing help and resources.",
+    "crumbs": [
+      "TME 310A",
+      "Course information",
+      "Being a Successful Student"
+    ]
+  },
+  {
+    "objectID": "website/grading_policies.html",
+    "href": "website/grading_policies.html",
+    "title": "Grading policies",
+    "section": "",
+    "text": "Grading policies",
+    "crumbs": [
+      "TME 310A",
+      "Course information",
+      "Grading policies"
+    ]
+  },
+  {
+    "objectID": "website/github_codespace.html",
+    "href": "website/github_codespace.html",
+    "title": "Coding platform: GitHub Codespace",
+    "section": "",
+    "text": "See some slides from the intro lecture.\nAnd some other content",
+    "crumbs": [
+      "TME 310A",
+      "Course information",
+      "Coding platform: GitHub Codespace"
     ]
   },
   {
@@ -256,111 +273,87 @@
     ]
   },
   {
-    "objectID": "website/github_codespace.html",
-    "href": "website/github_codespace.html",
-    "title": "Coding platform: GitHub Codespace",
+    "objectID": "website/weeks/week_2.html",
+    "href": "website/weeks/week_2.html",
+    "title": "Week 2",
     "section": "",
-    "text": "See some slides from the intro lecture.\nAnd some other content",
+    "text": "Topic\nVideo\nSlides\nCode\n\n\n\n\nModeling framework\ntext\n\ntext\n\n\nApproaching problems\ntext\n\n\n\n\nFunctional programming\ntext\n\n\n\n\n\n\n\n\nHomework 1",
     "crumbs": [
       "TME 310A",
-      "Course information",
-      "Coding platform: GitHub Codespace"
+      "Weekly materials",
+      "Week 2"
     ]
   },
   {
-    "objectID": "website/grading_policies.html",
-    "href": "website/grading_policies.html",
-    "title": "Grading policies",
+    "objectID": "website/weeks/week_2.html#materials",
+    "href": "website/weeks/week_2.html#materials",
+    "title": "Week 2",
     "section": "",
-    "text": "Grading policies",
+    "text": "Topic\nVideo\nSlides\nCode\n\n\n\n\nModeling framework\ntext\n\ntext\n\n\nApproaching problems\ntext\n\n\n\n\nFunctional programming\ntext",
     "crumbs": [
       "TME 310A",
-      "Course information",
-      "Grading policies"
+      "Weekly materials",
+      "Week 2"
     ]
   },
   {
-    "objectID": "website/being_successful_student.html",
-    "href": "website/being_successful_student.html",
-    "title": "Being a Successful Student",
+    "objectID": "website/weeks/week_2.html#assignments-due",
+    "href": "website/weeks/week_2.html#assignments-due",
+    "title": "Week 2",
     "section": "",
-    "text": "Being a Successful Student\nKeep Current with Course Notifications\nCanvas can automatically keep you informed about due dates, class changes, scheduled events, and much more through its notification system. Be sure to set them, so you are receiving each kind immediately, daily, or weekly, as you prefer.\nPeer Success Mentors\nA peer mentor can assist you in “using effective learning techniques to improve your study skills and gain confidence in your academic abilities.” Connect with one today!\nUW Tacoma Teaching & Learning Center\nHere you can schedule appointments with quantitative and writing lab tutors and access quantitative and writing help and resources.",
+    "text": "Homework 1",
     "crumbs": [
       "TME 310A",
-      "Course information",
-      "Being a Successful Student"
+      "Weekly materials",
+      "Week 2"
     ]
   },
   {
-    "objectID": "website/project_03.html",
-    "href": "website/project_03.html",
-    "title": "Project Part 3 - enhanced pile-driving app",
+    "objectID": "website/project_02.html",
+    "href": "website/project_02.html",
+    "title": "Project Part 2 - basic pile-driving app",
     "section": "",
-    "text": "Project Part 3 - enhanced pile-driving app",
+    "text": "Project Part 2 - basic pile-driving app\nPurpose\nInstructions\nSubmission\nRubric",
     "crumbs": [
       "TME 310A",
       "Project",
-      "Project Part 3 - enhanced pile-driving app"
+      "Project Part 2 - basic pile-driving app"
     ]
   },
   {
-    "objectID": "website/weeks/week_1.html",
-    "href": "website/weeks/week_1.html",
-    "title": "Week 1",
+    "objectID": "website/project_description.html",
+    "href": "website/project_description.html",
+    "title": "Course Project",
     "section": "",
-    "text": "Topic\nVideo\nSlides\nCode\n\n\n\n\nIntroduction\nN/A\n\nN/A\n\n\nPython basics\ntext\n\n\n\n\n\n\n\n\nNone",
-    "crumbs": [
-      "TME 310A",
-      "Weekly materials",
-      "Week 1"
-    ]
-  },
-  {
-    "objectID": "website/weeks/week_1.html#materials",
-    "href": "website/weeks/week_1.html#materials",
-    "title": "Week 1",
-    "section": "",
-    "text": "Topic\nVideo\nSlides\nCode\n\n\n\n\nIntroduction\nN/A\n\nN/A\n\n\nPython basics\ntext",
-    "crumbs": [
-      "TME 310A",
-      "Weekly materials",
-      "Week 1"
-    ]
-  },
-  {
-    "objectID": "website/weeks/week_1.html#assignments-due",
-    "href": "website/weeks/week_1.html#assignments-due",
-    "title": "Week 1",
-    "section": "",
-    "text": "None",
-    "crumbs": [
-      "TME 310A",
-      "Weekly materials",
-      "Week 1"
-    ]
-  },
-  {
-    "objectID": "website/project_01.html",
-    "href": "website/project_01.html",
-    "title": "Project Part 1 - group coordination",
-    "section": "",
-    "text": "Project Part 1 - group coordination\nPurpose\nInstructions\nSubmission\nRubric",
+    "text": "It’s a group project.\nGroups will be assigned randomly. Groups will be 3 or 4 students.\n\n\nThe project topic is modeling the installation of driven piles with open-ended diesel hammers.\nEach team will build a jupyter notebook interactive app to predict the capacity of a driven pile based on data collected during installation.\nThere will be a baseline app to be delivered in Part 2 and then the groups will choose additional features to include to enhance their app for Part 3.\n\n\n\nThe project will have three deliverables:\n\nGroup coordination (due week 3)\nBasic pile-driving app (due week 6)\nEnhanced pile-driving app (due finals week)",
     "crumbs": [
       "TME 310A",
       "Project",
-      "Project Part 1 - group coordination"
+      "Course Project"
     ]
   },
   {
-    "objectID": "website/start_here.html",
-    "href": "website/start_here.html",
-    "title": "Start here",
+    "objectID": "website/project_description.html#topic",
+    "href": "website/project_description.html#topic",
+    "title": "Course Project",
     "section": "",
-    "text": "Start here\nGo through this short “Start here” module for information about the course, the instructor, and being a successful student. At the very least, read the syllabus!\nSyllabus\nInstructor and my role in this course\nAccessibility and accommodations\nBeing a successful student\nGrading policies\nHomework format\nCoding platforms",
+    "text": "The project topic is modeling the installation of driven piles with open-ended diesel hammers.\nEach team will build a jupyter notebook interactive app to predict the capacity of a driven pile based on data collected during installation.\nThere will be a baseline app to be delivered in Part 2 and then the groups will choose additional features to include to enhance their app for Part 3.",
     "crumbs": [
       "TME 310A",
-      "Course information",
-      "Start here"
+      "Project",
+      "Course Project"
+    ]
+  },
+  {
+    "objectID": "website/project_description.html#deliverables",
+    "href": "website/project_description.html#deliverables",
+    "title": "Course Project",
+    "section": "",
+    "text": "The project will have three deliverables:\n\nGroup coordination (due week 3)\nBasic pile-driving app (due week 6)\nEnhanced pile-driving app (due finals week)",
+    "crumbs": [
+      "TME 310A",
+      "Project",
+      "Course Project"
     ]
   },
   {
