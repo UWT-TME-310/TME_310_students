@@ -1,0 +1,17 @@
+# Instructor introduction
+
+My name is Lorne Arnold. I like to sail, listen to music, and take naps. Before I started teaching, I worked as a geotechnical engineer for many years, designing foundations for buildings, bridges, and ports. I'm looking forward to getting to know you all this term.
+
+![](reference/instructor_intro_slide.png)
+
+## My role in this course
+
+I am here to guide you as you learn and practice new skills. We will spend a lot of time writing code together and learning from one another. I hope you will all be generous in helping one another during this class. Engineering is very collaborative, so that is an extra skill to practice.
+
+**Online Availability:** I'm online between 8 AM and 5 PM most days, and I'll try to keep Canvas and GitHub open when I'm not otherwise engaged. From time to time, I will check in after 5 PM, but family obligations will make evening responses from me hit or miss. You can expect to get responses to questions from me in less than one day. Graded quizzes and projects will be typically be returned in less than one week.
+
+If you're looking for help outside of the course's normal office hours, you can book a meeting with me using [my booking link](https://outlook.office.com/bookwithme/user/0c66e8bf6bf047598409c5e87e3fc6b2@uw.edu/meetingtype/E1ppQjWkZ0m9IqYS6DpRTA2?anonymous&ismsaljsauthenabled&ep=mLinkFromTile).
+
+**Feedback:** I care a lot about improving my teaching. Teaching is not a formula to learn, so I am still working on my own methods in the classroom. I would love to hear from you frequently about how things are going so I can improve over time. Send me a note, a chat, or catch me after class if you have ideas for improvements.
+
+**Understanding and flexibility:** Every quarter, some students will encounter unavoidable problems that prevent them from completing course assignments on time. The course grading is structured to be fairly flexible. For example, we will drop your lowest in-person quiz score. Let me know if something comes up, and do the best you can to stay on track.

@@ -1,0 +1,23 @@
+# Resources
+This page contains lists of resources you may find helpful for this course.
+None of the resources are mandatory, but I recommend you look over the list to familiarize yourself with the kind of content that's available.
+If you find yourself struggling with any of the course concepts, look through these resources again to see if there's anything that can help.
+
+## Python language
+
+* [Python cheatsheet](reference/python-cheat-sheet.pdf)
+
+* [Python reference (Real Python)](https://realpython.com/ref/)
+
+## Coding with Copilot
+
+* [Prompting Copilot](https://www.youtube.com/watch?v=hh1nOX14TyY&t=118s)
+
+* [Copilot Best Practices](https://www.youtube.com/watch?v=2q0BoioYSxQ&list=PLj6YeMhvp2S7rQaCLRrMnzRdkNdKnMVwg&index=48)
+
+::: callout-note
+## Note
+I didn't agree with the advice to not use comments to interact with Copilot... And then the very next video (next link below) I watched from the same playlist recommended using comments to prompt Copilot!
+:::
+
+* [Copilot in Jupyter](https://www.youtube.com/watch?v=QS_bh-3qKdw&list=PLj6YeMhvp2S7rQaCLRrMnzRdkNdKnMVwg&index=106)

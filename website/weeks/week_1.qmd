@@ -1,0 +1,12 @@
+# Week 1
+
+## Materials
+
+| Topic         | Video        | Slides | Code |
+|---------------|--------------|--------|------|
+| Introduction  | N/A          |        | N/A  |
+| Python basics | [text](link) |        |      |
+
+## Assignments due
+
+None

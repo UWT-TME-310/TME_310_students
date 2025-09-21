@@ -1,0 +1,21 @@
+# Course Project
+
+It's a group project.
+
+Groups will be assigned randomly. Groups will be 3 or 4 students.
+
+## Topic
+
+The project topic is modeling the installation of driven piles with open-ended diesel hammers.
+
+Each team will build a jupyter notebook interactive app to predict the capacity of a driven pile based on data collected during installation.
+
+There will be a baseline app to be delivered in Part 2 and then the groups will choose additional features to include to enhance their app for Part 3.
+
+## Deliverables
+
+The project will have three deliverables:
+
+1.  Group coordination (due week 3)
+2.  Basic pile-driving app (due week 6)
+3.  Enhanced pile-driving app (due finals week)

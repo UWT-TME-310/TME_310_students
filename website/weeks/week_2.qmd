@@ -1,0 +1,13 @@
+# Week 2
+
+## Materials
+
+| Topic | Video | Slides| Code |
+|----|----|----|----|
+| Modeling framework| [text](link)|    | [text](link)|
+| Approaching problems | [text](link)|    |    |
+| Functional programming | [text](link)|    |    |
+
+## Assignments due
+
+[Homework 1](https://canvas.uw.edu/courses/1835208/assignments/10692082)

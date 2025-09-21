@@ -1,0 +1,10 @@
+---
+title: "Coding platform: GitHub Codespace"
+slide-format: revealjs
+---
+
+See some slides from the intro lecture.
+
+
+
+And some other content

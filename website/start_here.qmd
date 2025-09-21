@@ -1,0 +1,17 @@
+# Start here
+
+Go through this short "Start here" module for information about the course, the instructor, and being a successful student. At the very least, read the syllabus!
+
+[**Syllabus**](course_syllabus.qmd)
+
+[**Instructor and my role in this course**](instructor.qmd)
+
+[**Accessibility and accommodations**](accessibility_accommodations.qmd)
+
+[**Being a successful student**](being_successful_student.qmd)
+
+[**Grading policies**](grading_policies.qmd)
+
+[**Homework format**](homework_format.qmd)
+
+[**Coding platforms**](github_codespace.qmd)
