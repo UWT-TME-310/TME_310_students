@@ -21,7 +21,8 @@
           "pytest.ini": true,
           "conftest.py": true,
           "website*": true,
-          "requirements.txt": true
+          "requirements.txt": true,
+          "index.qmd": true
         },
         "workbench.sideBar.location": "left",
         "workbench.activityBar.location": "top",
