@@ -4,7 +4,12 @@
     "href": "examples/plotting_a_sine_wave.html",
     "title": "Plotting a sine wave",
     "section": "",
-    "text": "This notebook shows how to use matplotlib and numpy to plot a sine wave.\nFirst, import the required packages:\n\nimport matplotlib.pyplot as plt\nimport numpy as np\n\nThen create a time array using Numpy’s linspace() and an amplitude array by using the newly created time array as input to Numpy’s sin(). I also include a factor of \\(2 \\pi\\) radians so that one second corresponds to one full sine period.\n\ntime = np.linspace(0, 3, 500)\namplitude = np.sin(2 * np.pi * time)\n\nUse plt.subplots() to create a figure and axes to plot on. Add the plot to the axes with the plot(x, y) method, providing time as the x variable and amplitude as the y variable.\n\nfig, ax = plt.subplots()\nax.plot(time, amplitude)\nax.set(xlabel='Time (s)', ylabel='Amplitude', title='Sine Wave')\nax.grid()\nplt.show()"
+    "text": "This notebook shows how to use matplotlib and numpy to plot a sine wave.\nFirst, import the required packages:\n\nimport matplotlib.pyplot as plt\nimport numpy as np\n\nThen create a time array using Numpy’s linspace() and an amplitude array by using the newly created time array as input to Numpy’s sin(). I also include a factor of \\(2 \\pi\\) radians so that one second corresponds to one full sine period.\n\ntime = np.linspace(0, 3, 500)\namplitude = np.sin(2 * np.pi * time)\n\nUse plt.subplots() to create a figure and axes to plot on. Add the plot to the axes with the plot(x, y) method, providing time as the x variable and amplitude as the y variable.\n\nfig, ax = plt.subplots()\nax.plot(time, amplitude)\nax.set(xlabel='Time (s)', ylabel='Amplitude', title='Sine Wave')\nax.grid()\nplt.show()",
+    "crumbs": [
+      "TME 310A",
+      "Weekly materials",
+      "Plotting a sine wave"
+    ]
   },
   {
     "objectID": "website/resources.html",
