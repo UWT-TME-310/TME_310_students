@@ -1,119 +1,407 @@
 [
   {
-    "objectID": "resources.html",
-    "href": "resources.html",
-    "title": "Resources",
-    "section": "",
-    "text": "Resources\nPython reference (Real Python)\nPython cheatsheet\nPrompting Copilot\nCopilot Best Practices\nI didn’t agree with the advice to not use comments to interact with Copilot… And then the very next video I watched recommended using comments to prompt Copilot!\nCopilot in Jupyter",
-    "crumbs": [
-      "Resources",
-      "Resources"
-    ]
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "TME 310 A Home Page",
-    "section": "",
-    "text": "Welcome to TME 310 A - Computational Physical Modeling!\n\n\n\nModeling Framework by Allen Downey (CC BY-NC 4.0)\n\n\nIn this course, we’ll look at the concept of physical modeling with an emphasis on civil and mechanical engineering applications. We will use Python to perform calculations on our models.",
-    "crumbs": [
-      "Course information",
-      "Home"
-    ]
-  },
-  {
-    "objectID": "weeks/week_1.html",
-    "href": "weeks/week_1.html",
-    "title": "TME 310 A - Fall 2025",
-    "section": "",
-    "text": "Placeholder",
-    "crumbs": [
-      "Weekly materials",
-      "Week 1"
-    ]
-  },
-  {
-    "objectID": "course_syllabus.html",
-    "href": "course_syllabus.html",
-    "title": "Course description",
-    "section": "",
-    "text": "Computational methods for analyzing mathematical representations of physical systems. The concepts are practiced through examples involving differential equations and programming with computational linear algebra.",
-    "crumbs": [
-      "Course information",
-      "Syllabus"
-    ]
-  },
-  {
-    "objectID": "course_syllabus.html#in-class-exercises-10",
-    "href": "course_syllabus.html#in-class-exercises-10",
-    "title": "Course description",
-    "section": "In-Class Exercises (10%)",
-    "text": "In-Class Exercises (10%)\nMost days during class, an exercise problem will be assigned. Students are encouraged to work together to solve the problem and be willing to discuss their results in class. These exercises will help you prepare for homework. In-Class exercises (ICEs) should be your own work, but you may consult classmates and use online resources to help.",
-    "crumbs": [
-      "Course information",
-      "Syllabus"
-    ]
-  },
-  {
-    "objectID": "course_syllabus.html#homework-30",
-    "href": "course_syllabus.html#homework-30",
-    "title": "Course description",
-    "section": "Homework (30%)",
-    "text": "Homework (30%)\nYou will receive a homework assignment every week. You should begin working on your assignment the day it is assigned. The description of the assignment will be posted on Canvas. Homework grades will be based on completeness and answers to reflection questions, rather than the correctness of your Python scripts. However, knowing how to create useful Python scripts is important in the course, so you’re encouraged to review homework solutions when they’re posted and compare the solutions with your own work. Homework should be your own work, but you may consult with classmates and use online resources to help. It is very important that you understand every line of code you submit.",
-    "crumbs": [
-      "Course information",
-      "Syllabus"
-    ]
-  },
-  {
-    "objectID": "course_syllabus.html#quizzes-30",
-    "href": "course_syllabus.html#quizzes-30",
-    "title": "Course description",
-    "section": "Quizzes (30%)",
-    "text": "Quizzes (30%)\nBiweekly on Thursday, we will have a quiz based on the most recently covered homework. Quiz dates are shown on the course schedule below. The lowest quiz score will be dropped at the end of the term.\nQuizzes are closed-book, closed-notes, individual activities. Consulting any external sources (internet, friend, etc.) is an academic integrity violation. Posting quiz materials or information to a website or sharing it with others is also a violation of academic integrity.",
-    "crumbs": [
-      "Course information",
-      "Syllabus"
-    ]
-  },
-  {
-    "objectID": "course_syllabus.html#project-30",
-    "href": "course_syllabus.html#project-30",
-    "title": "Course description",
-    "section": "Project (30%)",
-    "text": "Project (30%)\nThe course will culminate with a group project focused on implementing the numerical methods learned.\nEach team will submit a written report and include the source code for the project.",
-    "crumbs": [
-      "Course information",
-      "Syllabus"
-    ]
-  },
-  {
-    "objectID": "weeks/week_2.html",
-    "href": "weeks/week_2.html",
-    "title": "TME 310 A - Fall 2025",
-    "section": "",
-    "text": "Placeholder 2",
-    "crumbs": [
-      "Weekly materials",
-      "Week 2"
-    ]
-  },
-  {
-    "objectID": "project_description.html",
-    "href": "project_description.html",
-    "title": "TME 310 A - Fall 2025",
-    "section": "",
-    "text": "Placeholder",
-    "crumbs": [
-      "Project",
-      "Description"
-    ]
-  },
-  {
     "objectID": "examples/plotting_a_sine_wave.html",
     "href": "examples/plotting_a_sine_wave.html",
     "title": "Plotting a sine wave",
     "section": "",
     "text": "This notebook shows how to use matplotlib and numpy to plot a sine wave.\nFirst, import the required packages:\n\nimport matplotlib.pyplot as plt\nimport numpy as np\n\nThen create a time array using Numpy’s linspace() and an amplitude array by using the newly created time array as input to Numpy’s sin(). I also include a factor of \\(2 \\pi\\) radians so that one second corresponds to one full sine period.\n\ntime = np.linspace(0, 3, 500)\namplitude = np.sin(2 * np.pi * time)\n\nUse plt.subplots() to create a figure and axes to plot on. Add the plot to the axes with the plot(x, y) method, providing time as the x variable and amplitude as the y variable.\n\nfig, ax = plt.subplots()\nax.plot(time, amplitude)\nax.set(xlabel='Time (s)', ylabel='Amplitude', title='Sine Wave')\nax.grid()\nplt.show()"
+  },
+  {
+    "objectID": "website/resources.html",
+    "href": "website/resources.html",
+    "title": "Resources",
+    "section": "",
+    "text": "This page contains lists of resources you may find helpful for this course. None of the resources are mandatory, but I recommend you look over the list to familiarize yourself with the kind of content that’s available. If you find yourself struggling with any of the course concepts, look through these resources again to see if there’s anything that can help.\n\n\n\nPython cheatsheet\nPython reference (Real Python)\n\n\n\n\n\nPrompting Copilot\nCopilot Best Practices\n\n\n\n\n\n\n\nNote\n\n\n\nI didn’t agree with the advice to not use comments to interact with Copilot… And then the very next video (next link below) I watched from the same playlist recommended using comments to prompt Copilot!\n\n\n\nCopilot in Jupyter",
+    "crumbs": [
+      "TME 310A",
+      "Resources"
+    ]
+  },
+  {
+    "objectID": "website/resources.html#python-language",
+    "href": "website/resources.html#python-language",
+    "title": "Resources",
+    "section": "",
+    "text": "Python cheatsheet\nPython reference (Real Python)",
+    "crumbs": [
+      "TME 310A",
+      "Resources"
+    ]
+  },
+  {
+    "objectID": "website/resources.html#coding-with-copilot",
+    "href": "website/resources.html#coding-with-copilot",
+    "title": "Resources",
+    "section": "",
+    "text": "Prompting Copilot\nCopilot Best Practices\n\n\n\n\n\n\n\nNote\n\n\n\nI didn’t agree with the advice to not use comments to interact with Copilot… And then the very next video (next link below) I watched from the same playlist recommended using comments to prompt Copilot!\n\n\n\nCopilot in Jupyter",
+    "crumbs": [
+      "TME 310A",
+      "Resources"
+    ]
+  },
+  {
+    "objectID": "website/homework_format.html",
+    "href": "website/homework_format.html",
+    "title": "Homework format",
+    "section": "",
+    "text": "Homework format",
+    "crumbs": [
+      "TME 310A",
+      "Course information",
+      "Homework format"
+    ]
+  },
+  {
+    "objectID": "website/index.html",
+    "href": "website/index.html",
+    "title": "Welcome to TME 310 A - Computational Physical Modeling!",
+    "section": "",
+    "text": "Welcome to TME 310 A - Computational Physical Modeling!\n\n\n\nModeling Framework by Allen Downey (CC BY-NC 4.0)\n\n\nIn this course, we’ll look at the concept of physical modeling with an emphasis on civil and mechanical engineering applications. We will use Python to perform calculations on our models.\nClick the “Start Here” link below to begin going through some introductory material about the course."
+  },
+  {
+    "objectID": "website/project_description.html",
+    "href": "website/project_description.html",
+    "title": "Course Project",
+    "section": "",
+    "text": "It’s a group project.\nGroups will be assigned randomly. Groups will be 3 or 4 students.\n\n\nThe project topic is modeling the installation of driven piles with open-ended diesel hammers.\nEach team will build a jupyter notebook interactive app to predict the capacity of a driven pile based on data collected during installation.\nThere will be a baseline app to be delivered in Part 2 and then the groups will choose additional features to include to enhance their app for Part 3.\n\n\n\nThe project will have three deliverables:\n\nGroup coordination (due week 3)\nBasic pile-driving app (due week 6)\nEnhanced pile-driving app (due finals week)",
+    "crumbs": [
+      "TME 310A",
+      "Project",
+      "Course Project"
+    ]
+  },
+  {
+    "objectID": "website/project_description.html#topic",
+    "href": "website/project_description.html#topic",
+    "title": "Course Project",
+    "section": "",
+    "text": "The project topic is modeling the installation of driven piles with open-ended diesel hammers.\nEach team will build a jupyter notebook interactive app to predict the capacity of a driven pile based on data collected during installation.\nThere will be a baseline app to be delivered in Part 2 and then the groups will choose additional features to include to enhance their app for Part 3.",
+    "crumbs": [
+      "TME 310A",
+      "Project",
+      "Course Project"
+    ]
+  },
+  {
+    "objectID": "website/project_description.html#deliverables",
+    "href": "website/project_description.html#deliverables",
+    "title": "Course Project",
+    "section": "",
+    "text": "The project will have three deliverables:\n\nGroup coordination (due week 3)\nBasic pile-driving app (due week 6)\nEnhanced pile-driving app (due finals week)",
+    "crumbs": [
+      "TME 310A",
+      "Project",
+      "Course Project"
+    ]
+  },
+  {
+    "objectID": "website/project_02.html",
+    "href": "website/project_02.html",
+    "title": "Project Part 2 - basic pile-driving app",
+    "section": "",
+    "text": "Project Part 2 - basic pile-driving app\nPurpose\nInstructions\nSubmission\nRubric",
+    "crumbs": [
+      "TME 310A",
+      "Project",
+      "Project Part 2 - basic pile-driving app"
+    ]
+  },
+  {
+    "objectID": "website/weeks/week_2.html",
+    "href": "website/weeks/week_2.html",
+    "title": "Week 2",
+    "section": "",
+    "text": "Topic\nVideo\nSlides\nCode\n\n\n\n\nModeling framework\ntext\n\ntext\n\n\nApproaching problems\ntext\n\n\n\n\nFunctional programming\ntext\n\n\n\n\n\n\n\n\nHomework 1",
+    "crumbs": [
+      "TME 310A",
+      "Weekly materials",
+      "Week 2"
+    ]
+  },
+  {
+    "objectID": "website/weeks/week_2.html#materials",
+    "href": "website/weeks/week_2.html#materials",
+    "title": "Week 2",
+    "section": "",
+    "text": "Topic\nVideo\nSlides\nCode\n\n\n\n\nModeling framework\ntext\n\ntext\n\n\nApproaching problems\ntext\n\n\n\n\nFunctional programming\ntext",
+    "crumbs": [
+      "TME 310A",
+      "Weekly materials",
+      "Week 2"
+    ]
+  },
+  {
+    "objectID": "website/weeks/week_2.html#assignments-due",
+    "href": "website/weeks/week_2.html#assignments-due",
+    "title": "Week 2",
+    "section": "",
+    "text": "Homework 1",
+    "crumbs": [
+      "TME 310A",
+      "Weekly materials",
+      "Week 2"
+    ]
+  },
+  {
+    "objectID": "website/course_syllabus.html",
+    "href": "website/course_syllabus.html",
+    "title": "Syllabus",
+    "section": "",
+    "text": "Computational methods for analyzing mathematical representations of physical systems. The concepts are practiced through examples involving differential equations and programming with computational linear algebra.\n\n\n\nThis course is designed to enable students to meet the following learning objectives:\n\nCreate models of different kinds of systems (e.g., populations, thermal systems, mechanical systems) using multiple kinds of appropriate abstractions (e.g., free-body diagrams, differential equations), validate the predictions of models using different approaches (e.g., estimation, physical laws, analytical solutions), and use models to accomplish useful tasks (e.g., make predictions, explain behavior, evaluate design decisions).\nBe a critical consumer of models (e.g., by assessing a model you encounter and evaluating whether it is appropriate and useful for a given purpose).\nUse code-cased numerical tools to implement models, run simulations, work with data, and generate visualizations.\nCommunicate technical and quantitative information effectively using written and graphical media.\nWork effectively in teams to produce technical deliverables.\n\n\n\n\nUsing AI tools (which I’ll generically use to mean LLMs, generative models, coding agents, etc.) to help you generate code for homework assignments, in-class exercises, and projects is encouraged in this course. As a modeler and an engineer, you are responsible for all the work you submit. Which means that: - You should be able to explain each line of code you submit, whether you used AI on the submission or not. - If you cannot understand the code you submit, you are doing yourself a major disservice.\nIf used properly, AI tools can enhance your learning by allowing you to dig deeper into the physical significance of the models discussed in this course. If used without critically thinking about each line of code generated, AI tools can inhibit your learning by allowing you to complete assignments without understanding what it represents.\nUsing AI tools (or any internet resource, for that matter) is not allowed during in-class quizzes! This makes it all the more important to understand course concepts and not use AI to short-circuit your learning.\nIn short, AI is a tool. Use your tools wisely!\n\n\n\nThis course will have pre-recorded lectures and in-person instruction and exercises. Class sessions will involve a brief lecture recap followed by in-class exercises (ICEs) designed to help you with the weekly homework and/or project.\nI encourage you to work together with your classmates on the ICEs. We will have a quiz every two weeks in class on Thursday.\nOffice hours will be held immediately after class in the same room. I will stick around for an hour after the scheduled class time to help answer questions and work with you on assignments.\n\n\n\n\n\nMost days during class, an exercise problem will be assigned. Students are encouraged to work together to solve the problem and be willing to discuss their results in class. These exercises will help you prepare for homework. In-Class exercises (ICEs) should be your own work, but you may consult classmates and use online resources to help.\n\n\n\nYou will receive a homework assignment every week. You should begin working on your assignment the day it is assigned. The description of the assignment will be posted on Canvas. Homework grades will be based on completeness and answers to reflection questions, rather than the correctness of your Python scripts. However, knowing how to create useful Python scripts is important in the course, so you’re encouraged to review homework solutions when they’re posted and compare the solutions with your own work. Homework should be your own work, but you may consult with classmates and use online resources to help. It is very important that you understand every line of code you submit.\n\n\n\nBiweekly on Thursday, we will have a quiz based on the most recently covered homework. Quiz dates are shown on the course schedule below. The lowest quiz score will be dropped at the end of the term.\nQuizzes are closed-book, closed-notes, individual activities. Consulting any external sources (internet, friend, etc.) is an academic integrity violation. Posting quiz materials or information to a website or sharing it with others is also a violation of academic integrity.\n\n\n\nThe course will culminate with a group project focused on implementing the numerical methods learned.\nEach team will submit a written report and include the source code for the project.\n\n\n\n\nThe schedule below is preliminary and subject to change without notice.\n\n\n\n\n\n\n\n\n\nWeek\nTuesday\nThursday\nNotes\n\n\n\n\n1\n–\nIntroductions, Engineering modeling concept (Ch. 1)\n\n\n\n2\nProgram flow (notes)\nApproximation and error (Ch. 3.2) Quiz 1\nProject groups formed\n\n\n3\nApproximation and error (Ch. 3)\nRoot finding (Ch. 3)\n\n\n\n4\nRoot finding (Ch. 3)\nRoot finding (Ch. 3) Quiz 2\n\n\n\n5\nMatrices (Ch. 2, 4)\nMatrices (Ch. 2, 4)\n\n\n\n6\nMatrices (Ch. 2, 4)\nMatrices (Ch. 2, 4) Quiz 3\n\n\n\n7\nSystems of equations (Ch. 2, 4)\nSystems of equations (Ch. 2, 4)\nProject Part 1 due\n\n\n8\nNumerical differentiation\nNumerical differentiation Quiz 4\n\n\n\n9\nNumerical differentiation (Ch. 8)\nNumerical differentiation (Ch. 8)\n\n\n\n10\nNumerical integration (Ch. 9)\nNumerical integration (Ch. 9) Quiz 5\n\n\n\n11\nNumerical integration (Ch. 9)\n\n\n\n\nFinals week\nQuiz 6\n\nProject Part 2 due\n\n\n\n\n\n\nSO 1: an ability to identify, formulate, and solve complex engineering problems by applying principles of engineering, science, and mathematics\nSO 6: an ability to develop and conduct appropriate experimentation, analyze and interpret data, and use engineering judgment to draw conclusions\n\n\n\nFor information on other campus and student resources, including Policies and Expectations (including religious accommodation), Academic Support, and Self & Family Resources, visit The e-Syllabus: Campus Information, Resources, Policies and Expectations page.",
+    "crumbs": [
+      "TME 310A",
+      "Course information",
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "website/course_syllabus.html#course-description",
+    "href": "website/course_syllabus.html#course-description",
+    "title": "Syllabus",
+    "section": "",
+    "text": "Computational methods for analyzing mathematical representations of physical systems. The concepts are practiced through examples involving differential equations and programming with computational linear algebra.",
+    "crumbs": [
+      "TME 310A",
+      "Course information",
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "website/course_syllabus.html#learning-objectives",
+    "href": "website/course_syllabus.html#learning-objectives",
+    "title": "Syllabus",
+    "section": "",
+    "text": "This course is designed to enable students to meet the following learning objectives:\n\nCreate models of different kinds of systems (e.g., populations, thermal systems, mechanical systems) using multiple kinds of appropriate abstractions (e.g., free-body diagrams, differential equations), validate the predictions of models using different approaches (e.g., estimation, physical laws, analytical solutions), and use models to accomplish useful tasks (e.g., make predictions, explain behavior, evaluate design decisions).\nBe a critical consumer of models (e.g., by assessing a model you encounter and evaluating whether it is appropriate and useful for a given purpose).\nUse code-cased numerical tools to implement models, run simulations, work with data, and generate visualizations.\nCommunicate technical and quantitative information effectively using written and graphical media.\nWork effectively in teams to produce technical deliverables.",
+    "crumbs": [
+      "TME 310A",
+      "Course information",
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "website/course_syllabus.html#using-ai-tools-in-this-course",
+    "href": "website/course_syllabus.html#using-ai-tools-in-this-course",
+    "title": "Syllabus",
+    "section": "",
+    "text": "Using AI tools (which I’ll generically use to mean LLMs, generative models, coding agents, etc.) to help you generate code for homework assignments, in-class exercises, and projects is encouraged in this course. As a modeler and an engineer, you are responsible for all the work you submit. Which means that: - You should be able to explain each line of code you submit, whether you used AI on the submission or not. - If you cannot understand the code you submit, you are doing yourself a major disservice.\nIf used properly, AI tools can enhance your learning by allowing you to dig deeper into the physical significance of the models discussed in this course. If used without critically thinking about each line of code generated, AI tools can inhibit your learning by allowing you to complete assignments without understanding what it represents.\nUsing AI tools (or any internet resource, for that matter) is not allowed during in-class quizzes! This makes it all the more important to understand course concepts and not use AI to short-circuit your learning.\nIn short, AI is a tool. Use your tools wisely!",
+    "crumbs": [
+      "TME 310A",
+      "Course information",
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "website/course_syllabus.html#course-format",
+    "href": "website/course_syllabus.html#course-format",
+    "title": "Syllabus",
+    "section": "",
+    "text": "This course will have pre-recorded lectures and in-person instruction and exercises. Class sessions will involve a brief lecture recap followed by in-class exercises (ICEs) designed to help you with the weekly homework and/or project.\nI encourage you to work together with your classmates on the ICEs. We will have a quiz every two weeks in class on Thursday.\nOffice hours will be held immediately after class in the same room. I will stick around for an hour after the scheduled class time to help answer questions and work with you on assignments.",
+    "crumbs": [
+      "TME 310A",
+      "Course information",
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "website/course_syllabus.html#assignments",
+    "href": "website/course_syllabus.html#assignments",
+    "title": "Syllabus",
+    "section": "",
+    "text": "Most days during class, an exercise problem will be assigned. Students are encouraged to work together to solve the problem and be willing to discuss their results in class. These exercises will help you prepare for homework. In-Class exercises (ICEs) should be your own work, but you may consult classmates and use online resources to help.\n\n\n\nYou will receive a homework assignment every week. You should begin working on your assignment the day it is assigned. The description of the assignment will be posted on Canvas. Homework grades will be based on completeness and answers to reflection questions, rather than the correctness of your Python scripts. However, knowing how to create useful Python scripts is important in the course, so you’re encouraged to review homework solutions when they’re posted and compare the solutions with your own work. Homework should be your own work, but you may consult with classmates and use online resources to help. It is very important that you understand every line of code you submit.\n\n\n\nBiweekly on Thursday, we will have a quiz based on the most recently covered homework. Quiz dates are shown on the course schedule below. The lowest quiz score will be dropped at the end of the term.\nQuizzes are closed-book, closed-notes, individual activities. Consulting any external sources (internet, friend, etc.) is an academic integrity violation. Posting quiz materials or information to a website or sharing it with others is also a violation of academic integrity.\n\n\n\nThe course will culminate with a group project focused on implementing the numerical methods learned.\nEach team will submit a written report and include the source code for the project.",
+    "crumbs": [
+      "TME 310A",
+      "Course information",
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "website/course_syllabus.html#schedule",
+    "href": "website/course_syllabus.html#schedule",
+    "title": "Syllabus",
+    "section": "",
+    "text": "The schedule below is preliminary and subject to change without notice.\n\n\n\n\n\n\n\n\n\nWeek\nTuesday\nThursday\nNotes\n\n\n\n\n1\n–\nIntroductions, Engineering modeling concept (Ch. 1)\n\n\n\n2\nProgram flow (notes)\nApproximation and error (Ch. 3.2) Quiz 1\nProject groups formed\n\n\n3\nApproximation and error (Ch. 3)\nRoot finding (Ch. 3)\n\n\n\n4\nRoot finding (Ch. 3)\nRoot finding (Ch. 3) Quiz 2\n\n\n\n5\nMatrices (Ch. 2, 4)\nMatrices (Ch. 2, 4)\n\n\n\n6\nMatrices (Ch. 2, 4)\nMatrices (Ch. 2, 4) Quiz 3\n\n\n\n7\nSystems of equations (Ch. 2, 4)\nSystems of equations (Ch. 2, 4)\nProject Part 1 due\n\n\n8\nNumerical differentiation\nNumerical differentiation Quiz 4\n\n\n\n9\nNumerical differentiation (Ch. 8)\nNumerical differentiation (Ch. 8)\n\n\n\n10\nNumerical integration (Ch. 9)\nNumerical integration (Ch. 9) Quiz 5\n\n\n\n11\nNumerical integration (Ch. 9)\n\n\n\n\nFinals week\nQuiz 6\n\nProject Part 2 due",
+    "crumbs": [
+      "TME 310A",
+      "Course information",
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "website/course_syllabus.html#abet-student-outcomes",
+    "href": "website/course_syllabus.html#abet-student-outcomes",
+    "title": "Syllabus",
+    "section": "",
+    "text": "SO 1: an ability to identify, formulate, and solve complex engineering problems by applying principles of engineering, science, and mathematics\nSO 6: an ability to develop and conduct appropriate experimentation, analyze and interpret data, and use engineering judgment to draw conclusions",
+    "crumbs": [
+      "TME 310A",
+      "Course information",
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "website/course_syllabus.html#resources",
+    "href": "website/course_syllabus.html#resources",
+    "title": "Syllabus",
+    "section": "",
+    "text": "For information on other campus and student resources, including Policies and Expectations (including religious accommodation), Academic Support, and Self & Family Resources, visit The e-Syllabus: Campus Information, Resources, Policies and Expectations page.",
+    "crumbs": [
+      "TME 310A",
+      "Course information",
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "website/github_codespace.html",
+    "href": "website/github_codespace.html",
+    "title": "Coding platform: GitHub Codespace",
+    "section": "",
+    "text": "See some slides from the intro lecture.\nAnd some other content",
+    "crumbs": [
+      "TME 310A",
+      "Course information",
+      "Coding platform: GitHub Codespace"
+    ]
+  },
+  {
+    "objectID": "website/grading_policies.html",
+    "href": "website/grading_policies.html",
+    "title": "Grading policies",
+    "section": "",
+    "text": "Grading policies",
+    "crumbs": [
+      "TME 310A",
+      "Course information",
+      "Grading policies"
+    ]
+  },
+  {
+    "objectID": "website/being_successful_student.html",
+    "href": "website/being_successful_student.html",
+    "title": "Being a Successful Student",
+    "section": "",
+    "text": "Being a Successful Student\nKeep Current with Course Notifications\nCanvas can automatically keep you informed about due dates, class changes, scheduled events, and much more through its notification system. Be sure to set them, so you are receiving each kind immediately, daily, or weekly, as you prefer.\nPeer Success Mentors\nA peer mentor can assist you in “using effective learning techniques to improve your study skills and gain confidence in your academic abilities.” Connect with one today!\nUW Tacoma Teaching & Learning Center\nHere you can schedule appointments with quantitative and writing lab tutors and access quantitative and writing help and resources.",
+    "crumbs": [
+      "TME 310A",
+      "Course information",
+      "Being a Successful Student"
+    ]
+  },
+  {
+    "objectID": "website/project_03.html",
+    "href": "website/project_03.html",
+    "title": "Project Part 3 - enhanced pile-driving app",
+    "section": "",
+    "text": "Project Part 3 - enhanced pile-driving app",
+    "crumbs": [
+      "TME 310A",
+      "Project",
+      "Project Part 3 - enhanced pile-driving app"
+    ]
+  },
+  {
+    "objectID": "website/weeks/week_1.html",
+    "href": "website/weeks/week_1.html",
+    "title": "Week 1",
+    "section": "",
+    "text": "Topic\nVideo\nSlides\nCode\n\n\n\n\nIntroduction\nN/A\n\nN/A\n\n\nPython basics\ntext\n\n\n\n\n\n\n\n\nNone",
+    "crumbs": [
+      "TME 310A",
+      "Weekly materials",
+      "Week 1"
+    ]
+  },
+  {
+    "objectID": "website/weeks/week_1.html#materials",
+    "href": "website/weeks/week_1.html#materials",
+    "title": "Week 1",
+    "section": "",
+    "text": "Topic\nVideo\nSlides\nCode\n\n\n\n\nIntroduction\nN/A\n\nN/A\n\n\nPython basics\ntext",
+    "crumbs": [
+      "TME 310A",
+      "Weekly materials",
+      "Week 1"
+    ]
+  },
+  {
+    "objectID": "website/weeks/week_1.html#assignments-due",
+    "href": "website/weeks/week_1.html#assignments-due",
+    "title": "Week 1",
+    "section": "",
+    "text": "None",
+    "crumbs": [
+      "TME 310A",
+      "Weekly materials",
+      "Week 1"
+    ]
+  },
+  {
+    "objectID": "website/project_01.html",
+    "href": "website/project_01.html",
+    "title": "Project Part 1 - group coordination",
+    "section": "",
+    "text": "Project Part 1 - group coordination\nPurpose\nInstructions\nSubmission\nRubric",
+    "crumbs": [
+      "TME 310A",
+      "Project",
+      "Project Part 1 - group coordination"
+    ]
+  },
+  {
+    "objectID": "website/start_here.html",
+    "href": "website/start_here.html",
+    "title": "Start here",
+    "section": "",
+    "text": "Start here\nGo through this short “Start here” module for information about the course, the instructor, and being a successful student. At the very least, read the syllabus!\nSyllabus\nInstructor and my role in this course\nAccessibility and accommodations\nBeing a successful student\nGrading policies\nHomework format\nCoding platforms",
+    "crumbs": [
+      "TME 310A",
+      "Course information",
+      "Start here"
+    ]
+  },
+  {
+    "objectID": "website/instructor.html",
+    "href": "website/instructor.html",
+    "title": "Instructor introduction",
+    "section": "",
+    "text": "My name is Lorne Arnold. I like to sail, listen to music, and take naps. Before I started teaching, I worked as a geotechnical engineer for many years, designing foundations for buildings, bridges, and ports. I’m looking forward to getting to know you all this term.\n\n\n\nI am here to guide you as you learn and practice new skills. We will spend a lot of time writing code together and learning from one another. I hope you will all be generous in helping one another during this class. Engineering is very collaborative, so that is an extra skill to practice.\nOnline Availability: I’m online between 8 AM and 5 PM most days, and I’ll try to keep Canvas and GitHub open when I’m not otherwise engaged. From time to time, I will check in after 5 PM, but family obligations will make evening responses from me hit or miss. You can expect to get responses to questions from me in less than one day. Graded quizzes and projects will be typically be returned in less than one week.\nIf you’re looking for help outside of the course’s normal office hours, you can book a meeting with me using my booking link.\nFeedback: I care a lot about improving my teaching. Teaching is not a formula to learn, so I am still working on my own methods in the classroom. I would love to hear from you frequently about how things are going so I can improve over time. Send me a note, a chat, or catch me after class if you have ideas for improvements.\nUnderstanding and flexibility: Every quarter, some students will encounter unavoidable problems that prevent them from completing course assignments on time. The course grading is structured to be fairly flexible. For example, we will drop your lowest in-person quiz score. Let me know if something comes up, and do the best you can to stay on track.",
+    "crumbs": [
+      "TME 310A",
+      "Course information",
+      "Instructor introduction"
+    ]
+  },
+  {
+    "objectID": "website/instructor.html#my-role-in-this-course",
+    "href": "website/instructor.html#my-role-in-this-course",
+    "title": "Instructor introduction",
+    "section": "",
+    "text": "I am here to guide you as you learn and practice new skills. We will spend a lot of time writing code together and learning from one another. I hope you will all be generous in helping one another during this class. Engineering is very collaborative, so that is an extra skill to practice.\nOnline Availability: I’m online between 8 AM and 5 PM most days, and I’ll try to keep Canvas and GitHub open when I’m not otherwise engaged. From time to time, I will check in after 5 PM, but family obligations will make evening responses from me hit or miss. You can expect to get responses to questions from me in less than one day. Graded quizzes and projects will be typically be returned in less than one week.\nIf you’re looking for help outside of the course’s normal office hours, you can book a meeting with me using my booking link.\nFeedback: I care a lot about improving my teaching. Teaching is not a formula to learn, so I am still working on my own methods in the classroom. I would love to hear from you frequently about how things are going so I can improve over time. Send me a note, a chat, or catch me after class if you have ideas for improvements.\nUnderstanding and flexibility: Every quarter, some students will encounter unavoidable problems that prevent them from completing course assignments on time. The course grading is structured to be fairly flexible. For example, we will drop your lowest in-person quiz score. Let me know if something comes up, and do the best you can to stay on track.",
+    "crumbs": [
+      "TME 310A",
+      "Course information",
+      "Instructor introduction"
+    ]
+  },
+  {
+    "objectID": "website/accessibility_accommodations.html",
+    "href": "website/accessibility_accommodations.html",
+    "title": "Accessibility and Accommodations",
+    "section": "",
+    "text": "Accessibility and Accommodations\nIn addition to services offered by UW Tacoma’s Disability Resources for Students (DRS), I will attempt to make every effort to adjust assignments/materials to meet the needs of students who need alternative forms of access.\nIf you find yourself in need of additional assistance, please feel free to contact me directly or arrange to attend my virtual office hours.\nDRS Website: http://www.tacoma.uw.edu/drsuwt",
+    "crumbs": [
+      "TME 310A",
+      "Course information",
+      "Accessibility and Accommodations"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Welcome to TME 310 A - Computational Physical Modeling!",
+    "section": "",
+    "text": "Welcome to TME 310 A - Computational Physical Modeling!\n\n\n\nModeling Framework by Allen Downey (CC BY-NC 4.0)\n\n\nIn this course, we’ll look at the concept of physical modeling with an emphasis on civil and mechanical engineering applications. We will use Python to perform calculations on our models.\nClick the “Start Here” link below to begin going through some introductory material about the course.",
+    "crumbs": [
+      "TME 310A"
+    ]
   }
 ]
