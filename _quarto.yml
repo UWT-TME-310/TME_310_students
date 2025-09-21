@@ -1,7 +1,7 @@
 project:
   type: website
 
-website:
+website: 
   page-navigation: true
   title: "TME 310 A - Fall 2025"
   description: "Homepage for TME 310 A - Computational Physical Modeling at UW Tacoma"
@@ -10,52 +10,59 @@ website:
   repo-url: https://github.com/UWT-TME-310/TME_310_students
   repo-actions: [source, issue]
 
-  open-graph: true
-
   sidebar:
     background: "#ffffff"
-    logo: ".reference/modeling_framework.png"
+    logo: "website/reference/modeling_framework.png"
     pinned: true
     align: center
     tools:
       - icon: github
         href: https://github.com/UWT-TME-310/TME_310_students
-        text: "GitHub site"
+        target: _blank
        
     style: "docked"
     search: true
-    collapse-level: 1
     contents:
-      - section: "Course information"
+      - section: "TME 310A"
+        href: index.qmd
         contents:
-          - href: index.qmd
-            text: Home
-          - href: course_syllabus.qmd
-            text: Syllabus
-      - section: "Resources"
-        contents:
-          - href: resources.qmd
-            text: Resources
-      - section: "Project"
-        contents:
-          - href: project_description.qmd
-            text: Description
-      - section: "Weekly materials"
-        contents:
-          - href: weeks/week_1.qmd
-            text: "Week 1"
-          - href: weeks/week_2.qmd
-            text: "Week 2"
+        - section: "Course information"
+          contents:
+            - href: website/start_here.qmd
+            - href: website/course_syllabus.qmd
+            - href: website/instructor.qmd
+            - href: website/accessibility_accommodations.qmd
+            - href: website/being_successful_student.qmd
+            - href: website/grading_policies.qmd
+            - href: website/homework_format.qmd
+            - href: website/github_codespace.qmd
+        - text: ---
+        - section: "Weekly materials"
+          contents:
+            - href: website/weeks/week_1.qmd
+            - href: website/weeks/week_2.qmd
+            - href: website/examples/plotting_a_sine_wave.ipynb
+        - text: ---
+        - section:
+          href: website/resources.qmd
+        - text: ---   
+        - section: "Project"
+          contents:
+            - href: website/project_description.qmd
+            - href: website/project_01.qmd
+            - href: website/project_02.qmd
+            - href: website/project_03.qmd
+      
 
 format:
   html:
+    link-external-newwindow: true
+    link-source-notebook: true
     theme:
       - cosmo
-    css: styles.css
+    css: website/styles.css
     code-copy: true
     code-overflow: wrap
     toc: true
 
 freeze: auto
-
-editor: visual
