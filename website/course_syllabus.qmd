@@ -1,5 +1,11 @@
 # Syllabus
 
+TME 310 A - Computational Physical Modeling\
+**Instructor**: Dr. Lorne Arnold\
+**Location**: MLG 330\
+**Meeting times**: Tuesdays and Thursdays, 1:30 to 2:30 PM \
+**Office Hours**: Tuesdays and Thursdays, 2:30 to 3:30 PM (right after class, in the same room)
+
 ## Course description
 
 Computational methods for analyzing mathematical representations of physical systems. The concepts are practiced through examples involving differential equations and programming with computational linear algebra.
@@ -33,13 +39,9 @@ Office hours will be held immediately after class in the same room. I will stick
 
 ## Assignments
 
-### In-Class Exercises (10%)
-
-Most days during class, an exercise problem will be assigned. Students are encouraged to work together to solve the problem and be willing to discuss their results in class. These exercises will help you prepare for homework. In-Class exercises (ICEs) should be your own work, but you may consult classmates and use online resources to help.
-
 ### Homework (30%)
 
-You will receive a homework assignment every week. You should begin working on your assignment the day it is assigned. The description of the assignment will be posted on Canvas. Homework grades will be based on **completeness** and answers to **reflection** questions, rather than the correctness of your Python scripts. However, knowing how to create useful Python scripts is important in the course, so you're encouraged to review homework solutions when they're posted and compare the solutions with your own work. Homework should be your own work, but you may consult with classmates and use online resources to help. It is very important that you understand every line of code you submit.
+You will receive a homework assignment roughly every week. You should begin working on your assignment the day it is assigned. The description of the assignment will be posted on Canvas. Homework grades will be based on **completeness** and answers to **reflection** questions, rather than the correctness of your Python scripts. Homework should be your own work, but you may consult with classmates and use online resources to help. It is very important that you understand every line of code you submit.
 
 ### Quizzes (30%)
 
@@ -51,6 +53,10 @@ Quizzes are closed-book, closed-notes, individual activities. Consulting any ext
 The course will culminate with a group project focused on implementing the numerical methods learned.\
 Each team will submit a written report and include the source code for the project.
 
+### Lectures, etc. (10%)
+
+Pre-recorded lecture videos will be posted to Canvas as assignments. Additionally, occasional small assignments (e.g., surveys, low-stakes problems) may be assigned throughout the quarter.
+
 ## Schedule
 
 The schedule below is preliminary and subject to
@@ -59,17 +65,17 @@ The schedule below is preliminary and subject to
 | **Week** | **Tuesday** | **Thursday** | **Notes** |
 |------------------|------------------|------------------|------------------|
 | 1 | -- | Introductions, <br>Engineering modeling concept (Ch. 1) |  |
-| 2 | Program flow (notes) | Approximation and error (Ch. 3.2) <br>**Quiz 1** | Project groups formed |
-| 3 | Approximation and error (Ch. 3) | Root finding (Ch. 3) |  |
-| 4 | Root finding (Ch. 3) | Root finding (Ch. 3) <br>**Quiz 2** |  |
-| 5 | Matrices (Ch. 2, 4) | Matrices (Ch. 2, 4) |  |
-| 6 | Matrices (Ch. 2, 4) | Matrices (Ch. 2, 4) <br>**Quiz 3** |  |
-| 7 | Systems of equations (Ch. 2, 4) | Systems of equations (Ch. 2, 4) | Project Part 1 due |
-| 8 | Numerical differentiation | Numerical differentiation <br>**Quiz 4** |  |
-| 9 | Numerical differentiation (Ch. 8) | Numerical differentiation (Ch. 8) |  |
-| 10 | Numerical integration (Ch. 9) | Numerical integration (Ch. 9) <br>**Quiz 5** |  |
-| 11 | Numerical integration (Ch. 9) |  |  |
-| Finals week | **Quiz 6** |  | Project Part 2 due |
+| 2 | Modeling framework | Problem-solving  |  |
+| 3 | Approximation and error | Root finding  <br>**Quiz 1**| Project Part 1 due |
+| 4 | Root finding | Root finding  |  |
+| 5 | Matrices  | Matrices  <br>**Quiz 2**  |  |
+| 6 | Matrices  | Matrices  | Project Part 2 due  |
+| 7 | Systems of equations  | Systems of equations  <br>**Quiz 3**  | |
+| 8 | No class (Veterans Day) | Numerical differentiation |  |
+| 9 | Numerical differentiation  | Numerical differentiation  <br>**Quiz 4**  |  |
+| 10 | Numerical integration | No class (Thanskgiving) |  |
+| 11 | Numerical integration |  |  |
+| Finals week | **Quiz 5** |  | Project Part 3 due |
 
 ## ABET Student Outcomes
 

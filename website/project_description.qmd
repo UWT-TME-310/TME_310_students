@@ -1,6 +1,9 @@
 # Course Project
 
-It's a group project.
+::: callout-caution
+## Note
+This page is incomplete. Details coming soon.
+:::
 
 Groups will be assigned randomly. Groups will be 3 or 4 students.
 

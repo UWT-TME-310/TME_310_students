@@ -1,9 +1,14 @@
 # Project Part 1 - group coordination
 
-Purpose
+::: callout-caution
+## Note
+This page is incomplete. Details coming soon.
+:::
+
+<!-- Purpose
 
 Instructions
 
 Submission
 
-Rubric
+Rubric -->

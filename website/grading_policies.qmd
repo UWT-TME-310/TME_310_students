@@ -1,1 +1,94 @@
 # Grading policies
+
+Assignment categories and weights
+
+* Homework (30%)
+* Quizzes (30%) - lowest quiz score dropped
+* Project (30%)
+* Lectures, etc. (10%)
+
+## Late policies
+
+The course has different late policies depending on the assignment type.
+
+### For Homework, Project assignments, and Lectures, etc.
+
+#### WHY
+
+My goal for this late policy is to motivate students to complete their work on time whenever possible, but still encourage completing assignments if the due date has passed. Even if several days go by, getting some points is better than getting none! Of course, toward the end of the quarter, your flexibility runs out.
+
+#### WHAT
+
+Homework and Project assignments in Canvas will remain open for submissions after the deadline through the end of the quarter. I will grade late submissions like any other submission (except that it may take longer for me to get to them). Canvas will automatically deduct 10 percent of the possible grade for each day late up to 5 days. After 5 days, no further penalty is applied and Canvas will automatically deduct 50 percent of the possible grade from the graded assignment score. If there are unusual circumstances that you know about in advance, talk to me about them. For legitimate, pre-approved reasons, I can override Canvas's deduction for late work.
+
+### For Quizzes 
+
+#### WHY
+This late policy is based on the in-person, timed nature of the assignment type.
+
+#### WHAT
+
+Quizzes are conducted in-person in class. In general, makeup quizzes will not be offered. If there are unusual circumstances that you know about in advance, talk to me about them. For legitimate, pre-approved reasons, I can allow you to arrange an alternative time to take a quiz.
+Course grade scale
+
+Your lowest quiz score for the quarter will be dropped.
+
+## Self-grading for Homework
+
+Homework assignments will be self-graded. 
+I will provide the grading rubric and solution shortly after the assignment due date.
+Students will be responsible for assessing their work against the rubric and assignment solution and posting their self-assessments to Canvas.
+
+I will randomly select one problem per homework assignment to grade myself.
+These instructor-graded scores will take precedent over the self-graded score for that problem.
+If a student's self-assigned grade for the problem varies significantly from the instructor's score, it may trigger instructor grading of additional problems where the instructor's score will also take precedent over the self-graded scores.
+Blatantly inflated self-assigned grades are considered an academic integrity violation and may result in loss of all points for the assignment.
+
+## Grade scale
+
+Final grades will be calculated by determining the percentage of points received (rounding up or down to the nearest % point using conventional rounding standards) and converting to numerical grades as follows:
+
+| Letter   Grade | Overall Score (%) | GPA   |
+|----------------|-------------------|-------|
+| A              | 100               | 4     |
+| A              | 99                | 4     |
+| A              | 98                | 3.9   |
+| A              | 97                | 3.9   |
+| A-             | 96                | 3.8   |
+| A-             | 95                | 3.8   |
+| A-             | 94                | 3.7   |
+| A-             | 93                | 3.7   |
+| A-             | 92                | 3.6   |
+| A-             | 91                | 3.6   |
+| A-             | 90                | 3.5   |
+| B+             | 89                | 3.4   |
+| B+             | 88                | 3.3   |
+| B+             | 87                | 3.2   |
+| B              | 86                | 3.1   |
+| B              | 85                | 3     |
+| B              | 84                | 2.9   |
+| B-             | 83                | 2.8   |
+| B-             | 82                | 2.7   |
+| B-             | 81                | 2.6   |
+| B-             | 80                | 2.5   |
+| C+             | 79                | 2.4   |
+| C+             | 78                | 2.3   |
+| C+             | 77                | 2.2   |
+| C              | 76                | 2.1   |
+| C              | 75                | 2     |
+| C              | 74                | 1.9   |
+| C-             | 73                | 1.8   |
+| C-             | 72                | 1.7   |
+| C-             | 71                | 1.6   |
+| C-             | 70                | 1.5   |
+| D+             | 69                | 1.4   |
+| D+             | 68                | 1.3   |
+| D+             | 67                | 1.2   |
+| D              | 66                | 1.1   |
+| D              | 65                | 1     |
+| D              | 64                | 0.9   |
+| D-             | 63                | 0.8   |
+| D-             | 62                | 0.8   |
+| D-             | 61                | 0.7   |
+| D-             | 60                | 0.7   |
+| E              | 59                | < 0.7 |

@@ -1,0 +1,13 @@
+# Week 3
+Course content will be added on a rolling basis
+
+## Materials
+
+| Topic | Video | Slides| Code |
+|----|----|----|----|
+|   |   |   |   |    
+
+
+## Assignments due
+* Homework 2
+* [Project Part 1](https://canvas.uw.edu/courses/1835208/assignments/10692178)

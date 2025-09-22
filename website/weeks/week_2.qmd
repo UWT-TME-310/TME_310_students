@@ -1,13 +1,14 @@
 # Week 2
+Course content will be added on a rolling basis
 
 ## Materials
 
 | Topic | Video | Slides| Code |
 |----|----|----|----|
-| Modeling framework| [text](link)|    | [text](link)|
-| Approaching problems | [text](link)|    |    |
-| Functional programming | [text](link)|    |    |
+| Modeling framework| |    | |
+| Approaching problems | |    |    |
+| Functional programming | |    |    |
 
 ## Assignments due
 
-[Homework 1](https://canvas.uw.edu/courses/1835208/assignments/10692082)
+* Homework 1 (plus self-grading)

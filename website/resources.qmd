@@ -6,13 +6,11 @@ If you find yourself struggling with any of the course concepts, look through th
 ## Python language
 
 * [Python cheatsheet](reference/python-cheat-sheet.pdf)
-
 * [Python reference (Real Python)](https://realpython.com/ref/)
 
 ## Coding with Copilot
 
 * [Prompting Copilot](https://www.youtube.com/watch?v=hh1nOX14TyY&t=118s)
-
 * [Copilot Best Practices](https://www.youtube.com/watch?v=2q0BoioYSxQ&list=PLj6YeMhvp2S7rQaCLRrMnzRdkNdKnMVwg&index=48)
 
 ::: callout-note
@@ -21,3 +19,8 @@ I didn't agree with the advice to not use comments to interact with Copilot... A
 :::
 
 * [Copilot in Jupyter](https://www.youtube.com/watch?v=QS_bh-3qKdw&list=PLj6YeMhvp2S7rQaCLRrMnzRdkNdKnMVwg&index=106)
+
+## External libraries
+
+* Arrays and computation: [Numpy introductory documentation](https://numpy.org/doc/stable/user/absolute_beginners.html)
+* Plotting: [Plotting introductory documentation](https://matplotlib.org/stable/users/explain/quick_start.html)
