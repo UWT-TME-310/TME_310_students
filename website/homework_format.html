@@ -202,19 +202,12 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../examples/plotting_a_sine_wave.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Plotting a sine wave</span></a>
+  <a href="../website/weeks/week_3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 3</span></a>
   </div>
 </li>
       </ul>
   </li>
-          <li class="px-0"><hr class="sidebar-divider hi "></li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../website/resources.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Resources</span></a>
-  </div>
-</li>
           <li class="px-0"><hr class="sidebar-divider hi "></li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
@@ -231,26 +224,22 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Course Project</span></a>
   </div>
 </li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../website/project_01.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Project Part 1 - group coordination</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../website/project_02.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Project Part 2 - basic pile-driving app</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../website/project_03.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Project Part 3 - enhanced pile-driving app</span></a>
-  </div>
-</li>
       </ul>
   </li>
+          <li class="px-0"><hr class="sidebar-divider hi "></li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../website/examples.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Example scripts</span></a>
+  </div>
+</li>
+          <li class="px-0"><hr class="sidebar-divider hi "></li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../website/resources.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Resources</span></a>
+  </div>
+</li>
       </ul>
   </li>
     </ul>
@@ -263,7 +252,17 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#homework-format" id="toc-homework-format" class="nav-link active" data-scroll-target="#homework-format">Homework format</a></li>
+  <li><a href="#homework-format" id="toc-homework-format" class="nav-link active" data-scroll-target="#homework-format">Homework format</a>
+  <ul class="collapse">
+  <li><a href="#anatomy-of-a-problem" id="toc-anatomy-of-a-problem" class="nav-link" data-scroll-target="#anatomy-of-a-problem">Anatomy of a problem</a>
+  <ul class="collapse">
+  <li><a href="#summarize" id="toc-summarize" class="nav-link" data-scroll-target="#summarize">Summarize</a></li>
+  <li><a href="#plan" id="toc-plan" class="nav-link" data-scroll-target="#plan">Plan</a></li>
+  <li><a href="#code" id="toc-code" class="nav-link" data-scroll-target="#code">Code</a></li>
+  <li><a href="#reflect" id="toc-reflect" class="nav-link" data-scroll-target="#reflect">Reflect</a></li>
+  </ul></li>
+  <li><a href="#grading-rubric" id="toc-grading-rubric" class="nav-link" data-scroll-target="#grading-rubric">Grading rubric</a></li>
+  </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/UWT-TME-310/TME_310_students/blob/main/website/homework_format.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="https://github.com/UWT-TME-310/TME_310_students/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -275,8 +274,107 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="homework-format" class="level1">
 <h1>Homework format</h1>
+<p>Homework assignments will be distributed through GitHub Classroom in the form of Jupyter Notebooks. In general, there will be 3 to 4 problems to solve in each assignment. The problems are intended to take 15 to 30 minutes of your time. Taking into consideration the coding skills and concepts presented throughout the course, you should expect the complexity of the problems to increase throughout the quarter.</p>
+<section id="anatomy-of-a-problem" class="level2">
+<h2 class="anchored" data-anchor-id="anatomy-of-a-problem">Anatomy of a problem</h2>
+<p>Each problem contains four sub-problems, which are based on the <a href="https://math.libretexts.org/Courses/Coalinga_College/Math_for_Educators_(MATH_010A_and_010B_CID120)/05%3A_Problem_Solving/5.02%3A_George_Polya's_Strategy#:~:text=His%20method%20consists%20of%20four,of%20the%20problem%2Dsolving%20process.">four phases of problem solving proposed by G. Polya</a>.</p>
+<ol type="1">
+<li>Summarize</li>
+<li>Plan</li>
+<li>Code</li>
+<li>Reflect</li>
+</ol>
+<p>Three of the sections (1, 2, and 4) ask for text responses and one (3) asks for Python code.</p>
+<section id="summarize" class="level3">
+<h3 class="anchored" data-anchor-id="summarize">Summarize</h3>
+<p>In general, the summarize sub-problem will prompt you to:</p>
+<blockquote class="blockquote">
+<p>Summarize the goal(s) of the problem in your own words.</p>
+</blockquote>
+<p>Answers to this sub-problem should be written in complete sentences and accurately reflect the goal(s) from the problem description. This is where students can demonstrate their understanding of the problem.</p>
+</section>
+<section id="plan" class="level3">
+<h3 class="anchored" data-anchor-id="plan">Plan</h3>
+<p>In general, the plan sub-problem will prompt you to:</p>
+<blockquote class="blockquote">
+<p>Describe your plan to solve the problem.</p>
+</blockquote>
+<p>Answers to this sub-problem may be in complete sentences, but a bullet list of steps or some combination of sentences and bullets will work well, too. Whatever the form, the plan should give enough detail to outline the code you’ll write to solve the problem.</p>
+</section>
+<section id="code" class="level3">
+<h3 class="anchored" data-anchor-id="code">Code</h3>
+<p>This sub-problem is where you’re asked to write the Python code that will solve the problem. You can write all the code in the assignment notebook (recommended towards the beginning of the course) or in separate Python scripts that you import into your assignment notebook (we’ll do this towards the end of the course).</p>
+<p>If your plan is well-written, simply copying it into your script (commented out, of course) will take you a long way toward a successful code solution. Feel free to ask GitHub Copilot “help me implement this plan”. This will often result in a good first pass at your coding solution.</p>
+</section>
+<section id="reflect" class="level3">
+<h3 class="anchored" data-anchor-id="reflect">Reflect</h3>
+<p>The specific text of this sub-problem will vary, so please read it carefully. In general, the plan sub-problem will ask:</p>
+<blockquote class="blockquote">
+<p>Looking back at your code and the resulting output, reflect on whether your code achieved the problem goal(s). To the extent the problem models a physical system, how realistic does the behavior seem? Are there any changes you would make to your approach if you were to solve this problem again (e.g., to make your code more re-usable or to avoid dead ends)?</p>
+</blockquote>
+</section>
+</section>
+<section id="grading-rubric" class="level2">
+<h2 class="anchored" data-anchor-id="grading-rubric">Grading rubric</h2>
+<p>As described in the <a href="../website/grading_policies.html#self-grading-for-homework">Grading policies page</a>, you’ll be responsible for grading your own homework assignments. Use the rubric below to grade your homework. I’ll use the same rubric for check problems I grade.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Category</th>
+<th>2 Points</th>
+<th>1 Point</th>
+<th>0 Points</th>
+<th>Score</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Summarize</td>
+<td>The problem goals are summarized accurately. The summary is written in complete sentences.</td>
+<td>Problem goals are inaccurately summarized or the summary is not in complete sentences.</td>
+<td>Missing or unclear summary</td>
+<td>__ / 8</td>
+</tr>
+<tr class="even">
+<td>Plan</td>
+<td>A reasonable plan to solve the problem is described. The description provides enough detail for a coding outline.</td>
+<td>The proposed plan contains logical errors or insufficient detail to start a coding outline.</td>
+<td>Missing or unclear plan</td>
+<td>__ / 8</td>
+</tr>
+<tr class="odd">
+<td>Code</td>
+<td>The code solves the problem. The code runs without raising errors.</td>
+<td>The code provides a partial solution to the problem or raises errors when executed</td>
+<td>Missing or irrelevant code</td>
+<td>__ / 8</td>
+</tr>
+<tr class="even">
+<td>Reflect</td>
+<td>The reflection is thoughtful, relevant, and written in complete sentences. Problem-specific content is addressed.</td>
+<td>The reflection is marginally relevant or not in complete sentences.</td>
+<td>Missing or unclear reflection</td>
+<td>__ / 8</td>
+</tr>
+<tr class="odd">
+<td>Total</td>
+<td></td>
+<td></td>
+<td></td>
+<td>__ / 8</td>
+</tr>
+</tbody>
+</table>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

@@ -4,19 +4,14 @@
     "href": "examples/plotting_a_sine_wave.html",
     "title": "Plotting a sine wave",
     "section": "",
-    "text": "This notebook shows how to use matplotlib and numpy to plot a sine wave.\nFirst, import the required packages:\n\nimport matplotlib.pyplot as plt\nimport numpy as np\n\nThen create a time array using Numpy’s linspace() and an amplitude array by using the newly created time array as input to Numpy’s sin(). I also include a factor of \\(2 \\pi\\) radians so that one second corresponds to one full sine period.\n\ntime = np.linspace(0, 3, 500)\namplitude = np.sin(2 * np.pi * time)\n\nUse plt.subplots() to create a figure and axes to plot on. Add the plot to the axes with the plot(x, y) method, providing time as the x variable and amplitude as the y variable.\n\nfig, ax = plt.subplots()\nax.plot(time, amplitude)\nax.set(xlabel='Time (s)', ylabel='Amplitude', title='Sine Wave')\nax.grid()\nplt.show()",
-    "crumbs": [
-      "TME 310A",
-      "Weekly materials",
-      "Plotting a sine wave"
-    ]
+    "text": "This notebook shows how to use matplotlib and numpy to plot a sine wave.\nFirst, import the required packages:\n\nimport matplotlib.pyplot as plt\nimport numpy as np\n\nThen create a time array using Numpy’s linspace() and an amplitude array by using the newly created time array as input to Numpy’s sin(). I also include a factor of \\(2 \\pi\\) radians so that one second corresponds to one full sine period.\n\ntime = np.linspace(0, 3, 500)\namplitude = np.sin(2 * np.pi * time)\n\nUse plt.subplots() to create a figure and axes to plot on. Add the plot to the axes with the plot(x, y) method, providing time as the x variable and amplitude as the y variable.\n\nfig, ax = plt.subplots()\nax.plot(time, amplitude)\nax.set(xlabel='Time (s)', ylabel='Amplitude', title='Sine Wave')\nax.grid()\nplt.show()"
   },
   {
     "objectID": "website/resources.html",
     "href": "website/resources.html",
     "title": "Resources",
     "section": "",
-    "text": "This page contains lists of resources you may find helpful for this course. None of the resources are mandatory, but I recommend you look over the list to familiarize yourself with the kind of content that’s available. If you find yourself struggling with any of the course concepts, look through these resources again to see if there’s anything that can help.\n\n\n\nPython cheatsheet\nPython reference (Real Python)\n\n\n\n\n\nPrompting Copilot\nCopilot Best Practices\n\n\n\n\n\n\n\nNote\n\n\n\nI didn’t agree with the advice to not use comments to interact with Copilot… And then the very next video (next link below) I watched from the same playlist recommended using comments to prompt Copilot!\n\n\n\nCopilot in Jupyter",
+    "text": "This page contains lists of resources you may find helpful for this course. None of the resources are mandatory, but I recommend you look over the list to familiarize yourself with the kind of content that’s available. If you find yourself struggling with any of the course concepts, look through these resources again to see if there’s anything that can help.\n\n\n\nPython cheatsheet\nPython reference (Real Python)\n\n\n\n\n\nPrompting Copilot\nCopilot Best Practices\n\n\n\n\n\n\n\nNote\n\n\n\nI didn’t agree with the advice to not use comments to interact with Copilot… And then the very next video (next link below) I watched from the same playlist recommended using comments to prompt Copilot!\n\n\n\nCopilot in Jupyter\n\n\n\n\n\nArrays and computation: Numpy introductory documentation\nPlotting: Plotting introductory documentation",
     "crumbs": [
       "TME 310A",
       "Resources"
@@ -45,123 +40,196 @@
     ]
   },
   {
-    "objectID": "website/homework_format.html",
-    "href": "website/homework_format.html",
-    "title": "Homework format",
+    "objectID": "website/resources.html#external-libraries",
+    "href": "website/resources.html#external-libraries",
+    "title": "Resources",
     "section": "",
-    "text": "Homework format",
+    "text": "Arrays and computation: Numpy introductory documentation\nPlotting: Plotting introductory documentation",
     "crumbs": [
       "TME 310A",
-      "Course information",
-      "Homework format"
+      "Resources"
     ]
   },
   {
-    "objectID": "website/start_here.html",
-    "href": "website/start_here.html",
-    "title": "Start here",
+    "objectID": "website/accessibility_accommodations.html",
+    "href": "website/accessibility_accommodations.html",
+    "title": "Accessibility and Accommodations",
     "section": "",
-    "text": "Start here\nGo through this short “Start here” module for information about the course, the instructor, and being a successful student. At the very least, read the syllabus!\nSyllabus\nInstructor and my role in this course\nAccessibility and accommodations\nBeing a successful student\nGrading policies\nHomework format\nCoding platforms",
+    "text": "Accessibility and Accommodations\nIn addition to services offered by UW Tacoma’s Disability Resources for Students (DRS), I will attempt to make every effort to adjust assignments/materials to meet the needs of students who need alternative forms of access.\nIf you find yourself in need of additional assistance, please feel free to contact me directly or arrange to attend my virtual office hours.\nDRS Website: http://www.tacoma.uw.edu/drsuwt",
     "crumbs": [
       "TME 310A",
       "Course information",
-      "Start here"
+      "Accessibility and Accommodations"
     ]
   },
   {
-    "objectID": "website/project_01.html",
-    "href": "website/project_01.html",
-    "title": "Project Part 1 - group coordination",
+    "objectID": "website/instructor.html",
+    "href": "website/instructor.html",
+    "title": "Instructor introduction",
     "section": "",
-    "text": "Project Part 1 - group coordination\nPurpose\nInstructions\nSubmission\nRubric",
+    "text": "My name is Lorne Arnold. I like to sail, listen to music, and take naps. Before I started teaching, I worked as a geotechnical engineer for many years, designing foundations for buildings, bridges, and ports. I’m looking forward to getting to know you all this term.\n\n\n\nI am here to guide you as you learn and practice new skills. We will spend a lot of time writing code together and learning from one another. I hope you will all be generous in helping one another during this class. Engineering is very collaborative, so that is an extra skill to practice.\nOnline Availability: I’m online between 8 AM and 5 PM most days, and I’ll try to keep Canvas and GitHub open when I’m not otherwise engaged. From time to time, I will check in after 5 PM, but family obligations will make evening responses from me hit or miss. You can expect to get responses to questions from me in less than one day. Graded quizzes and projects will be typically be returned in less than one week.\nIf you’re looking for help outside of the course’s normal office hours, you can book a meeting with me using my booking link.\nFeedback: I care a lot about improving my teaching. Teaching is not a formula to learn, so I am still working on my own methods in the classroom. I would love to hear from you frequently about how things are going so I can improve over time. Send me a note, a chat, or catch me after class if you have ideas for improvements.\nUnderstanding and flexibility: Every quarter, some students will encounter unavoidable problems that prevent them from completing course assignments on time. The course grading is structured to be fairly flexible. For example, we will drop your lowest in-person quiz score. Let me know if something comes up, and do the best you can to stay on track.",
+    "crumbs": [
+      "TME 310A",
+      "Course information",
+      "Instructor introduction"
+    ]
+  },
+  {
+    "objectID": "website/instructor.html#my-role-in-this-course",
+    "href": "website/instructor.html#my-role-in-this-course",
+    "title": "Instructor introduction",
+    "section": "",
+    "text": "I am here to guide you as you learn and practice new skills. We will spend a lot of time writing code together and learning from one another. I hope you will all be generous in helping one another during this class. Engineering is very collaborative, so that is an extra skill to practice.\nOnline Availability: I’m online between 8 AM and 5 PM most days, and I’ll try to keep Canvas and GitHub open when I’m not otherwise engaged. From time to time, I will check in after 5 PM, but family obligations will make evening responses from me hit or miss. You can expect to get responses to questions from me in less than one day. Graded quizzes and projects will be typically be returned in less than one week.\nIf you’re looking for help outside of the course’s normal office hours, you can book a meeting with me using my booking link.\nFeedback: I care a lot about improving my teaching. Teaching is not a formula to learn, so I am still working on my own methods in the classroom. I would love to hear from you frequently about how things are going so I can improve over time. Send me a note, a chat, or catch me after class if you have ideas for improvements.\nUnderstanding and flexibility: Every quarter, some students will encounter unavoidable problems that prevent them from completing course assignments on time. The course grading is structured to be fairly flexible. For example, we will drop your lowest in-person quiz score. Let me know if something comes up, and do the best you can to stay on track.",
+    "crumbs": [
+      "TME 310A",
+      "Course information",
+      "Instructor introduction"
+    ]
+  },
+  {
+    "objectID": "website/project_description.html",
+    "href": "website/project_description.html",
+    "title": "Course Project",
+    "section": "",
+    "text": "Note\n\n\n\nThis page is incomplete. Details coming soon.\n\n\nGroups will be assigned randomly. Groups will be 3 or 4 students.\n\n\nThe project topic is modeling the installation of driven piles with open-ended diesel hammers.\nEach team will build a jupyter notebook interactive app to predict the capacity of a driven pile based on data collected during installation.\nThere will be a baseline app to be delivered in Part 2 and then the groups will choose additional features to include to enhance their app for Part 3.\n\n\n\nThe project will have three deliverables:\n\nGroup coordination (due week 3)\nBasic pile-driving app (due week 6)\nEnhanced pile-driving app (due finals week)",
     "crumbs": [
       "TME 310A",
       "Project",
-      "Project Part 1 - group coordination"
+      "Course Project"
     ]
   },
   {
-    "objectID": "website/weeks/week_1.html",
-    "href": "website/weeks/week_1.html",
-    "title": "Week 1",
+    "objectID": "website/project_description.html#topic",
+    "href": "website/project_description.html#topic",
+    "title": "Course Project",
     "section": "",
-    "text": "Topic\nVideo\nSlides\nCode\n\n\n\n\nIntroduction\nN/A\n\nN/A\n\n\nPython basics\ntext\n\n\n\n\n\n\n\n\nNone",
-    "crumbs": [
-      "TME 310A",
-      "Weekly materials",
-      "Week 1"
-    ]
-  },
-  {
-    "objectID": "website/weeks/week_1.html#materials",
-    "href": "website/weeks/week_1.html#materials",
-    "title": "Week 1",
-    "section": "",
-    "text": "Topic\nVideo\nSlides\nCode\n\n\n\n\nIntroduction\nN/A\n\nN/A\n\n\nPython basics\ntext",
-    "crumbs": [
-      "TME 310A",
-      "Weekly materials",
-      "Week 1"
-    ]
-  },
-  {
-    "objectID": "website/weeks/week_1.html#assignments-due",
-    "href": "website/weeks/week_1.html#assignments-due",
-    "title": "Week 1",
-    "section": "",
-    "text": "None",
-    "crumbs": [
-      "TME 310A",
-      "Weekly materials",
-      "Week 1"
-    ]
-  },
-  {
-    "objectID": "website/project_03.html",
-    "href": "website/project_03.html",
-    "title": "Project Part 3 - enhanced pile-driving app",
-    "section": "",
-    "text": "Project Part 3 - enhanced pile-driving app",
+    "text": "The project topic is modeling the installation of driven piles with open-ended diesel hammers.\nEach team will build a jupyter notebook interactive app to predict the capacity of a driven pile based on data collected during installation.\nThere will be a baseline app to be delivered in Part 2 and then the groups will choose additional features to include to enhance their app for Part 3.",
     "crumbs": [
       "TME 310A",
       "Project",
-      "Project Part 3 - enhanced pile-driving app"
+      "Course Project"
     ]
   },
   {
-    "objectID": "website/being_successful_student.html",
-    "href": "website/being_successful_student.html",
-    "title": "Being a Successful Student",
+    "objectID": "website/project_description.html#deliverables",
+    "href": "website/project_description.html#deliverables",
+    "title": "Course Project",
     "section": "",
-    "text": "Being a Successful Student\nKeep Current with Course Notifications\nCanvas can automatically keep you informed about due dates, class changes, scheduled events, and much more through its notification system. Be sure to set them, so you are receiving each kind immediately, daily, or weekly, as you prefer.\nPeer Success Mentors\nA peer mentor can assist you in “using effective learning techniques to improve your study skills and gain confidence in your academic abilities.” Connect with one today!\nUW Tacoma Teaching & Learning Center\nHere you can schedule appointments with quantitative and writing lab tutors and access quantitative and writing help and resources.",
+    "text": "The project will have three deliverables:\n\nGroup coordination (due week 3)\nBasic pile-driving app (due week 6)\nEnhanced pile-driving app (due finals week)",
     "crumbs": [
       "TME 310A",
-      "Course information",
-      "Being a Successful Student"
+      "Project",
+      "Course Project"
     ]
   },
   {
-    "objectID": "website/grading_policies.html",
-    "href": "website/grading_policies.html",
-    "title": "Grading policies",
+    "objectID": "website/project_02.html",
+    "href": "website/project_02.html",
+    "title": "Project Part 2 - basic pile-driving app",
     "section": "",
-    "text": "Grading policies",
+    "text": "Project Part 2 - basic pile-driving app\n\n\n\n\n\n\nNote\n\n\n\nThis page is incomplete. Details coming soon."
+  },
+  {
+    "objectID": "website/weeks/week_8.html",
+    "href": "website/weeks/week_8.html",
+    "title": "Week 8",
+    "section": "",
+    "text": "Course content will be added on a rolling basis\n\n\n\n\n\nTopic\nVideo\nSlides\nCode"
+  },
+  {
+    "objectID": "website/weeks/week_8.html#materials",
+    "href": "website/weeks/week_8.html#materials",
+    "title": "Week 8",
+    "section": "",
+    "text": "Topic\nVideo\nSlides\nCode"
+  },
+  {
+    "objectID": "website/weeks/week_10.html",
+    "href": "website/weeks/week_10.html",
+    "title": "Week 10",
+    "section": "",
+    "text": "Course content will be added on a rolling basis\n\n\n\n\n\nTopic\nVideo\nSlides\nCode"
+  },
+  {
+    "objectID": "website/weeks/week_10.html#materials",
+    "href": "website/weeks/week_10.html#materials",
+    "title": "Week 10",
+    "section": "",
+    "text": "Topic\nVideo\nSlides\nCode"
+  },
+  {
+    "objectID": "website/weeks/week_3.html",
+    "href": "website/weeks/week_3.html",
+    "title": "Week 3",
+    "section": "",
+    "text": "Course content will be added on a rolling basis\n\n\n\n\n\nTopic\nVideo\nSlides\nCode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHomework 2\nProject Part 1",
     "crumbs": [
       "TME 310A",
-      "Course information",
-      "Grading policies"
+      "Weekly materials",
+      "Week 3"
     ]
   },
   {
-    "objectID": "website/github_codespace.html",
-    "href": "website/github_codespace.html",
-    "title": "Coding platform: GitHub Codespace",
+    "objectID": "website/weeks/week_3.html#materials",
+    "href": "website/weeks/week_3.html#materials",
+    "title": "Week 3",
     "section": "",
-    "text": "See some slides from the intro lecture.\nAnd some other content",
+    "text": "Topic\nVideo\nSlides\nCode",
     "crumbs": [
       "TME 310A",
-      "Course information",
-      "Coding platform: GitHub Codespace"
+      "Weekly materials",
+      "Week 3"
+    ]
+  },
+  {
+    "objectID": "website/weeks/week_3.html#assignments-due",
+    "href": "website/weeks/week_3.html#assignments-due",
+    "title": "Week 3",
+    "section": "",
+    "text": "Homework 2\nProject Part 1",
+    "crumbs": [
+      "TME 310A",
+      "Weekly materials",
+      "Week 3"
+    ]
+  },
+  {
+    "objectID": "website/weeks/week_6.html",
+    "href": "website/weeks/week_6.html",
+    "title": "Week 6",
+    "section": "",
+    "text": "Course content will be added on a rolling basis\n\n\n\n\n\nTopic\nVideo\nSlides\nCode"
+  },
+  {
+    "objectID": "website/weeks/week_6.html#materials",
+    "href": "website/weeks/week_6.html#materials",
+    "title": "Week 6",
+    "section": "",
+    "text": "Topic\nVideo\nSlides\nCode"
+  },
+  {
+    "objectID": "website/weeks/week_5.html",
+    "href": "website/weeks/week_5.html",
+    "title": "Week 5",
+    "section": "",
+    "text": "Course content will be added on a rolling basis\n\n\n\n\n\nTopic\nVideo\nSlides\nCode"
+  },
+  {
+    "objectID": "website/weeks/week_5.html#materials",
+    "href": "website/weeks/week_5.html#materials",
+    "title": "Week 5",
+    "section": "",
+    "text": "Topic\nVideo\nSlides\nCode"
+  },
+  {
+    "objectID": "website/examples.html",
+    "href": "website/examples.html",
+    "title": "Example scripts",
+    "section": "",
+    "text": "Example scripts\nThe table below contains some example scripts using basic course concepts.\n\n\n\nScript link\nNotes\n\n\n\n\nPlotting a sine wave\nBasic use of matplotlib",
+    "crumbs": [
+      "TME 310A",
+      "Example scripts"
     ]
   },
   {
@@ -169,7 +237,7 @@
     "href": "website/course_syllabus.html",
     "title": "Syllabus",
     "section": "",
-    "text": "Computational methods for analyzing mathematical representations of physical systems. The concepts are practiced through examples involving differential equations and programming with computational linear algebra.\n\n\n\nThis course is designed to enable students to meet the following learning objectives:\n\nCreate models of different kinds of systems (e.g., populations, thermal systems, mechanical systems) using multiple kinds of appropriate abstractions (e.g., free-body diagrams, differential equations), validate the predictions of models using different approaches (e.g., estimation, physical laws, analytical solutions), and use models to accomplish useful tasks (e.g., make predictions, explain behavior, evaluate design decisions).\nBe a critical consumer of models (e.g., by assessing a model you encounter and evaluating whether it is appropriate and useful for a given purpose).\nUse code-cased numerical tools to implement models, run simulations, work with data, and generate visualizations.\nCommunicate technical and quantitative information effectively using written and graphical media.\nWork effectively in teams to produce technical deliverables.\n\n\n\n\nUsing AI tools (which I’ll generically use to mean LLMs, generative models, coding agents, etc.) to help you generate code for homework assignments, in-class exercises, and projects is encouraged in this course. As a modeler and an engineer, you are responsible for all the work you submit. Which means that: - You should be able to explain each line of code you submit, whether you used AI on the submission or not. - If you cannot understand the code you submit, you are doing yourself a major disservice.\nIf used properly, AI tools can enhance your learning by allowing you to dig deeper into the physical significance of the models discussed in this course. If used without critically thinking about each line of code generated, AI tools can inhibit your learning by allowing you to complete assignments without understanding what it represents.\nUsing AI tools (or any internet resource, for that matter) is not allowed during in-class quizzes! This makes it all the more important to understand course concepts and not use AI to short-circuit your learning.\nIn short, AI is a tool. Use your tools wisely!\n\n\n\nThis course will have pre-recorded lectures and in-person instruction and exercises. Class sessions will involve a brief lecture recap followed by in-class exercises (ICEs) designed to help you with the weekly homework and/or project.\nI encourage you to work together with your classmates on the ICEs. We will have a quiz every two weeks in class on Thursday.\nOffice hours will be held immediately after class in the same room. I will stick around for an hour after the scheduled class time to help answer questions and work with you on assignments.\n\n\n\n\n\nMost days during class, an exercise problem will be assigned. Students are encouraged to work together to solve the problem and be willing to discuss their results in class. These exercises will help you prepare for homework. In-Class exercises (ICEs) should be your own work, but you may consult classmates and use online resources to help.\n\n\n\nYou will receive a homework assignment every week. You should begin working on your assignment the day it is assigned. The description of the assignment will be posted on Canvas. Homework grades will be based on completeness and answers to reflection questions, rather than the correctness of your Python scripts. However, knowing how to create useful Python scripts is important in the course, so you’re encouraged to review homework solutions when they’re posted and compare the solutions with your own work. Homework should be your own work, but you may consult with classmates and use online resources to help. It is very important that you understand every line of code you submit.\n\n\n\nBiweekly on Thursday, we will have a quiz based on the most recently covered homework. Quiz dates are shown on the course schedule below. The lowest quiz score will be dropped at the end of the term.\nQuizzes are closed-book, closed-notes, individual activities. Consulting any external sources (internet, friend, etc.) is an academic integrity violation. Posting quiz materials or information to a website or sharing it with others is also a violation of academic integrity.\n\n\n\nThe course will culminate with a group project focused on implementing the numerical methods learned.\nEach team will submit a written report and include the source code for the project.\n\n\n\n\nThe schedule below is preliminary and subject to change without notice.\n\n\n\n\n\n\n\n\n\nWeek\nTuesday\nThursday\nNotes\n\n\n\n\n1\n–\nIntroductions, Engineering modeling concept (Ch. 1)\n\n\n\n2\nProgram flow (notes)\nApproximation and error (Ch. 3.2) Quiz 1\nProject groups formed\n\n\n3\nApproximation and error (Ch. 3)\nRoot finding (Ch. 3)\n\n\n\n4\nRoot finding (Ch. 3)\nRoot finding (Ch. 3) Quiz 2\n\n\n\n5\nMatrices (Ch. 2, 4)\nMatrices (Ch. 2, 4)\n\n\n\n6\nMatrices (Ch. 2, 4)\nMatrices (Ch. 2, 4) Quiz 3\n\n\n\n7\nSystems of equations (Ch. 2, 4)\nSystems of equations (Ch. 2, 4)\nProject Part 1 due\n\n\n8\nNumerical differentiation\nNumerical differentiation Quiz 4\n\n\n\n9\nNumerical differentiation (Ch. 8)\nNumerical differentiation (Ch. 8)\n\n\n\n10\nNumerical integration (Ch. 9)\nNumerical integration (Ch. 9) Quiz 5\n\n\n\n11\nNumerical integration (Ch. 9)\n\n\n\n\nFinals week\nQuiz 6\n\nProject Part 2 due\n\n\n\n\n\n\nSO 1: an ability to identify, formulate, and solve complex engineering problems by applying principles of engineering, science, and mathematics\nSO 6: an ability to develop and conduct appropriate experimentation, analyze and interpret data, and use engineering judgment to draw conclusions\n\n\n\nFor information on other campus and student resources, including Policies and Expectations (including religious accommodation), Academic Support, and Self & Family Resources, visit The e-Syllabus: Campus Information, Resources, Policies and Expectations page.",
+    "text": "TME 310 A - Computational Physical Modeling\nInstructor: Dr. Lorne Arnold\nLocation: MLG 330\nMeeting times: Tuesdays and Thursdays, 1:30 to 2:30 PM\nOffice Hours: Tuesdays and Thursdays, 2:30 to 3:30 PM (right after class, in the same room)\n\n\nComputational methods for analyzing mathematical representations of physical systems. The concepts are practiced through examples involving differential equations and programming with computational linear algebra.\n\n\n\nThis course is designed to enable students to meet the following learning objectives:\n\nCreate models of different kinds of systems (e.g., populations, thermal systems, mechanical systems) using multiple kinds of appropriate abstractions (e.g., free-body diagrams, differential equations), validate the predictions of models using different approaches (e.g., estimation, physical laws, analytical solutions), and use models to accomplish useful tasks (e.g., make predictions, explain behavior, evaluate design decisions).\nBe a critical consumer of models (e.g., by assessing a model you encounter and evaluating whether it is appropriate and useful for a given purpose).\nUse code-cased numerical tools to implement models, run simulations, work with data, and generate visualizations.\nCommunicate technical and quantitative information effectively using written and graphical media.\nWork effectively in teams to produce technical deliverables.\n\n\n\n\nUsing AI tools (which I’ll generically use to mean LLMs, generative models, coding agents, etc.) to help you generate code for homework assignments, in-class exercises, and projects is encouraged in this course. As a modeler and an engineer, you are responsible for all the work you submit. Which means that: - You should be able to explain each line of code you submit, whether you used AI on the submission or not. - If you cannot understand the code you submit, you are doing yourself a major disservice.\nIf used properly, AI tools can enhance your learning by allowing you to dig deeper into the physical significance of the models discussed in this course. If used without critically thinking about each line of code generated, AI tools can inhibit your learning by allowing you to complete assignments without understanding what it represents.\nUsing AI tools (or any internet resource, for that matter) is not allowed during in-class quizzes! This makes it all the more important to understand course concepts and not use AI to short-circuit your learning.\nIn short, AI is a tool. Use your tools wisely!\n\n\n\nThis course will have pre-recorded lectures and in-person instruction and exercises. Class sessions will involve a brief lecture recap followed by in-class exercises (ICEs) designed to help you with the weekly homework and/or project.\nI encourage you to work together with your classmates on the ICEs. We will have a quiz every two weeks in class on Thursday.\nOffice hours will be held immediately after class in the same room. I will stick around for an hour after the scheduled class time to help answer questions and work with you on assignments.\n\n\n\n\n\nYou will receive a homework assignment roughly every week. You should begin working on your assignment the day it is assigned. The description of the assignment will be posted on Canvas. Homework grades will be based on completeness and answers to reflection questions, rather than the correctness of your Python scripts. Homework should be your own work, but you may consult with classmates and use online resources to help. It is very important that you understand every line of code you submit.\n\n\n\nBiweekly on Thursday, we will have a quiz based on the most recently covered homework. Quiz dates are shown on the course schedule below. The lowest quiz score will be dropped at the end of the term.\nQuizzes are closed-book, closed-notes, individual activities. Consulting any external sources (internet, friend, etc.) is an academic integrity violation. Posting quiz materials or information to a website or sharing it with others is also a violation of academic integrity.\n\n\n\nThe course will culminate with a group project focused on implementing the numerical methods learned.\nEach team will submit a written report and include the source code for the project.\n\n\n\nPre-recorded lecture videos will be posted to Canvas as assignments. Additionally, occasional small assignments (e.g., surveys, low-stakes problems) may be assigned throughout the quarter.\n\n\n\n\nThe schedule below is preliminary and subject to change without notice.\n\n\n\n\n\n\n\n\n\nWeek\nTuesday\nThursday\nNotes\n\n\n\n\n1\n–\nIntroductions, Engineering modeling concept (Ch. 1)\n\n\n\n2\nModeling framework\nProblem-solving\n\n\n\n3\nApproximation and error\nRoot finding Quiz 1\nProject Part 1 due\n\n\n4\nRoot finding\nRoot finding\n\n\n\n5\nMatrices\nMatrices Quiz 2\n\n\n\n6\nMatrices\nMatrices\nProject Part 2 due\n\n\n7\nSystems of equations\nSystems of equations Quiz 3\n\n\n\n8\nNo class (Veterans Day)\nNumerical differentiation\n\n\n\n9\nNumerical differentiation\nNumerical differentiation Quiz 4\n\n\n\n10\nNumerical integration\nNo class (Thanskgiving)\n\n\n\n11\nNumerical integration\n\n\n\n\nFinals week\nQuiz 5\n\nProject Part 3 due\n\n\n\n\n\n\nSO 1: an ability to identify, formulate, and solve complex engineering problems by applying principles of engineering, science, and mathematics\nSO 6: an ability to develop and conduct appropriate experimentation, analyze and interpret data, and use engineering judgment to draw conclusions\n\n\n\nFor information on other campus and student resources, including Policies and Expectations (including religious accommodation), Academic Support, and Self & Family Resources, visit The e-Syllabus: Campus Information, Resources, Policies and Expectations page.",
     "crumbs": [
       "TME 310A",
       "Course information",
@@ -229,7 +297,7 @@
     "href": "website/course_syllabus.html#assignments",
     "title": "Syllabus",
     "section": "",
-    "text": "Most days during class, an exercise problem will be assigned. Students are encouraged to work together to solve the problem and be willing to discuss their results in class. These exercises will help you prepare for homework. In-Class exercises (ICEs) should be your own work, but you may consult classmates and use online resources to help.\n\n\n\nYou will receive a homework assignment every week. You should begin working on your assignment the day it is assigned. The description of the assignment will be posted on Canvas. Homework grades will be based on completeness and answers to reflection questions, rather than the correctness of your Python scripts. However, knowing how to create useful Python scripts is important in the course, so you’re encouraged to review homework solutions when they’re posted and compare the solutions with your own work. Homework should be your own work, but you may consult with classmates and use online resources to help. It is very important that you understand every line of code you submit.\n\n\n\nBiweekly on Thursday, we will have a quiz based on the most recently covered homework. Quiz dates are shown on the course schedule below. The lowest quiz score will be dropped at the end of the term.\nQuizzes are closed-book, closed-notes, individual activities. Consulting any external sources (internet, friend, etc.) is an academic integrity violation. Posting quiz materials or information to a website or sharing it with others is also a violation of academic integrity.\n\n\n\nThe course will culminate with a group project focused on implementing the numerical methods learned.\nEach team will submit a written report and include the source code for the project.",
+    "text": "You will receive a homework assignment roughly every week. You should begin working on your assignment the day it is assigned. The description of the assignment will be posted on Canvas. Homework grades will be based on completeness and answers to reflection questions, rather than the correctness of your Python scripts. Homework should be your own work, but you may consult with classmates and use online resources to help. It is very important that you understand every line of code you submit.\n\n\n\nBiweekly on Thursday, we will have a quiz based on the most recently covered homework. Quiz dates are shown on the course schedule below. The lowest quiz score will be dropped at the end of the term.\nQuizzes are closed-book, closed-notes, individual activities. Consulting any external sources (internet, friend, etc.) is an academic integrity violation. Posting quiz materials or information to a website or sharing it with others is also a violation of academic integrity.\n\n\n\nThe course will culminate with a group project focused on implementing the numerical methods learned.\nEach team will submit a written report and include the source code for the project.\n\n\n\nPre-recorded lecture videos will be posted to Canvas as assignments. Additionally, occasional small assignments (e.g., surveys, low-stakes problems) may be assigned throughout the quarter.",
     "crumbs": [
       "TME 310A",
       "Course information",
@@ -241,7 +309,7 @@
     "href": "website/course_syllabus.html#schedule",
     "title": "Syllabus",
     "section": "",
-    "text": "The schedule below is preliminary and subject to change without notice.\n\n\n\n\n\n\n\n\n\nWeek\nTuesday\nThursday\nNotes\n\n\n\n\n1\n–\nIntroductions, Engineering modeling concept (Ch. 1)\n\n\n\n2\nProgram flow (notes)\nApproximation and error (Ch. 3.2) Quiz 1\nProject groups formed\n\n\n3\nApproximation and error (Ch. 3)\nRoot finding (Ch. 3)\n\n\n\n4\nRoot finding (Ch. 3)\nRoot finding (Ch. 3) Quiz 2\n\n\n\n5\nMatrices (Ch. 2, 4)\nMatrices (Ch. 2, 4)\n\n\n\n6\nMatrices (Ch. 2, 4)\nMatrices (Ch. 2, 4) Quiz 3\n\n\n\n7\nSystems of equations (Ch. 2, 4)\nSystems of equations (Ch. 2, 4)\nProject Part 1 due\n\n\n8\nNumerical differentiation\nNumerical differentiation Quiz 4\n\n\n\n9\nNumerical differentiation (Ch. 8)\nNumerical differentiation (Ch. 8)\n\n\n\n10\nNumerical integration (Ch. 9)\nNumerical integration (Ch. 9) Quiz 5\n\n\n\n11\nNumerical integration (Ch. 9)\n\n\n\n\nFinals week\nQuiz 6\n\nProject Part 2 due",
+    "text": "The schedule below is preliminary and subject to change without notice.\n\n\n\n\n\n\n\n\n\nWeek\nTuesday\nThursday\nNotes\n\n\n\n\n1\n–\nIntroductions, Engineering modeling concept (Ch. 1)\n\n\n\n2\nModeling framework\nProblem-solving\n\n\n\n3\nApproximation and error\nRoot finding Quiz 1\nProject Part 1 due\n\n\n4\nRoot finding\nRoot finding\n\n\n\n5\nMatrices\nMatrices Quiz 2\n\n\n\n6\nMatrices\nMatrices\nProject Part 2 due\n\n\n7\nSystems of equations\nSystems of equations Quiz 3\n\n\n\n8\nNo class (Veterans Day)\nNumerical differentiation\n\n\n\n9\nNumerical differentiation\nNumerical differentiation Quiz 4\n\n\n\n10\nNumerical integration\nNo class (Thanskgiving)\n\n\n\n11\nNumerical integration\n\n\n\n\nFinals week\nQuiz 5\n\nProject Part 3 due",
     "crumbs": [
       "TME 310A",
       "Course information",
@@ -273,11 +341,166 @@
     ]
   },
   {
+    "objectID": "website/github_codespace.html",
+    "href": "website/github_codespace.html",
+    "title": "Coding platform: GitHub Codespace",
+    "section": "",
+    "text": "The course is designed to be run through GitHub Codespaces, which provides a web-based coding environment with everything you need pre-installed. For every assignment, when you accept the assignment in GitHub Classroom, a new GitHub repo will be created for you automatically. You can start a codespace for the assignment by clicking on the “Code” dropdown and selecting “Create codespace on main.” You should only need to do this once for each assignment.\nThis will launch a new codespace with the assignment files.\n\n\n\n\n\n\nNote\n\n\n\nIt takes a few minutes for the codespace to get started and install all the requirements for the first time! Be patient - it’s essentially starting up a brand new computer from scratch. It will go faster the next time you open the codespace.\n\n\n\n\nAn un-graded “sandbox” assignment has been created so you can work on code independently of homework assignments if you’d like.\n\n\n\nThe codespaces run VS Code in a web browser. There are a few main areas you’ll want to navigate to use VS Code:\n\n\n\n\nPrimary sidebar: This area is set up to show the file explorer by default.\nActivity bar: The activity bar touches the primary sidebar and lets you select different content to show in the primary sidebar.\nSecondary sidebar: This area is set up to show the GitHub Copilot Chat. You can use this area to ask Copilot questions about your code.\nEditor: This is where your notebooks and scripts will open.\nPanel: This area sits beneath your editor and between the sidebars. This is where your Terminal and Jupyter Variables containers will be.\n\n\n\n\n\n\n\nNote\n\n\n\nThe positions of all the interface areas can be adjusted. Feel free to adjust them if you have a layout preference, but it can be a bit frustrating if you misplace something, so I recommend against it unless you’re familiar with VS Code and have a specific layout you prefer.\n\n\n\n\n\n\nThe way you submit your assignments with GitHub Classroom is by committing and pushing your changes. There are multiple ways to accomplish this, but I recommend using a few git commands in the terminal. The three commands are all you should need:\n\ngit add . This adds all the changes you’ve made to what will be committed.\ngit commit -m \"your message here\" This commits the changes in your codespaace and attaches a message to them. Of course, you can replace the text in the example with whatever message you want to include. In general, commit messages are supposed to be a brief description of the changes you made since the last commit.\ngit push This pushes your committed changes back to the repo.\n\nYou can create and push as many commits as you want. When grading, I’ll use whichever version existed at the time of the deadline unless you arrange something else with me. I recommend pushing your changes any time you’re planning to pause your work and close your codespace. The codespace should automatically save your changes and keep them, but it is possible to permanently lose changes if you delete the codespace (which is different than just closing the browser/tab) if they weren’t pushed to the repo.\n\n\n\nYour codespace includes the GitHub Copilot extension, which provides you with a powerful AI coding assistant. I encourage you to interact with Copilot and ask it questions about your code. It can write code for you based on instructions you provide and it can read your files to get additional context. In addition to experimenting with Copilot on your own, I encourage you to watch the Copilot videos listed on the Resources Page.\nRegardless of how you use copilot, you are responsible for all the code and text you submit.\n\n\nThere are some things Copilot can do that I’ve turned off on your codespaces. The features aren’t truly removed, just suppressed. They aren’t turned off to prevent you from using them, it’s more that I think they’re more likely to cause problems than be helpful.\nI’ve specifically configured Copilot to provide coding help based on where we’re at in the course. This is intended to prevent it from using Python language features we don’t cover in this class and may be difficult for you to interpret. If there are more advanced uses of Python you want to try, Copilot will help you with them if you ask it to “please override” the course’s coding assistance guidelines.\n\n\n\n\nThe codespace settings are all contained in the GitHub repos and you will have the ability to view, modify, and delete them. By default, I’ve set the codespace to hide these configuration files, but you’ll be able to see them in the repo. I’ve “hidden” them so that it’s difficult for you to accidentally break something about the codespace, not because I don’t want you to see them. If you have experience with the kinds of configuration files in the repo and you want to modify them, you may. But be warned: I can’t guarantee that I’ll be able to fix something if you break it and you’ll still be responsible for completing your assignments.",
+    "crumbs": [
+      "TME 310A",
+      "Course information",
+      "Coding platform: GitHub Codespace"
+    ]
+  },
+  {
+    "objectID": "website/github_codespace.html#vs-code",
+    "href": "website/github_codespace.html#vs-code",
+    "title": "Coding platform: GitHub Codespace",
+    "section": "",
+    "text": "The codespaces run VS Code in a web browser. There are a few main areas you’ll want to navigate to use VS Code:\n\n\n\n\nPrimary sidebar: This area is set up to show the file explorer by default.\nActivity bar: The activity bar touches the primary sidebar and lets you select different content to show in the primary sidebar.\nSecondary sidebar: This area is set up to show the GitHub Copilot Chat. You can use this area to ask Copilot questions about your code.\nEditor: This is where your notebooks and scripts will open.\nPanel: This area sits beneath your editor and between the sidebars. This is where your Terminal and Jupyter Variables containers will be.\n\n\n\n\n\n\n\nNote\n\n\n\nThe positions of all the interface areas can be adjusted. Feel free to adjust them if you have a layout preference, but it can be a bit frustrating if you misplace something, so I recommend against it unless you’re familiar with VS Code and have a specific layout you prefer.",
+    "crumbs": [
+      "TME 310A",
+      "Course information",
+      "Coding platform: GitHub Codespace"
+    ]
+  },
+  {
+    "objectID": "website/github_codespace.html#saving-and-submitting-your-work",
+    "href": "website/github_codespace.html#saving-and-submitting-your-work",
+    "title": "Coding platform: GitHub Codespace",
+    "section": "",
+    "text": "The way you submit your assignments with GitHub Classroom is by committing and pushing your changes. There are multiple ways to accomplish this, but I recommend using a few git commands in the terminal. The three commands are all you should need:\n\ngit add . This adds all the changes you’ve made to what will be committed.\ngit commit -m \"your message here\" This commits the changes in your codespaace and attaches a message to them. Of course, you can replace the text in the example with whatever message you want to include. In general, commit messages are supposed to be a brief description of the changes you made since the last commit.\ngit push This pushes your committed changes back to the repo.\n\nYou can create and push as many commits as you want. When grading, I’ll use whichever version existed at the time of the deadline unless you arrange something else with me. I recommend pushing your changes any time you’re planning to pause your work and close your codespace. The codespace should automatically save your changes and keep them, but it is possible to permanently lose changes if you delete the codespace (which is different than just closing the browser/tab) if they weren’t pushed to the repo.",
+    "crumbs": [
+      "TME 310A",
+      "Course information",
+      "Coding platform: GitHub Codespace"
+    ]
+  },
+  {
+    "objectID": "website/github_codespace.html#github-copilot",
+    "href": "website/github_codespace.html#github-copilot",
+    "title": "Coding platform: GitHub Codespace",
+    "section": "",
+    "text": "Your codespace includes the GitHub Copilot extension, which provides you with a powerful AI coding assistant. I encourage you to interact with Copilot and ask it questions about your code. It can write code for you based on instructions you provide and it can read your files to get additional context. In addition to experimenting with Copilot on your own, I encourage you to watch the Copilot videos listed on the Resources Page.\nRegardless of how you use copilot, you are responsible for all the code and text you submit.\n\n\nThere are some things Copilot can do that I’ve turned off on your codespaces. The features aren’t truly removed, just suppressed. They aren’t turned off to prevent you from using them, it’s more that I think they’re more likely to cause problems than be helpful.\nI’ve specifically configured Copilot to provide coding help based on where we’re at in the course. This is intended to prevent it from using Python language features we don’t cover in this class and may be difficult for you to interpret. If there are more advanced uses of Python you want to try, Copilot will help you with them if you ask it to “please override” the course’s coding assistance guidelines.",
+    "crumbs": [
+      "TME 310A",
+      "Course information",
+      "Coding platform: GitHub Codespace"
+    ]
+  },
+  {
+    "objectID": "website/github_codespace.html#breaking-things",
+    "href": "website/github_codespace.html#breaking-things",
+    "title": "Coding platform: GitHub Codespace",
+    "section": "",
+    "text": "The codespace settings are all contained in the GitHub repos and you will have the ability to view, modify, and delete them. By default, I’ve set the codespace to hide these configuration files, but you’ll be able to see them in the repo. I’ve “hidden” them so that it’s difficult for you to accidentally break something about the codespace, not because I don’t want you to see them. If you have experience with the kinds of configuration files in the repo and you want to modify them, you may. But be warned: I can’t guarantee that I’ll be able to fix something if you break it and you’ll still be responsible for completing your assignments.",
+    "crumbs": [
+      "TME 310A",
+      "Course information",
+      "Coding platform: GitHub Codespace"
+    ]
+  },
+  {
+    "objectID": "website/grading_policies.html",
+    "href": "website/grading_policies.html",
+    "title": "Grading policies",
+    "section": "",
+    "text": "Assignment categories and weights\n\nHomework (30%)\nQuizzes (30%) - lowest quiz score dropped\nProject (30%)\nLectures, etc. (10%)\n\n\n\nThe course has different late policies depending on the assignment type.\n\n\n\n\nMy goal for this late policy is to motivate students to complete their work on time whenever possible, but still encourage completing assignments if the due date has passed. Even if several days go by, getting some points is better than getting none! Of course, toward the end of the quarter, your flexibility runs out.\n\n\n\nHomework and Project assignments in Canvas will remain open for submissions after the deadline through the end of the quarter. I will grade late submissions like any other submission (except that it may take longer for me to get to them). Canvas will automatically deduct 10 percent of the possible grade for each day late up to 5 days. After 5 days, no further penalty is applied and Canvas will automatically deduct 50 percent of the possible grade from the graded assignment score. If there are unusual circumstances that you know about in advance, talk to me about them. For legitimate, pre-approved reasons, I can override Canvas’s deduction for late work.\n\n\n\n\n\n\nThis late policy is based on the in-person, timed nature of the assignment type.\n\n\n\nQuizzes are conducted in-person in class. In general, makeup quizzes will not be offered. If there are unusual circumstances that you know about in advance, talk to me about them. For legitimate, pre-approved reasons, I can allow you to arrange an alternative time to take a quiz. Course grade scale\nYour lowest quiz score for the quarter will be dropped.\n\n\n\n\n\nHomework assignments will be self-graded. I will provide the grading rubric and solution shortly after the assignment due date. Students will be responsible for assessing their work against the rubric and assignment solution and posting their self-assessments to Canvas.\nI will randomly select one problem per homework assignment to grade myself. These instructor-graded scores will take precedent over the self-graded score for that problem. If a student’s self-assigned grade for the problem varies significantly from the instructor’s score, it may trigger instructor grading of additional problems where the instructor’s score will also take precedent over the self-graded scores. Blatantly inflated self-assigned grades are considered an academic integrity violation and may result in loss of all points for the assignment.\n\n\n\nFinal grades will be calculated by determining the percentage of points received (rounding up or down to the nearest % point using conventional rounding standards) and converting to numerical grades as follows:\n\n\n\nLetter Grade\nOverall Score (%)\nGPA\n\n\n\n\nA\n100\n4\n\n\nA\n99\n4\n\n\nA\n98\n3.9\n\n\nA\n97\n3.9\n\n\nA-\n96\n3.8\n\n\nA-\n95\n3.8\n\n\nA-\n94\n3.7\n\n\nA-\n93\n3.7\n\n\nA-\n92\n3.6\n\n\nA-\n91\n3.6\n\n\nA-\n90\n3.5\n\n\nB+\n89\n3.4\n\n\nB+\n88\n3.3\n\n\nB+\n87\n3.2\n\n\nB\n86\n3.1\n\n\nB\n85\n3\n\n\nB\n84\n2.9\n\n\nB-\n83\n2.8\n\n\nB-\n82\n2.7\n\n\nB-\n81\n2.6\n\n\nB-\n80\n2.5\n\n\nC+\n79\n2.4\n\n\nC+\n78\n2.3\n\n\nC+\n77\n2.2\n\n\nC\n76\n2.1\n\n\nC\n75\n2\n\n\nC\n74\n1.9\n\n\nC-\n73\n1.8\n\n\nC-\n72\n1.7\n\n\nC-\n71\n1.6\n\n\nC-\n70\n1.5\n\n\nD+\n69\n1.4\n\n\nD+\n68\n1.3\n\n\nD+\n67\n1.2\n\n\nD\n66\n1.1\n\n\nD\n65\n1\n\n\nD\n64\n0.9\n\n\nD-\n63\n0.8\n\n\nD-\n62\n0.8\n\n\nD-\n61\n0.7\n\n\nD-\n60\n0.7\n\n\nE\n59\n&lt; 0.7",
+    "crumbs": [
+      "TME 310A",
+      "Course information",
+      "Grading policies"
+    ]
+  },
+  {
+    "objectID": "website/grading_policies.html#late-policies",
+    "href": "website/grading_policies.html#late-policies",
+    "title": "Grading policies",
+    "section": "",
+    "text": "The course has different late policies depending on the assignment type.\n\n\n\n\nMy goal for this late policy is to motivate students to complete their work on time whenever possible, but still encourage completing assignments if the due date has passed. Even if several days go by, getting some points is better than getting none! Of course, toward the end of the quarter, your flexibility runs out.\n\n\n\nHomework and Project assignments in Canvas will remain open for submissions after the deadline through the end of the quarter. I will grade late submissions like any other submission (except that it may take longer for me to get to them). Canvas will automatically deduct 10 percent of the possible grade for each day late up to 5 days. After 5 days, no further penalty is applied and Canvas will automatically deduct 50 percent of the possible grade from the graded assignment score. If there are unusual circumstances that you know about in advance, talk to me about them. For legitimate, pre-approved reasons, I can override Canvas’s deduction for late work.\n\n\n\n\n\n\nThis late policy is based on the in-person, timed nature of the assignment type.\n\n\n\nQuizzes are conducted in-person in class. In general, makeup quizzes will not be offered. If there are unusual circumstances that you know about in advance, talk to me about them. For legitimate, pre-approved reasons, I can allow you to arrange an alternative time to take a quiz. Course grade scale\nYour lowest quiz score for the quarter will be dropped.",
+    "crumbs": [
+      "TME 310A",
+      "Course information",
+      "Grading policies"
+    ]
+  },
+  {
+    "objectID": "website/grading_policies.html#self-grading-for-homework",
+    "href": "website/grading_policies.html#self-grading-for-homework",
+    "title": "Grading policies",
+    "section": "",
+    "text": "Homework assignments will be self-graded. I will provide the grading rubric and solution shortly after the assignment due date. Students will be responsible for assessing their work against the rubric and assignment solution and posting their self-assessments to Canvas.\nI will randomly select one problem per homework assignment to grade myself. These instructor-graded scores will take precedent over the self-graded score for that problem. If a student’s self-assigned grade for the problem varies significantly from the instructor’s score, it may trigger instructor grading of additional problems where the instructor’s score will also take precedent over the self-graded scores. Blatantly inflated self-assigned grades are considered an academic integrity violation and may result in loss of all points for the assignment.",
+    "crumbs": [
+      "TME 310A",
+      "Course information",
+      "Grading policies"
+    ]
+  },
+  {
+    "objectID": "website/grading_policies.html#grade-scale",
+    "href": "website/grading_policies.html#grade-scale",
+    "title": "Grading policies",
+    "section": "",
+    "text": "Final grades will be calculated by determining the percentage of points received (rounding up or down to the nearest % point using conventional rounding standards) and converting to numerical grades as follows:\n\n\n\nLetter Grade\nOverall Score (%)\nGPA\n\n\n\n\nA\n100\n4\n\n\nA\n99\n4\n\n\nA\n98\n3.9\n\n\nA\n97\n3.9\n\n\nA-\n96\n3.8\n\n\nA-\n95\n3.8\n\n\nA-\n94\n3.7\n\n\nA-\n93\n3.7\n\n\nA-\n92\n3.6\n\n\nA-\n91\n3.6\n\n\nA-\n90\n3.5\n\n\nB+\n89\n3.4\n\n\nB+\n88\n3.3\n\n\nB+\n87\n3.2\n\n\nB\n86\n3.1\n\n\nB\n85\n3\n\n\nB\n84\n2.9\n\n\nB-\n83\n2.8\n\n\nB-\n82\n2.7\n\n\nB-\n81\n2.6\n\n\nB-\n80\n2.5\n\n\nC+\n79\n2.4\n\n\nC+\n78\n2.3\n\n\nC+\n77\n2.2\n\n\nC\n76\n2.1\n\n\nC\n75\n2\n\n\nC\n74\n1.9\n\n\nC-\n73\n1.8\n\n\nC-\n72\n1.7\n\n\nC-\n71\n1.6\n\n\nC-\n70\n1.5\n\n\nD+\n69\n1.4\n\n\nD+\n68\n1.3\n\n\nD+\n67\n1.2\n\n\nD\n66\n1.1\n\n\nD\n65\n1\n\n\nD\n64\n0.9\n\n\nD-\n63\n0.8\n\n\nD-\n62\n0.8\n\n\nD-\n61\n0.7\n\n\nD-\n60\n0.7\n\n\nE\n59\n&lt; 0.7",
+    "crumbs": [
+      "TME 310A",
+      "Course information",
+      "Grading policies"
+    ]
+  },
+  {
+    "objectID": "website/being_successful_student.html",
+    "href": "website/being_successful_student.html",
+    "title": "Being a Successful Student",
+    "section": "",
+    "text": "Being a Successful Student\nKeep Current with Course Notifications\nCanvas can automatically keep you informed about due dates, class changes, scheduled events, and much more through its notification system. Be sure to set them, so you are receiving each kind immediately, daily, or weekly, as you prefer.\nPeer Success Mentors\nA peer mentor can assist you in “using effective learning techniques to improve your study skills and gain confidence in your academic abilities.” Connect with one today!\nUW Tacoma Teaching & Learning Center\nHere you can schedule appointments with quantitative and writing lab tutors and access quantitative and writing help and resources.",
+    "crumbs": [
+      "TME 310A",
+      "Course information",
+      "Being a Successful Student"
+    ]
+  },
+  {
+    "objectID": "website/project_03.html",
+    "href": "website/project_03.html",
+    "title": "Project Part 3 - enhanced pile-driving app",
+    "section": "",
+    "text": "Project Part 3 - enhanced pile-driving app\n\n\n\n\n\n\nNote\n\n\n\nThis page is incomplete. Details coming soon."
+  },
+  {
+    "objectID": "website/weeks/week_4.html",
+    "href": "website/weeks/week_4.html",
+    "title": "Week 4",
+    "section": "",
+    "text": "Course content will be added on a rolling basis\n\n\n\n\n\nTopic\nVideo\nSlides\nCode"
+  },
+  {
+    "objectID": "website/weeks/week_4.html#materials",
+    "href": "website/weeks/week_4.html#materials",
+    "title": "Week 4",
+    "section": "",
+    "text": "Topic\nVideo\nSlides\nCode"
+  },
+  {
+    "objectID": "website/weeks/week_7.html",
+    "href": "website/weeks/week_7.html",
+    "title": "Week 7",
+    "section": "",
+    "text": "Course content will be added on a rolling basis\n\n\n\n\n\nTopic\nVideo\nSlides\nCode"
+  },
+  {
+    "objectID": "website/weeks/week_7.html#materials",
+    "href": "website/weeks/week_7.html#materials",
+    "title": "Week 7",
+    "section": "",
+    "text": "Topic\nVideo\nSlides\nCode"
+  },
+  {
     "objectID": "website/weeks/week_2.html",
     "href": "website/weeks/week_2.html",
     "title": "Week 2",
     "section": "",
-    "text": "Topic\nVideo\nSlides\nCode\n\n\n\n\nModeling framework\ntext\n\ntext\n\n\nApproaching problems\ntext\n\n\n\n\nFunctional programming\ntext\n\n\n\n\n\n\n\n\nHomework 1",
+    "text": "Course content will be added on a rolling basis\n\n\n\n\n\nTopic\nVideo\nSlides\nCode\n\n\n\n\nModeling framework\n\n\n\n\n\nApproaching problems\n\n\n\n\n\nFunctional programming\n\n\n\n\n\n\n\n\n\n\nHomework 1 (plus self-grading)",
     "crumbs": [
       "TME 310A",
       "Weekly materials",
@@ -289,7 +512,7 @@
     "href": "website/weeks/week_2.html#materials",
     "title": "Week 2",
     "section": "",
-    "text": "Topic\nVideo\nSlides\nCode\n\n\n\n\nModeling framework\ntext\n\ntext\n\n\nApproaching problems\ntext\n\n\n\n\nFunctional programming\ntext",
+    "text": "Topic\nVideo\nSlides\nCode\n\n\n\n\nModeling framework\n\n\n\n\n\nApproaching problems\n\n\n\n\n\nFunctional programming",
     "crumbs": [
       "TME 310A",
       "Weekly materials",
@@ -301,7 +524,7 @@
     "href": "website/weeks/week_2.html#assignments-due",
     "title": "Week 2",
     "section": "",
-    "text": "Homework 1",
+    "text": "Homework 1 (plus self-grading)",
     "crumbs": [
       "TME 310A",
       "Weekly materials",
@@ -309,88 +532,186 @@
     ]
   },
   {
-    "objectID": "website/project_02.html",
-    "href": "website/project_02.html",
-    "title": "Project Part 2 - basic pile-driving app",
+    "objectID": "website/weeks/week_1.html",
+    "href": "website/weeks/week_1.html",
+    "title": "Week 1",
     "section": "",
-    "text": "Project Part 2 - basic pile-driving app\nPurpose\nInstructions\nSubmission\nRubric",
+    "text": "Topic\nVideo\nSlides\nCode\n\n\n\n\nIntroduction\nN/A\nN/A\nN/A\n\n\nPython basics\nLink\nN/A\nLink\n\n\n\n\n\n\nNone",
     "crumbs": [
       "TME 310A",
-      "Project",
-      "Project Part 2 - basic pile-driving app"
+      "Weekly materials",
+      "Week 1"
     ]
   },
   {
-    "objectID": "website/project_description.html",
-    "href": "website/project_description.html",
-    "title": "Course Project",
+    "objectID": "website/weeks/week_1.html#materials",
+    "href": "website/weeks/week_1.html#materials",
+    "title": "Week 1",
     "section": "",
-    "text": "It’s a group project.\nGroups will be assigned randomly. Groups will be 3 or 4 students.\n\n\nThe project topic is modeling the installation of driven piles with open-ended diesel hammers.\nEach team will build a jupyter notebook interactive app to predict the capacity of a driven pile based on data collected during installation.\nThere will be a baseline app to be delivered in Part 2 and then the groups will choose additional features to include to enhance their app for Part 3.\n\n\n\nThe project will have three deliverables:\n\nGroup coordination (due week 3)\nBasic pile-driving app (due week 6)\nEnhanced pile-driving app (due finals week)",
+    "text": "Topic\nVideo\nSlides\nCode\n\n\n\n\nIntroduction\nN/A\nN/A\nN/A\n\n\nPython basics\nLink\nN/A\nLink",
     "crumbs": [
       "TME 310A",
-      "Project",
-      "Course Project"
+      "Weekly materials",
+      "Week 1"
     ]
   },
   {
-    "objectID": "website/project_description.html#topic",
-    "href": "website/project_description.html#topic",
-    "title": "Course Project",
+    "objectID": "website/weeks/week_1.html#assignments-due",
+    "href": "website/weeks/week_1.html#assignments-due",
+    "title": "Week 1",
     "section": "",
-    "text": "The project topic is modeling the installation of driven piles with open-ended diesel hammers.\nEach team will build a jupyter notebook interactive app to predict the capacity of a driven pile based on data collected during installation.\nThere will be a baseline app to be delivered in Part 2 and then the groups will choose additional features to include to enhance their app for Part 3.",
+    "text": "None",
     "crumbs": [
       "TME 310A",
-      "Project",
-      "Course Project"
+      "Weekly materials",
+      "Week 1"
     ]
   },
   {
-    "objectID": "website/project_description.html#deliverables",
-    "href": "website/project_description.html#deliverables",
-    "title": "Course Project",
+    "objectID": "website/weeks/week_11.html",
+    "href": "website/weeks/week_11.html",
+    "title": "Week 11",
     "section": "",
-    "text": "The project will have three deliverables:\n\nGroup coordination (due week 3)\nBasic pile-driving app (due week 6)\nEnhanced pile-driving app (due finals week)",
-    "crumbs": [
-      "TME 310A",
-      "Project",
-      "Course Project"
-    ]
+    "text": "Course content will be added on a rolling basis\n\n\n\n\n\nTopic\nVideo\nSlides\nCode"
   },
   {
-    "objectID": "website/instructor.html",
-    "href": "website/instructor.html",
-    "title": "Instructor introduction",
+    "objectID": "website/weeks/week_11.html#materials",
+    "href": "website/weeks/week_11.html#materials",
+    "title": "Week 11",
     "section": "",
-    "text": "My name is Lorne Arnold. I like to sail, listen to music, and take naps. Before I started teaching, I worked as a geotechnical engineer for many years, designing foundations for buildings, bridges, and ports. I’m looking forward to getting to know you all this term.\n\n\n\nI am here to guide you as you learn and practice new skills. We will spend a lot of time writing code together and learning from one another. I hope you will all be generous in helping one another during this class. Engineering is very collaborative, so that is an extra skill to practice.\nOnline Availability: I’m online between 8 AM and 5 PM most days, and I’ll try to keep Canvas and GitHub open when I’m not otherwise engaged. From time to time, I will check in after 5 PM, but family obligations will make evening responses from me hit or miss. You can expect to get responses to questions from me in less than one day. Graded quizzes and projects will be typically be returned in less than one week.\nIf you’re looking for help outside of the course’s normal office hours, you can book a meeting with me using my booking link.\nFeedback: I care a lot about improving my teaching. Teaching is not a formula to learn, so I am still working on my own methods in the classroom. I would love to hear from you frequently about how things are going so I can improve over time. Send me a note, a chat, or catch me after class if you have ideas for improvements.\nUnderstanding and flexibility: Every quarter, some students will encounter unavoidable problems that prevent them from completing course assignments on time. The course grading is structured to be fairly flexible. For example, we will drop your lowest in-person quiz score. Let me know if something comes up, and do the best you can to stay on track.",
+    "text": "Topic\nVideo\nSlides\nCode"
+  },
+  {
+    "objectID": "website/weeks/week_9.html",
+    "href": "website/weeks/week_9.html",
+    "title": "Week 9",
+    "section": "",
+    "text": "Course content will be added on a rolling basis\n\n\n\n\n\nTopic\nVideo\nSlides\nCode"
+  },
+  {
+    "objectID": "website/weeks/week_9.html#materials",
+    "href": "website/weeks/week_9.html#materials",
+    "title": "Week 9",
+    "section": "",
+    "text": "Topic\nVideo\nSlides\nCode"
+  },
+  {
+    "objectID": "website/project_01.html",
+    "href": "website/project_01.html",
+    "title": "Project Part 1 - group coordination",
+    "section": "",
+    "text": "Project Part 1 - group coordination\n\n\n\n\n\n\nNote\n\n\n\nThis page is incomplete. Details coming soon."
+  },
+  {
+    "objectID": "website/start_here.html",
+    "href": "website/start_here.html",
+    "title": "Start here",
+    "section": "",
+    "text": "Start here\nGo through this short “Start here” module for information about the course, the instructor, and being a successful student. At the very least, read the syllabus!\nSyllabus\nInstructor and my role in this course\nAccessibility and accommodations\nBeing a successful student\nGrading policies\nHomework format\nCoding platforms",
     "crumbs": [
       "TME 310A",
       "Course information",
-      "Instructor introduction"
+      "Start here"
     ]
   },
   {
-    "objectID": "website/instructor.html#my-role-in-this-course",
-    "href": "website/instructor.html#my-role-in-this-course",
-    "title": "Instructor introduction",
+    "objectID": "website/homework_format.html",
+    "href": "website/homework_format.html",
+    "title": "Homework format",
     "section": "",
-    "text": "I am here to guide you as you learn and practice new skills. We will spend a lot of time writing code together and learning from one another. I hope you will all be generous in helping one another during this class. Engineering is very collaborative, so that is an extra skill to practice.\nOnline Availability: I’m online between 8 AM and 5 PM most days, and I’ll try to keep Canvas and GitHub open when I’m not otherwise engaged. From time to time, I will check in after 5 PM, but family obligations will make evening responses from me hit or miss. You can expect to get responses to questions from me in less than one day. Graded quizzes and projects will be typically be returned in less than one week.\nIf you’re looking for help outside of the course’s normal office hours, you can book a meeting with me using my booking link.\nFeedback: I care a lot about improving my teaching. Teaching is not a formula to learn, so I am still working on my own methods in the classroom. I would love to hear from you frequently about how things are going so I can improve over time. Send me a note, a chat, or catch me after class if you have ideas for improvements.\nUnderstanding and flexibility: Every quarter, some students will encounter unavoidable problems that prevent them from completing course assignments on time. The course grading is structured to be fairly flexible. For example, we will drop your lowest in-person quiz score. Let me know if something comes up, and do the best you can to stay on track.",
+    "text": "Homework assignments will be distributed through GitHub Classroom in the form of Jupyter Notebooks. In general, there will be 3 to 4 problems to solve in each assignment. The problems are intended to take 15 to 30 minutes of your time. Taking into consideration the coding skills and concepts presented throughout the course, you should expect the complexity of the problems to increase throughout the quarter.\n\n\nEach problem contains four sub-problems, which are based on the four phases of problem solving proposed by G. Polya.\n\nSummarize\nPlan\nCode\nReflect\n\nThree of the sections (1, 2, and 4) ask for text responses and one (3) asks for Python code.\n\n\nIn general, the summarize sub-problem will prompt you to:\n\nSummarize the goal(s) of the problem in your own words.\n\nAnswers to this sub-problem should be written in complete sentences and accurately reflect the goal(s) from the problem description. This is where students can demonstrate their understanding of the problem.\n\n\n\nIn general, the plan sub-problem will prompt you to:\n\nDescribe your plan to solve the problem.\n\nAnswers to this sub-problem may be in complete sentences, but a bullet list of steps or some combination of sentences and bullets will work well, too. Whatever the form, the plan should give enough detail to outline the code you’ll write to solve the problem.\n\n\n\nThis sub-problem is where you’re asked to write the Python code that will solve the problem. You can write all the code in the assignment notebook (recommended towards the beginning of the course) or in separate Python scripts that you import into your assignment notebook (we’ll do this towards the end of the course).\nIf your plan is well-written, simply copying it into your script (commented out, of course) will take you a long way toward a successful code solution. Feel free to ask GitHub Copilot “help me implement this plan”. This will often result in a good first pass at your coding solution.\n\n\n\nThe specific text of this sub-problem will vary, so please read it carefully. In general, the plan sub-problem will ask:\n\nLooking back at your code and the resulting output, reflect on whether your code achieved the problem goal(s). To the extent the problem models a physical system, how realistic does the behavior seem? Are there any changes you would make to your approach if you were to solve this problem again (e.g., to make your code more re-usable or to avoid dead ends)?\n\n\n\n\n\nAs described in the Grading policies page, you’ll be responsible for grading your own homework assignments. Use the rubric below to grade your homework. I’ll use the same rubric for check problems I grade.\n\n\n\n\n\n\n\n\n\n\nCategory\n2 Points\n1 Point\n0 Points\nScore\n\n\n\n\nSummarize\nThe problem goals are summarized accurately. The summary is written in complete sentences.\nProblem goals are inaccurately summarized or the summary is not in complete sentences.\nMissing or unclear summary\n__ / 8\n\n\nPlan\nA reasonable plan to solve the problem is described. The description provides enough detail for a coding outline.\nThe proposed plan contains logical errors or insufficient detail to start a coding outline.\nMissing or unclear plan\n__ / 8\n\n\nCode\nThe code solves the problem. The code runs without raising errors.\nThe code provides a partial solution to the problem or raises errors when executed\nMissing or irrelevant code\n__ / 8\n\n\nReflect\nThe reflection is thoughtful, relevant, and written in complete sentences. Problem-specific content is addressed.\nThe reflection is marginally relevant or not in complete sentences.\nMissing or unclear reflection\n__ / 8\n\n\nTotal\n\n\n\n__ / 8",
     "crumbs": [
       "TME 310A",
       "Course information",
-      "Instructor introduction"
+      "Homework format"
     ]
   },
   {
-    "objectID": "website/accessibility_accommodations.html",
-    "href": "website/accessibility_accommodations.html",
-    "title": "Accessibility and Accommodations",
+    "objectID": "website/homework_format.html#anatomy-of-a-problem",
+    "href": "website/homework_format.html#anatomy-of-a-problem",
+    "title": "Homework format",
     "section": "",
-    "text": "Accessibility and Accommodations\nIn addition to services offered by UW Tacoma’s Disability Resources for Students (DRS), I will attempt to make every effort to adjust assignments/materials to meet the needs of students who need alternative forms of access.\nIf you find yourself in need of additional assistance, please feel free to contact me directly or arrange to attend my virtual office hours.\nDRS Website: http://www.tacoma.uw.edu/drsuwt",
+    "text": "Each problem contains four sub-problems, which are based on the four phases of problem solving proposed by G. Polya.\n\nSummarize\nPlan\nCode\nReflect\n\nThree of the sections (1, 2, and 4) ask for text responses and one (3) asks for Python code.\n\n\nIn general, the summarize sub-problem will prompt you to:\n\nSummarize the goal(s) of the problem in your own words.\n\nAnswers to this sub-problem should be written in complete sentences and accurately reflect the goal(s) from the problem description. This is where students can demonstrate their understanding of the problem.\n\n\n\nIn general, the plan sub-problem will prompt you to:\n\nDescribe your plan to solve the problem.\n\nAnswers to this sub-problem may be in complete sentences, but a bullet list of steps or some combination of sentences and bullets will work well, too. Whatever the form, the plan should give enough detail to outline the code you’ll write to solve the problem.\n\n\n\nThis sub-problem is where you’re asked to write the Python code that will solve the problem. You can write all the code in the assignment notebook (recommended towards the beginning of the course) or in separate Python scripts that you import into your assignment notebook (we’ll do this towards the end of the course).\nIf your plan is well-written, simply copying it into your script (commented out, of course) will take you a long way toward a successful code solution. Feel free to ask GitHub Copilot “help me implement this plan”. This will often result in a good first pass at your coding solution.\n\n\n\nThe specific text of this sub-problem will vary, so please read it carefully. In general, the plan sub-problem will ask:\n\nLooking back at your code and the resulting output, reflect on whether your code achieved the problem goal(s). To the extent the problem models a physical system, how realistic does the behavior seem? Are there any changes you would make to your approach if you were to solve this problem again (e.g., to make your code more re-usable or to avoid dead ends)?",
     "crumbs": [
       "TME 310A",
       "Course information",
-      "Accessibility and Accommodations"
+      "Homework format"
     ]
+  },
+  {
+    "objectID": "website/homework_format.html#grading-rubric",
+    "href": "website/homework_format.html#grading-rubric",
+    "title": "Homework format",
+    "section": "",
+    "text": "As described in the Grading policies page, you’ll be responsible for grading your own homework assignments. Use the rubric below to grade your homework. I’ll use the same rubric for check problems I grade.\n\n\n\n\n\n\n\n\n\n\nCategory\n2 Points\n1 Point\n0 Points\nScore\n\n\n\n\nSummarize\nThe problem goals are summarized accurately. The summary is written in complete sentences.\nProblem goals are inaccurately summarized or the summary is not in complete sentences.\nMissing or unclear summary\n__ / 8\n\n\nPlan\nA reasonable plan to solve the problem is described. The description provides enough detail for a coding outline.\nThe proposed plan contains logical errors or insufficient detail to start a coding outline.\nMissing or unclear plan\n__ / 8\n\n\nCode\nThe code solves the problem. The code runs without raising errors.\nThe code provides a partial solution to the problem or raises errors when executed\nMissing or irrelevant code\n__ / 8\n\n\nReflect\nThe reflection is thoughtful, relevant, and written in complete sentences. Problem-specific content is addressed.\nThe reflection is marginally relevant or not in complete sentences.\nMissing or unclear reflection\n__ / 8\n\n\nTotal\n\n\n\n__ / 8",
+    "crumbs": [
+      "TME 310A",
+      "Course information",
+      "Homework format"
+    ]
+  },
+  {
+    "objectID": "website/lectures/02_python_basics.html",
+    "href": "website/lectures/02_python_basics.html",
+    "title": "Python Basics for Computational Physical Modeling",
+    "section": "",
+    "text": "Welcome to Python! This notebook will introduce you to some basic Python concepts that you’ll use in TME 310."
+  },
+  {
+    "objectID": "website/lectures/02_python_basics.html#what-will-be-covered",
+    "href": "website/lectures/02_python_basics.html#what-will-be-covered",
+    "title": "Python Basics for Computational Physical Modeling",
+    "section": "What will be covered",
+    "text": "What will be covered\n\nData Types - Kinds of information\nVariables - Where information is stored\nNumbers and Math - How calculations are done\nStrings - Text objects\nLists - A built in way to organize data\nConditionals - How we ask questions about data\nLoops - Doing repetitive things automatically"
+  },
+  {
+    "objectID": "website/lectures/02_python_basics.html#data-types",
+    "href": "website/lectures/02_python_basics.html#data-types",
+    "title": "Python Basics for Computational Physical Modeling",
+    "section": "Data Types",
+    "text": "Data Types\nThere are different kinds of information we can store in Python - these are called types. Python has several built in data types. Today, we’ll cover some of the most commonly-used ones:\n\nint (numeric integers)\nfloat (numeric real numbers)\nbool (true or false)\nstring (text)\nlist (collection of other objects)\n\n\nint\nAn int is an integer value (e.g., 1 or -395). In Python, we can check the type of an object with the built-in type() function.\n\n# An integer\ntype(1)\n\nint\n\n\n\n# Another integer\ntype(-395)\n\nint\n\n\n\n\nfloat\nA float is another numeric data type in Python. Unlike an int, a float is a real number that can have several decimal places. For example:\n\n# A floating point number\ntype(9.81)\n\nfloat\n\n\nNote that any number with a decimal place will be interpreted as a float by Python, even if there’s nothing after the decimal place:\n\n# This is also a floating point number\ntype(1.)\n\nfloat\n\n\n\n\nbool\nA bool (boolean) represents True or False values. These are useful for yes/no questions.\n\n# In Python True and False are capitalized\ntype(True)\n\nbool\n\n\n\ntype(False)\n\nbool\n\n\n\n\nstr\nA string (or str) represents text. Strings are surrounded by quotes. Either single or double quotes can be used to surround strings:\n\n# A double-quoted string\ntype(\"hello\")\n\nstr\n\n\n\n# A single-quoted string\ntype('world')\n\nstr\n\n\nIt’s considered best practice to use double quotes for strings even though single quotes are accepted by Python. More importantly, whichever kind of quote starts the string has to be used to close it, or you’ll get a syntax error!\n\n# This will cause an error!\ntype('mismatch\")\n\n\n  Cell In[9], line 2\n    type('mismatch\")\n         ^\nSyntaxError: unterminated string literal (detected at line 2)\n\n\n\n\n\n\nlist\nA list is a collection of other objects. Lists are surrounded by square brackets [] with their elements separated by commas.\n\n# A list of integers\ntype([1, 2, 3])\n\nlist\n\n\nThe elements of a list don’t need to be the same type.\n\n# A list of mixed types\ntype([1, \"two\", 3.0, True])\n\nlist\n\n\n\n# Even another list:\ntype([1, 2, [\"I'm\", \"a\", \"list\"], 4])\n\nlist"
+  },
+  {
+    "objectID": "website/lectures/02_python_basics.html#variables",
+    "href": "website/lectures/02_python_basics.html#variables",
+    "title": "Python Basics for Computational Physical Modeling",
+    "section": "Variables",
+    "text": "Variables\nVariables are names that refer to objects. We create variables using the assignment operator =.\n\nx = 5\nx\n\n5\n\n\nJupyter will automatically display the output of the last line in a cell if it is an expression or variable, and not assigned to anything. That’s why writing x on the last line in the cell above resulted in the value assigned to x being displayed.\nBut that automatic display only happens for the last line in a cell.\n\n# No output here\ny = 10\ny\nz = 37\n\nIn general, it’s better to explicitly tell Python what to display with the print() function, which does not need to be on any particular line.\n\n# Printing the value of y that wasn't shown above\nprint(y)\n\n10\n\n\nAny data type can be assigned to a variable:\n\ncourse = \"TME 310A\"\nstudents = 25\nmax_grade = 4.0\nfun = True\n\nThe value of one variable can be assigned to another, too:\n\na = 5\nprint(a)\n\n# Assigning the value of a to b\nb = a\nprint(b)\n\n5\n5\n\n\n\n\n\n\n\n\nCaution\n\n\n\nIn the case above, a and b are both of type int. If the value of a is changed at some future point in the code, the value of b will be unaffected. But this is not the case for all data types, as we’ll see in a few sections."
+  },
+  {
+    "objectID": "website/lectures/02_python_basics.html#numbers-and-math",
+    "href": "website/lectures/02_python_basics.html#numbers-and-math",
+    "title": "Python Basics for Computational Physical Modeling",
+    "section": "Numbers and Math",
+    "text": "Numbers and Math\nMost arithmetic operations in Python act like you’d expect. For example:\n\n# Addition\nw = 20 + 34\nprint(w)\n\n54\n\n\n\n# Subtraction\nx = 10 - 4\nprint(x)\n\n6\n\n\n\n# Multiplication\ny = 3 * 7\nprint(y)\n\n21\n\n\n\n\n\n\n\n\nCaution\n\n\n\nThis is a good place to note one of the potential sources of error in Jupyter notebooks.\nNow that we’ve just overwritten the variable y with a new value, go back to the Variables section and run the cell that contains print(y). Python will always interpret variables based on their values at the time of execution, which may not reflect the expected values based on a linear reading of the notebook.\n\n\nDivision in Python will often look how you’d expect, but there are some details worth examining. The basic division operator is /, which works on int and float data types, but always returns a float. This is because it converts anything it’s operating on into a float before performing division. So, even if it’s used between two integers and the result could be represented as an integer, the resulting data type will be float.\n\n# Division\nz = 15 / 3\nprint(z) # z is a float even though 15 can be divided by 3 evenly\n\n5.0\n\n\nTo perform integer division in Python, use the // operator. This performs division and returns the result rounded down to the next smallest whole number.\n\n# Returns an integer result (no rounding needed)\n15 // 3\n\n5\n\n\n\n# This result gets rounded to the next smallest whole number\n13 // 3\n\n4\n\n\nWhen you first learned to divide, you probably used “remainders” when numbers didn’t divide evenly. So the answer to 13 divided by 3 would have been 4 remainder 1. The integer division operator in Python ignores the remainder, but another useful operator provides it - the modulo operator: %.\n\n# The remainder after integer division\n13 % 3\n\n1\n\n\nThe ** operator means “to the power of”. So 2 ** 3 means 2 to the power of 3.\n\n2 ** 3\n\n8"
+  },
+  {
+    "objectID": "website/lectures/02_python_basics.html#strings",
+    "href": "website/lectures/02_python_basics.html#strings",
+    "title": "Python Basics for Computational Physical Modeling",
+    "section": "Strings",
+    "text": "Strings\nAlthough strings are text, not numbers, some of the operators discussed above can be used with strings. But, of course, they have different meanings when text is involved.\nFor example, “adding” two strings sticks the two pieces of text together:\n\n\"hello\" + \" world\"\n\n'hello world'\n\n\nMultiplying a string creates multiple copies of the original text and sticks them all together:\n\n\" alright \" * 3\n\n' alright  alright  alright '\n\n\nOther operators (like - or /) don’t have unique meaning with strings, so they aren’t allowed. Trying to use them will result in an error:\n\n\"hello\" - \" world\"  # This will cause an error\n\n\n---------------------------------------------------------------------------\nTypeError                                 Traceback (most recent call last)\nCell In[28], line 1\n----&gt; 1 \"hello\" - \" world\"  # This will cause an error\n\nTypeError: unsupported operand type(s) for -: 'str' and 'str'\n\n\n\nThe len() function returns the number of characters in a string:\n\nlen(\"This is a string. It's not super long, but it's long enough that I don't want to count the characters myself.\")\n\n109\n\n\nOne of the most useful features Python has for strings is the “F-string”. With F-strings, you can put variables inside your strings (inside curly braces {}) and get the variable value inserted into your string.\n\ncourse = \"TME 310A\"\nstudents = 25\nmax_grade = 4.0\n\nprint(f\"There are {students} students registered for {course}. The highest grade you can get is {max_grade}\")\n\nThere are 25 students registered for TME 310A. The highest grade you can get is 4.0\n\n\nStrings are indexed, which means that each character in the string has a numbered position (called an index). You can access the \\(n\\)th character in a string putting the index you want in square brackets after the string:\n\nmy_string = \"abstraction\"\nmy_string[2]\n\n's'\n\n\nDepending on what languages you’ve programmed in before, you may have expected my_string[2] to return b since that’s the 2nd character in the string. But Python is a “zero-indexed” language, so counting always starts at zero. To get the first character in the string, we need to put 0 in square brackets:\n\nmy_string[0]\n\n'a'\n\n\nTrying to access an index past the end of the string will cause an error:\n\ntoo_far = len(my_string)\nmy_string[too_far] # This will cause an error\n\n\n---------------------------------------------------------------------------\nIndexError                                Traceback (most recent call last)\nCell In[33], line 2\n      1 too_far = len(my_string)\n----&gt; 2 my_string[too_far] # This will cause an error\n\nIndexError: string index out of range\n\n\n\nNotice that the trying to access and index equal to the length of the string causes IndexError: string index out of range because the indexing starts at 0! That means that the last entry in the string will have the value len(my_string) - 1.\nIn fact, Python supports negative indexing without needing to find the length of the string. The last entry in the string has index -1; and the second to last entry has index -2, and so on.\n\nmy_string[-1] # This will give the last character of the string\n\n'n'\n\n\n\nmy_string[-2] # This will give the second to last character of the string\n\n'o'"
+  },
+  {
+    "objectID": "website/lectures/02_python_basics.html#lists",
+    "href": "website/lectures/02_python_basics.html#lists",
+    "title": "Python Basics for Computational Physical Modeling",
+    "section": "Lists",
+    "text": "Lists\nWe’ve already seen that lists are containers that hold objects. Now we’ll discuss how to interact with these containers.\nLike strings, lists are indexed data types, so we can use the indexing syntax to access specific values in a list:\n\ncolors = [\"red\", \"green\", \"blue\"]\n\n# Print the first item in the list:\nprint(colors[0])\n\nred\n\n\nOne of the key differences between lists and strings is that lists are mutable, while strings are immutable. This means that you can change the value of an entry in a list, but you can’t with a string:\n\n# Change the second color from \"green\" to \"yellow\":\ncolors[1] = \"yellow\"\nprint(colors)\n\n['red', 'yellow', 'blue']\n\n\n\n# Trying to change one of the characters in a string will cause an error:\nmy_string[0] = \"A\" # This will cause an error\n\n\n---------------------------------------------------------------------------\nTypeError                                 Traceback (most recent call last)\nCell In[38], line 2\n      1 # Trying to change one of the characters in a string will cause an error:\n----&gt; 2 my_string[0] = \"A\" # This will cause an error\n\nTypeError: 'str' object does not support item assignment\n\n\n\nCopying A major implication of whether an object is mutable or not is how Python handles copies of the object. We saw previously that when we made a copy of an integer variable, changing the original variable did not change the copy. This kind of copying is called deep copying. It’s the default behavior for immutable objects in Python so the same applies to strings:\n\n# Make a string and copy it\noriginal_string = \"TME 310A\"\ncopied_string = original_string\nprint(original_string)\nprint(copied_string)\n\nTME 310A\nTME 310A\n\n\n\n# Change the original string\noriginal_string = \"TME 310B\"\n\n# The copy is unchanged\nprint(original_string)\nprint(copied_string)\n\nTME 310B\nTME 310A\n\n\nBut since lists are mutable, when they’re copied, Python makes what’s called a shallow copy. A shallow copy points to the original rather than reproducing it. This means that a change to the original will immediately cause a change in the “copy”. And, strangely enough, a change in the copy will immediately change the original!\n\n# Make a list and copy it\noriginal_list = [ 1, 2, 3 ]\ncopied_list = original_list\nprint(original_list)\nprint(copied_list)\n\n[1, 2, 3]\n[1, 2, 3]\n\n\n\n# Change the original list\noriginal_list[0] = 99\n\n# Both the original and the \"copy\" are changed!\nprint(original_list)\nprint(copied_list)\n\n[99, 2, 3]\n[99, 2, 3]\n\n\n\n# Change the copy\ncopied_list[-1] = -5\n\n# The original gets changed too!\nprint(original_list)\nprint(copied_list)\n\n[99, 2, -5]\n[99, 2, -5]"
+  },
+  {
+    "objectID": "website/lectures/02_python_basics.html#conditionals",
+    "href": "website/lectures/02_python_basics.html#conditionals",
+    "title": "Python Basics for Computational Physical Modeling",
+    "section": "Conditionals",
+    "text": "Conditionals\nConditionals let you make decisions in your code with if, elif, and else statements. Often these use boolean comparators which evaluate a statement and return whether it is true or false. Python’s boolean comparators are\n\n\n\nBoolean comparator\nMeaning\n\n\n\n\n&gt;\ngreater than\n\n\n&lt;\nless than\n\n\n&gt;=\ngreater than or equal to\n\n\n&lt;=\nless than or equal to\n\n\n!=\nnot equal to\n\n\n==\nequal to\n\n\n\n\n# Create two variables and check whether one is greater than the other\na = 5\nb = 10\na &gt; b\n\nFalse\n\n\nBoolean comparators and conditional statements allow us to change the behavior of Python scripts depending on the values of certain variables. Conditional statements (like the if statement) have three parts: 1. The keyword 2. The test condition followed by a colon : 3. An indented codeblock that is executed if the test condition is True\nFor example:\n\ntemperature = 65                # a variable representing the temperature\n\nif temperature &gt; 70:            # The \"if\" keyword, the test condition, and a colon\n    print(\"It's warm outside\")  # An indented codeblock that runs if the test condition is True\n\nThe other conditional statements, else and elif (short for “else if”) use the same syntax as the if statement, but the must come after an if or elif statement. They can be used to execute different indented codeblocks under different circumstances.\nFor example:\n\ntemperature = 65  \n\nif temperature &gt; 70: \n    print(\"It's warm outside\")\nelif temperature &lt; 50:\n    print(\"It's cold outside\")\nelse:\n    print(\"It's a nice day\")\n\nIt's a nice day"
+  },
+  {
+    "objectID": "website/lectures/02_python_basics.html#loops",
+    "href": "website/lectures/02_python_basics.html#loops",
+    "title": "Python Basics for Computational Physical Modeling",
+    "section": "Loops",
+    "text": "Loops\nLoops let you repeat code. The for loop goes through each item in an iterable object, like a list:\n\nfruits = [\"apple\", \"banana\", \"orange\"]\n\nfor fruit in fruits:\n    print(fruit)\n\napple\nbanana\norange\n\n\nThe range() function creates an iterable sequence of numbers that can be used to control a for loop:\n\nfor i in range(5):\n    print(i)\n\n0\n1\n2\n3\n4\n\n\nThe while loop repeats as long as a condition is True.\n\ncount = 0\n\nwhile count &lt; 3:\n    print(f\"Count is {count}\")\n    count = count + 1\n\nCount is 0\nCount is 1\nCount is 2\n\n\nThe example above is not a great use of a while loop because the same thing can be accomplished with a for loop and while loops have the potential to run forever (or until you manually force the computer to stop). That’s called an “infinite loop” and can be a pain if triggered accidentally in your code. In the code above, if you left out the list line in the loop, for example, the value of count would never increase and the conditional test (count &lt; 3) would always be True and the loop would run forever.\nIt’s best to reserve while loops for situations where you’re uncertain how many iterations are needed."
   },
   {
     "objectID": "index.html",
