@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>course_syllabus – TME 310 A - Fall 2025</title>
+<title>Parachute problem – TME 310 A - Fall 2025</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,6 +20,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -29,8 +64,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../website/instructor.html" rel="next">
-<link href="../website/start_here.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -69,6 +102,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../website/styles.css">
 </head>
@@ -82,7 +144,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../index.html">TME 310A</a></li><li class="breadcrumb-item"><a href="../website/start_here.html">Course information</a></li><li class="breadcrumb-item"><a href="../website/course_syllabus.html">Syllabus</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Parachute problem</li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -121,13 +183,13 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
  <span class="menu-text">Course information</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 show">  
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../website/start_here.html" class="sidebar-item-text sidebar-link">
@@ -136,7 +198,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../website/course_syllabus.html" class="sidebar-item-text sidebar-link active">
+  <a href="../website/course_syllabus.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Syllabus</span></a>
   </div>
 </li>
@@ -252,194 +314,115 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#syllabus" id="toc-syllabus" class="nav-link active" data-scroll-target="#syllabus">Syllabus</a>
-  <ul class="collapse">
-  <li><a href="#course-description" id="toc-course-description" class="nav-link" data-scroll-target="#course-description">Course description</a></li>
-  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link" data-scroll-target="#learning-objectives">Learning objectives</a></li>
-  <li><a href="#using-ai-tools-in-this-course" id="toc-using-ai-tools-in-this-course" class="nav-link" data-scroll-target="#using-ai-tools-in-this-course">Using AI tools in this course</a></li>
-  <li><a href="#course-format" id="toc-course-format" class="nav-link" data-scroll-target="#course-format">Course Format</a></li>
-  <li><a href="#assignments" id="toc-assignments" class="nav-link" data-scroll-target="#assignments">Assignments</a>
-  <ul class="collapse">
-  <li><a href="#homework-30" id="toc-homework-30" class="nav-link" data-scroll-target="#homework-30">Homework (30%)</a></li>
-  <li><a href="#quizzes-30" id="toc-quizzes-30" class="nav-link" data-scroll-target="#quizzes-30">Quizzes (30%)</a></li>
-  <li><a href="#project-30" id="toc-project-30" class="nav-link" data-scroll-target="#project-30">Project (30%)</a></li>
-  <li><a href="#lectures-etc.-10" id="toc-lectures-etc.-10" class="nav-link" data-scroll-target="#lectures-etc.-10">Lectures, etc. (10%)</a></li>
-  </ul></li>
-  <li><a href="#schedule" id="toc-schedule" class="nav-link" data-scroll-target="#schedule">Schedule</a></li>
-  <li><a href="#abet-student-outcomes" id="toc-abet-student-outcomes" class="nav-link" data-scroll-target="#abet-student-outcomes">ABET Student Outcomes</a></li>
-  <li><a href="#uw-policies" id="toc-uw-policies" class="nav-link" data-scroll-target="#uw-policies">UW Policies</a></li>
-  </ul></li>
+  <li><a href="#assumptions" id="toc-assumptions" class="nav-link active" data-scroll-target="#assumptions">Assumptions</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/UWT-TME-310/TME_310_students/blob/main/website/course_syllabus.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="https://github.com/UWT-TME-310/TME_310_students/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/UWT-TME-310/TME_310_students/blob/main/examples/03_parachute.ipynb" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="https://github.com/UWT-TME-310/TME_310_students/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../index.html">TME 310A</a></li><li class="breadcrumb-item"><a href="../website/start_here.html">Course information</a></li><li class="breadcrumb-item"><a href="../website/course_syllabus.html">Syllabus</a></li></ol></nav></header>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Parachute problem</h1>
+</div>
 
 
 
+<div class="quarto-title-meta">
 
-<section id="syllabus" class="level1">
-<h1>Syllabus</h1>
-<p>TME 310 A - Computational Physical Modeling<br>
-<strong>Instructor</strong>: Dr.&nbsp;Lorne Arnold<br>
-<strong>Location</strong>: MLG 330<br>
-<strong>Meeting times</strong>: Tuesdays and Thursdays, 1:30 to 2:30 PM<br>
-<strong>Office Hours</strong>: Tuesdays and Thursdays, 2:30 to 3:30 PM (right after class, in the same room)</p>
-<section id="course-description" class="level2">
-<h2 class="anchored" data-anchor-id="course-description">Course description</h2>
-<p>Computational methods for analyzing mathematical representations of physical systems. The concepts are practiced through examples involving differential equations and programming with computational linear algebra.</p>
-</section>
-<section id="learning-objectives" class="level2">
-<h2 class="anchored" data-anchor-id="learning-objectives">Learning objectives</h2>
-<p>This course is designed to enable students to meet the following learning objectives:</p>
-<ul>
-<li>Create models of different kinds of systems (e.g., populations, thermal systems, mechanical systems) using multiple kinds of appropriate abstractions (e.g., free-body diagrams, differential equations), validate the predictions of models using different approaches (e.g., estimation, physical laws, analytical solutions), and use models to accomplish useful tasks (e.g., make predictions, explain behavior, evaluate design decisions).</li>
-<li>Be a critical consumer of models (e.g., by assessing a model you encounter and evaluating whether it is appropriate and useful for a given purpose).</li>
-<li>Use code-cased numerical tools to implement models, run simulations, work with data, and generate visualizations.</li>
-<li>Communicate technical and quantitative information effectively using written and graphical media.</li>
-<li>Work effectively in teams to produce technical deliverables.</li>
-</ul>
-</section>
-<section id="using-ai-tools-in-this-course" class="level2">
-<h2 class="anchored" data-anchor-id="using-ai-tools-in-this-course">Using AI tools in this course</h2>
-<p>Using AI tools (which I’ll generically use to mean LLMs, generative models, coding agents, etc.) to help you generate code for homework assignments, in-class exercises, and projects is encouraged in this course. As a modeler and an engineer, you are responsible for all the work you submit. Which means that: - You should be able to explain each line of code you submit, whether you used AI on the submission or not. - If you cannot understand the code you submit, you are doing yourself a major disservice.</p>
-<p>If used properly, AI tools can enhance your learning by allowing you to dig deeper into the physical significance of the models discussed in this course. If used without critically thinking about each line of code generated, AI tools can inhibit your learning by allowing you to complete assignments without understanding what it represents.</p>
-<p>Using AI tools (or any internet resource, for that matter) is not allowed during in-class quizzes! This makes it all the more important to understand course concepts and not use AI to short-circuit your learning.</p>
-<p>In short, AI is a tool. Use your tools wisely!</p>
-</section>
-<section id="course-format" class="level2">
-<h2 class="anchored" data-anchor-id="course-format">Course Format</h2>
-<p>This course will have pre-recorded lectures and in-person instruction and exercises. Class sessions will involve a brief lecture recap followed by in-class exercises (ICEs) designed to help you with the weekly homework and/or project.<br>
-I encourage you to work together with your classmates on the ICEs. We will have a quiz every two weeks in class on Thursday.</p>
-<p>Office hours will be held immediately after class in the same room. I will stick around for an hour after the scheduled class time to help answer questions and work with you on assignments.</p>
-</section>
-<section id="assignments" class="level2">
-<h2 class="anchored" data-anchor-id="assignments">Assignments</h2>
-<section id="homework-30" class="level3">
-<h3 class="anchored" data-anchor-id="homework-30">Homework (30%)</h3>
-<p>You will receive a homework assignment roughly every week. You should begin working on your assignment the day it is assigned. The description of the assignment will be posted on Canvas. Homework grades will be based on <strong>completeness</strong> and answers to <strong>reflection</strong> questions, rather than the correctness of your Python scripts. Homework should be your own work, but you may consult with classmates and use online resources to help. It is very important that you understand every line of code you submit.</p>
-</section>
-<section id="quizzes-30" class="level3">
-<h3 class="anchored" data-anchor-id="quizzes-30">Quizzes (30%)</h3>
-<p>Biweekly on Thursday, we will have a quiz based on the most recently covered homework. Quiz dates are shown on the course schedule below. The lowest quiz score will be dropped at the end of the term.<br>
-Quizzes are closed-book, closed-notes, individual activities. Consulting any external sources (internet, friend, etc.) is an academic integrity violation. Posting quiz materials or information to a website or sharing it with others is also a violation of academic integrity.</p>
-</section>
-<section id="project-30" class="level3">
-<h3 class="anchored" data-anchor-id="project-30">Project (30%)</h3>
-<p>The course will culminate with a group project focused on implementing the numerical methods learned.<br>
-Each team will submit a written report and include the source code for the project.</p>
-</section>
-<section id="lectures-etc.-10" class="level3">
-<h3 class="anchored" data-anchor-id="lectures-etc.-10">Lectures, etc. (10%)</h3>
-<p>Pre-recorded lecture videos will be posted to Canvas as assignments. Additionally, occasional small assignments (e.g., surveys, low-stakes problems) may be assigned throughout the quarter.</p>
-</section>
-</section>
-<section id="schedule" class="level2">
-<h2 class="anchored" data-anchor-id="schedule">Schedule</h2>
-<p>The schedule below is preliminary and subject to <a href="reference/strange planet syllabus.jpg" class="preview-image">change without notice</a>.</p>
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>What’s the terminal velocity of someone falling with a parachute? (this is our <strong>system</strong>)</p>
+<section id="assumptions" class="level2">
+<h2 class="anchored" data-anchor-id="assumptions">Assumptions</h2>
+<p>Let’s say we have a <strong>model</strong> for this problem:</p>
+<p><span class="math display">\[\frac{dv}{dt} = g -\frac{c}{m}v\]</span></p>
+<p>where <span class="math inline">\(g\)</span> is gravitational acceleration, <span class="math inline">\(c\)</span> is a drag coefficient, <span class="math inline">\(m\)</span> is the parachutist’s mass, and <span class="math inline">\(v\)</span> is their velocity. The solution to this differential equation is:</p>
+<p><span class="math display">\[ v(t) = \frac{gm}{c}(1 - e^{ct/m})\]</span></p>
+<p>Use the following parameters for the parachutist:</p>
 <table class="caption-top table">
-<colgroup>
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
-</colgroup>
 <thead>
 <tr class="header">
-<th><strong>Week</strong></th>
-<th><strong>Tuesday</strong></th>
-<th><strong>Thursday</strong></th>
-<th><strong>Notes</strong></th>
+<th>Parameter</th>
+<th>Value</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>1</td>
-<td>–</td>
-<td>Introductions, <br>Engineering modeling concept (Ch. 1)</td>
-<td></td>
+<td>Mass</td>
+<td>70 kg</td>
 </tr>
 <tr class="even">
-<td>2</td>
-<td>Modeling framework</td>
-<td>Problem-solving</td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>3</td>
-<td>Approximation and error</td>
-<td>Root finding <br><strong>Quiz 1</strong></td>
-<td>Project Part 1 due</td>
-</tr>
-<tr class="even">
-<td>4</td>
-<td>Root finding</td>
-<td>Root finding</td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>5</td>
-<td>Matrices</td>
-<td>Matrices <br><strong>Quiz 2</strong></td>
-<td></td>
-</tr>
-<tr class="even">
-<td>6</td>
-<td>Matrices</td>
-<td>Matrices</td>
-<td>Project Part 2 due</td>
-</tr>
-<tr class="odd">
-<td>7</td>
-<td>Systems of equations</td>
-<td>Systems of equations <br><strong>Quiz 3</strong></td>
-<td></td>
-</tr>
-<tr class="even">
-<td>8</td>
-<td>No class (Veterans Day)</td>
-<td>Numerical differentiation</td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>9</td>
-<td>Numerical differentiation</td>
-<td>Numerical differentiation <br><strong>Quiz 4</strong></td>
-<td></td>
-</tr>
-<tr class="even">
-<td>10</td>
-<td>Numerical integration</td>
-<td>No class (Thanskgiving)</td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>11</td>
-<td>Numerical integration</td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td>Finals week</td>
-<td><strong>Quiz 5</strong></td>
-<td></td>
-<td>Project Part 3 due</td>
+<td>Drag coefficient</td>
+<td>12 kg/s</td>
 </tr>
 </tbody>
 </table>
-</section>
-<section id="abet-student-outcomes" class="level2">
-<h2 class="anchored" data-anchor-id="abet-student-outcomes">ABET Student Outcomes</h2>
-<p>SO 1: an ability to identify, formulate, and solve complex engineering problems by applying principles of engineering, science, and mathematics</p>
-<p>SO 6: an ability to develop and conduct appropriate experimentation, analyze and interpret data, and use engineering judgment to draw conclusions</p>
-</section>
-<section id="uw-policies" class="level2">
-<h2 class="anchored" data-anchor-id="uw-policies">UW Policies</h2>
-<p>Religious Accommodations:- Washington state law requires that UW develop a policy for accommodation of student absences or significant hardship due to reasons of faith or conscience, or for organized religious activities. The UW’s policy, including more information about how to request an accommodation, is available at <a href="https://registrar.washington.edu/staffandfaculty/religious-accommodations-policy/">Religious Accommodations Policy (https://registrar.washington.edu/staffandfaculty/religious-accommodations-policy/)</a>. Accommodations must be requested within the first two weeks of this course using the <a href="https://registrar.washington.edu/students/religious-accommodations-request/">Religious Accommodations Request form (https://registrar.washington.edu/students/religious-accommodations-request/)</a>.</p>
-<p>For information on other campus and student resources, including Policies and Expectations, Academic Support, and Self &amp; Family Resources, visit <a href="https://www.tacoma.uw.edu/digital-learning/e-syllabus">The e-Syllabus: Campus Information, Resources, Policies and Expectations page.</a></p>
+<hr>
+<p>Summarize the goal(s) of the problem in your own words.</p>
+<hr>
+<p>Use one or more of the equations given and the parameters (mass = 70 kg; drag coeff = 12 kg/s) to find the terminal velocity of a parachutist.</p>
+<hr>
+<p>Describe your plan to solve the problem.</p>
+<hr>
+<p>It looks like the second equation give the velocity directly so I’ll just use that one. If I plug a big value for <span class="math inline">\(t\)</span> into the equation, it will probably show the terminal velocity. But I want to be able to check that, so I’ll calculate velocity for several values of <span class="math inline">\(t\)</span> and confirm that the velocity stops changing (i.e., reaches its terminal value).</p>
+<p>Steps * assign values to known parameters * use a for loop to calculate and print the velocity for several (maybe 10?) time values from 0 to 100.</p>
+<hr>
+<p>Write Python code to carry out your solution</p>
+<hr>
+<div id="be87c316" class="cell" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># assign values to known parameters</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>g <span class="op">=</span> <span class="fl">9.81</span> <span class="co"># m/s/s</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>e <span class="op">=</span> <span class="fl">2.718</span> <span class="co"># Euler's number</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>m <span class="op">=</span> <span class="dv">70</span> <span class="co"># kg</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>c <span class="op">=</span> <span class="dv">12</span> <span class="co"># kg/s</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co"># use a for loop to calculate and print the velocity for several (maybe 11?) time values from 0 to 100.</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">11</span>):</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    t <span class="op">=</span> <span class="dv">10</span><span class="op">*</span>i <span class="co"># time (sec)</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    v <span class="op">=</span> (g <span class="op">*</span> m <span class="op">/</span> c) <span class="op">*</span> (<span class="dv">1</span> <span class="op">-</span> e<span class="op">**</span>( <span class="op">-</span>c <span class="op">*</span> t <span class="op">/</span> m))</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"At time </span><span class="sc">{</span>t<span class="sc">}</span><span class="ss"> sec, the velocity is </span><span class="sc">{</span>v<span class="sc">:.2f}</span><span class="ss"> m/s"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>At time 0 sec, the velocity is 0.00 m/s
+At time 10 sec, the velocity is 46.92 m/s
+At time 20 sec, the velocity is 55.37 m/s
+At time 30 sec, the velocity is 56.89 m/s
+At time 40 sec, the velocity is 57.16 m/s
+At time 50 sec, the velocity is 57.21 m/s
+At time 60 sec, the velocity is 57.22 m/s
+At time 70 sec, the velocity is 57.22 m/s
+At time 80 sec, the velocity is 57.22 m/s
+At time 90 sec, the velocity is 57.22 m/s
+At time 100 sec, the velocity is 57.22 m/s</code></pre>
+</div>
+</div>
+<div id="2be9e83e" class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"The terminal velocity is </span><span class="sc">{</span>v<span class="sc">:.2f}</span><span class="ss"> m/s."</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>The terminal velocity is 57.22 m/s.</code></pre>
+</div>
+</div>
+<hr>
+<p>Looking back at your code and the resulting output, reflect on whether your code achieved the problem goal(s). To the extent the problem models a physical system, how realistic does the behavior seem? Are there any changes you would make to your approach if you were to solve this problem again (e.g., to make your code more re-usable or to avoid dead ends)?</p>
+<hr>
+<p>Yes, the code achieves the problem goals. The behavior seems realistic because:</p>
+<ul>
+<li>The sign of the velocity is the same as the acceleration (falling downward).</li>
+<li>After about 50 seconds, the velocity stays the same.</li>
+<li>When the drag coefficient is small, the velocity increases linearly.</li>
+</ul>
+<p>I think the actual value seems a bit high. From what I could look up quickly, 7 m/s is a safe landing speed. 57 m/s is way too fast!</p>
+<p>It would be nice if the code saved the velocity and time values so I could plot them. It would be hard to use this code to check the terminal velocity of several differnent combinations of mass and drag coefficient, so I’d want to a way to keep track of that.</p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
@@ -847,21 +830,9 @@ Each team will submit a written report and include the source code for the proje
     }
   });
   </script>
-<nav class="page-navigation">
-  <div class="nav-page nav-page-previous">
-      <a href="../website/start_here.html" class="pagination-link" aria-label="Start here">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Start here</span>
-      </a>          
-  </div>
-  <div class="nav-page nav-page-next">
-      <a href="../website/instructor.html" class="pagination-link" aria-label="Instructor introduction">
-        <span class="nav-page-text">Instructor introduction</span> <i class="bi bi-arrow-right-short"></i>
-      </a>
-  </div>
-</nav>
 </div> <!-- /content -->
 
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/UWT-TME-310/TME_310_students/blob/main/website/course_syllabus.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="https://github.com/UWT-TME-310/TME_310_students/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/UWT-TME-310/TME_310_students/blob/main/examples/03_parachute.ipynb" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="https://github.com/UWT-TME-310/TME_310_students/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>

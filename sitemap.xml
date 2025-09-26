@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://UWT-TME-310.github.io/TME_310_students/examples/plotting_a_sine_wave.html</loc>
-    <lastmod>2025-09-21T02:54:57.556Z</lastmod>
+    <loc>https://UWT-TME-310.github.io/TME_310_students/examples/03_parachute.html</loc>
+    <lastmod>2025-09-26T19:40:04.744Z</lastmod>
+  </url>
+  <url>
+    <loc>https://UWT-TME-310.github.io/TME_310_students/examples/03_parachute_copilot.html</loc>
+    <lastmod>2025-09-26T19:39:18.337Z</lastmod>
   </url>
   <url>
     <loc>https://UWT-TME-310.github.io/TME_310_students/website/resources.html</loc>
-    <lastmod>2025-09-22T14:53:35.024Z</lastmod>
+    <lastmod>2025-09-26T19:30:37.275Z</lastmod>
   </url>
   <url>
     <loc>https://UWT-TME-310.github.io/TME_310_students/website/accessibility_accommodations.html</loc>
@@ -50,7 +54,7 @@
   </url>
   <url>
     <loc>https://UWT-TME-310.github.io/TME_310_students/website/course_syllabus.html</loc>
-    <lastmod>2025-09-22T21:14:37.932Z</lastmod>
+    <lastmod>2025-09-23T19:20:07.639Z</lastmod>
   </url>
   <url>
     <loc>https://UWT-TME-310.github.io/TME_310_students/website/github_codespace.html</loc>
@@ -102,7 +106,7 @@
   </url>
   <url>
     <loc>https://UWT-TME-310.github.io/TME_310_students/website/homework_format.html</loc>
-    <lastmod>2025-09-22T18:40:46.953Z</lastmod>
+    <lastmod>2025-09-26T19:36:53.437Z</lastmod>
   </url>
   <url>
     <loc>https://UWT-TME-310.github.io/TME_310_students/website/lectures/02_python_basics.html</loc>
@@ -111,5 +115,9 @@
   <url>
     <loc>https://UWT-TME-310.github.io/TME_310_students/index.html</loc>
     <lastmod>2025-09-21T03:03:46.120Z</lastmod>
+  </url>
+  <url>
+    <loc>https://UWT-TME-310.github.io/TME_310_students/examples/00_plotting_a_sine_wave.html</loc>
+    <lastmod>2025-09-23T19:20:07.517Z</lastmod>
   </url>
 </urlset>
