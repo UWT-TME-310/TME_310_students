@@ -5,7 +5,7 @@ Course content will be added on a rolling basis
 
 | Topic | Video | Slides| Code |
 |----|----|----|----|
-| Modeling framework| |    | |
+| Modeling framework| [Link](https://uw.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=1ffa7bdf-69c2-460c-b394-b3620021a18b)|    | |
 | Approaching problems | |    |    |
 | Functional programming | |    |    |
 

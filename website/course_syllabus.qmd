@@ -83,6 +83,9 @@ SO 1: an ability to identify, formulate, and solve complex engineering problems 
 
 SO 6: an ability to develop and conduct appropriate experimentation, analyze and interpret data, and use engineering judgment to draw conclusions
 
-## Resources
+## UW Policies
 
-For information on other campus and student resources, including Policies and Expectations (including religious accommodation), Academic Support, and Self & Family Resources, visit [The e-Syllabus: Campus Information, Resources, Policies and Expectations page.](https://www.tacoma.uw.edu/digital-learning/e-syllabus)
+Religious Accommodations:- Washington state law requires that UW develop a policy for accommodation of student absences or significant hardship due to reasons of faith or conscience, or for organized religious activities. The UW’s policy, including more information about how to request an accommodation, is available at [Religious Accommodations Policy (https://registrar.washington.edu/staffandfaculty/religious-accommodations-policy/)](https://registrar.washington.edu/staffandfaculty/religious-accommodations-policy/). Accommodations must be requested within the first two weeks of this course using the [Religious Accommodations Request form (https://registrar.washington.edu/students/religious-accommodations-request/)](https://registrar.washington.edu/students/religious-accommodations-request/).
+
+For information on other campus and student resources, including Policies and Expectations, Academic Support, and Self & Family Resources, visit [The e-Syllabus: Campus Information, Resources, Policies and Expectations page.](https://www.tacoma.uw.edu/digital-learning/e-syllabus)
+

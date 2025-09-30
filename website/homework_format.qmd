@@ -61,8 +61,8 @@ I'll use the same rubric for check problems I grade.
 
 | Category | 2 Points | 1 Point | 0 Points | Score |
 |----|----|----|----|----|
-| Summarize | The problem goals are summarized accurately. The summary is written in complete sentences. | Problem goals are inaccurately summarized or the summary is not in complete sentences. | Missing or unclear summary |  __ / 8 |
-| Plan | A reasonable plan to solve the problem is described. The description provides enough detail for a coding outline. | The proposed plan contains logical errors or insufficient detail to start a coding outline.  |  Missing or unclear plan |  __ / 8  |
-| Code | The code solves the problem. The code runs without raising errors.  | The code provides a partial solution to the problem or raises errors when executed  | Missing or irrelevant code |  __ / 8 |
-| Reflect |  The reflection is thoughtful, relevant, and written in complete sentences. Problem-specific content is addressed. | The reflection is marginally relevant or not in complete sentences.  |  Missing or unclear reflection |  __ / 8 |
+| Summarize | The problem goals are summarized accurately. The summary is written in complete sentences. | Problem goals are inaccurately summarized or the summary is not in complete sentences. | Missing or unclear summary |  __ / 2 |
+| Plan | A reasonable plan to solve the problem is described. The description provides enough detail for a coding outline. | The proposed plan contains logical errors or insufficient detail to start a coding outline.  |  Missing or unclear plan |  __ / 2  |
+| Code | The code solves the problem. The code runs without raising errors.  | The code provides a partial solution to the problem or raises errors when executed  | Missing or irrelevant code |  __ / 2 |
+| Reflect |  The reflection is thoughtful, relevant, and written in complete sentences. Problem-specific content is addressed. | The reflection is marginally relevant or not in complete sentences.  |  Missing or unclear reflection |  __ / 2 |
 | Total |   |   |   |  __ / 8 |

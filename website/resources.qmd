@@ -8,6 +8,12 @@ If you find yourself struggling with any of the course concepts, look through th
 * [Python cheatsheet](reference/python-cheat-sheet.pdf)
 * [Python reference (Real Python)](https://realpython.com/ref/)
 
+## Modeling
+
+Allen Downey wrote an open-source book on [Modeling and Simulation in Python](https://allendowney.github.io/ModSimPy/index.html) that I use a lot of content from.
+One of the coolest things about the book is that the chapters can be opened as executable notebooks right in your browser.
+My one complaint about the book is that Downey uses the dreaded `import *` approach in the book, which makes it hard to tell when he's using the package he wrote to accompany the book.
+
 ## Coding with Copilot
 
 * [Prompting Copilot](https://www.youtube.com/watch?v=hh1nOX14TyY&t=118s)
