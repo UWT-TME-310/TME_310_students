@@ -28,5 +28,11 @@ I didn't agree with the advice to not use comments to interact with Copilot... A
 
 ## External libraries
 
-* Arrays and computation: [Numpy introductory documentation](https://numpy.org/doc/stable/user/absolute_beginners.html)
-* Plotting: [Plotting introductory documentation](https://matplotlib.org/stable/users/explain/quick_start.html)
+### Numpy
+* [Numpy introductory documentation](https://numpy.org/doc/stable/user/absolute_beginners.html)
+* [Numpy cheatsheet](reference/Numpy_Python_Cheat_Sheet.pdf)
+  
+
+### Matplotlib
+* [Plotting introductory documentation](https://matplotlib.org/stable/users/explain/quick_start.html)
+* [Matplotlib cheatsheet](reference/matplotlib-cheatsheets.pdf)
