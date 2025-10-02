@@ -351,19 +351,51 @@ window.Quarto = {
 <hr>
 <p>Summarize the goal(s) of the problem in your own words.</p>
 <hr>
+<p>Similar as last time, but now use a functions. And the function itself should find the terminal velocity</p>
 <hr>
 <p>Describe your plan to solve the problem.</p>
 <hr>
+<p>Copy code from the previous exercise. Start a function signature and move content into it incrementally. Inside the function, check wether velocity is changing as time is increased incrementally.</p>
 <hr>
 <p>Write Python <strong>code</strong> to solve the problem</p>
 <hr>
-<div id="5cf7c424" class="cell" data-execution_count="3">
+<div id="5cf7c424" class="cell" data-execution_count="18">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Your code here</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> terminal_velocity(mass, drag, g<span class="op">=</span><span class="fl">9.81</span>):</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="co"># mass in kg</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="co"># drag in kg/s</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="co"># g in m/s/s</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    e <span class="op">=</span> <span class="fl">2.718</span> <span class="co"># Euler's number</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    new_vel <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    old_vel <span class="op">=</span> <span class="op">-</span><span class="dv">1</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>    t <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> old_vel <span class="op">&lt;</span> new_vel:</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>        t <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>        old_vel <span class="op">=</span> new_vel</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>        new_vel <span class="op">=</span> (g <span class="op">*</span> mass <span class="op">/</span> drag) <span class="op">*</span> (<span class="dv">1</span> <span class="op">-</span> e<span class="op">**</span>( <span class="op">-</span>drag <span class="op">*</span> t <span class="op">/</span> mass))</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"For a parachutist with mass of </span><span class="sc">{</span>mass<span class="sc">}</span><span class="ss"> kg and drag coeff. of </span><span class="sc">{</span>drag<span class="sc">}</span><span class="ss"> kg/s, the terminal velocity is </span><span class="sc">{</span>new_vel<span class="sc">:.2f}</span><span class="ss"> m/s"</span>)</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>    <span class="cf">pass</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="co"># assign values to known parameters</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>m <span class="op">=</span> <span class="dv">70</span> <span class="co"># kg</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>c <span class="op">=</span> <span class="dv">12</span> <span class="co"># kg/s</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>terminal_velocity(m,c)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>For a parachutist with mass of 70 kg and drag coeff. of 12 kg/s, the terminal velocity is 57.22 m/s</code></pre>
+</div>
 </div>
 <hr>
 <p>Looking back at your code and the resulting output, reflect on whether your code achieved the problem goal(s). To the extent the problem models a physical system, how realistic does the behavior seem? Are there any changes you would make to your approach if you were to solve this problem again (e.g., to make your code more re-usable or to avoid dead ends)?</p>
 <hr>
+<p>The code achieves the goal - it now uses a function to find the terminal velocity. It checks that velocity has not changed to determine that the value is the terminal value.</p>
+<p>The behavior still seems realisitc: * increasing mass increases the terminal velocity * increasing drag coefficient decreases the terminal velocity</p>
+<p>I’d like to modify the code to create plots of velocity vs.&nbsp;time.</p>
 
 
 </section>
