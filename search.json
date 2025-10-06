@@ -1,149 +1,132 @@
 [
   {
-    "objectID": "examples/03_parachute.html",
-    "href": "examples/03_parachute.html",
+    "objectID": "examples/matplotlib_quick_ref.html",
+    "href": "examples/matplotlib_quick_ref.html",
+    "title": "Matplotlib quick reference",
+    "section": "",
+    "text": "import matplotlib.pyplot as plt"
+  },
+  {
+    "objectID": "examples/matplotlib_quick_ref.html#basic-plotting",
+    "href": "examples/matplotlib_quick_ref.html#basic-plotting",
+    "title": "Matplotlib quick reference",
+    "section": "Basic plotting",
+    "text": "Basic plotting\nplt.plot(x, y)                    # Line plot\nplt.scatter(x, y)                 # Scatter plot\nplt.bar(x, heights)               # Bar chart\nplt.hist(data, bins=20)           # Histogram\nplt.imshow(array)                 # 2D array as image"
+  },
+  {
+    "objectID": "examples/matplotlib_quick_ref.html#customization",
+    "href": "examples/matplotlib_quick_ref.html#customization",
+    "title": "Matplotlib quick reference",
+    "section": "Customization",
+    "text": "Customization\nplt.xlabel(\"X Label\")\nplt.ylabel(\"Y Label\")\nplt.title(\"Title\")\nplt.legend([\"Series 1\", \"Series 2\"])\nplt.grid(True)\nplt.xlim(0, 10)\nplt.ylim(0, 100)"
+  },
+  {
+    "objectID": "examples/matplotlib_quick_ref.html#styling",
+    "href": "examples/matplotlib_quick_ref.html#styling",
+    "title": "Matplotlib quick reference",
+    "section": "Styling",
+    "text": "Styling\nplt.plot(x, y, 'r--')            # Red dashed line\nplt.plot(x, y, marker='o')       # With markers\nplt.plot(x, y, linewidth=2)      # Line thickness\nplt.plot(x, y, alpha=0.5)        # Transparency"
+  },
+  {
+    "objectID": "examples/matplotlib_quick_ref.html#multiple-plots",
+    "href": "examples/matplotlib_quick_ref.html#multiple-plots",
+    "title": "Matplotlib quick reference",
+    "section": "Multiple plots",
+    "text": "Multiple plots\nplt.plot(x, y1)\nplt.plot(x, y2)                   # Plots on same axes\n\nplt.figure()                      # New figure\nplt.plot(x, y3)                   # Separate plot"
+  },
+  {
+    "objectID": "examples/matplotlib_quick_ref.html#display",
+    "href": "examples/matplotlib_quick_ref.html#display",
+    "title": "Matplotlib quick reference",
+    "section": "Display",
+    "text": "Display\nplt.show()                        # Display all figures\nplt.savefig('plot.png', dpi=400)  # Save to file\nplt.close()                       # Close current figure\nplt.close('all')                  # Close all figures"
+  },
+  {
+    "objectID": "examples/matplotlib_quick_ref.html#common-patterns",
+    "href": "examples/matplotlib_quick_ref.html#common-patterns",
+    "title": "Matplotlib quick reference",
+    "section": "Common patterns",
+    "text": "Common patterns\nplt.plot(x, y, label='Data')\nplt.xlabel('Time (s)')\nplt.ylabel('Value')\nplt.legend()\nplt.grid(True)\nplt.savefig('output.png')\nplt.show()"
+  },
+  {
+    "objectID": "examples/05_parachute_functions.html",
+    "href": "examples/05_parachute_functions.html",
     "title": "Parachute problem",
     "section": "",
     "text": "What’s the terminal velocity of someone falling with a parachute? (this is our system)"
   },
   {
-    "objectID": "examples/03_parachute.html#assumptions",
-    "href": "examples/03_parachute.html#assumptions",
+    "objectID": "examples/05_parachute_functions.html#assumptions",
+    "href": "examples/05_parachute_functions.html#assumptions",
     "title": "Parachute problem",
     "section": "Assumptions",
-    "text": "Assumptions\nLet’s say we have a model for this problem:\n\\[\\frac{dv}{dt} = g -\\frac{c}{m}v\\]\nwhere \\(g\\) is gravitational acceleration, \\(c\\) is a drag coefficient, \\(m\\) is the parachutist’s mass, and \\(v\\) is their velocity. The solution to this differential equation is:\n\\[ v(t) = \\frac{gm}{c}(1 - e^{ct/m})\\]\nUse the following parameters for the parachutist:\n\n\n\nParameter\nValue\n\n\n\n\nMass\n70 kg\n\n\nDrag coefficient\n12 kg/s\n\n\n\n\nSummarize the goal(s) of the problem in your own words.\n\nUse one or more of the equations given and the parameters (mass = 70 kg; drag coeff = 12 kg/s) to find the terminal velocity of a parachutist.\n\nDescribe your plan to solve the problem.\n\nIt looks like the second equation give the velocity directly so I’ll just use that one. If I plug a big value for \\(t\\) into the equation, it will probably show the terminal velocity. But I want to be able to check that, so I’ll calculate velocity for several values of \\(t\\) and confirm that the velocity stops changing (i.e., reaches its terminal value).\nSteps * assign values to known parameters * use a for loop to calculate and print the velocity for several (maybe 10?) time values from 0 to 100.\n\nWrite Python code to carry out your solution\n\n\n# assign values to known parameters\ng = 9.81 # m/s/s\ne = 2.718 # Euler's number\nm = 70 # kg\nc = 12 # kg/s\n\n# use a for loop to calculate and print the velocity for several (maybe 11?) time values from 0 to 100.\nfor i in range(11):\n    t = 10*i # time (sec)\n    v = (g * m / c) * (1 - e**( -c * t / m))\n    print(f\"At time {t} sec, the velocity is {v:.2f} m/s\")\n\nAt time 0 sec, the velocity is 0.00 m/s\nAt time 10 sec, the velocity is 46.92 m/s\nAt time 20 sec, the velocity is 55.37 m/s\nAt time 30 sec, the velocity is 56.89 m/s\nAt time 40 sec, the velocity is 57.16 m/s\nAt time 50 sec, the velocity is 57.21 m/s\nAt time 60 sec, the velocity is 57.22 m/s\nAt time 70 sec, the velocity is 57.22 m/s\nAt time 80 sec, the velocity is 57.22 m/s\nAt time 90 sec, the velocity is 57.22 m/s\nAt time 100 sec, the velocity is 57.22 m/s\n\n\n\nprint(f\"The terminal velocity is {v:.2f} m/s.\")\n\nThe terminal velocity is 57.22 m/s.\n\n\n\nLooking back at your code and the resulting output, reflect on whether your code achieved the problem goal(s). To the extent the problem models a physical system, how realistic does the behavior seem? Are there any changes you would make to your approach if you were to solve this problem again (e.g., to make your code more re-usable or to avoid dead ends)?\n\nYes, the code achieves the problem goals. The behavior seems realistic because:\n\nThe sign of the velocity is the same as the acceleration (falling downward).\nAfter about 50 seconds, the velocity stays the same.\nWhen the drag coefficient is small, the velocity increases linearly.\n\nI think the actual value seems a bit high. From what I could look up quickly, 7 m/s is a safe landing speed. 57 m/s is way too fast!\nIt would be nice if the code saved the velocity and time values so I could plot them. It would be hard to use this code to check the terminal velocity of several differnent combinations of mass and drag coefficient, so I’d want to a way to keep track of that.\n\nprint(\"Hi\")\n\nHi\n\n\nchange on “new branch”"
+    "text": "Assumptions\nLet’s say we have a model for this problem:\n\\[\\frac{dv}{dt} = g -\\frac{c}{m}v\\]\nwhere \\(g\\) is gravitational acceleration, \\(c\\) is a drag coefficient, \\(m\\) is the parachutist’s mass, and \\(v\\) is their velocity. The solution to this differential equation is:\n\\[ v(t) = \\frac{gm}{c}(1 - e^{ct/m})\\]\nWrite a function that finds the terminal velocity of a parachutist of a given mass and drag coefficient.\n\nSummarize the goal(s) of the problem in your own words.\n\nSimilar as last time, but now use a functions. And the function itself should find the terminal velocity\n\nDescribe your plan to solve the problem.\n\nCopy code from the previous exercise. Start a function signature and move content into it incrementally. Inside the function, check wether velocity is changing as time is increased incrementally.\n\nWrite Python code to solve the problem\n\n\n# Your code here\ndef terminal_velocity(mass, drag, g=9.81):\n    # mass in kg\n    # drag in kg/s\n    # g in m/s/s\n\n    e = 2.718 # Euler's number\n\n    new_vel = 0\n    old_vel = -1\n    t = 0\n\n    while old_vel &lt; new_vel:\n        t += 1\n        old_vel = new_vel\n        new_vel = (g * mass / drag) * (1 - e**( -drag * t / mass))\n    \n    print(f\"For a parachutist with mass of {mass} kg and drag coeff. of {drag} kg/s, the terminal velocity is {new_vel:.2f} m/s\")\n\n    pass\n\n# assign values to known parameters\nm = 70 # kg\nc = 12 # kg/s\n\nterminal_velocity(m,c)\n\nFor a parachutist with mass of 70 kg and drag coeff. of 12 kg/s, the terminal velocity is 57.22 m/s\n\n\n\nLooking back at your code and the resulting output, reflect on whether your code achieved the problem goal(s). To the extent the problem models a physical system, how realistic does the behavior seem? Are there any changes you would make to your approach if you were to solve this problem again (e.g., to make your code more re-usable or to avoid dead ends)?\n\nThe code achieves the goal - it now uses a function to find the terminal velocity. It checks that velocity has not changed to determine that the value is the terminal value.\nThe behavior still seems realisitc: * increasing mass increases the terminal velocity * increasing drag coefficient decreases the terminal velocity\nI’d like to modify the code to create plots of velocity vs. time."
   },
   {
-    "objectID": "examples/02_python_basics.html",
-    "href": "examples/02_python_basics.html",
-    "title": "Python Basics for Computational Physical Modeling",
+    "objectID": "examples/00_plotting_a_sine_wave.html",
+    "href": "examples/00_plotting_a_sine_wave.html",
+    "title": "Plotting a sine wave",
     "section": "",
-    "text": "Welcome to Python! This notebook will introduce you to some basic Python concepts that you’ll use in TME 310."
+    "text": "This notebook shows how to use matplotlib and numpy to plot a sine wave.\nFirst, import the required packages:\n\nimport matplotlib.pyplot as plt\nimport numpy as np\n\nThen create a time array using Numpy’s linspace() and an amplitude array by using the newly created time array as input to Numpy’s sin(). I also include a factor of \\(2 \\pi\\) radians so that one second corresponds to one full sine period.\n\ntime = np.linspace(0, 3, 500)\namplitude = np.sin(2 * np.pi * time)\n\nUse plt.subplots() to create a figure and axes to plot on. Add the plot to the axes with the plot(x, y) method, providing time as the x variable and amplitude as the y variable.\n\nfig, ax = plt.subplots()\nax.plot(time, amplitude)\nax.set(xlabel='Time (s)', ylabel='Amplitude', title='Sine Wave')\nax.grid()\nplt.show()"
   },
   {
-    "objectID": "examples/02_python_basics.html#what-will-be-covered",
-    "href": "examples/02_python_basics.html#what-will-be-covered",
-    "title": "Python Basics for Computational Physical Modeling",
-    "section": "What will be covered",
-    "text": "What will be covered\n\nData Types - Kinds of information\nVariables - Where information is stored\nNumbers and Math - How calculations are done\nStrings - Text objects\nLists - A built in way to organize data\nConditionals - How we ask questions about data\nLoops - Doing repetitive things automatically"
-  },
-  {
-    "objectID": "examples/02_python_basics.html#data-types",
-    "href": "examples/02_python_basics.html#data-types",
-    "title": "Python Basics for Computational Physical Modeling",
-    "section": "Data Types",
-    "text": "Data Types\nThere are different kinds of information we can store in Python - these are called types. Python has several built in data types. Today, we’ll cover some of the most commonly-used ones:\n\nint (numeric integers)\nfloat (numeric real numbers)\nbool (true or false)\nstring (text)\nlist (collection of other objects)\n\n\nint\nAn int is an integer value (e.g., 1 or -395). In Python, we can check the type of an object with the built-in type() function.\n\n# An integer\ntype(1)\n\nint\n\n\n\n# Another integer\ntype(-395)\n\nint\n\n\n\n\nfloat\nA float is another numeric data type in Python. Unlike an int, a float is a real number that can have several decimal places. For example:\n\n# A floating point number\ntype(9.81)\n\nfloat\n\n\nNote that any number with a decimal place will be interpreted as a float by Python, even if there’s nothing after the decimal place:\n\n# This is also a floating point number\ntype(1.)\n\nfloat\n\n\n\n\nbool\nA bool (boolean) represents True or False values. These are useful for yes/no questions.\n\n# In Python True and False are capitalized\ntype(True)\n\nbool\n\n\n\ntype(False)\n\nbool\n\n\n\n\nstr\nA string (or str) represents text. Strings are surrounded by quotes. Either single or double quotes can be used to surround strings:\n\n# A double-quoted string\ntype(\"hello\")\n\nstr\n\n\n\n# A single-quoted string\ntype('world')\n\nstr\n\n\nIt’s considered best practice to use double quotes for strings even though single quotes are accepted by Python. More importantly, whichever kind of quote starts the string has to be used to close it, or you’ll get a syntax error!\n\n# This will cause an error!\ntype('mismatch\")\n\n\n  Cell In[9], line 2\n    type('mismatch\")\n         ^\nSyntaxError: unterminated string literal (detected at line 2)\n\n\n\n\n\n\nlist\nA list is a collection of other objects. Lists are surrounded by square brackets [] with their elements separated by commas.\n\n# A list of integers\ntype([1, 2, 3])\n\nlist\n\n\nThe elements of a list don’t need to be the same type.\n\n# A list of mixed types\ntype([1, \"two\", 3.0, True])\n\nlist\n\n\n\n# Even another list:\ntype([1, 2, [\"I'm\", \"a\", \"list\"], 4])\n\nlist"
-  },
-  {
-    "objectID": "examples/02_python_basics.html#variables",
-    "href": "examples/02_python_basics.html#variables",
-    "title": "Python Basics for Computational Physical Modeling",
-    "section": "Variables",
-    "text": "Variables\nVariables are names that refer to objects. We create variables using the assignment operator =.\n\nx = 5\nx\n\n5\n\n\nJupyter will automatically display the output of the last line in a cell if it is an expression or variable, and not assigned to anything. That’s why writing x on the last line in the cell above resulted in the value assigned to x being displayed.\nBut that automatic display only happens for the last line in a cell.\n\n# No output here\ny = 10\ny\nz = 37\n\nIn general, it’s better to explicitly tell Python what to display with the print() function, which does not need to be on any particular line.\n\n# Printing the value of y that wasn't shown above\nprint(y)\n\n10\n\n\nAny data type can be assigned to a variable:\n\ncourse = \"TME 310A\"\nstudents = 25\nmax_grade = 4.0\nfun = True\n\nThe value of one variable can be assigned to another, too:\n\na = 5\nprint(a)\n\n# Assigning the value of a to b\nb = a\nprint(b)\n\n5\n5\n\n\n\n\n\n\n\n\nCaution\n\n\n\nIn the case above, a and b are both of type int. If the value of a is changed at some future point in the code, the value of b will be unaffected. But this is not the case for all data types, as we’ll see in a few sections."
-  },
-  {
-    "objectID": "examples/02_python_basics.html#numbers-and-math",
-    "href": "examples/02_python_basics.html#numbers-and-math",
-    "title": "Python Basics for Computational Physical Modeling",
-    "section": "Numbers and Math",
-    "text": "Numbers and Math\nMost arithmetic operations in Python act like you’d expect. For example:\n\n# Addition\nw = 20 + 34\nprint(w)\n\n54\n\n\n\n# Subtraction\nx = 10 - 4\nprint(x)\n\n6\n\n\n\n# Multiplication\ny = 3 * 7\nprint(y)\n\n21\n\n\n\n\n\n\n\n\nCaution\n\n\n\nThis is a good place to note one of the potential sources of error in Jupyter notebooks.\nNow that we’ve just overwritten the variable y with a new value, go back to the Variables section and run the cell that contains print(y). Python will always interpret variables based on their values at the time of execution, which may not reflect the expected values based on a linear reading of the notebook.\n\n\nDivision in Python will often look how you’d expect, but there are some details worth examining. The basic division operator is /, which works on int and float data types, but always returns a float. This is because it converts anything it’s operating on into a float before performing division. So, even if it’s used between two integers and the result could be represented as an integer, the resulting data type will be float.\n\n# Division\nz = 15 / 3\nprint(z) # z is a float even though 15 can be divided by 3 evenly\n\n5.0\n\n\nTo perform integer division in Python, use the // operator. This performs division and returns the result rounded down to the next smallest whole number.\n\n# Returns an integer result (no rounding needed)\n15 // 3\n\n5\n\n\n\n# This result gets rounded to the next smallest whole number\n13 // 3\n\n4\n\n\nWhen you first learned to divide, you probably used “remainders” when numbers didn’t divide evenly. So the answer to 13 divided by 3 would have been 4 remainder 1. The integer division operator in Python ignores the remainder, but another useful operator provides it - the modulo operator: %.\n\n# The remainder after integer division\n13 % 3\n\n1\n\n\nThe ** operator means “to the power of”. So 2 ** 3 means 2 to the power of 3.\n\n2 ** 3\n\n8"
-  },
-  {
-    "objectID": "examples/02_python_basics.html#strings",
-    "href": "examples/02_python_basics.html#strings",
-    "title": "Python Basics for Computational Physical Modeling",
-    "section": "Strings",
-    "text": "Strings\nAlthough strings are text, not numbers, some of the operators discussed above can be used with strings. But, of course, they have different meanings when text is involved.\nFor example, “adding” two strings sticks the two pieces of text together:\n\n\"hello\" + \" world\"\n\n'hello world'\n\n\nMultiplying a string creates multiple copies of the original text and sticks them all together:\n\n\" alright \" * 3\n\n' alright  alright  alright '\n\n\nOther operators (like - or /) don’t have unique meaning with strings, so they aren’t allowed. Trying to use them will result in an error:\n\n\"hello\" - \" world\"  # This will cause an error\n\n\n---------------------------------------------------------------------------\nTypeError                                 Traceback (most recent call last)\nCell In[28], line 1\n----&gt; 1 \"hello\" - \" world\"  # This will cause an error\n\nTypeError: unsupported operand type(s) for -: 'str' and 'str'\n\n\n\nThe len() function returns the number of characters in a string:\n\nlen(\"This is a string. It's not super long, but it's long enough that I don't want to count the characters myself.\")\n\n109\n\n\nOne of the most useful features Python has for strings is the “F-string”. With F-strings, you can put variables inside your strings (inside curly braces {}) and get the variable value inserted into your string.\n\ncourse = \"TME 310A\"\nstudents = 25\nmax_grade = 4.0\n\nprint(f\"There are {students} students registered for {course}. The highest grade you can get is {max_grade}\")\n\nThere are 25 students registered for TME 310A. The highest grade you can get is 4.0\n\n\nStrings are indexed, which means that each character in the string has a numbered position (called an index). You can access the \\(n\\)th character in a string putting the index you want in square brackets after the string:\n\nmy_string = \"abstraction\"\nmy_string[2]\n\n's'\n\n\nDepending on what languages you’ve programmed in before, you may have expected my_string[2] to return b since that’s the 2nd character in the string. But Python is a “zero-indexed” language, so counting always starts at zero. To get the first character in the string, we need to put 0 in square brackets:\n\nmy_string[0]\n\n'a'\n\n\nTrying to access an index past the end of the string will cause an error:\n\ntoo_far = len(my_string)\nmy_string[too_far] # This will cause an error\n\n\n---------------------------------------------------------------------------\nIndexError                                Traceback (most recent call last)\nCell In[33], line 2\n      1 too_far = len(my_string)\n----&gt; 2 my_string[too_far] # This will cause an error\n\nIndexError: string index out of range\n\n\n\nNotice that the trying to access and index equal to the length of the string causes IndexError: string index out of range because the indexing starts at 0! That means that the last entry in the string will have the value len(my_string) - 1.\nIn fact, Python supports negative indexing without needing to find the length of the string. The last entry in the string has index -1; and the second to last entry has index -2, and so on.\n\nmy_string[-1] # This will give the last character of the string\n\n'n'\n\n\n\nmy_string[-2] # This will give the second to last character of the string\n\n'o'"
-  },
-  {
-    "objectID": "examples/02_python_basics.html#lists",
-    "href": "examples/02_python_basics.html#lists",
-    "title": "Python Basics for Computational Physical Modeling",
-    "section": "Lists",
-    "text": "Lists\nWe’ve already seen that lists are containers that hold objects. Now we’ll discuss how to interact with these containers.\nLike strings, lists are indexed data types, so we can use the indexing syntax to access specific values in a list:\n\ncolors = [\"red\", \"green\", \"blue\"]\n\n# Print the first item in the list:\nprint(colors[0])\n\nred\n\n\nOne of the key differences between lists and strings is that lists are mutable, while strings are immutable. This means that you can change the value of an entry in a list, but you can’t with a string:\n\n# Change the second color from \"green\" to \"yellow\":\ncolors[1] = \"yellow\"\nprint(colors)\n\n['red', 'yellow', 'blue']\n\n\n\n# Trying to change one of the characters in a string will cause an error:\nmy_string[0] = \"A\" # This will cause an error\n\n\n---------------------------------------------------------------------------\nTypeError                                 Traceback (most recent call last)\nCell In[38], line 2\n      1 # Trying to change one of the characters in a string will cause an error:\n----&gt; 2 my_string[0] = \"A\" # This will cause an error\n\nTypeError: 'str' object does not support item assignment\n\n\n\nCopying A major implication of whether an object is mutable or not is how Python handles copies of the object. We saw previously that when we made a copy of an integer variable, changing the original variable did not change the copy. This kind of copying is called deep copying. It’s the default behavior for immutable objects in Python so the same applies to strings:\n\n# Make a string and copy it\noriginal_string = \"TME 310A\"\ncopied_string = original_string\nprint(original_string)\nprint(copied_string)\n\nTME 310A\nTME 310A\n\n\n\n# Change the original string\noriginal_string = \"TME 310B\"\n\n# The copy is unchanged\nprint(original_string)\nprint(copied_string)\n\nTME 310B\nTME 310A\n\n\nBut since lists are mutable, when they’re copied, Python makes what’s called a shallow copy. A shallow copy points to the original rather than reproducing it. This means that a change to the original will immediately cause a change in the “copy”. And, strangely enough, a change in the copy will immediately change the original!\n\n# Make a list and copy it\noriginal_list = [ 1, 2, 3 ]\ncopied_list = original_list\nprint(original_list)\nprint(copied_list)\n\n[1, 2, 3]\n[1, 2, 3]\n\n\n\n# Change the original list\noriginal_list[0] = 99\n\n# Both the original and the \"copy\" are changed!\nprint(original_list)\nprint(copied_list)\n\n[99, 2, 3]\n[99, 2, 3]\n\n\n\n# Change the copy\ncopied_list[-1] = -5\n\n# The original gets changed too!\nprint(original_list)\nprint(copied_list)\n\n[99, 2, -5]\n[99, 2, -5]"
-  },
-  {
-    "objectID": "examples/02_python_basics.html#conditionals",
-    "href": "examples/02_python_basics.html#conditionals",
-    "title": "Python Basics for Computational Physical Modeling",
-    "section": "Conditionals",
-    "text": "Conditionals\nConditionals let you make decisions in your code with if, elif, and else statements. Often these use boolean comparators which evaluate a statement and return whether it is true or false. Python’s boolean comparators are\n\n\n\nBoolean comparator\nMeaning\n\n\n\n\n&gt;\ngreater than\n\n\n&lt;\nless than\n\n\n&gt;=\ngreater than or equal to\n\n\n&lt;=\nless than or equal to\n\n\n!=\nnot equal to\n\n\n==\nequal to\n\n\n\n\n# Create two variables and check whether one is greater than the other\na = 5\nb = 10\na &gt; b\n\nFalse\n\n\nBoolean comparators and conditional statements allow us to change the behavior of Python scripts depending on the values of certain variables. Conditional statements (like the if statement) have three parts: 1. The keyword 2. The test condition followed by a colon : 3. An indented codeblock that is executed if the test condition is True\nFor example:\n\ntemperature = 65                # a variable representing the temperature\n\nif temperature &gt; 70:            # The \"if\" keyword, the test condition, and a colon\n    print(\"It's warm outside\")  # An indented codeblock that runs if the test condition is True\n\nThe other conditional statements, else and elif (short for “else if”) use the same syntax as the if statement, but the must come after an if or elif statement. They can be used to execute different indented codeblocks under different circumstances.\nFor example:\n\ntemperature = 65  \n\nif temperature &gt; 70: \n    print(\"It's warm outside\")\nelif temperature &lt; 50:\n    print(\"It's cold outside\")\nelse:\n    print(\"It's a nice day\")\n\nIt's a nice day"
-  },
-  {
-    "objectID": "examples/02_python_basics.html#loops",
-    "href": "examples/02_python_basics.html#loops",
-    "title": "Python Basics for Computational Physical Modeling",
-    "section": "Loops",
-    "text": "Loops\nLoops let you repeat code. The for loop goes through each item in an iterable object, like a list:\n\nfruits = [\"apple\", \"banana\", \"orange\"]\n\nfor fruit in fruits:\n    print(fruit)\n\napple\nbanana\norange\n\n\nThe range() function creates an iterable sequence of numbers that can be used to control a for loop:\n\nfor i in range(5):\n    print(i)\n\n0\n1\n2\n3\n4\n\n\nThe while loop repeats as long as a condition is True.\n\ncount = 0\n\nwhile count &lt; 3:\n    print(f\"Count is {count}\")\n    count = count + 1\n\nCount is 0\nCount is 1\nCount is 2\n\n\nThe example above is not a great use of a while loop because the same thing can be accomplished with a for loop and while loops have the potential to run forever (or until you manually force the computer to stop). That’s called an “infinite loop” and can be a pain if triggered accidentally in your code. In the code above, if you left out the list line in the loop, for example, the value of count would never increase and the conditional test (count &lt; 3) would always be True and the loop would run forever.\nIt’s best to reserve while loops for situations where you’re uncertain how many iterations are needed."
-  },
-  {
-    "objectID": "examples/03_parachute_copilot.html",
-    "href": "examples/03_parachute_copilot.html",
-    "title": "Parachute problem",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Welcome to TME 310 A - Computational Physical Modeling!",
     "section": "",
-    "text": "What’s the terminal velocity of someone falling with a parachute? (this is our system)"
-  },
-  {
-    "objectID": "examples/03_parachute_copilot.html#assumptions",
-    "href": "examples/03_parachute_copilot.html#assumptions",
-    "title": "Parachute problem",
-    "section": "Assumptions",
-    "text": "Assumptions\nLet’s say we have a model for this problem:\n\\[\\frac{dv}{dt} = g -\\frac{c}{m}v\\]\nwhere \\(g\\) is gravitational acceleration, \\(c\\) is a drag coefficient, \\(m\\) is the parachutist’s mass, and \\(v\\) is their velocity. The solution to this differential equation is:\n\\[ v(t) = \\frac{gm}{c}(1 - e^{ct/m})\\]\nUse the following parameters for the parachutist:\n\n\n\nParameter\nValue\n\n\n\n\nMass\n70 kg\n\n\nDrag coefficient\n12 kg/s\n\n\n\n\nSummarize the goal(s) of the problem in your own words.\n\nUse one or more of the equations given and the parameters (mass = 70 kg; drag coeff = 12 kg/s) to find the terminal velocity of a parachutist.\n\nDescribe your plan to solve the problem.\n\nIt looks like the second equation give the velocity directly so I’ll just use that one. If I plug a big value for \\(t\\) into the equation, it will probably show the terminal velocity. But I want to be able to check that, so I’ll calculate velocity for several values of \\(t\\) and confirm that the velocity stops changing (i.e., reaches its terminal value).\nSteps * assign values to known parameters * use a for loop to calculate and print the velocity for several (maybe 10?) time values from 0 to 100.\n\nWrite Python code to carry out your solution\n\n\n# assign values to known parameters\ng = 9.81  # gravitational acceleration in m/s^2\nm = 70   # mass in kg\nc = 12   # drag coefficient in kg/s\n\n# calculate gm/c once since it is used in the formula\ngm_over_c = (g * m) / c\n\n# use a for loop to calculate and print the velocity for several time values from 0 to 100\n# we'll use 11 time values: 0, 10, 20, ..., 100\nprint(\"Time (s)    Velocity (m/s)\")\nfor t in range(0, 101, 10):\n    # calculate the exponent part: -c * t / m\n    exponent = -c * t / m\n    # calculate e^(exponent) using the built-in pow() function\n    exp_value = pow(2.71828, exponent)  # 2.71828 is an approximation for e\n    # calculate velocity using the formula\n    v = gm_over_c * (1 - exp_value)\n    # print the time and velocity, rounded to 2 decimal places\n    print(str(t).ljust(10), round(v, 2))\n\nTime (s)    Velocity (m/s)\n0          0.0\n10         46.92\n20         55.37\n30         56.89\n40         57.16\n50         57.21\n60         57.22\n70         57.22\n80         57.22\n90         57.22\n100        57.22\n\n\n\nLooking back at your code and the resulting output, reflect on whether your code achieved the problem goal(s). To the extent the problem models a physical system, how realistic does the behavior seem? Are there any changes you would make to your approach if you were to solve this problem again (e.g., to make your code more re-usable or to avoid dead ends)?"
-  },
-  {
-    "objectID": "website/resources.html",
-    "href": "website/resources.html",
-    "title": "Resources",
-    "section": "",
-    "text": "This page contains lists of resources you may find helpful for this course. None of the resources are mandatory, but I recommend you look over the list to familiarize yourself with the kind of content that’s available. If you find yourself struggling with any of the course concepts, look through these resources again to see if there’s anything that can help.\n\n\n\nPython cheatsheet\nPython reference (Real Python)\n\n\n\n\nAllen Downey wrote an open-source book on Modeling and Simulation in Python that I use a lot of content from. One of the coolest things about the book is that the chapters can be opened as executable notebooks right in your browser. My one complaint about the book is that Downey uses the dreaded import * approach in the book, which makes it hard to tell when he’s using the package he wrote to accompany the book.\n\n\n\n\nPrompting Copilot\nCopilot Best Practices\n\n\n\n\n\n\n\nNote\n\n\n\nI didn’t agree with the advice to not use comments to interact with Copilot… And then the very next video (next link below) I watched from the same playlist recommended using comments to prompt Copilot!\n\n\n\nCopilot in Jupyter\n\n\n\n\n\n\n\nNumpy introductory documentation\nNumpy cheatsheet\n\n\n\n\n\nPlotting introductory documentation\nMatplotlib cheatsheet",
+    "text": "Welcome to TME 310 A - Computational Physical Modeling!\n\n\n\nModeling Framework by Allen Downey (CC BY-NC 4.0)\n\n\nIn this course, we’ll look at the concept of physical modeling with an emphasis on civil and mechanical engineering applications. We will use Python to perform calculations on our models.\nClick the “Start Here” link below to begin going through some introductory material about the course.",
     "crumbs": [
-      "TME 310A",
-      "Resources"
+      "TME 310A"
     ]
   },
   {
-    "objectID": "website/resources.html#python-language",
-    "href": "website/resources.html#python-language",
-    "title": "Resources",
-    "section": "",
-    "text": "Python cheatsheet\nPython reference (Real Python)",
-    "crumbs": [
-      "TME 310A",
-      "Resources"
-    ]
+    "objectID": "website/lectures/06_arrays/array_logic.html#logical-expressions",
+    "href": "website/lectures/06_arrays/array_logic.html#logical-expressions",
+    "title": "Array logic",
+    "section": "Logical expressions",
+    "text": "Logical expressions\nWe have already seen logical expressions in places like while loops:\nwhile logical_expression:\n    # execute something\nLogical expressions evaluate whether something is true or false. They result in a boolean value (True or False in Python).\n\n\nx = 0\nwhile x &lt; 2:\n    print(x)\n    x += 1\n\n\n\n0\n1"
   },
   {
-    "objectID": "website/resources.html#modeling",
-    "href": "website/resources.html#modeling",
-    "title": "Resources",
-    "section": "",
-    "text": "Allen Downey wrote an open-source book on Modeling and Simulation in Python that I use a lot of content from. One of the coolest things about the book is that the chapters can be opened as executable notebooks right in your browser. My one complaint about the book is that Downey uses the dreaded import * approach in the book, which makes it hard to tell when he’s using the package he wrote to accompany the book.",
-    "crumbs": [
-      "TME 310A",
-      "Resources"
-    ]
+    "objectID": "website/lectures/06_arrays/array_logic.html#array-indexing",
+    "href": "website/lectures/06_arrays/array_logic.html#array-indexing",
+    "title": "Array logic",
+    "section": "Array indexing",
+    "text": "Array indexing\nWe’ve also seen that we can access specific portions of arrays with indexing.\n\nimport numpy as np\nx = np.linspace(0,100,6)\nprint(x)\n\n\n\n[  0.  20.  40.  60.  80. 100.]\n\n\n\nWe can access individual elements or slices:\n\n\n\n\nx[0]: 0.0\n\n\n\n\n\n\nx[-1]: 100.0\n\n\n\n\n\n\nx[2:4]: [40. 60.]"
   },
   {
-    "objectID": "website/resources.html#coding-with-copilot",
-    "href": "website/resources.html#coding-with-copilot",
-    "title": "Resources",
-    "section": "",
-    "text": "Prompting Copilot\nCopilot Best Practices\n\n\n\n\n\n\n\nNote\n\n\n\nI didn’t agree with the advice to not use comments to interact with Copilot… And then the very next video (next link below) I watched from the same playlist recommended using comments to prompt Copilot!\n\n\n\nCopilot in Jupyter",
-    "crumbs": [
-      "TME 310A",
-      "Resources"
-    ]
+    "objectID": "website/lectures/06_arrays/array_logic.html#logical-indexing",
+    "href": "website/lectures/06_arrays/array_logic.html#logical-indexing",
+    "title": "Array logic",
+    "section": "Logical indexing",
+    "text": "Logical indexing\nLogical indexing combines these two ideas.\n\nA logical expression with an array results in a logical array (sometimes called a mask):\n\n\n\nx = np.array([1.32, 1.1, 0.3, 3.8, -5.2]) # &lt;-- an array of random numbers\nlogical_array = x &lt; 1\nprint(f\"logical_array: {logical_array}\")\n\n\n\nlogical_array: [False False  True False  True]\n\n\n\n\n\nIndexing an array with a logical array returns only the entries of the array where the logical array is True.\n\n\n\n\nx[logical_array]\n\n\n\narray([ 0.3, -5.2])"
   },
   {
-    "objectID": "website/resources.html#external-libraries",
-    "href": "website/resources.html#external-libraries",
-    "title": "Resources",
-    "section": "",
-    "text": "Numpy introductory documentation\nNumpy cheatsheet\n\n\n\n\n\nPlotting introductory documentation\nMatplotlib cheatsheet",
-    "crumbs": [
-      "TME 310A",
-      "Resources"
-    ]
+    "objectID": "website/lectures/06_arrays/array_logic.html#logical-andor-with-arrays",
+    "href": "website/lectures/06_arrays/array_logic.html#logical-andor-with-arrays",
+    "title": "Array logic",
+    "section": "Logical AND/OR with arrays",
+    "text": "Logical AND/OR with arrays\nWe can combine logical tests in numpy with the bitwise “AND” operator, &, or the bitwise “OR” operator, |.\n\nThe result of logical tests connected by & is only True if BOTH statements are true. The result of logical tests connected by | is True if EITHER statements are true.\n\n\n\narr = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])\n# What values of arr are greater than 3 AND less than 7?\nprint(arr[(arr &gt; 3) & (arr &lt; 7)]) # &lt;--- each test in ()!\n\n\n\n[4 5 6]\n\n\n\n# What values of arr are greater than 6 OR less than 2?\nprint(arr[(arr &gt; 6) | (arr &lt; 2)])\n\n\n\n[ 1  7  8  9 10]"
+  },
+  {
+    "objectID": "website/lectures/06_arrays/array_logic.html#application-with-related-arrays",
+    "href": "website/lectures/06_arrays/array_logic.html#application-with-related-arrays",
+    "title": "Array logic",
+    "section": "Application with related arrays",
+    "text": "Application with related arrays\nLogical indexing is particularly powerful with related arrays. For example:\n\nIf \\(y(x) = 1.27^{2.3x}\\), what is the minimum value of \\(x\\) to result in a value of \\(y\\) greater than \\(4.0\\)?\n\n\nSteps to solving with logical indexing:\n\nCreate a mask using the test condition on \\(y\\)\nApply the mask to the related array, \\(x\\)\nSelect the first1 entry in the masked version of \\(x\\)\n\n\nOr last, depending on how the mask and test condition are applied"
+  },
+  {
+    "objectID": "website/lectures/06_arrays/array_logic.html#solve-with-logical-array",
+    "href": "website/lectures/06_arrays/array_logic.html#solve-with-logical-array",
+    "title": "Array logic",
+    "section": "Solve with logical array",
+    "text": "Solve with logical array\n\n# Initial arrays x and y:\nx = np.linspace(0,4)\ny = 1.27**(2.3*x)\n# Create a mask using the test condition on y:\nlogical_mask = y &gt; 4.0\n# Apply the mask to the related array, x:\nx_masked = x[logical_mask]\n# Select the first entry in the masked version of x:\nanswer = x_masked[0]\nprint(f\"x_masked: {x_masked}\")\nprint(f\"answer: {answer:.2f}\")\n\n\n\nx_masked: [2.53061224 2.6122449  2.69387755 2.7755102  2.85714286 2.93877551\n 3.02040816 3.10204082 3.18367347 3.26530612 3.34693878 3.42857143\n 3.51020408 3.59183673 3.67346939 3.75510204 3.83673469 3.91836735\n 4.        ]\nanswer: 2.53\n\n\n\nWhat about values of x slightly smaller than 2.53061224?"
+  },
+  {
+    "objectID": "website/lectures/06_arrays/array_logic.html#plots-with-masked-arrays",
+    "href": "website/lectures/06_arrays/array_logic.html#plots-with-masked-arrays",
+    "title": "Array logic",
+    "section": "Plots with masked arrays",
+    "text": "Plots with masked arrays\nSee if you can re-create the plots of these array masking examples: (hint: some use np.random.rand())\n\nExample 1Example 2Example 3Example 4"
   },
   {
     "objectID": "website/lectures/05_functional_programming_plots/05_parachute_functions_solution.html",
@@ -488,7 +471,7 @@
     "href": "website/weeks/week_3.html",
     "title": "Week 3",
     "section": "",
-    "text": "Course content will be added on a rolling basis\n\n\n\n\n\nTopic\nVideo\nSlides\n\n\n\n\nArrays\nLink\n\n\n\nArray logic\nLink\nLink\n\n\n\n\n\n\n\nHomework 2",
+    "text": "Course content will be added on a rolling basis\n\n\n\n\n\nTopic\nVideo\nSlides\n\n\n\n\nArrays\nLink\nLink\n\n\nArray logic\nLink\nLink\n\n\n\n\n\n\n\nHomework 2",
     "crumbs": [
       "TME 310A",
       "Weekly materials",
@@ -500,7 +483,7 @@
     "href": "website/weeks/week_3.html#materials",
     "title": "Week 3",
     "section": "",
-    "text": "Topic\nVideo\nSlides\n\n\n\n\nArrays\nLink\n\n\n\nArray logic\nLink\nLink",
+    "text": "Topic\nVideo\nSlides\n\n\n\n\nArrays\nLink\nLink\n\n\nArray logic\nLink\nLink",
     "crumbs": [
       "TME 310A",
       "Weekly materials",
@@ -1208,34 +1191,149 @@
     "text": "import matplotlib.pyplot as plt \nimport numpy as np\ntime = np.linspace(0, 3, 500)\namplitude = np.sin(2 * np.pi * time)\nplt.plot(time, amplitude)"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Welcome to TME 310 A - Computational Physical Modeling!",
+    "objectID": "website/resources.html",
+    "href": "website/resources.html",
+    "title": "Resources",
     "section": "",
-    "text": "Welcome to TME 310 A - Computational Physical Modeling!\n\n\n\nModeling Framework by Allen Downey (CC BY-NC 4.0)\n\n\nIn this course, we’ll look at the concept of physical modeling with an emphasis on civil and mechanical engineering applications. We will use Python to perform calculations on our models.\nClick the “Start Here” link below to begin going through some introductory material about the course.",
+    "text": "This page contains lists of resources you may find helpful for this course. None of the resources are mandatory, but I recommend you look over the list to familiarize yourself with the kind of content that’s available. If you find yourself struggling with any of the course concepts, look through these resources again to see if there’s anything that can help.\n\n\n\nPython cheatsheet\nPython reference (Real Python)\n\n\n\n\nAllen Downey wrote an open-source book on Modeling and Simulation in Python that I use a lot of content from. One of the coolest things about the book is that the chapters can be opened as executable notebooks right in your browser. My one complaint about the book is that Downey uses the dreaded import * approach in the book, which makes it hard to tell when he’s using the package he wrote to accompany the book.\n\n\n\n\nPrompting Copilot\nCopilot Best Practices\n\n\n\n\n\n\n\nNote\n\n\n\nI didn’t agree with the advice to not use comments to interact with Copilot… And then the very next video (next link below) I watched from the same playlist recommended using comments to prompt Copilot!\n\n\n\nCopilot in Jupyter\n\n\n\n\n\n\n\nNumpy introductory documentation\nNumpy cheatsheet\n\n\n\n\n\nPlotting introductory documentation\nMatplotlib cheatsheet",
     "crumbs": [
-      "TME 310A"
+      "TME 310A",
+      "Resources"
     ]
   },
   {
-    "objectID": "examples/00_plotting_a_sine_wave.html",
-    "href": "examples/00_plotting_a_sine_wave.html",
-    "title": "Plotting a sine wave",
+    "objectID": "website/resources.html#python-language",
+    "href": "website/resources.html#python-language",
+    "title": "Resources",
     "section": "",
-    "text": "This notebook shows how to use matplotlib and numpy to plot a sine wave.\nFirst, import the required packages:\n\nimport matplotlib.pyplot as plt\nimport numpy as np\n\nThen create a time array using Numpy’s linspace() and an amplitude array by using the newly created time array as input to Numpy’s sin(). I also include a factor of \\(2 \\pi\\) radians so that one second corresponds to one full sine period.\n\ntime = np.linspace(0, 3, 500)\namplitude = np.sin(2 * np.pi * time)\n\nUse plt.subplots() to create a figure and axes to plot on. Add the plot to the axes with the plot(x, y) method, providing time as the x variable and amplitude as the y variable.\n\nfig, ax = plt.subplots()\nax.plot(time, amplitude)\nax.set(xlabel='Time (s)', ylabel='Amplitude', title='Sine Wave')\nax.grid()\nplt.show()"
+    "text": "Python cheatsheet\nPython reference (Real Python)",
+    "crumbs": [
+      "TME 310A",
+      "Resources"
+    ]
   },
   {
-    "objectID": "examples/05_parachute_functions.html",
-    "href": "examples/05_parachute_functions.html",
+    "objectID": "website/resources.html#modeling",
+    "href": "website/resources.html#modeling",
+    "title": "Resources",
+    "section": "",
+    "text": "Allen Downey wrote an open-source book on Modeling and Simulation in Python that I use a lot of content from. One of the coolest things about the book is that the chapters can be opened as executable notebooks right in your browser. My one complaint about the book is that Downey uses the dreaded import * approach in the book, which makes it hard to tell when he’s using the package he wrote to accompany the book.",
+    "crumbs": [
+      "TME 310A",
+      "Resources"
+    ]
+  },
+  {
+    "objectID": "website/resources.html#coding-with-copilot",
+    "href": "website/resources.html#coding-with-copilot",
+    "title": "Resources",
+    "section": "",
+    "text": "Prompting Copilot\nCopilot Best Practices\n\n\n\n\n\n\n\nNote\n\n\n\nI didn’t agree with the advice to not use comments to interact with Copilot… And then the very next video (next link below) I watched from the same playlist recommended using comments to prompt Copilot!\n\n\n\nCopilot in Jupyter",
+    "crumbs": [
+      "TME 310A",
+      "Resources"
+    ]
+  },
+  {
+    "objectID": "website/resources.html#external-libraries",
+    "href": "website/resources.html#external-libraries",
+    "title": "Resources",
+    "section": "",
+    "text": "Numpy introductory documentation\nNumpy cheatsheet\n\n\n\n\n\nPlotting introductory documentation\nMatplotlib cheatsheet",
+    "crumbs": [
+      "TME 310A",
+      "Resources"
+    ]
+  },
+  {
+    "objectID": "examples/03_parachute_copilot.html",
+    "href": "examples/03_parachute_copilot.html",
     "title": "Parachute problem",
     "section": "",
     "text": "What’s the terminal velocity of someone falling with a parachute? (this is our system)"
   },
   {
-    "objectID": "examples/05_parachute_functions.html#assumptions",
-    "href": "examples/05_parachute_functions.html#assumptions",
+    "objectID": "examples/03_parachute_copilot.html#assumptions",
+    "href": "examples/03_parachute_copilot.html#assumptions",
     "title": "Parachute problem",
     "section": "Assumptions",
-    "text": "Assumptions\nLet’s say we have a model for this problem:\n\\[\\frac{dv}{dt} = g -\\frac{c}{m}v\\]\nwhere \\(g\\) is gravitational acceleration, \\(c\\) is a drag coefficient, \\(m\\) is the parachutist’s mass, and \\(v\\) is their velocity. The solution to this differential equation is:\n\\[ v(t) = \\frac{gm}{c}(1 - e^{ct/m})\\]\nWrite a function that finds the terminal velocity of a parachutist of a given mass and drag coefficient.\n\nSummarize the goal(s) of the problem in your own words.\n\nSimilar as last time, but now use a functions. And the function itself should find the terminal velocity\n\nDescribe your plan to solve the problem.\n\nCopy code from the previous exercise. Start a function signature and move content into it incrementally. Inside the function, check wether velocity is changing as time is increased incrementally.\n\nWrite Python code to solve the problem\n\n\n# Your code here\ndef terminal_velocity(mass, drag, g=9.81):\n    # mass in kg\n    # drag in kg/s\n    # g in m/s/s\n\n    e = 2.718 # Euler's number\n\n    new_vel = 0\n    old_vel = -1\n    t = 0\n\n    while old_vel &lt; new_vel:\n        t += 1\n        old_vel = new_vel\n        new_vel = (g * mass / drag) * (1 - e**( -drag * t / mass))\n    \n    print(f\"For a parachutist with mass of {mass} kg and drag coeff. of {drag} kg/s, the terminal velocity is {new_vel:.2f} m/s\")\n\n    pass\n\n# assign values to known parameters\nm = 70 # kg\nc = 12 # kg/s\n\nterminal_velocity(m,c)\n\nFor a parachutist with mass of 70 kg and drag coeff. of 12 kg/s, the terminal velocity is 57.22 m/s\n\n\n\nLooking back at your code and the resulting output, reflect on whether your code achieved the problem goal(s). To the extent the problem models a physical system, how realistic does the behavior seem? Are there any changes you would make to your approach if you were to solve this problem again (e.g., to make your code more re-usable or to avoid dead ends)?\n\nThe code achieves the goal - it now uses a function to find the terminal velocity. It checks that velocity has not changed to determine that the value is the terminal value.\nThe behavior still seems realisitc: * increasing mass increases the terminal velocity * increasing drag coefficient decreases the terminal velocity\nI’d like to modify the code to create plots of velocity vs. time."
+    "text": "Assumptions\nLet’s say we have a model for this problem:\n\\[\\frac{dv}{dt} = g -\\frac{c}{m}v\\]\nwhere \\(g\\) is gravitational acceleration, \\(c\\) is a drag coefficient, \\(m\\) is the parachutist’s mass, and \\(v\\) is their velocity. The solution to this differential equation is:\n\\[ v(t) = \\frac{gm}{c}(1 - e^{ct/m})\\]\nUse the following parameters for the parachutist:\n\n\n\nParameter\nValue\n\n\n\n\nMass\n70 kg\n\n\nDrag coefficient\n12 kg/s\n\n\n\n\nSummarize the goal(s) of the problem in your own words.\n\nUse one or more of the equations given and the parameters (mass = 70 kg; drag coeff = 12 kg/s) to find the terminal velocity of a parachutist.\n\nDescribe your plan to solve the problem.\n\nIt looks like the second equation give the velocity directly so I’ll just use that one. If I plug a big value for \\(t\\) into the equation, it will probably show the terminal velocity. But I want to be able to check that, so I’ll calculate velocity for several values of \\(t\\) and confirm that the velocity stops changing (i.e., reaches its terminal value).\nSteps * assign values to known parameters * use a for loop to calculate and print the velocity for several (maybe 10?) time values from 0 to 100.\n\nWrite Python code to carry out your solution\n\n\n# assign values to known parameters\ng = 9.81  # gravitational acceleration in m/s^2\nm = 70   # mass in kg\nc = 12   # drag coefficient in kg/s\n\n# calculate gm/c once since it is used in the formula\ngm_over_c = (g * m) / c\n\n# use a for loop to calculate and print the velocity for several time values from 0 to 100\n# we'll use 11 time values: 0, 10, 20, ..., 100\nprint(\"Time (s)    Velocity (m/s)\")\nfor t in range(0, 101, 10):\n    # calculate the exponent part: -c * t / m\n    exponent = -c * t / m\n    # calculate e^(exponent) using the built-in pow() function\n    exp_value = pow(2.71828, exponent)  # 2.71828 is an approximation for e\n    # calculate velocity using the formula\n    v = gm_over_c * (1 - exp_value)\n    # print the time and velocity, rounded to 2 decimal places\n    print(str(t).ljust(10), round(v, 2))\n\nTime (s)    Velocity (m/s)\n0          0.0\n10         46.92\n20         55.37\n30         56.89\n40         57.16\n50         57.21\n60         57.22\n70         57.22\n80         57.22\n90         57.22\n100        57.22\n\n\n\nLooking back at your code and the resulting output, reflect on whether your code achieved the problem goal(s). To the extent the problem models a physical system, how realistic does the behavior seem? Are there any changes you would make to your approach if you were to solve this problem again (e.g., to make your code more re-usable or to avoid dead ends)?"
+  },
+  {
+    "objectID": "examples/02_python_basics.html",
+    "href": "examples/02_python_basics.html",
+    "title": "Python Basics for Computational Physical Modeling",
+    "section": "",
+    "text": "Welcome to Python! This notebook will introduce you to some basic Python concepts that you’ll use in TME 310."
+  },
+  {
+    "objectID": "examples/02_python_basics.html#what-will-be-covered",
+    "href": "examples/02_python_basics.html#what-will-be-covered",
+    "title": "Python Basics for Computational Physical Modeling",
+    "section": "What will be covered",
+    "text": "What will be covered\n\nData Types - Kinds of information\nVariables - Where information is stored\nNumbers and Math - How calculations are done\nStrings - Text objects\nLists - A built in way to organize data\nConditionals - How we ask questions about data\nLoops - Doing repetitive things automatically"
+  },
+  {
+    "objectID": "examples/02_python_basics.html#data-types",
+    "href": "examples/02_python_basics.html#data-types",
+    "title": "Python Basics for Computational Physical Modeling",
+    "section": "Data Types",
+    "text": "Data Types\nThere are different kinds of information we can store in Python - these are called types. Python has several built in data types. Today, we’ll cover some of the most commonly-used ones:\n\nint (numeric integers)\nfloat (numeric real numbers)\nbool (true or false)\nstring (text)\nlist (collection of other objects)\n\n\nint\nAn int is an integer value (e.g., 1 or -395). In Python, we can check the type of an object with the built-in type() function.\n\n# An integer\ntype(1)\n\nint\n\n\n\n# Another integer\ntype(-395)\n\nint\n\n\n\n\nfloat\nA float is another numeric data type in Python. Unlike an int, a float is a real number that can have several decimal places. For example:\n\n# A floating point number\ntype(9.81)\n\nfloat\n\n\nNote that any number with a decimal place will be interpreted as a float by Python, even if there’s nothing after the decimal place:\n\n# This is also a floating point number\ntype(1.)\n\nfloat\n\n\n\n\nbool\nA bool (boolean) represents True or False values. These are useful for yes/no questions.\n\n# In Python True and False are capitalized\ntype(True)\n\nbool\n\n\n\ntype(False)\n\nbool\n\n\n\n\nstr\nA string (or str) represents text. Strings are surrounded by quotes. Either single or double quotes can be used to surround strings:\n\n# A double-quoted string\ntype(\"hello\")\n\nstr\n\n\n\n# A single-quoted string\ntype('world')\n\nstr\n\n\nIt’s considered best practice to use double quotes for strings even though single quotes are accepted by Python. More importantly, whichever kind of quote starts the string has to be used to close it, or you’ll get a syntax error!\n\n# This will cause an error!\ntype('mismatch\")\n\n\n  Cell In[9], line 2\n    type('mismatch\")\n         ^\nSyntaxError: unterminated string literal (detected at line 2)\n\n\n\n\n\n\nlist\nA list is a collection of other objects. Lists are surrounded by square brackets [] with their elements separated by commas.\n\n# A list of integers\ntype([1, 2, 3])\n\nlist\n\n\nThe elements of a list don’t need to be the same type.\n\n# A list of mixed types\ntype([1, \"two\", 3.0, True])\n\nlist\n\n\n\n# Even another list:\ntype([1, 2, [\"I'm\", \"a\", \"list\"], 4])\n\nlist"
+  },
+  {
+    "objectID": "examples/02_python_basics.html#variables",
+    "href": "examples/02_python_basics.html#variables",
+    "title": "Python Basics for Computational Physical Modeling",
+    "section": "Variables",
+    "text": "Variables\nVariables are names that refer to objects. We create variables using the assignment operator =.\n\nx = 5\nx\n\n5\n\n\nJupyter will automatically display the output of the last line in a cell if it is an expression or variable, and not assigned to anything. That’s why writing x on the last line in the cell above resulted in the value assigned to x being displayed.\nBut that automatic display only happens for the last line in a cell.\n\n# No output here\ny = 10\ny\nz = 37\n\nIn general, it’s better to explicitly tell Python what to display with the print() function, which does not need to be on any particular line.\n\n# Printing the value of y that wasn't shown above\nprint(y)\n\n10\n\n\nAny data type can be assigned to a variable:\n\ncourse = \"TME 310A\"\nstudents = 25\nmax_grade = 4.0\nfun = True\n\nThe value of one variable can be assigned to another, too:\n\na = 5\nprint(a)\n\n# Assigning the value of a to b\nb = a\nprint(b)\n\n5\n5\n\n\n\n\n\n\n\n\nCaution\n\n\n\nIn the case above, a and b are both of type int. If the value of a is changed at some future point in the code, the value of b will be unaffected. But this is not the case for all data types, as we’ll see in a few sections."
+  },
+  {
+    "objectID": "examples/02_python_basics.html#numbers-and-math",
+    "href": "examples/02_python_basics.html#numbers-and-math",
+    "title": "Python Basics for Computational Physical Modeling",
+    "section": "Numbers and Math",
+    "text": "Numbers and Math\nMost arithmetic operations in Python act like you’d expect. For example:\n\n# Addition\nw = 20 + 34\nprint(w)\n\n54\n\n\n\n# Subtraction\nx = 10 - 4\nprint(x)\n\n6\n\n\n\n# Multiplication\ny = 3 * 7\nprint(y)\n\n21\n\n\n\n\n\n\n\n\nCaution\n\n\n\nThis is a good place to note one of the potential sources of error in Jupyter notebooks.\nNow that we’ve just overwritten the variable y with a new value, go back to the Variables section and run the cell that contains print(y). Python will always interpret variables based on their values at the time of execution, which may not reflect the expected values based on a linear reading of the notebook.\n\n\nDivision in Python will often look how you’d expect, but there are some details worth examining. The basic division operator is /, which works on int and float data types, but always returns a float. This is because it converts anything it’s operating on into a float before performing division. So, even if it’s used between two integers and the result could be represented as an integer, the resulting data type will be float.\n\n# Division\nz = 15 / 3\nprint(z) # z is a float even though 15 can be divided by 3 evenly\n\n5.0\n\n\nTo perform integer division in Python, use the // operator. This performs division and returns the result rounded down to the next smallest whole number.\n\n# Returns an integer result (no rounding needed)\n15 // 3\n\n5\n\n\n\n# This result gets rounded to the next smallest whole number\n13 // 3\n\n4\n\n\nWhen you first learned to divide, you probably used “remainders” when numbers didn’t divide evenly. So the answer to 13 divided by 3 would have been 4 remainder 1. The integer division operator in Python ignores the remainder, but another useful operator provides it - the modulo operator: %.\n\n# The remainder after integer division\n13 % 3\n\n1\n\n\nThe ** operator means “to the power of”. So 2 ** 3 means 2 to the power of 3.\n\n2 ** 3\n\n8"
+  },
+  {
+    "objectID": "examples/02_python_basics.html#strings",
+    "href": "examples/02_python_basics.html#strings",
+    "title": "Python Basics for Computational Physical Modeling",
+    "section": "Strings",
+    "text": "Strings\nAlthough strings are text, not numbers, some of the operators discussed above can be used with strings. But, of course, they have different meanings when text is involved.\nFor example, “adding” two strings sticks the two pieces of text together:\n\n\"hello\" + \" world\"\n\n'hello world'\n\n\nMultiplying a string creates multiple copies of the original text and sticks them all together:\n\n\" alright \" * 3\n\n' alright  alright  alright '\n\n\nOther operators (like - or /) don’t have unique meaning with strings, so they aren’t allowed. Trying to use them will result in an error:\n\n\"hello\" - \" world\"  # This will cause an error\n\n\n---------------------------------------------------------------------------\nTypeError                                 Traceback (most recent call last)\nCell In[28], line 1\n----&gt; 1 \"hello\" - \" world\"  # This will cause an error\n\nTypeError: unsupported operand type(s) for -: 'str' and 'str'\n\n\n\nThe len() function returns the number of characters in a string:\n\nlen(\"This is a string. It's not super long, but it's long enough that I don't want to count the characters myself.\")\n\n109\n\n\nOne of the most useful features Python has for strings is the “F-string”. With F-strings, you can put variables inside your strings (inside curly braces {}) and get the variable value inserted into your string.\n\ncourse = \"TME 310A\"\nstudents = 25\nmax_grade = 4.0\n\nprint(f\"There are {students} students registered for {course}. The highest grade you can get is {max_grade}\")\n\nThere are 25 students registered for TME 310A. The highest grade you can get is 4.0\n\n\nStrings are indexed, which means that each character in the string has a numbered position (called an index). You can access the \\(n\\)th character in a string putting the index you want in square brackets after the string:\n\nmy_string = \"abstraction\"\nmy_string[2]\n\n's'\n\n\nDepending on what languages you’ve programmed in before, you may have expected my_string[2] to return b since that’s the 2nd character in the string. But Python is a “zero-indexed” language, so counting always starts at zero. To get the first character in the string, we need to put 0 in square brackets:\n\nmy_string[0]\n\n'a'\n\n\nTrying to access an index past the end of the string will cause an error:\n\ntoo_far = len(my_string)\nmy_string[too_far] # This will cause an error\n\n\n---------------------------------------------------------------------------\nIndexError                                Traceback (most recent call last)\nCell In[33], line 2\n      1 too_far = len(my_string)\n----&gt; 2 my_string[too_far] # This will cause an error\n\nIndexError: string index out of range\n\n\n\nNotice that the trying to access and index equal to the length of the string causes IndexError: string index out of range because the indexing starts at 0! That means that the last entry in the string will have the value len(my_string) - 1.\nIn fact, Python supports negative indexing without needing to find the length of the string. The last entry in the string has index -1; and the second to last entry has index -2, and so on.\n\nmy_string[-1] # This will give the last character of the string\n\n'n'\n\n\n\nmy_string[-2] # This will give the second to last character of the string\n\n'o'"
+  },
+  {
+    "objectID": "examples/02_python_basics.html#lists",
+    "href": "examples/02_python_basics.html#lists",
+    "title": "Python Basics for Computational Physical Modeling",
+    "section": "Lists",
+    "text": "Lists\nWe’ve already seen that lists are containers that hold objects. Now we’ll discuss how to interact with these containers.\nLike strings, lists are indexed data types, so we can use the indexing syntax to access specific values in a list:\n\ncolors = [\"red\", \"green\", \"blue\"]\n\n# Print the first item in the list:\nprint(colors[0])\n\nred\n\n\nOne of the key differences between lists and strings is that lists are mutable, while strings are immutable. This means that you can change the value of an entry in a list, but you can’t with a string:\n\n# Change the second color from \"green\" to \"yellow\":\ncolors[1] = \"yellow\"\nprint(colors)\n\n['red', 'yellow', 'blue']\n\n\n\n# Trying to change one of the characters in a string will cause an error:\nmy_string[0] = \"A\" # This will cause an error\n\n\n---------------------------------------------------------------------------\nTypeError                                 Traceback (most recent call last)\nCell In[38], line 2\n      1 # Trying to change one of the characters in a string will cause an error:\n----&gt; 2 my_string[0] = \"A\" # This will cause an error\n\nTypeError: 'str' object does not support item assignment\n\n\n\nCopying A major implication of whether an object is mutable or not is how Python handles copies of the object. We saw previously that when we made a copy of an integer variable, changing the original variable did not change the copy. This kind of copying is called deep copying. It’s the default behavior for immutable objects in Python so the same applies to strings:\n\n# Make a string and copy it\noriginal_string = \"TME 310A\"\ncopied_string = original_string\nprint(original_string)\nprint(copied_string)\n\nTME 310A\nTME 310A\n\n\n\n# Change the original string\noriginal_string = \"TME 310B\"\n\n# The copy is unchanged\nprint(original_string)\nprint(copied_string)\n\nTME 310B\nTME 310A\n\n\nBut since lists are mutable, when they’re copied, Python makes what’s called a shallow copy. A shallow copy points to the original rather than reproducing it. This means that a change to the original will immediately cause a change in the “copy”. And, strangely enough, a change in the copy will immediately change the original!\n\n# Make a list and copy it\noriginal_list = [ 1, 2, 3 ]\ncopied_list = original_list\nprint(original_list)\nprint(copied_list)\n\n[1, 2, 3]\n[1, 2, 3]\n\n\n\n# Change the original list\noriginal_list[0] = 99\n\n# Both the original and the \"copy\" are changed!\nprint(original_list)\nprint(copied_list)\n\n[99, 2, 3]\n[99, 2, 3]\n\n\n\n# Change the copy\ncopied_list[-1] = -5\n\n# The original gets changed too!\nprint(original_list)\nprint(copied_list)\n\n[99, 2, -5]\n[99, 2, -5]"
+  },
+  {
+    "objectID": "examples/02_python_basics.html#conditionals",
+    "href": "examples/02_python_basics.html#conditionals",
+    "title": "Python Basics for Computational Physical Modeling",
+    "section": "Conditionals",
+    "text": "Conditionals\nConditionals let you make decisions in your code with if, elif, and else statements. Often these use boolean comparators which evaluate a statement and return whether it is true or false. Python’s boolean comparators are\n\n\n\nBoolean comparator\nMeaning\n\n\n\n\n&gt;\ngreater than\n\n\n&lt;\nless than\n\n\n&gt;=\ngreater than or equal to\n\n\n&lt;=\nless than or equal to\n\n\n!=\nnot equal to\n\n\n==\nequal to\n\n\n\n\n# Create two variables and check whether one is greater than the other\na = 5\nb = 10\na &gt; b\n\nFalse\n\n\nBoolean comparators and conditional statements allow us to change the behavior of Python scripts depending on the values of certain variables. Conditional statements (like the if statement) have three parts: 1. The keyword 2. The test condition followed by a colon : 3. An indented codeblock that is executed if the test condition is True\nFor example:\n\ntemperature = 65                # a variable representing the temperature\n\nif temperature &gt; 70:            # The \"if\" keyword, the test condition, and a colon\n    print(\"It's warm outside\")  # An indented codeblock that runs if the test condition is True\n\nThe other conditional statements, else and elif (short for “else if”) use the same syntax as the if statement, but the must come after an if or elif statement. They can be used to execute different indented codeblocks under different circumstances.\nFor example:\n\ntemperature = 65  \n\nif temperature &gt; 70: \n    print(\"It's warm outside\")\nelif temperature &lt; 50:\n    print(\"It's cold outside\")\nelse:\n    print(\"It's a nice day\")\n\nIt's a nice day"
+  },
+  {
+    "objectID": "examples/02_python_basics.html#loops",
+    "href": "examples/02_python_basics.html#loops",
+    "title": "Python Basics for Computational Physical Modeling",
+    "section": "Loops",
+    "text": "Loops\nLoops let you repeat code. The for loop goes through each item in an iterable object, like a list:\n\nfruits = [\"apple\", \"banana\", \"orange\"]\n\nfor fruit in fruits:\n    print(fruit)\n\napple\nbanana\norange\n\n\nThe range() function creates an iterable sequence of numbers that can be used to control a for loop:\n\nfor i in range(5):\n    print(i)\n\n0\n1\n2\n3\n4\n\n\nThe while loop repeats as long as a condition is True.\n\ncount = 0\n\nwhile count &lt; 3:\n    print(f\"Count is {count}\")\n    count = count + 1\n\nCount is 0\nCount is 1\nCount is 2\n\n\nThe example above is not a great use of a while loop because the same thing can be accomplished with a for loop and while loops have the potential to run forever (or until you manually force the computer to stop). That’s called an “infinite loop” and can be a pain if triggered accidentally in your code. In the code above, if you left out the list line in the loop, for example, the value of count would never increase and the conditional test (count &lt; 3) would always be True and the loop would run forever.\nIt’s best to reserve while loops for situations where you’re uncertain how many iterations are needed."
+  },
+  {
+    "objectID": "examples/03_parachute.html",
+    "href": "examples/03_parachute.html",
+    "title": "Parachute problem",
+    "section": "",
+    "text": "What’s the terminal velocity of someone falling with a parachute? (this is our system)"
+  },
+  {
+    "objectID": "examples/03_parachute.html#assumptions",
+    "href": "examples/03_parachute.html#assumptions",
+    "title": "Parachute problem",
+    "section": "Assumptions",
+    "text": "Assumptions\nLet’s say we have a model for this problem:\n\\[\\frac{dv}{dt} = g -\\frac{c}{m}v\\]\nwhere \\(g\\) is gravitational acceleration, \\(c\\) is a drag coefficient, \\(m\\) is the parachutist’s mass, and \\(v\\) is their velocity. The solution to this differential equation is:\n\\[ v(t) = \\frac{gm}{c}(1 - e^{ct/m})\\]\nUse the following parameters for the parachutist:\n\n\n\nParameter\nValue\n\n\n\n\nMass\n70 kg\n\n\nDrag coefficient\n12 kg/s\n\n\n\n\nSummarize the goal(s) of the problem in your own words.\n\nUse one or more of the equations given and the parameters (mass = 70 kg; drag coeff = 12 kg/s) to find the terminal velocity of a parachutist.\n\nDescribe your plan to solve the problem.\n\nIt looks like the second equation give the velocity directly so I’ll just use that one. If I plug a big value for \\(t\\) into the equation, it will probably show the terminal velocity. But I want to be able to check that, so I’ll calculate velocity for several values of \\(t\\) and confirm that the velocity stops changing (i.e., reaches its terminal value).\nSteps * assign values to known parameters * use a for loop to calculate and print the velocity for several (maybe 10?) time values from 0 to 100.\n\nWrite Python code to carry out your solution\n\n\n# assign values to known parameters\ng = 9.81 # m/s/s\ne = 2.718 # Euler's number\nm = 70 # kg\nc = 12 # kg/s\n\n# use a for loop to calculate and print the velocity for several (maybe 11?) time values from 0 to 100.\nfor i in range(11):\n    t = 10*i # time (sec)\n    v = (g * m / c) * (1 - e**( -c * t / m))\n    print(f\"At time {t} sec, the velocity is {v:.2f} m/s\")\n\nAt time 0 sec, the velocity is 0.00 m/s\nAt time 10 sec, the velocity is 46.92 m/s\nAt time 20 sec, the velocity is 55.37 m/s\nAt time 30 sec, the velocity is 56.89 m/s\nAt time 40 sec, the velocity is 57.16 m/s\nAt time 50 sec, the velocity is 57.21 m/s\nAt time 60 sec, the velocity is 57.22 m/s\nAt time 70 sec, the velocity is 57.22 m/s\nAt time 80 sec, the velocity is 57.22 m/s\nAt time 90 sec, the velocity is 57.22 m/s\nAt time 100 sec, the velocity is 57.22 m/s\n\n\n\nprint(f\"The terminal velocity is {v:.2f} m/s.\")\n\nThe terminal velocity is 57.22 m/s.\n\n\n\nLooking back at your code and the resulting output, reflect on whether your code achieved the problem goal(s). To the extent the problem models a physical system, how realistic does the behavior seem? Are there any changes you would make to your approach if you were to solve this problem again (e.g., to make your code more re-usable or to avoid dead ends)?\n\nYes, the code achieves the problem goals. The behavior seems realistic because:\n\nThe sign of the velocity is the same as the acceleration (falling downward).\nAfter about 50 seconds, the velocity stays the same.\nWhen the drag coefficient is small, the velocity increases linearly.\n\nI think the actual value seems a bit high. From what I could look up quickly, 7 m/s is a safe landing speed. 57 m/s is way too fast!\nIt would be nice if the code saved the velocity and time values so I could plot them. It would be hard to use this code to check the terminal velocity of several differnent combinations of mass and drag coefficient, so I’d want to a way to keep track of that.\n\nprint(\"Hi\")\n\nHi\n\n\nchange on “new branch”"
   }
 ]
