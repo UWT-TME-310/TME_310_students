@@ -1,0 +1,265 @@
+---
+title: "Array logic"
+subtitle: "TME 310 - Computational Physical Modeling"
+author: 
+  - "Lorne Arnold, PhD, PE"
+institute: "University of Washington Tacoma"
+format:
+  revealjs:
+      logo: ""
+---
+
+## Logical expressions
+
+We have already seen **logical expressions** in places like while loops:
+
+```{.python}
+while logical_expression:
+    # execute something
+```
+
+Logical expressions evaluate whether something is true or false.
+They result in a **boolean** value (`True` or `False` in Python).
+
+:::{.fragment}
+```{python}
+#| echo: true
+#| error: true
+#| output-location: fragment
+#| code-line-numbers: ",|2|,"
+x = 0
+while x < 2:
+    print(x)
+    x += 1
+```
+:::
+
+## Array indexing
+
+We've also seen that we can access specific portions of arrays with **indexing**.
+
+```{python}
+#| echo: true
+#| output-location: fragment
+#| error: true
+import numpy as np
+x = np.linspace(0,100,6)
+print(x)
+```
+
+:::{.fragment}
+We can access individual elements or slices:
+:::
+
+:::{.fragment}
+```{python}
+#| echo: false
+#| error: true
+#| #| output-location: fragment
+print(f"x[0]: {x[0]}")
+```
+:::
+
+:::{.fragment}
+```{python}
+#| echo: false
+#| error: true
+#| #| output-location: fragment
+print(f"x[-1]: {x[-1]}")
+```
+:::
+
+:::{.fragment}
+```{python}
+#| echo: false
+#| error: true
+#| #| output-location: fragment
+print(f"x[2:4]: {x[2:4]}")
+```
+:::
+
+## Logical indexing
+Logical indexing combines these two ideas.
+
+* A **logical expression** with an array results in a **logical array** (sometimes called a **mask**):
+
+:::{.fragment}
+
+```{python}
+#| echo: true
+#| error: true
+#| output-location: fragment
+#| code-line-numbers: ","
+x = np.array([1.32, 1.1, 0.3, 3.8, -5.2]) # <-- an array of random numbers
+logical_array = x < 1
+print(f"logical_array: {logical_array}")
+```
+:::
+
+
+:::{.fragment}
+* **Indexing** an array with a logical array returns *only the entries of the array where the logical array is `True`.*
+:::
+
+:::{.fragment}
+
+```{python}
+#| echo: true
+#| error: true
+#| output-location: fragment
+#| code-line-numbers: ","
+x[logical_array]
+```
+:::
+
+## Logical AND/OR with arrays
+We can combine logical tests in numpy with the bitwise "AND" operator, `&`, or the bitwise "OR" operator, `|`.
+
+:::{.fragment}
+The result of logical tests connected by `&` is only `True` if BOTH statements are true. 
+The result of logical tests connected by `|` is `True` if EITHER statements are true.
+:::
+
+:::{.fragment}
+
+```{python}
+#| echo: true
+#| error: true
+#| output-location: fragment
+#| code-line-numbers: ","
+arr = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
+# What values of arr are greater than 3 AND less than 7?
+print(arr[(arr > 3) & (arr < 7)]) # <--- each test in ()!
+```
+
+```{python}
+#| echo: true
+#| error: true
+#| output-location: fragment
+#| code-line-numbers: ","
+# What values of arr are greater than 6 OR less than 2?
+print(arr[(arr > 6) | (arr < 2)])
+```
+:::
+
+## Application with related arrays
+Logical indexing is particularly powerful with *related arrays*.
+For example:
+
+> If $y(x) = 1.27^{2.3x}$, what is the minimum value of $x$ to result in a value of $y$ greater than $4.0$?
+
+::: {.fragment}
+Steps to solving with logical indexing:
+
+1. Create a **mask** using the test condition on $y$
+2. Apply the mask to the **related array**, $x$
+3. Select the first^[Or last, depending on how the mask and test condition are applied] entry in the masked version of $x$
+
+:::
+
+## Solve with logical array
+
+
+
+```{python}
+#| echo: true
+#| error: true
+#| output-location: fragment
+#| code-line-numbers: "1,2,3|4,5|6,7|8,9"
+# Initial arrays x and y:
+x = np.linspace(0,4)
+y = 1.27**(2.3*x)
+# Create a mask using the test condition on y:
+logical_mask = y > 4.0
+# Apply the mask to the related array, x:
+x_masked = x[logical_mask]
+# Select the first entry in the masked version of x:
+answer = x_masked[0]
+print(f"x_masked: {x_masked}")
+print(f"answer: {answer:.2f}")
+```
+:::{.fragment}
+What about values of `x` *slightly* smaller than `2.53061224`?
+:::
+
+
+## Plots with masked arrays
+See if you can re-create the plots of these array masking examples: *(hint: some use `np.random.rand()`)*
+```{python}
+#| echo: false
+#| error: true
+import matplotlib.pyplot as plt
+```
+::: {.panel-tabset}
+
+### Example 1
+
+```{python}
+#| echo: false
+#| error: true
+#| fig-align: center 
+plt.plot(x, y, label = "$y(x) = 1.27^{2.3x}$")
+plt.plot(x[logical_mask],y[logical_mask], label="$y(x) > 4.0$")
+plt.xlabel("x")
+plt.ylabel("y")
+plt.legend()
+plt.grid()
+```
+
+### Example 2
+
+```{python}
+#| echo: false
+#| error: true
+#| fig-align: center 
+
+t = np.linspace(0,3,1000)
+a = np.cos(2*np.pi*t)
+mask = a < 0.4*t
+plt.plot(t, a, label = "$\sin{2 \pi t}$")
+plt.plot(t[mask],a[mask], ".", label="$\sin{2 \pi t} < 0.4 t$")
+plt.xlabel("t")
+plt.ylabel("f(t)")
+plt.legend()
+plt.grid()
+```
+
+### Example 3
+
+```{python}
+#| echo: false
+#| error: true
+#| fig-align: center 
+
+x = 2*np.random.rand(4000) - 1
+y = 2*np.random.rand(4000) - 1
+mask = x**2 + y**2 < 0.5**2
+plt.plot(x, y, ".", label = "$x, y$")
+plt.plot(x[mask],y[mask], ".", label="$x^2 + y^2 < 0.5^2$")
+plt.xlabel("x")
+plt.ylabel("y")
+plt.legend()
+plt.axis('equal')
+plt.grid()
+```
+
+
+### Example 4
+
+```{python}
+#| echo: false
+#| error: true
+#| fig-align: center 
+
+x = 2*np.random.rand(4000) 
+y = 2*np.random.rand(4000) 
+mask = (y > x**2) & (y < 0.5 + np.sqrt(x))
+plt.plot(x, y, ".", label = "$x, y$")
+plt.plot(x[mask],y[mask], ".", label="$y > x^2$ & $y < 0.5 + \sqrt{x}$")
+plt.xlabel("x")
+plt.ylabel("y")
+plt.legend()
+plt.axis('equal')
+plt.grid()
+```
+:::

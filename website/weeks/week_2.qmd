@@ -3,11 +3,11 @@ Course content will be added on a rolling basis
 
 ## Materials
 
-| Topic | Video | Slides| Code |
-|----|----|----|----|
-| Modeling framework| [Link](https://uw.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=1ffa7bdf-69c2-460c-b394-b3620021a18b)|    | |
-| Approaching problems | |    |    |
-| Functional programming | |    |    |
+| Topic | Video | Slides| 
+|----|----|----|
+| Modeling framework| [Link](https://uw.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=1ffa7bdf-69c2-460c-b394-b3620021a18b)|  [Link](../../website/lectures/03_modeling_framework/03_modeling_framework.qmd)  
+| Approaching problems | [Link](https://uw.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=4830e4f0-9c97-4ff7-a24c-b36800e5d629)|  [Link](../../website/lectures/04_problem_approach/problem_approach.qmd)  | 
+| Functional programming | [Link](https://uw.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=b1406d37-df27-45c1-8ae5-b368017b6692)|  [Link](../../website/lectures/05_functional_programming_plots/functional_programming.qmd)  |
 
 ## Assignments due
 

@@ -1,0 +1,140 @@
+---
+title: "TME 310 - Computational Physical Modeling"
+subtitle: "Introduction"
+author: 
+  - "Lorne Arnold, PhD, PE"
+institute: "University of Washington Tacoma"
+format:
+  revealjs:
+      pdf-max-pages-per-slide: 1
+      pdf-separate-fragments: false 
+      slide-number: true
+      show-notes: false
+
+---
+
+## Introduction
+### About the course 
+Read the syllabus! 
+
+::: {.fragment .fade-up}
+But here are some quick highlights.
+The course focuses on:
+::: 
+
+::: incremental
+* Understanding the "modeling framework"
+* Using coding (implemented in Python) to perform engineering analysis
+* Evaluating computer output
+  * Are the AI tools helping write the Python code you want?
+  * Is the Python code doing what you want?
+:::
+
+## Introduction
+### About me
+::: incremental
+* 7 years of professional engineering experience
+  * Geotechnical engineering (mechanics of earth materials and their interactions with built infrastructure). 
+* I chose to major in civil engineering <br>to avoid coding 
+* Then I went to graduate school <br>and spent 4 years coding 🤦🏽‍♂️
+![BPM slope failure gif](../images/BPM_slope_failure.gif){.absolute bottom=0 left=700 width="350" height="300"}
+* Eventually, I enjoyed coding!
+:::
+
+## Introduction
+### About you
+::: incremental
+* What's your
+  * Name
+  * Major
+  * Future hobby
+:::
+
+## Modern Coding
+::: {.fragment .fade-up}
+Using AI tools to help you generate code is encouraged.
+:::
+
+::: {.fragment .fade-up}
+As a modeler and engineer, you are responsible for the content you submit.
+:::
+
+::: {.fragment .fade-up}
+You will have to understand Python code to be successful in this course. 
+But you don't need to start with a blank slate!
+:::
+
+## Coding Platform
+The course will use GitHub for assignments (links through Canvas).
+A coding environment with Copilot is provided through GitHub Codespaces.
+
+::: incremental
+Git
+: software for tracking and controlling your files
+
+Repository (or "repo")
+: a collection of files and folders
+
+GitHub
+: an online service for managing your repos with Git
+:::
+
+## Brace yourself
+
+::: incremental
+These tools serve the learning goals of the class.
+
+And they're good things to know.
+
+But they can be painful at first.
+:::
+
+## Modeling Framework {.smaller}
+
+The modeling framework we'll use in this course consists of four **elements** and four **activities**.
+
+::: {.fragment .fade-up}
+(more on this later)
+:::
+
+::: {.fragment .fade-up}
+![Modeling Framework by Allen Downey (CC BY-NC 4.0)](../images/modeling_framework.png){height=400px}
+:::
+
+## Today's Plan
+
+We're going to try to work on **Homework 1**.
+Homework 1 is primarily about making sure you can access and use the tools you'll need to complete course assignments.
+
+::: {.fragment .fade-in}
+Let's head to Canvas and step through the GitHub Classroom assignment process.
+:::
+
+## GitHub Classroom
+
+If you haven't done so already, head to Canvas and click the link under **Homework 1** that will take you to GitHub Classroom.
+
+:::: {.columns}
+
+::: {.column width="40%"}
+
+::: {.fragment .fade-in}
+![](../images/github_classroom_join.png){height=400px}
+:::
+
+:::
+
+::: {.column width="60%"}
+
+::: {.fragment .fade-in}
+![](../images/github_classroom_confirmation.png)
+:::
+
+:::
+
+::::
+
+## GitHub Codespace
+
+![](../images/github_codespace_markup.png){width=100%}
+

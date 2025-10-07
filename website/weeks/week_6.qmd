@@ -3,8 +3,8 @@ Course content will be added on a rolling basis
 
 ## Materials
 
-| Topic | Video | Slides| Code |
-|----|----|----|----|
-|   |   |   |   |    
+| Topic | Video | Slides|
+|----|----|----|
+|   |   |   |  
 
 ## Assignments due

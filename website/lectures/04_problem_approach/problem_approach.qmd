@@ -1,0 +1,116 @@
+---
+title: "TME 310 - Computational Physical Modeling"
+subtitle: "Approaching Problems"
+author: 
+  - "Lorne Arnold, PhD, PE"
+institute: "University of Washington Tacoma"
+format:
+  revealjs:
+      logo: ""
+---
+
+## Homework format
+
+Based on the problem-solving approach proposed by G. Polya:
+
+::::{columns}
+
+:::{.column width=50%}
+
+From *How to solve it* 
+
+::: incremental
+
+1. Understand the problem
+2. Make a plan
+3. Carry out the Plan
+4. Look back at the solution
+
+:::
+
+:::
+
+:::{.column width=50%}
+
+TME 310 Homework
+
+::: incremental
+
+1. Summarize
+2. Plan
+3. Code
+4. Reflect
+
+:::
+
+:::
+
+:::
+
+## Steps 1 and 2 {.smaller}
+
+### Understand and Plan
+
+These are about aligning your *efforts* with your *goals*.
+
+G. Polya:
+
+::: {.fragment .fade-in}
+> It is foolish to solve a problem that you do not understand.\
+> It is sad to work for an end that you do not desire. 
+:::
+
+::: {.fragment .fade-in}
+![](../images/calvin_connect-the-dots-duck.png){.absolute bottom=0 left=50 height="300"}
+:::
+
+::: {.fragment .fade-in}
+![](../images/calvin_paint-by-numbers.png){.absolute bottom=50 left=100 height="300"}
+:::
+
+
+::: {.fragment .fade-in}
+::: {.absolute top=100 left=700 width="350" height="300" style="color: red;"}
+Optional Canvas assignment:
+*What do you want to model?*
+:::
+:::
+
+## Step 3 {.smaller}
+
+### Code
+
+I strongly recommend an *incremental development*^[Modeling and Simulation in Python, by Allen Downey] approach:
+
+#### Incremental development
+
+::: incremental
+1. Always start with a working program
+2. Make one small, testable change at a time.
+3. Run the program and see if the change worked.
+:::
+
+## Step 4 {.smaller}
+
+### Look back
+
+There are two places I'll ask you to look back:
+
+::: {.fragment .fade-in}
+**The *Reflect* prompt**
+
+> Looking back at your code and the resulting output, reflect on whether your code achieved the problem goal(s). 
+> To the extent the problem models a physical system, how realistic does the behavior seem?
+> Are there any changes you would make to your approach if you were to solve this problem again (e.g., to make your code more re-usable or to avoid dead ends)?
+> 
+:::
+
+::: {.fragment .fade-in}
+**Self-grading**
+:::
+
+::: incremental
+* This should only take a few minutes of your time
+* Reinforces the *look back* 
+* Focus on comparing your code to the solution code
+:::

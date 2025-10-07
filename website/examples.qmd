@@ -4,5 +4,8 @@ The table below contains some example scripts using basic course concepts.
 
 | Script link | Notes |
 |----|----|
-| [Plotting a sine wave](/examples/plotting_a_sine_wave.ipynb) | Basic use of `matplotlib` |
+| [Python basics](/examples/02_python_basics.ipynb) | |
+| [Plotting a sine wave](/examples/00_plotting_a_sine_wave.ipynb) | Basic use of `matplotlib` |
 | [Parachute problem](/examples/03_parachute.ipynb) |  |
+| [Parachute problem (copilot solution)](/examples/03_parachute_copilot.ipynb) |  |
+| [Parachute functions](/examples/05_parachute_functions.ipynb) |  |

@@ -1,0 +1,363 @@
+---
+title: "TME 310 - Computational Physical Modeling"
+subtitle: "Modeling Framework"
+author: 
+  - "Lorne Arnold, PhD, PE"
+institute: "University of Washington Tacoma"
+format:
+  revealjs:
+      logo: ""
+---
+
+## Modeling Framework {.smaller}
+
+The modeling framework we'll use in this course consists of four **elements** and four **activities**.
+
+::: {.fragment .fade-up}
+(more on this later)
+:::
+
+::: {.fragment .fade-up}
+![Modeling Framework by Allen Downey (CC BY-NC 4.0)](../images/modeling_framework.png){height=400px}
+:::
+
+## Modeling Framework {.smaller}
+
+:::: {.columns}
+::: {.column width="35%"}
+### Elements
+::: {.fragment .fade-up}
+System
+: The real world.
+:::
+
+::: {.fragment .fade-up}
+Model
+: A simplified representation of the system.
+:::
+
+::: {.fragment .fade-up}
+Prediction
+: How the model says the system will behave
+:::
+
+::: {.fragment .fade-up}
+Data
+: Record of the system's behavior.
+:::
+
+:::
+
+::: {.column width="65%"}
+![Modeling Framework by Allen Downey (CC BY-NC 4.0)](../images/modeling_framework.png){width="100%"}
+:::
+::::
+
+## Modeling Framework {.smaller}
+
+:::: {.columns}
+::: {.column width="35%"}
+### Activities
+::: {.fragment .fade-up}
+Abstraction
+: Removing details to create a simpler representation of something
+:::
+
+::: {.fragment .fade-up}
+Analysis (or simulation)
+: Performing calculations with the model
+:::
+
+::: {.fragment .fade-up}
+Validation
+: Comparing predicted and actual behavior of a system
+:::
+
+::: {.fragment .fade-up}
+Measurement
+: Recording observations of the system.
+:::
+
+:::
+
+::: {.column width="65%"}
+![Modeling Framework by Allen Downey (CC BY-NC 4.0)](../images/modeling_framework.png){width="100%"}
+:::
+::::
+
+## An Example {.smaller}
+{{< include _base-example.qmd >}}
+
+
+## An Example {.smaller auto-animate=true}
+{{< include _base-example.qmd >}}
+
+::: {.absolute top=300 right=0 width="300"}
+System
+: The real world.
+:::
+
+::: {data-id="model_indicator" .absolute top=150 right=183 style="border: 4px solid red; border-radius: 50%; width: 80px; height: 80px; background: transparent;"}
+:::
+
+::: {data-id="line_1" .absolute top=135 left=150 style="width: 200px; height: 4px; background-color: red;"}
+:::
+
+::: {data-id="line_2" .absolute top=170 left=450 style="width: 275px; height: 4px; background-color: red;"}
+:::
+
+::: {data-id="line_3" .absolute top=205 left=10 style="width: 140px; height: 4px; background-color: red;"}
+:::
+
+::: notes
+See if you can identify the parts of the modeling framework in this example.
+:::
+
+<!-- QUIZ
+NOTE: don't use explanations
+1) Which is the best match for the MODEL element of the modeling framework?
+   1) a box of chocolates
+   2) PV = nRT   ***
+   3) some old French guy came up with something
+   4) His chocolates should be safe!
+
+2) Which is the best match for the DATA element of the modeling framework?
+   1) a puddle of delicious goo ***
+   2) Punching some best guess numbers into his calculator
+   3) chocolates will melt at 42 degrees Celsius
+   4) I guess this got a bit warmer than 34 degrees
+
+3) Which is the best match for the VALIDATION process of the modeling framework?
+   1) he estimates the air compressor will get up to 34 degrees Celsius
+   2) he doesn't want to share with his family
+   3) His chocolates should be safe!
+   4) I guess this got a bit warmer than 34 degrees ***
+-->
+
+## An Example {.smaller auto-animate=true}
+{{< include _base-example.qmd >}}
+
+::: {.absolute top=300 right=0 width="300"}
+Abstraction
+: Removing details to create a simpler representation of something
+:::
+
+::: {data-id="model_indicator" .absolute top=80 right=203 style="border: 4px solid red; border-radius: 50%; width: 40px; height: 80px; background: transparent;"}
+:::
+
+::: {data-id="line_1" .absolute top=280 left=150 style="width: 300px; height: 4px; background-color: red;"}
+:::
+
+::: {data-id="line_2" .absolute top=315 left=10 style="width: 275px; height: 4px; background-color: red;"}
+:::
+
+::: {data-id="line_3" .absolute top=280 left=380 style="width: 300px; height: 4px; background-color: red;"}
+:::
+
+## An Example {.smaller auto-animate=true}
+{{< include _base-example.qmd >}}
+
+::: {.absolute top=300 right=0 width="300"}
+Model
+: A simplified representation of the system.
+:::
+
+::: {data-id="model_indicator" .absolute top=8 right=185 style="border: 4px solid red; border-radius: 50%; width: 80px; height: 80px; background: transparent;"}
+:::
+
+::: {data-id="line_1" .absolute top=380 left=295 style="width: 150px; height: 4px; background-color: red;"}
+:::
+
+::: {data-id="line_2" .absolute top=380 left=295 style="width: 150px; height: 4px; background-color: red;"}
+:::
+
+::: {data-id="line_3" .absolute top=380 left=295 style="width: 150px; height: 4px; background-color: red;"}
+:::
+
+## An Example {.smaller auto-animate=true}
+{{< include _base-example.qmd >}}
+
+::: {.absolute top=300 right=0 width="300"}
+Analysis (or simulation)
+: Performing calculations with the model
+:::
+
+::: {data-id="model_indicator" .absolute top=28 right=120 style="border: 4px solid red; border-radius: 50%; width: 80px; height: 40px; background: transparent;"}
+:::
+
+::: {data-id="line_1" .absolute top=480 left=175 style="width: 520px; height: 4px; background-color: red;"}
+:::
+
+::: {data-id="line_2" .absolute top=515 left=5 style="width: 275px; height: 4px; background-color: red;"}
+:::
+
+::: {data-id="line_3" .absolute top=515 left=5 style="width: 275px; height: 4px; background-color: red;"}
+:::
+
+## An Example {.smaller auto-animate=true}
+{{< include _base-example.qmd >}}
+
+::: {.absolute top=300 right=0 width="300"}
+Prediction
+: How the model says the system will behave
+:::
+
+::: {data-id="model_indicator" .absolute top=8 right=40 style="border: 4px solid red; border-radius: 50%; width: 80px; height: 80px; background: transparent;"}
+:::
+
+::: {data-id="line_1" .absolute top=515 left=290 style="width: 410px; height: 4px; background-color: red;"}
+:::
+
+::: {data-id="line_2" .absolute top=555 left=5 style="width: 675px; height: 4px; background-color: red;"}
+:::
+
+::: {data-id="line_3" .absolute top=590 left=5 style="width: 50px; height: 4px; background-color: red;"}
+:::
+
+## An Example {.smaller auto-animate=true}
+{{< include _base-example.qmd >}}
+
+::: {.absolute top=300 right=0 width="300"}
+Measurement
+: Recording observations of the system.
+:::
+
+::: {data-id="model_indicator" .absolute top=175 right=118 style="border: 4px solid red; border-radius: 50%; width: 80px; height: 40px; background: transparent;"}
+:::
+
+::: {data-id="line_1" .absolute top=625 left=5 style="width: 440px; height: 4px; background-color: red;"}
+:::
+
+::: {data-id="line_2" .absolute top=625 left=5 style="width: 440px; height: 4px; background-color: red;"}
+:::
+
+::: {data-id="line_3" .absolute top=590 left=510 style="width: 220px; height: 4px; background-color: red;"}
+:::
+
+## An Example {.smaller auto-animate=true}
+{{< include _base-example.qmd >}}
+
+::: {.absolute top=300 right=0 width="300"}
+Data
+: Record of the system's behavior.
+:::
+
+::: {data-id="model_indicator" .absolute top=150 right=40 style="border: 4px solid red; border-radius: 50%; width: 80px; height: 80px; background: transparent;"}
+:::
+
+::: {data-id="line_1" .absolute top=660 left=5 style="width: 55px; height: 4px; background-color: red;"}
+:::
+
+::: {data-id="line_2" .absolute top=625 left=445 style="width: 260px; height: 4px; background-color: red;"}
+:::
+
+::: {data-id="line_3" .absolute top=625 left=445 style="width: 260px; height: 4px; background-color: red;"}
+:::
+
+## An Example {.smaller auto-animate=true}
+{{< include _base-example.qmd >}}
+
+::: {.absolute top=300 right=0 width="300"}
+Validation
+: Comparing predicted and actual behavior of a system
+:::
+
+::: {data-id="model_indicator" .absolute top=88 right=57 style="border: 4px solid red; border-radius: 50%; width: 40px; height: 80px; background: transparent;"}
+:::
+
+::: {data-id="line_1" .absolute top=700 left=85 style="width: 55px; height: 4px; background-color: red;"}
+:::
+
+::: {data-id="line_2" .absolute top=700 left=100 style="width: 260px; height: 4px; background-color: red;"}
+:::
+
+::: {data-id="line_3" .absolute top=700 left=350 style="width: 360px; height: 4px; background-color: red;"}
+:::
+
+## Another Example {.smaller}
+
+:::: {.columns}
+::: {.column width="50%"}
+### Parachute Problem
+
+What's the terminal velocity of someone falling with a parachute?
+(this is our **system**)
+
+::: {.fragment .fade-in}
+Let's say we have a **model** for this problem:
+
+$$\frac{dv}{dt} = g -\frac{c}{m}v$$
+
+where $g$ is gravitational acceleration, $c$ is a drag coefficient, $m$ is the parachutist's mass, and $v$ is their velocity.
+:::
+
+::: {.fragment .fade-in}
+The **abstraction** was done for us!
+:::
+
+::: {.fragment .fade-in}
+The model is a differential equation with the solution
+
+$$ v(t) = \frac{gm}{c}(1 - e^{ct/m})$$
+:::
+
+:::
+
+::: {.column width="50%"}
+![Freefall with a parachute (not pictured)](../images/parachute_fbd_1.png){width="50%"}
+:::
+::::
+
+## Another Example {.smaller}
+
+:::: {.columns}
+::: {.column width="50%"}
+If we can get our model into Python, we can easily do some **analysis** to make a **prediction** about the terminal velocity.
+
+::: {.fragment .fade-in}
+Let's move over to a Jupyter Notebook to do that.
+:::
+
+::: {.fragment .fade-in}
+But first...
+:::
+
+::: {.fragment .fade-in}
+What about **measuring** **data** for us to do the **validiation** step?
+:::
+
+:::
+
+::: {.column width="50%"}
+![Freefall with a parachute (not pictured)](../images/parachute_fbd_1.png){width="50%"}
+:::
+::::
+
+## Another Example {.smaller}
+
+:::: {.columns}
+::: {.column width="50%"}
+### Validation options
+
+::: {.fragment .fade-in}
+As we saw with **abstraction**, we don't have to do every step of this problem ourselves.
+:::
+
+::: {.fragment .fade-in}
+If we have reliable information about how a system behaves, we can perform validation (or at least partial validation) of our model.
+
+For example, no matter what the *actual* terminal velocity is, we probably know enough to expect:
+:::
+
+::: incremental
+* Velocity should increase linearly without any drag coefficient.
+* Things fall downwards.
+* At "terminal velocity" things fall at a constant rate
+:::
+
+:::
+
+::: {.column width="50%"}
+![Freefall with a parachute (not pictured)](../images/parachute_fbd_1.png){width="50%"}
+:::
+::::

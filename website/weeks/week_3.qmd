@@ -3,11 +3,11 @@ Course content will be added on a rolling basis
 
 ## Materials
 
-| Topic | Video | Slides| Code |
-|----|----|----|----|
-|   |   |   |   |    
+| Topic | Video | Slides|
+|----|----|----|
+|  Arrays | [Link](https://uw.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=7fc6c2f3-34e6-466f-9ca7-b36a0145e687)  |  [Link](../../website/lectures/06_arrays/arrays.qmd) | 
+| Array logic | [Link](https://uw.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=fa8f35f6-a8b5-48e4-bf21-b36e01584134) | [Link](../../website/lectures/06_arrays/array_logic.qmd)|
 
 
 ## Assignments due
 * Homework 2
-* [Project Part 1](https://canvas.uw.edu/courses/1835208/assignments/10692178)

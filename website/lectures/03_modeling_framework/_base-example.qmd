@@ -1,0 +1,16 @@
+:::: {.columns}
+::: {.column width="70%"}
+Lorne has a box of chocolates he doesn't want to share with his family. 
+He decides to hide them in his garage next to his air compressor. 
+He knows that air heats up when it's compressed and that the chocolates will melt at 42 degrees Celsius. He recalls that some old French guy came up with something called the ideal gas law: 
+
+$$PV = nRT$$ 
+
+($P$ = pressure, $V$ = volume, $n$ = moles, $R$ = 6.023E+23, $T$ = temperature).
+Punching some best guess numbers into his calculator, he estimates the air compressor will get up to 34 degrees Celsius when he uses it. 
+His chocolates should be safe! After he next uses the air compressor, Lorne checks in on his precious chocolates and discovers a puddle of delicious goo. 
+As he drizzles the remains over a bowl of ice cream, Lorne thinks *Hmm... I guess this got a bit warmer than 34 degrees*.
+:::
+::::
+
+![](../images/modeling_framework.png){.absolute top=0 right=0 width="300" height="233"}

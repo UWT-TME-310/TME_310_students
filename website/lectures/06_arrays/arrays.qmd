@@ -1,0 +1,193 @@
+---
+title: "Arrays"
+subtitle: "TME 310 - Computational Physical Modeling"
+author: 
+  - "Lorne Arnold, PhD, PE"
+institute: "University of Washington Tacoma"
+format:
+  revealjs:
+      logo: ""
+---
+
+# Arrays vs. lists
+
+# Lists
+
+## List contents
+Recall that lists are **ordered collections of objects**:
+```{python}
+#| echo: true
+#| output-location: fragment
+#| code-line-numbers: "1|2,3,4"
+my_list = [1, 2, "three", 4, False]
+print("A)", my_list[0])
+print("B)", my_list[-1])
+print("C)", my_list[1:3])
+```
+
+:::{.fragment}
+Lists can contain mixed data types
+:::
+
+## Working with lists
+Performing operations on lists happens one element at a time
+```{.python code-line-numbers="1,2|3,4,5"}
+x = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+y = []
+for x_value in x:
+  y_value = x_value ** 2
+  y.append(y_value)
+```
+
+## A mixed type issue
+Even though lists can **contain** mixed data types, not every operation we do will **work** with every data type
+```{python}
+#| code-line-numbers: "1,2|3,4,5"
+#| echo: true
+#| output-location: fragment
+#| error: true
+x = [1, 2, 3, 4, 5, 6, 7, 8, "nine"]  <--- mixed data types
+y = []
+for x_value in x:
+  y_value = x_value ** 2              <--- will cause a problem here
+  y.append(y_value)
+```
+
+# Arrays
+
+## Arrays with Numpy
+
+Like Matplotlib, Numpy is an external library that we can import and use in Python:
+```{.python}
+import numpy as np
+```
+
+:::{.fragment .fade-in}
+Numpy allows us to create n-dimensional arrays.
+
+::: incremental
+* 1-D arrays (aka "vectors")
+* 2-D and higher (aka "matrices")
+
+:::
+
+:::
+
+:::{.fragment .fade-in}
+But for today, just 1-D
+:::
+
+## Creating arrays from lists
+
+Numpy arrays can be created from lists using the `numpy.array()` function.
+Numpy will automatically convert data into compatible `dtype`s if possible.
+
+:::{.fragment .fade-in}
+```{python}
+#| code-line-numbers: "|2,4,6|3,5,7"
+#| echo: true
+#| output-location: fragment
+#| error: true
+import numpy as np
+list_a = [1, 2, 3, 4, 5]       # <--- all integers
+list_b = [6, 7, 8, 9, 10.]     # <--- mixed int/float
+array_a = np.array(list_a)
+array_b = np.array(list_b)
+print(array_a, array_a.dtype)  # <--- all integers
+print(array_b, array_b.dtype)  # <--- all floats
+```
+:::
+
+## Other ways to create arrays
+
+Numpy has built in functions to create arrays:
+```{python}
+#| code-line-numbers: "|2,3|4,5,6"
+#| echo: true
+#| output-location: fragment
+#| error: true
+import numpy as np
+# np.linspace(start, stop, number of points)
+x = np.linspace(0,100,6)
+# np.zeros(number of points) and np.ones(number of points)
+y = np.zeros(4)
+z = np.ones(5)
+print(f" x: {x}\n",f"y: {y}\n",f"z: {z}")
+```
+
+## Array contents
+We can access array contents via *indexing* just like lists:
+```{python}
+#| echo: false
+#| error: true
+# Get the first element of x:
+print(f"x: {x} <--- defined on previous slide")
+```
+
+```{python}
+#| echo: true
+#| output-location: fragment
+# Get the first element of x:
+x[0]
+```
+
+:::{.fragment}
+```{python}
+#| echo: true
+#| output-location: fragment
+# Get the last element of x:
+x[-1]
+```
+:::
+
+:::{.fragment}
+```{python}
+#| echo: true
+#| output-location: fragment
+# Get a slice of x from the second to the fourth element
+x[1:5]  # <--- Notice the ending index in a slice is NOT inclusive
+```
+:::
+
+## Working with arrays
+Unlike lists, we can perform operations on **entire arrays at once**.
+
+
+```{python}
+#| echo: true
+#| error: true
+#| output-location: fragment
+#| code-line-numbers: "1-6|8-10"
+########## List version #########
+x = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+y = []
+for x_value in x:
+  y_value = x_value ** 2
+  y.append(y_value)
+  
+######### Array version #########
+x_arr = np.array(x)
+y_arr = x_arr ** 2
+print(f"y_arr: {y_arr}")
+```
+
+## 
+
+```{python}
+#| echo: true
+#| error: true
+#| output-location: fragment
+#| code-line-numbers: "2|3|4,5,6"
+import matplotlib.pyplot as plt 
+import numpy as np
+time = np.linspace(0, 3, 500)
+amplitude = np.sin(2 * np.pi * time)
+plt.plot(time, amplitude)
+```
+
+
+
+
+
+
+

@@ -2,10 +2,10 @@
 
 ## Materials
 
-| Topic         | Video        | Slides | Code |
-|---------------|--------------|--------|------|
-| Introduction  | N/A          |   N/A  | N/A  |
-| Python basics |  [Link](https://uw.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=ee4ad1a3-635c-4148-b2bb-b359017aa92c)  |  N/A |    [Link](/website/lectures/02_python_basics.ipynb)     |
+| Topic         | Video        | Slides |
+|---------------|--------------|--------|
+| Introduction  | N/A          |   N/A  |
+| Python basics |  [Link](https://uw.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=ee4ad1a3-635c-4148-b2bb-b359017aa92c)  |  N/A |  
 
 ## Assignments due
 

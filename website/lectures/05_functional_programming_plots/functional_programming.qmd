@@ -1,0 +1,250 @@
+---
+title: "Functional Programming and Plotting"
+subtitle: "TME 310 - Computational Physical Modeling"
+author: 
+  - "Lorne Arnold, PhD, PE"
+institute: "University of Washington Tacoma"
+format:
+  revealjs:
+      logo: ""
+---
+
+# Functions
+
+## Why use functions?
+
+Functions allow us to organize and re-use our work.
+
+\ 
+
+Part of the purpose of **looking back** at our solutions during reflection and self-grading is to identify ways our work may be useful for future problems.
+<!-- 
+Problem     Possible solutions
+Hungry      hunt or gather food 
+            look for a grocery store or restaurant
+
+
+Engineering task        Write new code from scratch
+                        Re-use the old code (copy and paste?) -->
+
+## Anatomy of a function
+
+::: incremental
+1. The **function signature** defines function's *name* and *inputs* it uses.
+2. The **function body** contains the code that runs when the function is *called*.
+:::
+
+::: {.fragment .fade-in}
+Here's an example of a function called `average`:
+:::
+
+::: {.fragment .fade-in}
+```{.python code-line-numbers="1|2,3,4"}
+def average(x, y):      # <--- the function signature   
+    total = x + y       # <--- the function body starts here... 
+    avg = total / 2 
+    return avg          # <--- and ends here
+```
+:::
+
+## Function signature
+
+```{.python code-line-numbers="1,"}
+def average(x, y):      # <--- the function signature   
+    total = x + y        
+    avg = total / 2 
+    return avg          
+```
+
+The **function signature** consists of:
+
+::: incremental
+* the `def` keyword
+* the function name (e.g., `average`)
+* the function input parameters: `(x, y)`
+  * input parameters are optional, the parentheses `()` are not
+  * assign default values as follows: `(x=1,y=2)`
+* a colon (`:`) at the end of the line
+:::
+
+## Function body
+
+```{.python code-line-numbers="2,3,4"}
+def average(x, y):        
+    total = x + y       # <--- the function body starts here... 
+    avg = total / 2 
+    return avg          # <--- and ends here
+```
+
+The **function body** consists of:
+
+::: incremental
+* an **indented** code block
+  * usually indented by 4 spaces (or tab)
+  * can be 1 or more spaces but **must** be consistent
+* valid Python statements (or the `pass` keyword) 
+* optional: a `return` statement
+:::
+
+## Function calls
+
+User-defined functions are called just like built in functions but they need to be called after their defined.
+
+::: {.fragment .fade-in}
+```{.python code-line-numbers="1|8|9"}
+value = average(0, 1)   # <--- invalid function call
+
+def average(x, y):        
+    total = x + y       
+    avg = total / 2 
+    return avg          
+
+value = average(x=0, y=1)   # <--- valid function call
+value = average(0, 1)       # <--- also valid (order matters)
+```
+:::
+
+## Default values
+
+Functions can have default values for some input parameters. 
+Parameters with default values are optional.
+
+Required parameters have to come **before** optional parameters.
+
+::: {.fragment .fade-in}
+```{.python code-line-numbers="1|6|7"}
+def average(x, y=10):   # <--- y is optional now
+    total = x + y       
+    avg = total / 2 
+    return avg          
+
+value = average(0)      # <--- will average 0 and 10
+value = average(0,5)    # <--- will average 0 and 5
+```
+:::
+
+\ 
+
+::: {.fragment .fade-in}
+```{.python}
+def average(x=10, y):   # <--- invalid
+   ...     
+```
+:::
+
+::: {.fragment .fade-in}
+```
+SyntaxError: parameter without a default follows parameter with a default    
+```
+:::
+
+# Plotting
+
+## Python libraries
+
+Python has several built-in and external **libraries** that extend its capabilities.
+
+The two we'll use most in this course are
+
+::: incremental
+* Numpy
+  * Array calculations
+* Matplotlib
+  * Plotting
+:::
+
+:::{.fragment .fade-in}
+We'll look at Matplotlib today
+:::
+
+## Importing libraries
+
+Import libraries with the `import` statement
+
+\
+
+::: {.fragment .fade-in}
+It's common to *aliases* as shorthand for imported modules by using the `as` keyword:
+:::
+
+::: {.fragment .fade-in}
+```{.python code-line-numbers=""}
+import matplotlib as mpl
+```
+:::
+
+\
+
+::: {.fragment .fade-in}
+This imports the entire `matplotlib` library into your code. You can use `mpl` to refer to it.
+:::
+
+## Partial imports
+
+Sometimes libraries are large and we only need a small part of them.
+In these cases, we can import a specific function using the `from` keyword:
+
+
+::: {.fragment .fade-in}
+```{.python code-line-numbers=""}
+from numpy import array # <---- just imports the function numpy.array()
+```
+:::
+
+::: {.fragment .fade-in}
+
+Subcomponents of libraries are accessed with `.` syntax
+:::
+
+\ 
+
+::: {.fragment .fade-in}
+Or we can import a submodule:
+:::
+
+
+::: {.fragment .fade-in}
+```{.python code-line-numbers=""}
+import matplotlib.pyplot as plt 
+```
+:::
+
+## Basic Matplotlib use
+
+It's typical to start using Matplotlib with:
+
+```{.python code-line-numbers=""}
+import matplotlib.pyplot as plt 
+```
+
+::: {.fragment .fade-in}
+I'll add a link to the Matplotlib documentation page to the course website.
+But for today, we'll just look at one plotting fuction: `matplotlib.pyplot.plot()`
+:::
+
+## A line plot
+
+```{python}
+#| echo: true
+#| output-location: fragment
+#| code-line-numbers: "1|2,3|4"
+import matplotlib.pyplot as plt 
+x = [1, 2, 3, 4, 5]
+y = [-1, 0, 1, 3, 6]
+plt.plot(x,y)
+```
+
+## A line plot
+
+```{python}
+#| echo: true
+#| output-location: fragment
+#| code-line-numbers: "2|3|4,5,6"
+import matplotlib.pyplot as plt 
+x = list(range(100))
+y = []
+for x_value in x:
+  y_value = x_value ** 2
+  y.append(y_value)
+plt.plot(x,y)
+```
