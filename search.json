@@ -4,49 +4,21 @@
     "href": "examples/matplotlib_quick_ref.html",
     "title": "Matplotlib quick reference",
     "section": "",
-    "text": "import matplotlib.pyplot as plt"
+    "text": "This notebook includes several code snippets and examples of different features of Matplotlib. Matplotlib is a big library and there are many ways to use it. The more customized you want your plots to be, the more you will want to refer to the official Matplotlib documentation. But if you’re just looking to make basic plots with labeled axes, this guide may be enough for you.\nimport matplotlib.pyplot as plt\nimport numpy as np"
   },
   {
     "objectID": "examples/matplotlib_quick_ref.html#basic-plotting",
     "href": "examples/matplotlib_quick_ref.html#basic-plotting",
     "title": "Matplotlib quick reference",
     "section": "Basic plotting",
-    "text": "Basic plotting\nplt.plot(x, y)                    # Line plot\nplt.scatter(x, y)                 # Scatter plot\nplt.bar(x, heights)               # Bar chart\nplt.hist(data, bins=20)           # Histogram\nplt.imshow(array)                 # 2D array as image"
+    "text": "Basic plotting\n\nLine plot\n\nx = np.linspace(-2,2) \ny = x**3\nplt.plot(x,y)  # &lt;--- matplotlib.pyplot.plot() creates a line plot with two arrays of equal length\nplt.xlabel(\"x axis\")  # &lt;--- add axis labels\nplt.ylabel(\"y axis\")\nplt.title(\"A line plot of $y=x^3$\")  # &lt;--- and a title\nplt.grid()  # &lt;--- includes gridlines\n\n\n\n\n\n\n\n\n\n\nScatter plot\n\nx = np.linspace(-2, 2)\nnoise = np.random.rand(len(x))\ny = (x) ** 3 + noise\nplt.scatter(x, y)  # scatter() uses similar inputs as plot()\nplt.xlabel(\"x axis\")  # &lt;--- add axis labels\nplt.ylabel(\"y axis\")\nplt.title(\"A scatter plot of $y=x^3$ with random noise added\")  # &lt;--- and a title\nplt.grid()  # &lt;--- includes gridlines"
   },
   {
-    "objectID": "examples/matplotlib_quick_ref.html#customization",
-    "href": "examples/matplotlib_quick_ref.html#customization",
+    "objectID": "examples/matplotlib_quick_ref.html#styling-and-customization",
+    "href": "examples/matplotlib_quick_ref.html#styling-and-customization",
     "title": "Matplotlib quick reference",
-    "section": "Customization",
-    "text": "Customization\nplt.xlabel(\"X Label\")\nplt.ylabel(\"Y Label\")\nplt.title(\"Title\")\nplt.legend([\"Series 1\", \"Series 2\"])\nplt.grid(True)\nplt.xlim(0, 10)\nplt.ylim(0, 100)"
-  },
-  {
-    "objectID": "examples/matplotlib_quick_ref.html#styling",
-    "href": "examples/matplotlib_quick_ref.html#styling",
-    "title": "Matplotlib quick reference",
-    "section": "Styling",
-    "text": "Styling\nplt.plot(x, y, 'r--')            # Red dashed line\nplt.plot(x, y, marker='o')       # With markers\nplt.plot(x, y, linewidth=2)      # Line thickness\nplt.plot(x, y, alpha=0.5)        # Transparency"
-  },
-  {
-    "objectID": "examples/matplotlib_quick_ref.html#multiple-plots",
-    "href": "examples/matplotlib_quick_ref.html#multiple-plots",
-    "title": "Matplotlib quick reference",
-    "section": "Multiple plots",
-    "text": "Multiple plots\nplt.plot(x, y1)\nplt.plot(x, y2)                   # Plots on same axes\n\nplt.figure()                      # New figure\nplt.plot(x, y3)                   # Separate plot"
-  },
-  {
-    "objectID": "examples/matplotlib_quick_ref.html#display",
-    "href": "examples/matplotlib_quick_ref.html#display",
-    "title": "Matplotlib quick reference",
-    "section": "Display",
-    "text": "Display\nplt.show()                        # Display all figures\nplt.savefig('plot.png', dpi=400)  # Save to file\nplt.close()                       # Close current figure\nplt.close('all')                  # Close all figures"
-  },
-  {
-    "objectID": "examples/matplotlib_quick_ref.html#common-patterns",
-    "href": "examples/matplotlib_quick_ref.html#common-patterns",
-    "title": "Matplotlib quick reference",
-    "section": "Common patterns",
-    "text": "Common patterns\nplt.plot(x, y, label='Data')\nplt.xlabel('Time (s)')\nplt.ylabel('Value')\nplt.legend()\nplt.grid(True)\nplt.savefig('output.png')\nplt.show()"
+    "section": "Styling and Customization",
+    "text": "Styling and Customization\nIf you want specific line types, markers, or colors, those can be added as arguments to either the plt.plot() or plt.scatter() functions after the x and y inputs. You can also include labels for the data if more than one set of data is being shown. Use the plt.legend() function to display the legend on the plot.\nRefer to these pages for the available options:\n\nLine styles\nMarker styles\nColors\n\n\nx = np.linspace(-2, 2)\ny = x**3\nplt.plot(x, y, \"-r\", label=\"A solid red line\") \nplt.plot(x, -y, \"--g\", label=\"A dashed green line\")\nplt.xlabel(\"x axis\")  \nplt.ylabel(\"y axis\")\nplt.title(\"A line plot of $y=x^3$\")  \nplt.legend() # &lt;--- include a legend on the plot\nplt.grid()\n\n\n\n\n\n\n\n\n\nx = np.linspace(-2, 2)\nnoise = np.random.rand(len(x))\ny = (x) ** 3 + noise\nplt.scatter(x, y, marker=\"x\")  # &lt;--- use the \"marker\" keyword to change the marker type\nplt.xlabel(\"x axis\") \nplt.ylabel(\"y axis\")\nplt.title(\"A scatter plot of $y=x^3$ with random noise added\")  \nplt.grid()"
   },
   {
     "objectID": "examples/05_parachute_functions.html",
@@ -535,7 +507,7 @@
     "href": "website/examples.html",
     "title": "Example scripts",
     "section": "",
-    "text": "Example scripts\nThe table below contains some example scripts using basic course concepts.\n\n\n\nScript link\nNotes\n\n\n\n\nPython basics\n\n\n\nPlotting a sine wave\nBasic use of matplotlib\n\n\nParachute problem\n\n\n\nParachute problem (copilot solution)\n\n\n\nParachute functions",
+    "text": "Example scripts\nThe table below contains some example scripts using basic course concepts.\n\n\n\nScript link\nNotes\n\n\n\n\nPython basics\n\n\n\nPlotting a sine wave\nBasic use of matplotlib\n\n\nParachute problem\n\n\n\nParachute problem (copilot solution)\n\n\n\nParachute functions\n\n\n\nMatplotlib quick reference\nPlots with some styling options",
     "crumbs": [
       "TME 310A",
       "Example scripts"
