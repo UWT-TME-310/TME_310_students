@@ -9,3 +9,4 @@ The table below contains some example scripts using basic course concepts.
 | [Parachute problem](/examples/03_parachute.ipynb) |  |
 | [Parachute problem (copilot solution)](/examples/03_parachute_copilot.ipynb) |  |
 | [Parachute functions](/examples/05_parachute_functions.ipynb) |  |
+| [Matplotlib quick reference](/examples/matplotlib_quick_ref.ipynb) | Plots with some styling options |
