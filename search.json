@@ -1327,6 +1327,13 @@
     "href": "examples/quiz_correction.html#question-3.a",
     "title": "Quiz 1 extra credit",
     "section": "Question 3.a",
-    "text": "Question 3.a\nCorrect answer: In the simulation phase, we do calculations with the model. We vary the input parameters (like temperature, pressure, flow rate) and the model outputs predicted system responses.\nQuestion 5\nCorrect answer: C - 2.5\nWhy this answer is correct: See the code below.\n\ndef my_func(x, y=2):\n    z = (x**2 + y**2) / (x * y)\n    return z\n\nprint(my_func(2,4))\n\n2.5"
+    "text": "Question 3.a\nCorrect answer: In the simulation phase, we do calculations with the model. We vary the input parameters (like temperature, pressure, flow rate) and the model outputs predicted system responses."
+  },
+  {
+    "objectID": "examples/quiz_correction.html#question-5",
+    "href": "examples/quiz_correction.html#question-5",
+    "title": "Quiz 1 extra credit",
+    "section": "Question 5",
+    "text": "Question 5\nCorrect answer: C - 2.5\nWhy this answer is correct: See the code below.\n\ndef my_func(x, y=2):\n    z = (x**2 + y**2) / (x * y)\n    return z\n\nprint(my_func(2,4))\n\n2.5"
   }
 ]
