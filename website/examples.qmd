@@ -10,3 +10,4 @@ The table below contains some example scripts using basic course concepts.
 | [Parachute problem (copilot solution)](/examples/03_parachute_copilot.ipynb) |  |
 | [Parachute functions](/examples/05_parachute_functions.ipynb) |  |
 | [Matplotlib quick reference](/examples/matplotlib_quick_ref.ipynb) | Plots with some styling options |
+| [Quiz corrections for extra credit](/examples/quiz_correction.ipynb) | An example to follow if doing extra credit to make up points lost on a quiz |
