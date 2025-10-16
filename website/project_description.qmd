@@ -1,15 +1,14 @@
 # Course Project
 
-::: callout-caution
-## Note
-This page is incomplete. Details coming soon.
-:::
 
-Groups will be assigned randomly. Groups will be 3 or 4 students.
+## Project groups
+
+Project groups will be assigned randomly by the instructor. 
+Each group will have 3 to 4 students.
 
 ## Topic
 
-The project topic is modeling the installation of driven piles with open-ended diesel hammers.
+The project topic is modeling the installation of driven piles with open-ended diesel hammers (the topic of Homework 3, Problem 1).
 
 Each team will build a jupyter notebook interactive app to predict the capacity of a driven pile based on data collected during installation.
 
@@ -19,6 +18,6 @@ There will be a baseline app to be delivered in Part 2 and then the groups will 
 
 The project will have three deliverables:
 
-1.  Group coordination (due week 3)
-2.  Basic pile-driving app (due week 6)
+1.  [Group coordination](project_01.qmd) (due week 5)
+2.  [Basic pile-driving app](project_02.qmd) (due week 7)
 3.  Enhanced pile-driving app (due finals week)

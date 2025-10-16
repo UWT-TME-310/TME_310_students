@@ -1,0 +1,166 @@
+---
+title: "Numbers in computers"
+subtitle: "TME 310 - Computational Physical Modeling"
+author: 
+  - "Lorne Arnold, PhD, PE"
+institute: "University of Washington Tacoma"
+format:
+  revealjs:
+      logo: ""
+---
+
+## Why `float`?
+Python's integer type is `int`. That makes sense.
+
+What about `float` for numbers with decimals?
+
+:::{.fragment}
+`float` is short for *floating point*. In a float, the decimal place is not always in the same position (it floats around)
+
+```{python}
+#| code-line-numbers: "1,2,3|4,5,6"
+#| echo: true
+#| output-location: fragment
+#| error: true
+# Floats where the decimal point is between the "ones" and "tenths" place
+a = 1.0
+b = 0.01
+# Very large or very small floats will have decimals moved and use scientific notation:
+c = 11000000000000000000.0
+d = 0.0000000000000000022
+print(f"a: {a}; b: {b} \n")
+print(f"c: {c}; d: {d}")
+```
+:::
+
+## Why decimal places float
+Floating point numbers have a maximum (and minimum) size. 
+Using scientific notation allows the decimal place to be moved and unused places to be ignored.
+
+:::{.fragment}
+By default, Python's floats use 64 bits and are limited to 15 to 17 decimal places.
+:::
+
+:::{.fragment}
+So, floats have
+
+::: incremental
+1. limits on precision
+
+2. variable limits on precision
+:::
+
+:::
+
+
+## Precision limitations
+If we try to assign more precision to a float than it can hold, **information will be lost**.
+Consider the code below:
+
+:::{.fragment}
+
+```{python}
+#| code-line-numbers: "1,2,3"
+#| echo: true
+#| output-location: fragment
+#| error: true
+big = 1230000000.0
+med = 456.0
+sml = 0.0000000789
+print(f"big + med: {big + med} <--- data preserved\n")
+print(f"med + small: {med + sml} <--- data preserved\n")
+print(f"big + small: {big + sml} <--- data lost!")
+
+```
+:::
+
+## Variable precision
+Floating point precision is variable (15 to 17 base-10 places) because they're stored as binary (base-2) numbers.
+
+:::{.fragment}
+
+This can lead to some unexpected behaviors:
+
+```{python}
+#| code-line-numbers: "1,2,3"
+#| echo: true
+#| output-location: fragment
+#| error: true
+x = 1.1
+y = 2.2
+z = x + y
+print(f"z: {z}")
+```
+:::
+
+
+## Compare with caution
+This can be especially important when using logical statements to control scripts.
+
+```{.python code-line-numbers=",|1|2|3|4|5|,"}
+x = 1.0
+while x != 0:
+    x -= 0.1
+    print(f"The value of x is now {x}")
+print("I've exited the loop!")
+```
+
+:::{.fragment}
+```{python}
+#| code-line-numbers: "1,2,3"
+#| echo: false
+#| output-location: fragment
+#| error: true
+x = 1.0
+while x != 0:
+    x -= 0.1
+    print(f"The value of x is now {x}")
+    if x < 0:
+        break
+```
+:::
+
+:::{.fragment}
+```{python}
+#| code-line-numbers: "1,2,3"
+#| echo: false
+#| output-location: fragment
+#| error: true
+print("... You'll need to interrupt Python to get out of an infitinte loop!")
+```
+:::
+
+## With looser conditions
+The "fix" for this example is simple: use *looser conditions*.
+
+```{.python code-line-numbers=","}
+x = 1.0
+while x > 0:
+    x -= 0.1
+    print(f"The value of x is now {x}")
+print("I've exited the loop!")
+```
+
+:::{.fragment}
+```{python}
+#| code-line-numbers: "1,2,3"
+#| echo: false
+#| output-location: fragment
+#| error: true
+x = 1.0
+while x > 0:
+    x -= 0.1
+    print(f"The value of x is now {x}")
+    if x < 0:
+        break
+print("I've exited the loop!")
+```
+:::
+
+
+
+
+
+
+
+

@@ -1,0 +1,238 @@
+---
+title: "Error definitions"
+subtitle: "TME 310 - Computational Physical Modeling"
+author: 
+  - "Lorne Arnold, PhD, PE"
+institute: "University of Washington Tacoma"
+format:
+  revealjs:
+      logo: ""
+---
+
+## Absolute and relative error (true)
+
+:::{.fragment}
+The true *absolute* error, $E_t$, is the difference between the true value and our approximation:
+
+$$E_t = \text{true} - \text{approx}$$
+:::
+
+:::{.fragment}
+The true *relative* error, $\epsilon_t$ is:
+
+$$\epsilon_t = \frac{\text{true} - \text{approx}}{\text{true}} (\text{often}\times 100\%)$$
+:::
+
+:::{.fragment}
+$$\epsilon_t = \frac{E_t}{\text{true}} (\text{often}\times 100\%)$$
+
+:::
+
+## Absolute and relative error (approx.)
+
+We rarely know the true value (why approximate what we know exactly?)
+
+:::{.fragment}
+The *approximate* absolute error, $E_a$ is:
+
+$$E_a = \text{current approx} - \text{previous approx}$$
+:::
+
+
+
+:::{.fragment}
+The approximate relative error, $\epsilon_a$ is:
+
+$$\epsilon_a = \frac{E_a}{\text{current approx}} (\text{often}\times 100\%)$$
+:::
+
+
+## Key differences
+
+With *approximate* errors:
+
+::: incremental
+* We do not need to know the true value
+* We must perform the calculation iteratively
+* We assume that our solution *converges*
+  * If it doesn't we likely have a problem with our model.
+:::
+
+
+## Example - $\sqrt[3]{250}$
+
+```{python}
+#| code-line-numbers: ",|1|2|3|4,5|6"
+#| echo: true
+#| output-location: fragment
+#| error: true
+num = 250.0; guess = 100.0 # find cubed root of "num" with initial "guess"
+for i in range(10):
+    new_guess = (2 * guess + num / guess**2) / 3 # some approx. method
+    E_a = new_guess - guess # Approx. absolute error
+    e_a = E_a / new_guess  # Approx. relative error
+    guess = new_guess
+```
+
+:::{.fragment}
+```{python}
+#| code-line-numbers: ","
+#| echo: false
+#| error: true
+def convergence_example(num, guess, i,verbose=True):
+    new_guess = (2 * guess + num / guess**2) / 3
+    E_a = new_guess - guess
+    e_a = E_a / new_guess
+    if verbose:
+        print(f"{i:<8} {new_guess:>9.6f} {E_a:>8.4f} {100 * e_a:>8.2f}")
+    guess = new_guess
+    return num, guess, i+1, E_a, e_a
+
+print(f"{'Iter.':<6} {'Guess':>10} {'E_a':>10} {'e_a(%)':>10}")
+print("-" * 39)
+i = 1
+num = 250.0
+guess = 100.0
+
+num, guess, i, E_a, e_a = convergence_example(num,guess,i)
+```
+:::
+
+:::{.fragment}
+```{python}
+#| code-line-numbers: ","
+#| echo: false
+#| error: true
+num, guess, i, E_a, e_a = convergence_example(num,guess,i)
+```
+:::
+
+:::{.fragment}
+```{python}
+#| code-line-numbers: ","
+#| echo: false
+#| error: true
+num, guess, i, E_a, e_a = convergence_example(num,guess,i)
+```
+:::
+
+:::{.fragment}
+```{python}
+#| code-line-numbers: ","
+#| echo: false
+#| error: true
+num, guess, i, E_a, e_a = convergence_example(num,guess,i)
+```
+:::
+
+:::{.fragment}
+```{python}
+#| code-line-numbers: ","
+#| echo: false
+#| error: true
+num, guess, i, E_a, e_a = convergence_example(num,guess,i)
+```
+:::
+
+:::{.fragment}
+```{python}
+#| code-line-numbers: ","
+#| echo: false
+#| error: true
+num, guess, i, E_a, e_a = convergence_example(num,guess,i)
+```
+:::
+
+:::{.fragment}
+```{python}
+#| code-line-numbers: ","
+#| echo: false
+#| error: true
+num, guess, i, E_a, e_a = convergence_example(num,guess,i)
+```
+:::
+
+:::{.fragment}
+```{python}
+#| code-line-numbers: ","
+#| echo: false
+#| error: true
+num, guess, i, E_a, e_a = convergence_example(num,guess,i)
+```
+:::
+
+:::{.fragment}
+```{python}
+#| code-line-numbers: ","
+#| echo: false
+#| error: true
+num, guess, i, E_a, e_a = convergence_example(num,guess,i)
+```
+:::
+
+:::{.fragment}
+```{python}
+#| code-line-numbers: ","
+#| echo: false
+#| error: true
+num, guess, i, E_a, e_a = convergence_example(num,guess,i)
+```
+:::
+
+
+## Example - cubed root of 250 (plot)
+Visualize the algorithm's convergence with a plot
+
+```{python}
+import matplotlib.pyplot as plt
+```
+:::{.r-stretch}
+```{python}
+#| code-line-numbers: ","
+#| echo: false
+#| error: true
+#| fig-align: center 
+i = 1
+num = 250.0
+guess = 100.0
+i_list = []
+num_list = []
+guess_list = []
+E_a_list = []
+e_a_list = []
+
+while i <15:
+    i_list.append(i)
+    num, guess, i, E_a, e_a = convergence_example(num, guess, i,verbose=False)
+    guess_list.append(guess)
+    E_a_list.append(E_a)
+    e_a_list.append(e_a*100)
+
+plt.plot(i_list, guess_list,"-o")
+plt.plot(i_list, E_a_list,"-")
+plt.plot(i_list, e_a_list,"--")
+plt.legend(["Guess", "Approx. Error", "Rel. Approx. Error(%)"])
+plt.show()
+
+```
+:::
+
+## Which to use?
+
+Think about each scenario critically.
+
+:::{.fragment}
+Often best to use an approximate relative error method ($\epsilon_a$) when:
+:::
+
+::: incremental
+* Target unknown
+* Not converging near zero
+:::
+
+:::{.fragment}
+When converging to zero (known target), true absolute error method often best.
+:::
+
+
+

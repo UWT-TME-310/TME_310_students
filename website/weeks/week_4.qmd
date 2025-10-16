@@ -5,8 +5,11 @@ Course content will be added on a rolling basis
 
 | Topic | Video | Slides|
 |----|----|----|
-|   |   |   |   
+|  Numbers in Computers |  [Link](https://uw.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=198f891c-a7d5-4be2-8171-b3750036f27f) |  [Link](../../website/lectures/07_approx_and_error/numbers_in_computers.qmd) |   
+|  Error definitions | [Link](https://uw.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=444a7a2d-c1df-45f7-a201-b3750036f204)   |  [Link](../../website/lectures/07_approx_and_error/error_definitions.qmd) |   
+|  Error tolerance | [Link](https://uw.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=55b992b7-9f7e-4371-ae42-b3750036f1db)   |  [Link](../../website/lectures/07_approx_and_error/error_tolerance.qmd) |  
+| Dartboard approximation of $\pi$ | [Link](https://uw.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=26cda600-2dca-425a-a985-b3770124c93b) | | 
+| Plotting the dartboard approximation of $\pi$ | [Link](https://uw.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=91b996a3-a017-4977-84c0-b378010162be) | [Code](../../examples/07_dartboard_pi.ipynb)| 
 
 ## Assignments due
 * Homework 3
-* [Project Part 1](https://canvas.uw.edu/courses/1835208/assignments/10692178)

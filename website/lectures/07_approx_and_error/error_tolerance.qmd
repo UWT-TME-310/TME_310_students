@@ -1,0 +1,178 @@
+---
+title: "Error tolerance"
+subtitle: "TME 310 - Computational Physical Modeling"
+author: 
+  - "Lorne Arnold, PhD, PE"
+institute: "University of Washington Tacoma"
+format:
+  revealjs:
+      logo: ""
+---
+
+
+## Acceptable error
+We can calculate the approximate error of our calculations.
+Depending on what our goals are, we can set a threshold of acceptable error (a.k.a a **tolerance**).
+
+:::{.fragment}
+For example:
+
+> Find the value of $\pi$ with an approximate relative error tolerance of $1e^{-4}$ using the dartboard method.
+:::
+
+## A tolerance to finding $\sqrt[3]{250}$
+
+```{python}
+#| code-line-numbers: ",|2,3|4|5,6,7|8"
+#| echo: true
+#| output-location: fragment
+#| error: true
+num = 250.0; guess = 100.0 # find cubed root of "num" with initial "guess"
+tol = 1e-2
+e_a = 1
+while abs(e_a) > tol:
+    new_guess = (2 * guess + num / guess**2) / 3 # some approx. method
+    e_a = (new_guess - guess) / new_guess  # Approx. relative error
+    guess = new_guess
+print(f"The cubed root of {num} is about {guess}")
+```
+
+## Dartboard method
+
+Randomly throw darts at a square with an inscribed circle and calculate the ratio of darts that land *inside* the circle to the *total* number of darts.
+\
+\
+
+:::{.fragment}
+::: {.absolute top=230 right=200 style="border: 4px solid red; width: 150px; height: 150px; background: transparent;"}
+:::
+:::
+
+:::{.fragment}
+::: {.absolute top=230 right=200 style="border: 4px solid red; border-radius: 50%; width: 150px; height: 150px; background: transparent;"}
+:::
+:::
+
+:::{.fragment}
+::: {.absolute top=305 right=200 style="width: 75px; height: 4px; background-color: red;"}
+:::
+
+::: {.absolute top=245 right=230 style="color: red;"}
+r
+:::
+
+:::
+
+::: incremental
+* $A_{circle} = \pi r^2$
+* $A_{square} = 4 \times r^2$
+* $\displaystyle \pi = \frac{4 \times A_{circle}}{A_{square}} \approx \frac{4 \times \text{darts in circle}}{\text{total darts}}$
+:::
+
+
+
+## Visualizing the dartboard method
+
+```{python}
+import numpy as np
+import matplotlib.pyplot as plt
+```
+
+::: {.r-stack}
+```{python}
+#| echo: false
+#| error: true
+#| fig-align: center 
+
+rjs_adjustment = 466 / 488
+
+x = 2*np.random.rand(1000) - 1
+y = 2*np.random.rand(1000) - 1
+mask = x**2 + y**2 < 1**2
+
+fig, ax = plt.subplots(figsize=(7, 7))
+ax.plot(x, y, ".", label = "$x, y$")
+ax.plot(x[mask],y[mask], ".", label="$x^2 + y^2 < 1.0^2$")
+ax.set_xlabel("x")
+ax.set_ylabel("y")
+ax.set_xlim([-1.1,1.1])
+ax.set_ylim([-1.1,1.1])
+ax.legend()
+ax.set_aspect(rjs_adjustment)
+plt.show()
+```
+
+:::{.fragment}
+```{python}
+#| echo: false
+#| error: true
+#| fig-align: center 
+
+x = 2*np.random.rand(2000) - 1
+y = 2*np.random.rand(2000) - 1
+mask = x**2 + y**2 < 1**2
+
+fig, ax = plt.subplots(figsize=(7, 7))
+ax.plot(x, y, ".", label = "$x, y$")
+ax.plot(x[mask],y[mask], ".", label="$x^2 + y^2 < 1.0^2$")
+ax.set_xlabel("x")
+ax.set_ylabel("y")
+ax.set_xlim([-1.1,1.1])
+ax.set_ylim([-1.1,1.1])
+# ax.legend()
+ax.set_aspect(rjs_adjustment)
+plt.show()
+```
+:::
+
+:::{.fragment}
+```{python}
+#| echo: false
+#| error: true
+#| fig-align: center 
+
+x = 2*np.random.rand(4000) - 1
+y = 2*np.random.rand(4000) - 1
+mask = x**2 + y**2 < 1**2
+
+fig, ax = plt.subplots(figsize=(7, 7))
+ax.plot(x, y, ".", label = "$x, y$")
+ax.plot(x[mask],y[mask], ".", label="$x^2 + y^2 < 1.0^2$")
+ax.set_xlabel("x")
+ax.set_ylabel("y")
+ax.set_xlim([-1.1,1.1])
+ax.set_ylim([-1.1,1.1])
+# ax.legend()
+ax.set_aspect(rjs_adjustment)
+plt.show()
+```
+:::
+
+:::{.fragment}
+```{python}
+#| echo: false
+#| error: true
+#| fig-align: center 
+
+x = 2*np.random.rand(8000) - 1
+y = 2*np.random.rand(8000) - 1
+mask = x**2 + y**2 < 1**2
+
+fig, ax = plt.subplots(figsize=(7, 7))
+ax.plot(x, y, ".", label = "$x, y$")
+ax.plot(x[mask],y[mask], ".", label="$x^2 + y^2 < 1.0^2$")
+ax.set_xlabel("x")
+ax.set_ylabel("y")
+ax.set_xlim([-1.1,1.1])
+ax.set_ylim([-1.1,1.1])
+# ax.legend()
+ax.set_aspect(rjs_adjustment)#466/488)
+plt.show()
+```
+:::
+
+:::
+
+## Challenge:
+
+Use the dartboard method to approximate the value of $\pi$. Continue "throwing darts" until your **approximate relative error** is less than 1e-4.

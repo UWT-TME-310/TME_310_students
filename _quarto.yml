@@ -42,12 +42,13 @@ website:
             - href: website/weeks/week_1.qmd
             - href: website/weeks/week_2.qmd
             - href: website/weeks/week_3.qmd
+            - href: website/weeks/week_4.qmd
         - text: ---   
         - section: "Project"
           contents:
             - href: website/project_description.qmd
-            # - href: website/project_01.qmd
-            # - href: website/project_02.qmd
+            - href: website/project_01.qmd
+            - href: website/project_02.qmd
             # - href: website/project_03.qmd
         - text: ---
         - section:

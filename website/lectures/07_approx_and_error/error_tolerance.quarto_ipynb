@@ -1,0 +1,278 @@
+{
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "---\n",
+        "title: \"Error tolerance\"\n",
+        "subtitle: \"TME 310 - Computational Physical Modeling\"\n",
+        "author: \n",
+        "  - \"Lorne Arnold, PhD, PE\"\n",
+        "institute: \"University of Washington Tacoma\"\n",
+        "format:\n",
+        "  revealjs:\n",
+        "      logo: \"\"\n",
+        "---\n",
+        "\n",
+        "\n",
+        "## Acceptable error\n",
+        "We can calculate the approximate error of our calculations.\n",
+        "Depending on what our goals are, we can set a threshold of acceptable error (a.k.a a **tolerance**).\n",
+        "\n",
+        ":::{.fragment}\n",
+        "For example:\n",
+        "\n",
+        "> Find the value of $\\pi$ with an approximate relative error tolerance of $1e^{-4}$ using the dartboard method.\n",
+        ":::\n",
+        "\n",
+        "## A tolerance to finding $\\sqrt[3]{250}$"
+      ],
+      "id": "157deaf2"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "output-location": "fragment"
+      },
+      "source": [
+        "#| code-line-numbers: ',|2,3|4|5,6,7|8'\n",
+        "#| echo: true\n",
+        "#| error: true\n",
+        "num = 250.0; guess = 100.0 # find cubed root of \"num\" with initial \"guess\"\n",
+        "tol = 1e-2\n",
+        "e_a = 1\n",
+        "while abs(e_a) > tol:\n",
+        "    new_guess = (2 * guess + num / guess**2) / 3 # some approx. method\n",
+        "    e_a = (new_guess - guess) / new_guess  # Approx. relative error\n",
+        "    guess = new_guess\n",
+        "print(f\"The cubed root of {num} is about {guess}\")"
+      ],
+      "id": "cea214ba",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "## Dartboard method\n",
+        "\n",
+        "Randomly throw darts at a square with an inscribed circle and calculate the ratio of darts that land *inside* the circle to the *total* number of darts.\n",
+        "\\\n",
+        "\\\n",
+        "\n",
+        ":::{.fragment}\n",
+        "::: {.absolute top=230 right=200 style=\"border: 4px solid red; width: 150px; height: 150px; background: transparent;\"}\n",
+        ":::\n",
+        ":::\n",
+        "\n",
+        ":::{.fragment}\n",
+        "::: {.absolute top=230 right=200 style=\"border: 4px solid red; border-radius: 50%; width: 150px; height: 150px; background: transparent;\"}\n",
+        ":::\n",
+        ":::\n",
+        "\n",
+        ":::{.fragment}\n",
+        "::: {.absolute top=305 right=200 style=\"width: 75px; height: 4px; background-color: red;\"}\n",
+        ":::\n",
+        "\n",
+        "::: {.absolute top=245 right=230 style=\"color: red;\"}\n",
+        "r\n",
+        ":::\n",
+        "\n",
+        ":::\n",
+        "\n",
+        "::: incremental\n",
+        "* $A_{circle} = \\pi r^2$\n",
+        "* $A_{square} = 4 \\times r^2$\n",
+        "* $\\displaystyle \\pi = \\frac{4 \\times A_{circle}}{A_{square}} \\approx \\frac{4 \\times \\text{darts in circle}}{\\text{total darts}}$\n",
+        ":::\n",
+        "\n",
+        "\n",
+        "\n",
+        "## Visualizing the dartboard method"
+      ],
+      "id": "105dd43e"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "import numpy as np\n",
+        "import matplotlib.pyplot as plt"
+      ],
+      "id": "e9f4c5a0",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "::: {.r-stack}"
+      ],
+      "id": "878c3378"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "#| echo: false\n",
+        "#| error: true\n",
+        "#| fig-align: center \n",
+        "\n",
+        "rjs_adjustment = 466 / 488\n",
+        "\n",
+        "x = 2*np.random.rand(1000) - 1\n",
+        "y = 2*np.random.rand(1000) - 1\n",
+        "mask = x**2 + y**2 < 1**2\n",
+        "\n",
+        "fig, ax = plt.subplots(figsize=(7, 7))\n",
+        "ax.plot(x, y, \".\", label = \"$x, y$\")\n",
+        "ax.plot(x[mask],y[mask], \".\", label=\"$x^2 + y^2 < 1.0^2$\")\n",
+        "ax.set_xlabel(\"x\")\n",
+        "ax.set_ylabel(\"y\")\n",
+        "ax.set_xlim([-1.1,1.1])\n",
+        "ax.set_ylim([-1.1,1.1])\n",
+        "ax.legend()\n",
+        "ax.set_aspect(rjs_adjustment)\n",
+        "plt.show()"
+      ],
+      "id": "5199418d",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        ":::{.fragment}"
+      ],
+      "id": "a15156bf"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "#| echo: false\n",
+        "#| error: true\n",
+        "#| fig-align: center \n",
+        "\n",
+        "x = 2*np.random.rand(2000) - 1\n",
+        "y = 2*np.random.rand(2000) - 1\n",
+        "mask = x**2 + y**2 < 1**2\n",
+        "\n",
+        "fig, ax = plt.subplots(figsize=(7, 7))\n",
+        "ax.plot(x, y, \".\", label = \"$x, y$\")\n",
+        "ax.plot(x[mask],y[mask], \".\", label=\"$x^2 + y^2 < 1.0^2$\")\n",
+        "ax.set_xlabel(\"x\")\n",
+        "ax.set_ylabel(\"y\")\n",
+        "ax.set_xlim([-1.1,1.1])\n",
+        "ax.set_ylim([-1.1,1.1])\n",
+        "# ax.legend()\n",
+        "ax.set_aspect(rjs_adjustment)\n",
+        "plt.show()"
+      ],
+      "id": "6ddadc6a",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        ":::\n",
+        "\n",
+        ":::{.fragment}"
+      ],
+      "id": "d3b754a3"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "#| echo: false\n",
+        "#| error: true\n",
+        "#| fig-align: center \n",
+        "\n",
+        "x = 2*np.random.rand(4000) - 1\n",
+        "y = 2*np.random.rand(4000) - 1\n",
+        "mask = x**2 + y**2 < 1**2\n",
+        "\n",
+        "fig, ax = plt.subplots(figsize=(7, 7))\n",
+        "ax.plot(x, y, \".\", label = \"$x, y$\")\n",
+        "ax.plot(x[mask],y[mask], \".\", label=\"$x^2 + y^2 < 1.0^2$\")\n",
+        "ax.set_xlabel(\"x\")\n",
+        "ax.set_ylabel(\"y\")\n",
+        "ax.set_xlim([-1.1,1.1])\n",
+        "ax.set_ylim([-1.1,1.1])\n",
+        "# ax.legend()\n",
+        "ax.set_aspect(rjs_adjustment)\n",
+        "plt.show()"
+      ],
+      "id": "7d1fb138",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        ":::\n",
+        "\n",
+        ":::{.fragment}"
+      ],
+      "id": "771700a4"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "#| echo: false\n",
+        "#| error: true\n",
+        "#| fig-align: center \n",
+        "\n",
+        "x = 2*np.random.rand(8000) - 1\n",
+        "y = 2*np.random.rand(8000) - 1\n",
+        "mask = x**2 + y**2 < 1**2\n",
+        "\n",
+        "fig, ax = plt.subplots(figsize=(7, 7))\n",
+        "ax.plot(x, y, \".\", label = \"$x, y$\")\n",
+        "ax.plot(x[mask],y[mask], \".\", label=\"$x^2 + y^2 < 1.0^2$\")\n",
+        "ax.set_xlabel(\"x\")\n",
+        "ax.set_ylabel(\"y\")\n",
+        "ax.set_xlim([-1.1,1.1])\n",
+        "ax.set_ylim([-1.1,1.1])\n",
+        "# ax.legend()\n",
+        "ax.set_aspect(rjs_adjustment)#466/488)\n",
+        "plt.show()"
+      ],
+      "id": "78a8c36a",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        ":::\n",
+        "\n",
+        ":::\n",
+        "\n",
+        "## Challenge:\n",
+        "\n",
+        "Use the dartboard method to approximate the value of $\\pi$. Continue \"throwing darts\" until your **approximate relative error** is less than 1e-4."
+      ],
+      "id": "6b69dad2"
+    }
+  ],
+  "metadata": {
+    "kernelspec": {
+      "display_name": "Python 3",
+      "language": "python",
+      "name": "python3"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 5
+}

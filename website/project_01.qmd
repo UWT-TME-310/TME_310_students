@@ -1,14 +1,9 @@
 # Project Part 1 - group coordination
 
-::: callout-caution
-## Note
-This page is incomplete. Details coming soon.
-:::
+Your project groups have been assigned - you can see your group number and fellow team members by looking at the People page on Canvas.
 
-<!-- Purpose
+The task for Part 1 of the course project is simple:
 
-Instructions
-
-Submission
-
-Rubric -->
+1. Find a time (using in-class time is encouraged!) to meet with your group and introduce yourselves to each other if you don't already know one another.
+2. Decide amongst yourselves how your group will communicate and how often you plan to meet to work on the project for the rest of the quarter.
+3. Write down what your group decided about communication and meeting frequency in the [Canvas assignment text box](https://canvas.uw.edu/courses/1835208/assignments/10692178).
