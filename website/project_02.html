@@ -67,6 +67,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../website/styles.css">
 </head>
@@ -250,7 +279,20 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#project-part-2---basic-pile-driving-app" id="toc-project-part-2---basic-pile-driving-app" class="nav-link active" data-scroll-target="#project-part-2---basic-pile-driving-app">Project Part 2 - basic pile-driving app</a></li>
+  <li><a href="#project-part-2---basic-pile-driving-app" id="toc-project-part-2---basic-pile-driving-app" class="nav-link active" data-scroll-target="#project-part-2---basic-pile-driving-app">Project Part 2 - basic pile-driving app</a>
+  <ul class="collapse">
+  <li><a href="#purpose" id="toc-purpose" class="nav-link" data-scroll-target="#purpose">Purpose</a></li>
+  <li><a href="#instructions" id="toc-instructions" class="nav-link" data-scroll-target="#instructions">Instructions</a>
+  <ul class="collapse">
+  <li><a href="#choosing-a-pile-driving-log-file" id="toc-choosing-a-pile-driving-log-file" class="nav-link" data-scroll-target="#choosing-a-pile-driving-log-file">Choosing a pile-driving log file</a></li>
+  <li><a href="#plot-of-the-driving-log-data" id="toc-plot-of-the-driving-log-data" class="nav-link" data-scroll-target="#plot-of-the-driving-log-data">Plot of the driving log data</a></li>
+  <li><a href="#plot-of-the-piles-estimated-capacity" id="toc-plot-of-the-piles-estimated-capacity" class="nav-link" data-scroll-target="#plot-of-the-piles-estimated-capacity">Plot of the pile’s estimated capacity</a></li>
+  <li><a href="#pile-summary" id="toc-pile-summary" class="nav-link" data-scroll-target="#pile-summary">Pile summary</a></li>
+  </ul></li>
+  <li><a href="#submission" id="toc-submission" class="nav-link" data-scroll-target="#submission">Submission</a></li>
+  <li><a href="#rubric" id="toc-rubric" class="nav-link" data-scroll-target="#rubric">Rubric</a></li>
+  <li><a href="#grading-rubric" id="toc-grading-rubric" class="nav-link" data-scroll-target="#grading-rubric">Grading rubric</a></li>
+  </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/UWT-TME-310/TME_310_students/blob/main/website/project_02.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="https://github.com/UWT-TME-310/TME_310_students/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -262,28 +304,125 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="project-part-2---basic-pile-driving-app" class="level1">
 <h1>Project Part 2 - basic pile-driving app</h1>
-<div class="callout callout-style-default callout-caution callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>This page is incomplete. Details coming soon.</p>
-</div>
-</div>
-<!-- Purpose
+<section id="purpose" class="level2">
+<h2 class="anchored" data-anchor-id="purpose">Purpose</h2>
+<p>Demonstrate the coding skills learned in the course to develop a notebook that could be useful for engineering professionals working on pile-driving projects.</p>
+</section>
+<section id="instructions" class="level2">
+<h2 class="anchored" data-anchor-id="instructions">Instructions</h2>
+<p>Your goal for Part 2 of the course project is to build a basic pile-driving app from a jupyter notebook. In this context, “app” doesn’t mean software that runs on a mobile device, it means software that someone could use to perform a particular task on a computer if they have access to your notebook and supporting Python scripts. The notebook itself should have minimal visible code. The majority of your code should live in one or more Python script files that are imported into the notebook. This helps separate the inner workings of the app from the user’s experience (and also helps prevent accidental changes to the code).</p>
+<p>The app’s user should be able to:</p>
+<ol type="1">
+<li>Choose a pile-driving log file from within the app’s file directory.</li>
+<li>See a plot of the pile’s driving log data vs.&nbsp;elevation.</li>
+<li>See a plot of the pile’s estimated capacity vs.&nbsp;elevation.</li>
+<li>See a short text summary of the pile’s final condition, including:
+<ol type="1">
+<li>Pile ID</li>
+<li>Pile tip elevation</li>
+<li>Pile load capacity</li>
+</ol></li>
+</ol>
+<p>The purpose of the app and instructions for using it should be clearly described in the notebook. Any engineer who understands the basics of pile-driving and has a basic understanding of Jupyter notebooks should be able to use the notebook and understand its output.</p>
+<p>Additionally, the supporting code should be well-documented with docstrings. Any individual who understands Python should be able to view the supporting code and understand how each function works by reading the docstrings. At a minimum, docstrings should include:</p>
+<ol type="1">
+<li>A description of the function’s purpose.</li>
+<li>A list of the function’s input parameters, including whether they have default values and what units the should be in.</li>
+<li>A list of the function’s output parameters, including what units they will be in.</li>
+</ol>
+<section id="choosing-a-pile-driving-log-file" class="level3">
+<h3 class="anchored" data-anchor-id="choosing-a-pile-driving-log-file">Choosing a pile-driving log file</h3>
+<p>The way a user chooses a pile-driving log file can be as simple as typing the file name into the right place in a code cell in your notebook. Prompting the user for input or adding graphical user interface elements is not necessary.</p>
+<p>Your assignment repository will include a small number of properly formatted pile-driving logs for you to test your notebook with. You should assume that app users will want to add additional pile-driving logs and select them with your app. You may assume that any pile-driving logs the user adds will follow the same format as the sample logs.</p>
+</section>
+<section id="plot-of-the-driving-log-data" class="level3">
+<h3 class="anchored" data-anchor-id="plot-of-the-driving-log-data">Plot of the driving log data</h3>
+<p>The driving log data should show the blows per minute (BPM) and blows per foot (BPF) vs.&nbsp;pile tip <em>elevation</em>. The elevation should be shown on the <em>vertical</em> axis BPM and BPF can be included on a single plot or on two separate plots, but the elevations for both datasets should align visually. Since the elevation needs to be on the vertical axis, this means that if two plots are used, the two plots should be side-by-side.</p>
+</section>
+<section id="plot-of-the-piles-estimated-capacity" class="level3">
+<h3 class="anchored" data-anchor-id="plot-of-the-piles-estimated-capacity">Plot of the pile’s estimated capacity</h3>
+<p>Similar to the driving log data, the pile capacity should be plotted vs.&nbsp;pile tip elevation with elevation shown on the vertical axis.</p>
+<p>The pile’s capacity should be estimated using the driving log and the <span class="math inline">\(S_o\)</span> equation. The <span class="math inline">\(S_o\)</span> equation provides a method of estimating capacity from the hammer energy and blow count. It is a simplification of the rational pile formula and is based on the impulse-momentum principles of the hammer/pile system.</p>
+<p>The <span class="math inline">\(S_o\)</span> equation is:</p>
+<p><span class="math display">\[ Q = \frac{a E_r}{S + S_o}\]</span></p>
+<p>Where:</p>
+<p><span class="math display">\[S_o = \sqrt[]{\frac{a E_r L}{2 A E}} \]</span></p>
+<p>And:</p>
+<p><span class="math inline">\(Q\)</span> = Ultimate pile capacity in pounds</p>
+<p><span class="math inline">\(E_r\)</span> = Rated hammer energy in foot-pounds</p>
+<p><span class="math inline">\(a\)</span> = Hammer efficiency</p>
+<p><span class="math inline">\(L\)</span> = Total pile length in feet</p>
+<p><span class="math inline">\(A\)</span> = Pile cross-sectional area in square inches</p>
+<p><span class="math inline">\(E\)</span> = Modulus of elasticity of pile material in pounds per square inch</p>
+<p><span class="math inline">\(S\)</span> = Pile set (penetration per blow) in feet</p>
+</section>
+<section id="pile-summary" class="level3">
+<h3 class="anchored" data-anchor-id="pile-summary">Pile summary</h3>
+<p>The text summary of the pile’s final condition should include the pile ID, final tip elevation, and final load capacity. An example is shown below (note - 1 “kip” = 1,000 pounds):</p>
+<pre><code>Pile ID: B-14
+Pile tip elevation: -134 feet
+Pile load capacity: 899 kips</code></pre>
+</section>
+</section>
+<section id="submission" class="level2">
+<h2 class="anchored" data-anchor-id="submission">Submission</h2>
+<p>Your project will be submitted by pushing your work to GitHub (same as the homework submission procedure). At a minimum, the submission should include:</p>
+<ol type="1">
+<li>Your app’s notebook (one <code>.ipynb</code> file)</li>
+<li>Your app’s support script (one or more <code>.py</code> files)</li>
+<li>At least one of the pile-driving log data files (one or more <code>.csv</code> files)</li>
+</ol>
+</section>
+<section id="rubric" class="level2">
+<h2 class="anchored" data-anchor-id="rubric">Rubric</h2>
+</section>
+<section id="grading-rubric" class="level2">
+<h2 class="anchored" data-anchor-id="grading-rubric">Grading rubric</h2>
+<p>Your submission will be graded by the instructor with the following rubric:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Category</th>
+<th>Criteria</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Data reading</td>
+<td>Users have a way to change which pile-driving log is being analyzed by the app. The app will work for any properly formatted pile-driving log in the directory that the sample log files are in so that if a user adds additional logs, they can be analyzed by the app</td>
+<td>__ / 10</td>
+</tr>
+<tr class="even">
+<td>App instructions</td>
+<td>The app instructions are clearly written such that an informed (i.e., familiar with pile-driving and Jupyter notebooks) user would be able to use the app.</td>
+<td>__ / 10</td>
+</tr>
+<tr class="odd">
+<td>Plots</td>
+<td>Plots of BPM, BPF, and pile load capacity are generated from the log. All plots use elevation as the vertical axis. The units of data being plotted are included and correct.</td>
+<td>__ / 10</td>
+</tr>
+<tr class="even">
+<td>Output</td>
+<td>A short summary of the pile analysis is displayed when the app is run. The output summary includes the correct units. The information in the summary is consistent with the pile log file and the plots.</td>
+<td>__ / 10</td>
+</tr>
+<tr class="odd">
+<td>Support code</td>
+<td>The functions that perform the app’s calculations are imported into the app from one or more supporting Python files. The functions are well documented (purpose, inputs and outputs described in a docstring).</td>
+<td>__ / 10</td>
+</tr>
+</tbody>
+</table>
 
-Instructions
 
-Submission
-
-Rubric -->
-
-
+</section>
 </section>
 
 </main> <!-- /main -->
