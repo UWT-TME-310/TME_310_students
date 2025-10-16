@@ -234,6 +234,12 @@ window.Quarto = {
  <span class="menu-text">Week 3</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../website/weeks/week_4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Week 4</span></a>
+  </div>
+</li>
       </ul>
   </li>
           <li class="px-0"><hr class="sidebar-divider hi "></li>
@@ -317,6 +323,7 @@ window.Quarto = {
 
 <section id="project-part-2---basic-pile-driving-app" class="level1">
 <h1>Project Part 2 - basic pile-driving app</h1>
+<p>Assignment repo: <a href="https://github.com/UWT-TME-310/project_02">project_02</a></p>
 <section id="purpose" class="level2">
 <h2 class="anchored" data-anchor-id="purpose">Purpose</h2>
 <p>Demonstrate the coding skills learned in the course to develop a notebook that could be useful for engineering professionals working on pile-driving projects.</p>
@@ -357,17 +364,49 @@ window.Quarto = {
 <p>Similar to the driving log data, the pile capacity should be plotted vs.&nbsp;pile tip elevation with elevation shown on the vertical axis.</p>
 <p>The pile’s capacity should be estimated using the driving log and the <span class="math inline">\(S_o\)</span> equation. The <span class="math inline">\(S_o\)</span> equation provides a method of estimating capacity from the hammer energy and blow count. It is a simplification of the rational pile formula and is based on the impulse-momentum principles of the hammer/pile system.</p>
 <p>The <span class="math inline">\(S_o\)</span> equation is:</p>
-<p><span class="math display">\[ Q = \frac{a E_r}{S + S_o}\]</span></p>
+<p><span class="math display">\[ Q = \frac{a H W}{S + S_o}\]</span></p>
 <p>Where:</p>
-<p><span class="math display">\[S_o = \sqrt[]{\frac{a E_r L}{2 A E}} \]</span></p>
+<p><span class="math display">\[S_o = \sqrt[]{\frac{a H W L}{2 A E}} \]</span></p>
 <p>And:</p>
 <p><span class="math inline">\(Q\)</span> = Ultimate pile capacity in pounds</p>
-<p><span class="math inline">\(E_r\)</span> = Rated hammer energy in foot-pounds</p>
+<p><span class="math inline">\(H\)</span> = Height of hammer fall in feet</p>
+<p><span class="math inline">\(W\)</span> = weight of hammer in pounds</p>
 <p><span class="math inline">\(a\)</span> = Hammer efficiency</p>
 <p><span class="math inline">\(L\)</span> = Total pile length in feet</p>
 <p><span class="math inline">\(A\)</span> = Pile cross-sectional area in square inches</p>
 <p><span class="math inline">\(E\)</span> = Modulus of elasticity of pile material in pounds per square inch</p>
-<p><span class="math inline">\(S\)</span> = Pile set (penetration per blow) in feet</p>
+<p><span class="math inline">\(S\)</span> = Pile penetration (in feet) per blow</p>
+<p>Use the following pile and hammer parameters for your app’s calculations:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Parameter</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(W\)</span></td>
+<td>20,000 pounds</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(a\)</span></td>
+<td>0.4</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(L\)</span></td>
+<td>150 feet</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(A\)</span></td>
+<td>477 square inches</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(E\)</span></td>
+<td>6,000,000 psi</td>
+</tr>
+</tbody>
+</table>
 </section>
 <section id="pile-summary" class="level3">
 <h3 class="anchored" data-anchor-id="pile-summary">Pile summary</h3>
