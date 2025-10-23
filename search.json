@@ -251,6 +251,55 @@
     "text": "Assumptions\nLet’s say we have a model for this problem:\n\\[\\frac{dv}{dt} = g -\\frac{c}{m}v\\]\nwhere \\(g\\) is gravitational acceleration, \\(c\\) is a drag coefficient, \\(m\\) is the parachutist’s mass, and \\(v\\) is their velocity. The solution to this differential equation is:\n\\[ v(t) = \\frac{gm}{c}(1 - e^{-ct/m})\\]\nWrite a function that finds the terminal velocity of a parachutist of a given mass and drag coefficient.\n\nSummarize the goal(s) of the problem in your own words.\n\n\nDescribe your plan to solve the problem.\n\n\nWrite Python code to solve the problem\n\n\n# Your code here\n\n\n\nLooking back at your code and the resulting output, reflect on whether your code achieved the problem goal(s). To the extent the problem models a physical system, how realistic does the behavior seem? Are there any changes you would make to your approach if you were to solve this problem again (e.g., to make your code more re-usable or to avoid dead ends)?"
   },
   {
+    "objectID": "website/lectures/08_git_stuff/codespace_issues.html#codespace-and-git-issues",
+    "href": "website/lectures/08_git_stuff/codespace_issues.html#codespace-and-git-issues",
+    "title": "Technical difficulties 😕",
+    "section": "Codespace and Git issues",
+    "text": "Codespace and Git issues\n\nSome students have been experiencing issues with Git and GitHub codespaces.\nI get that this can be frustrating!\n\nTroubleshooting codespaces isn’t how I want you to be spending your time\nI have some suggestions of things to try if you run into problems"
+  },
+  {
+    "objectID": "website/lectures/08_git_stuff/codespace_issues.html#problems-with-git-push",
+    "href": "website/lectures/08_git_stuff/codespace_issues.html#problems-with-git-push",
+    "title": "Technical difficulties 😕",
+    "section": "Problems with git push",
+    "text": "Problems with git push\nMost of the problems I’ve seen with git push might look something like this:\n ! [rejected]        main -&gt; main (fetch first)\nerror: failed to push some refs to 'https://github.com/UWT-TME-310/...\nThe most likely cause is that your codespace is “behind” your repo (aka origin).\nBefore attempted push:\n    A---B---C  (origin/main)\n         \\\n          D---E  (codespace/main)\n\n\nTry merging changes\nAsk Copilot\nSave locally and restart"
+  },
+  {
+    "objectID": "website/lectures/08_git_stuff/codespace_issues.html#try-merging-changes",
+    "href": "website/lectures/08_git_stuff/codespace_issues.html#try-merging-changes",
+    "title": "Technical difficulties 😕",
+    "section": "Try merging changes",
+    "text": "Try merging changes\nUse these commands:\ngit config pull.rebase false\ngit pull\nYou’ll be prompted for a commit message"
+  },
+  {
+    "objectID": "website/lectures/08_git_stuff/codespace_issues.html#whats-going-on",
+    "href": "website/lectures/08_git_stuff/codespace_issues.html#whats-going-on",
+    "title": "Technical difficulties 😕",
+    "section": "What’s going on?",
+    "text": "What’s going on?\nBefore attempted push:\n    A---B---C  (origin/main)\n         \\\n          D---E  (codespace/main)\n\nAfter git config pull.rebase false AND git pull:\n    A---B-------C  (origin/main)\n         \\       \\\n          D---E---F (codespace/main)\nNow you can git push\nAfter git push:\n    A---B-------C   F (origin/main)\n         \\       \\ /\n          D---E---F (codespace/main)"
+  },
+  {
+    "objectID": "website/lectures/08_git_stuff/codespace_issues.html#ask-copilot",
+    "href": "website/lectures/08_git_stuff/codespace_issues.html#ask-copilot",
+    "title": "Technical difficulties 😕",
+    "section": "Ask Copilot",
+    "text": "Ask Copilot\nEven if you don’t try the previous method, you can ask Copilot to help you.\n\nTurn “Agent” mode on\nAsk: “help me with git push”\nAllow copilot to run terminal commands\n\n\n\nAfter several commands and checks, it will almost always get to a successful push"
+  },
+  {
+    "objectID": "website/lectures/08_git_stuff/codespace_issues.html#save-locally-and-restart",
+    "href": "website/lectures/08_git_stuff/codespace_issues.html#save-locally-and-restart",
+    "title": "Technical difficulties 😕",
+    "section": "Save locally and restart",
+    "text": "Save locally and restart\nIf you’re really tangled in a knot, make a copy of what you want to keep locally and start a new codespace from your repo.\n\nYour notebook and everything else in your file explorer can be downloaded.\nOr you can just copy and paste the contents if that’s easier for you.\nAfter you’ve saved everything you want to keep, delete the problematic codespace and start a new one."
+  },
+  {
+    "objectID": "website/lectures/08_git_stuff/codespace_issues.html#problems-with-the-codespace-itself",
+    "href": "website/lectures/08_git_stuff/codespace_issues.html#problems-with-the-codespace-itself",
+    "title": "Technical difficulties 😕",
+    "section": "Problems with the codespace itself",
+    "text": "Problems with the codespace itself\nYou might also have problems with the codespace itself…\n\ncodespace running in recovery mode…\nThere is no Pip installer…\nIf you’re seeing this kind of issue, follow the “Save locally and restart” steps."
+  },
+  {
     "objectID": "website/lectures/02_python_basics/02_python_basics.html",
     "href": "website/lectures/02_python_basics/02_python_basics.html",
     "title": "Python Basics for Computational Physical Modeling",
@@ -722,14 +771,21 @@
     "href": "website/weeks/week_5.html",
     "title": "Week 5",
     "section": "",
-    "text": "Course content will be added on a rolling basis\n\n\n\n\n\nTopic\nVideo\nSlides"
+    "text": "Course content will be added on a rolling basis\n\n\n\n\n\nTopic\nVideo\nSlides\n\n\n\n\nTechnical difficulties 😕\nN/A\nLink\n\n\nCollaborating with GitHub\nN/A\nLink\n\n\n\n\n\n\nHomework 5"
   },
   {
     "objectID": "website/weeks/week_5.html#materials",
     "href": "website/weeks/week_5.html#materials",
     "title": "Week 5",
     "section": "",
-    "text": "Topic\nVideo\nSlides"
+    "text": "Topic\nVideo\nSlides\n\n\n\n\nTechnical difficulties 😕\nN/A\nLink\n\n\nCollaborating with GitHub\nN/A\nLink"
+  },
+  {
+    "objectID": "website/weeks/week_5.html#assignments-due",
+    "href": "website/weeks/week_5.html#assignments-due",
+    "title": "Week 5",
+    "section": "",
+    "text": "Homework 5"
   },
   {
     "objectID": "website/examples.html",
@@ -1340,6 +1396,41 @@
     "title": "TME 310 - Computational Physical Modeling",
     "section": "Step 4",
     "text": "Step 4\nLook back\nThere are two places I’ll ask you to look back:\n\nThe Reflect prompt\n\nLooking back at your code and the resulting output, reflect on whether your code achieved the problem goal(s). To the extent the problem models a physical system, how realistic does the behavior seem? Are there any changes you would make to your approach if you were to solve this problem again (e.g., to make your code more re-usable or to avoid dead ends)?\n\n\n\nSelf-grading\n\n\nThis should only take a few minutes of your time\nReinforces the look back\nFocus on comparing your code to the solution code"
+  },
+  {
+    "objectID": "website/lectures/08_git_stuff/collaborating.html#group-project-work",
+    "href": "website/lectures/08_git_stuff/collaborating.html#group-project-work",
+    "title": "Collaborating and GitHub",
+    "section": "Group project work",
+    "text": "Group project work\nWays your project groups can collaborate successfully:\n\nUse “branches”\n\nThis is the “right” way, but it assumes everyone knows how to pull, push, and merge changes.\n\nTake turns\n\nThis is safest, but it may slow your progress\n\nCopy/paste\n\nThis is fast and safe for git, but may cause Python errors (easier to resolve than git erros)"
+  },
+  {
+    "objectID": "website/lectures/08_git_stuff/collaborating.html#use-branches",
+    "href": "website/lectures/08_git_stuff/collaborating.html#use-branches",
+    "title": "Collaborating and GitHub",
+    "section": "Use branches",
+    "text": "Use branches\n\nEach member can start their own branch\nFrequently pull, push, and merge back to origin/main\nCopilot can help"
+  },
+  {
+    "objectID": "website/lectures/08_git_stuff/collaborating.html#take-turns",
+    "href": "website/lectures/08_git_stuff/collaborating.html#take-turns",
+    "title": "Collaborating and GitHub",
+    "section": "Take turns",
+    "text": "Take turns\n\nHuddle around one computer\nOnly open one codespace at a time\nCommit and push after every change"
+  },
+  {
+    "objectID": "website/lectures/08_git_stuff/collaborating.html#copypaste",
+    "href": "website/lectures/08_git_stuff/collaborating.html#copypaste",
+    "title": "Collaborating and GitHub",
+    "section": "Copy/paste",
+    "text": "Copy/paste\n\nWork on things in your playground repo\nTalk about what code or text needs to be copied from each group member and pasted into the assignment repo.\nPaste everything in and confirm that it works when put together."
+  },
+  {
+    "objectID": "website/lectures/08_git_stuff/collaborating.html#which-to-use",
+    "href": "website/lectures/08_git_stuff/collaborating.html#which-to-use",
+    "title": "Collaborating and GitHub",
+    "section": "Which to use?",
+    "text": "Which to use?\n\nDecide within your group.\nMake use of “office hours”"
   },
   {
     "objectID": "website/lectures/05_functional_programming_plots/functional_programming.html#why-use-functions",
