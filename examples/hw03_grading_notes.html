@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>examples – TME 310 A - Fall 2025</title>
+<title>Homework 3 notes – TME 310 A - Fall 2025</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -109,7 +144,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../index.html">TME 310A</a></li><li class="breadcrumb-item"><a href="../website/examples.html">Example scripts</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Homework 3 notes</li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -274,7 +309,7 @@ window.Quarto = {
           <li class="px-0"><hr class="sidebar-divider hi "></li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../website/examples.html" class="sidebar-item-text sidebar-link active">
+  <a href="../website/examples.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Example scripts</span></a>
   </div>
 </li>
@@ -297,67 +332,187 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#example-scripts" id="toc-example-scripts" class="nav-link active" data-scroll-target="#example-scripts">Example scripts</a></li>
+  <li><a href="#user-prompts" id="toc-user-prompts" class="nav-link active" data-scroll-target="#user-prompts">User prompts</a></li>
+  <li><a href="#testing-your-code" id="toc-testing-your-code" class="nav-link" data-scroll-target="#testing-your-code">Testing your code</a></li>
+  <li><a href="#alternative-approach-recursion" id="toc-alternative-approach-recursion" class="nav-link" data-scroll-target="#alternative-approach-recursion">Alternative approach: recursion</a>
+  <ul class="collapse">
+  <li><a href="#plain-code-version" id="toc-plain-code-version" class="nav-link" data-scroll-target="#plain-code-version">Plain code version</a></li>
+  <li><a href="#verbose-version" id="toc-verbose-version" class="nav-link" data-scroll-target="#verbose-version">Verbose version</a></li>
+  </ul></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/UWT-TME-310/TME_310_students/blob/main/website/examples.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="https://github.com/UWT-TME-310/TME_310_students/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/UWT-TME-310/TME_310_students/blob/main/examples/hw03_grading_notes.ipynb" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="https://github.com/UWT-TME-310/TME_310_students/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../index.html">TME 310A</a></li><li class="breadcrumb-item"><a href="../website/examples.html">Example scripts</a></li></ol></nav></header>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Homework 3 notes</h1>
+</div>
 
 
 
+<div class="quarto-title-meta">
 
-<section id="example-scripts" class="level1">
-<h1>Example scripts</h1>
-<p>The table below contains some example scripts using basic course concepts.</p>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Script link</th>
-<th>Notes</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><a href="../examples/02_python_basics.html">Python basics</a></td>
-<td></td>
-</tr>
-<tr class="even">
-<td><a href="../examples/00_plotting_a_sine_wave.html">Plotting a sine wave</a></td>
-<td>Basic use of <code>matplotlib</code></td>
-</tr>
-<tr class="odd">
-<td><a href="../examples/03_parachute.html">Parachute problem</a></td>
-<td></td>
-</tr>
-<tr class="even">
-<td><a href="../examples/03_parachute_copilot.html">Parachute problem (copilot solution)</a></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td><a href="../examples/05_parachute_functions.html">Parachute functions</a></td>
-<td></td>
-</tr>
-<tr class="even">
-<td><a href="../examples/matplotlib_quick_ref.html">Matplotlib quick reference</a></td>
-<td>Plots with some styling options</td>
-</tr>
-<tr class="odd">
-<td><a href="../examples/quiz_correction.html">Quiz corrections for extra credit</a></td>
-<td>An example to follow if doing extra credit to make up points lost on a quiz</td>
-</tr>
-<tr class="even">
-<td><a href="../examples/07_dartboard_pi.html">Dartboard approximation of <span class="math inline">\(\pi\)</span></a></td>
-<td>Convergence and error tolerance example with plots</td>
-</tr>
-<tr class="odd">
-<td><a href="../examples/hw03_grading_notes.html">Homework 3 notes</a></td>
-<td>My notes on some of the common approaches I saw while grading homework 3.</td>
-</tr>
-</tbody>
-</table>
+    
+  
+    
+  </div>
+  
 
 
+</header>
+
+
+<p>For Homework 3, Problem 2 was randomly selected for instructor grading. This notebook contains my notes from general trends in the class’s code and interesting questions raised in your reflections.</p>
+<p>The topics covered in the notes include:</p>
+<ul>
+<li>User prompts</li>
+<li>Testing your code</li>
+<li>Alternative approach: recursion</li>
+</ul>
+<section id="user-prompts" class="level2">
+<h2 class="anchored" data-anchor-id="user-prompts">User prompts</h2>
+<p>A lot of solutions to Problem 2 (and others) involved prompting users for an input value. That might look something like this:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="bu">input</span>(<span class="st">"Enter a positive number: "</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>sqrt_approx(a, tol<span class="op">=</span><span class="fl">1e-6</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>While there’s nothing wrong with this approach in terms of solving the stated problem, it does create a serious limitation on the usability of your code. The main advantage of using computers is that they can perform calculations millions of times faster than humans. When we put hard stops in our code that have to wait for a human user to type something in, we’re doing two things: (1) allowing user control over what’s being calculated and (2) bringing the calculations to a screeching halt. In general, allowing user control is good and pausing the computer’s work is not so good.</p>
+<p>Of course, you’re unlikely to need to re-use your square root approximation since that particular calculation can be done without writing your own function for it. But I encourage everyone to adopt the practice of thinking about re-usability (that’s why it’s built in to so many of the reflection prompts). However, I don’t want anyone to get carried away with the idea of <em>maximizing</em> re-usability. For now, getting the core functionality of our work into… well, functions… is a great place to focus.</p>
+</section>
+<section id="testing-your-code" class="level2">
+<h2 class="anchored" data-anchor-id="testing-your-code">Testing your code</h2>
+<p>A few solutions explicitly included tests that checked whether the code produced the expected output for several input values. This is a great practice and will help make your code more robust by showing you mistakes when you’re looking for them (rather than when you’re trying to use your code to accomplish something else). I’m sure several students tested their code manually and confirmed that it was working as intended. Manual checking is also a good practice and it’s perfectly fine for your homework assignments. Formal software testing is out of scope for this class, but it’s still a good idea to run your functions through a few loops of parameters to confirm it’s working how you think it’s working. Plotting the results is a great way to review your code’s behavior. For example, if given input values (<span class="math inline">\(x\)</span>) ranging from -10 to 10, I would expect a plot of the square root approximation results (<span class="math inline">\(y\)</span>) from Problem 2 (without any modifications or improvements) to look like a straight line, <span class="math inline">\(y=0\)</span>, up to a <span class="math inline">\(x\)</span> value of zero and to have a concave downward curve with a very steep slope near <span class="math inline">\(x=0\)</span> and a shallow slope for large values of <span class="math inline">\(x\)</span>. And I’d look for a few points where I knew what the square root should be. The code below plots the results of a modified version of a solution I saw while grading Homework 3.</p>
+<div id="2442165a" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="4935474f" class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> sqrt_approx(a, tol<span class="op">=</span><span class="fl">1e-6</span>):</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    guess <span class="op">=</span> a <span class="op">/</span> <span class="dv">2</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> <span class="va">True</span>:</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>        new_guess <span class="op">=</span> (guess <span class="op">+</span> a <span class="op">/</span> guess) <span class="op">/</span> <span class="dv">2</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>        e_a <span class="op">=</span> (new_guess <span class="op">-</span> guess) <span class="op">/</span> new_guess</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> e_a <span class="op">&lt;</span> tol:</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>            <span class="cf">break</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>        guess <span class="op">=</span> new_guess</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> guess</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.linspace(<span class="op">-</span><span class="dv">10</span>,<span class="dv">10</span>,<span class="dv">500</span>)</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> np.zeros(<span class="bu">len</span>(x))</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, x_val <span class="kw">in</span> <span class="bu">enumerate</span>(x):</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>    y[i] <span class="op">=</span> sqrt_approx(x_val)</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>fig, axs <span class="op">=</span> plt.subplots(<span class="dv">1</span>,<span class="dv">2</span>)</span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>fig.set_figwidth(<span class="dv">8</span>)</span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>axs[<span class="dv">0</span>].plot(x,y)</span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>axs[<span class="dv">1</span>].plot(x,y)</span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>axs[<span class="dv">1</span>].plot(x,np.concatenate((np.zeros(<span class="bu">len</span>(x[x<span class="op">&lt;</span><span class="dv">0</span>])),np.sqrt(x[x<span class="op">&gt;=</span><span class="dv">0</span>]))))</span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>axs[<span class="dv">1</span>].set_ylim(<span class="op">-</span><span class="dv">1</span>,<span class="dv">5</span>)</span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>axs[<span class="dv">0</span>].set_title(<span class="st">"Test result"</span>)</span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>axs[<span class="dv">1</span>].set_title(<span class="st">"Zoomed, with expected"</span>)</span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="hw03_grading_notes_files/figure-html/cell-3-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>The plot on the left shows the full result of the algorithm tested over 500 values for <span class="math inline">\(x\)</span> between -10 and 10. The plot on the right is zoomed in and also shows the expected output from the algorithm.</p>
+<p>Clearly, there is something wrong with the implementation of the square root approximation. But it’s also clear that there are some places where doing a spot check would return an answer very close to the expected value. This is a case where spot checking two or three values (between <span class="math inline">\(x=2\)</span> and <span class="math inline">\(x=4\)</span>) would give a false sense of confidence in the code.</p>
+</section>
+<section id="alternative-approach-recursion" class="level2">
+<h2 class="anchored" data-anchor-id="alternative-approach-recursion">Alternative approach: recursion</h2>
+<p>A few students asked about alternative methods to solving the square root approximation problem from Homework 3. The flowchart that presented the algorithm seemed to use something like a <code>while True:</code> style loop that needed to be broken with an internal <code>if &lt;condition&gt;:</code> statement with a <code>break</code> statement inside it. Several students combined these approaches to use a <code>while &lt;condition&gt;:</code> statement (where the “condition” being checked would be opposite of the one from the flowchart). Both of these work, and the second is probably easier to read.</p>
+<p>Another option for this kind of problem is to use a <em>recursive</em> function. A function is recursive if it <em>calls itself</em> at some point during its execution with the right input parameters. For a function seeking an approximation within a set tolerance, a recursive solution would involve making one approximation, checking the tolerance and returning the solution if the tolerance is met and calling itself if the tolerance is not met. These recursive calls will continue until the tolerance is met, at which point, the solution is returned (through a chain of repeated calls to the function).</p>
+<p>The recursive version of the problem is implemented twice below. The first version is just the plain code needed to implement the algorithm. The second version is verbose (i.e., it spits out text describing what it’s doing). It includes print statements describing what’s being done at each recursion level.</p>
+<section id="plain-code-version" class="level3">
+<h3 class="anchored" data-anchor-id="plain-code-version">Plain code version</h3>
+<div id="75f96512" class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> step_approximation(a, x, tol, error<span class="op">=</span><span class="dv">1</span>):</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    y <span class="op">=</span> (x <span class="op">+</span> a <span class="op">/</span> x) <span class="op">/</span> <span class="dv">2</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    error <span class="op">=</span> <span class="bu">abs</span>((y <span class="op">-</span> x) <span class="op">/</span> y)</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> error <span class="op">&lt;</span> tol:</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> y</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> step_approximation(a, y, tol, error)</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> sqrt_approx(a, tol<span class="op">=</span><span class="fl">1e-5</span>):</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> a <span class="op">&gt;</span> <span class="dv">0</span>:</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> step_approximation(a, a <span class="op">/</span> <span class="dv">2</span>, tol)</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="dv">0</span></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>sqrt_approx(<span class="dv">100</span>, tol<span class="op">=</span><span class="fl">1e-6</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="3">
+<pre><code>10.0</code></pre>
+</div>
+</div>
+</section>
+<section id="verbose-version" class="level3">
+<h3 class="anchored" data-anchor-id="verbose-version">Verbose version</h3>
+<p>In this version, print statements have been added that keep track of the <strong>recursion depth</strong>. A depth of <code>0</code> means it’s the first call to the function (from within <code>sqrt_approx()</code>). Depths of <code>1</code> and greater are recursive calls from within <code>step_approximation()</code>.</p>
+<p>As you can see from the output, when finding the square root of 100 to a tolerance of <code>1e-6</code>, there is one original call, followed by six recursive calls to <code>step_approximation()</code>. On the sixth recursive call, the error is within the specified tolerance, so a result is returned instead of making another recursive call. Since all the calls to <code>step_approximation()</code> are expecting a result, <strong>all</strong> of the recursive calls are waiting for something to get returned. When this eventually happens, the result gets passed back “up” the recursive chain and back out to <code>sqrt_approx()</code>, which accepts it without knowing or caring how it was calculated.</p>
+<div id="85e4d899" class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> step_approximation(a, x, tol, error<span class="op">=</span><span class="dv">1</span>, depth<span class="op">=</span><span class="dv">0</span>):</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    y <span class="op">=</span> (x <span class="op">+</span> a <span class="op">/</span> x) <span class="op">/</span> <span class="dv">2</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    error <span class="op">=</span> <span class="bu">abs</span>((y <span class="op">-</span> x) <span class="op">/</span> y)</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>        <span class="ss">f"</span><span class="sc">{</span><span class="st">'  '</span><span class="op">*</span>depth<span class="sc">}{</span>depth<span class="sc">}</span><span class="ss">: Between approximations for sqrt(</span><span class="sc">{</span>a<span class="sc">}</span><span class="ss">) of </span><span class="sc">{</span>x<span class="sc">:.9f}</span><span class="ss"> and </span><span class="sc">{</span>y<span class="sc">:.9f}</span><span class="ss">, the error is </span><span class="sc">{</span>error<span class="sc">:.11f}</span><span class="ss">."</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> error <span class="op">&lt;</span> tol:</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span><span class="st">'  '</span> <span class="op">*</span> depth<span class="sc">}{</span>depth<span class="sc">}</span><span class="ss">: That's close enough! The 'answer' is </span><span class="sc">{</span>y<span class="sc">:.9f}</span><span class="ss">. Passing this result along..."</span>)</span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> y</span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(</span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>            <span class="ss">f"</span><span class="sc">{</span><span class="st">'  '</span> <span class="op">*</span> depth<span class="sc">}{</span>depth<span class="sc">}</span><span class="ss">: That's not close enough... call step_approximation(</span><span class="sc">{</span>a<span class="sc">}</span><span class="ss">, </span><span class="sc">{</span>y<span class="sc">:.9f}</span><span class="ss">, </span><span class="sc">{</span>tol<span class="sc">}</span><span class="ss">, </span><span class="sc">{</span>error<span class="sc">:.11f}</span><span class="ss">)."</span></span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>        )</span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>        result <span class="op">=</span> step_approximation(a, y, tol, error, depth<span class="op">=</span>depth<span class="op">+</span><span class="dv">1</span>)</span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(</span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>            <span class="ss">f"</span><span class="sc">{</span><span class="st">'  '</span> <span class="op">*</span> depth<span class="sc">}{</span>depth<span class="sc">}</span><span class="ss">: Result of </span><span class="sc">{</span>result<span class="sc">:.9f}</span><span class="ss"> received... passing it along."</span></span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>        )</span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> result</span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> sqrt_approx(a, tol<span class="op">=</span><span class="fl">1e-5</span>):</span>
+<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> a <span class="op">&gt;</span> <span class="dv">0</span>:</span>
+<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> step_approximation(a, a<span class="op">/</span><span class="dv">2</span>, tol)</span>
+<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="dv">0</span></span>
+<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a>sqrt_approx(<span class="dv">100</span>, tol<span class="op">=</span><span class="fl">1e-6</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>0: Between approximations for sqrt(100) of 50.000000000 and 26.000000000, the error is 0.92307692308.
+0: That's not close enough... call step_approximation(100, 26.000000000, 1e-06, 0.92307692308).
+  1: Between approximations for sqrt(100) of 26.000000000 and 14.923076923, the error is 0.74226804124.
+  1: That's not close enough... call step_approximation(100, 14.923076923, 1e-06, 0.74226804124).
+    2: Between approximations for sqrt(100) of 14.923076923 and 10.812053925, the error is 0.38022590582.
+    2: That's not close enough... call step_approximation(100, 10.812053925, 1e-06, 0.38022590582).
+      3: Between approximations for sqrt(100) of 10.812053925 and 10.030495204, the error is 0.07791825884.
+      3: That's not close enough... call step_approximation(100, 10.030495204, 1e-06, 0.07791825884).
+        4: Between approximations for sqrt(100) of 10.030495204 and 10.000046357, the error is 0.00304487062.
+        4: That's not close enough... call step_approximation(100, 10.000046357, 1e-06, 0.00304487062).
+          5: Between approximations for sqrt(100) of 10.000046357 and 10.000000000, the error is 0.00000463564.
+          5: That's not close enough... call step_approximation(100, 10.000000000, 1e-06, 0.00000463564).
+            6: Between approximations for sqrt(100) of 10.000000000 and 10.000000000, the error is 0.00000000001.
+            6: That's close enough! The 'answer' is 10.000000000. Passing this result along...
+          5: Result of 10.000000000 received... passing it along.
+        4: Result of 10.000000000 received... passing it along.
+      3: Result of 10.000000000 received... passing it along.
+    2: Result of 10.000000000 received... passing it along.
+  1: Result of 10.000000000 received... passing it along.
+0: Result of 10.000000000 received... passing it along.</code></pre>
+</div>
+<div class="cell-output cell-output-display" data-execution_count="4">
+<pre><code>10.0</code></pre>
+</div>
+</div>
+
+
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -770,4 +925,4 @@ window.Quarto = {
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/UWT-TME-310/TME_310_students/blob/main/website/examples.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="https://github.com/UWT-TME-310/TME_310_students/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/UWT-TME-310/TME_310_students/blob/main/examples/hw03_grading_notes.ipynb" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="https://github.com/UWT-TME-310/TME_310_students/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
