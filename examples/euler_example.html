@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>week_6 – TME 310 A - Fall 2025</title>
+<title>Euler’s Method example – TME 310 A - Fall 2025</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,25 +20,60 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../">
-<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-08a434c53e22a3a725fd2b6f2b042a35.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-08a434c53e22a3a725fd2b6f2b042a35.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -67,8 +102,37 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<link rel="stylesheet" href="../../website/styles.css">
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../website/styles.css">
 </head>
 
 <body class="nav-sidebar docked quarto-light">
@@ -80,7 +144,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Euler’s Method example</li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -94,8 +158,8 @@ ul.task-list li input[type="checkbox"] {
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-center sidebar-header">
-      <a href="../../index.html" class="sidebar-logo-link">
-      <img src="../../website/reference/modeling_framework.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      <a href="../index.html" class="sidebar-logo-link">
+      <img src="../website/reference/modeling_framework.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
       </a>
       <div class="sidebar-tools-main">
     <a href="https://github.com/UWT-TME-310/TME_310_students" title="" class="quarto-navigation-tool px-1" aria-label="" target="_blank"><i class="bi bi-github"></i></a>
@@ -110,7 +174,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../index.html" class="sidebar-item-text sidebar-link">
+            <a href="../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">TME 310A</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -128,49 +192,49 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../website/start_here.html" class="sidebar-item-text sidebar-link">
+  <a href="../website/start_here.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Start here</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../website/course_syllabus.html" class="sidebar-item-text sidebar-link">
+  <a href="../website/course_syllabus.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Syllabus</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../website/instructor.html" class="sidebar-item-text sidebar-link">
+  <a href="../website/instructor.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Instructor introduction</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../website/accessibility_accommodations.html" class="sidebar-item-text sidebar-link">
+  <a href="../website/accessibility_accommodations.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Accessibility and Accommodations</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../website/being_successful_student.html" class="sidebar-item-text sidebar-link">
+  <a href="../website/being_successful_student.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Being a Successful Student</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../website/grading_policies.html" class="sidebar-item-text sidebar-link">
+  <a href="../website/grading_policies.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Grading policies</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../website/homework_format.html" class="sidebar-item-text sidebar-link">
+  <a href="../website/homework_format.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Homework format</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../website/github_codespace.html" class="sidebar-item-text sidebar-link">
+  <a href="../website/github_codespace.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Coding platform: GitHub Codespace</span></a>
   </div>
 </li>
@@ -188,31 +252,31 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../website/weeks/week_1.html" class="sidebar-item-text sidebar-link">
+  <a href="../website/weeks/week_1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 1</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../website/weeks/week_2.html" class="sidebar-item-text sidebar-link">
+  <a href="../website/weeks/week_2.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 2</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../website/weeks/week_3.html" class="sidebar-item-text sidebar-link">
+  <a href="../website/weeks/week_3.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 3</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../website/weeks/week_4.html" class="sidebar-item-text sidebar-link">
+  <a href="../website/weeks/week_4.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 4</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../website/weeks/week_5.html" class="sidebar-item-text sidebar-link">
+  <a href="../website/weeks/week_5.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 5</span></a>
   </div>
 </li>
@@ -230,19 +294,19 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../website/project_description.html" class="sidebar-item-text sidebar-link">
+  <a href="../website/project_description.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Course Project</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../website/project_01.html" class="sidebar-item-text sidebar-link">
+  <a href="../website/project_01.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Project Part 1 - group coordination</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../website/project_02.html" class="sidebar-item-text sidebar-link">
+  <a href="../website/project_02.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Project Part 2 - basic pile-driving app</span></a>
   </div>
 </li>
@@ -251,14 +315,14 @@ ul.task-list li input[type="checkbox"] {
           <li class="px-0"><hr class="sidebar-divider hi "></li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../website/examples.html" class="sidebar-item-text sidebar-link">
+  <a href="../website/examples.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Example scripts</span></a>
   </div>
 </li>
           <li class="px-0"><hr class="sidebar-divider hi "></li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../website/resources.html" class="sidebar-item-text sidebar-link">
+  <a href="../website/resources.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Resources</span></a>
   </div>
 </li>
@@ -274,52 +338,102 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#week-6" id="toc-week-6" class="nav-link active" data-scroll-target="#week-6">Week 6</a>
-  <ul class="collapse">
-  <li><a href="#materials" id="toc-materials" class="nav-link" data-scroll-target="#materials">Materials</a></li>
-  <li><a href="#assignments-due" id="toc-assignments-due" class="nav-link" data-scroll-target="#assignments-due">Assignments due</a></li>
-  </ul></li>
+  <li><a href="#solution" id="toc-solution" class="nav-link active" data-scroll-target="#solution">Solution</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/UWT-TME-310/TME_310_students/blob/main/website/weeks/week_6.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="https://github.com/UWT-TME-310/TME_310_students/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/UWT-TME-310/TME_310_students/blob/main/examples/euler_example.ipynb" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="https://github.com/UWT-TME-310/TME_310_students/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Euler’s Method example</h1>
+</div>
 
 
 
+<div class="quarto-title-meta">
 
-<section id="week-6" class="level1">
-<h1>Week 6</h1>
-<p>Course content will be added on a rolling basis</p>
-<section id="materials" class="level2">
-<h2 class="anchored" data-anchor-id="materials">Materials</h2>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Topic</th>
-<th>Video</th>
-<th>Slides</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Euler’s method</td>
-<td><a href="https://uw.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=b66cf25f-cc41-4e86-a19d-b384016932d8">Link</a></td>
-<td><a href="../../website/lectures/09_euler/euler.html">Link</a></td>
-</tr>
-<tr class="even">
-<td>Euler’s method example code</td>
-<td><a href="https://uw.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=8fda7048-0eed-42f6-8b93-b38401693293">Link</a></td>
-<td><a href="../../examples/euler_example.html">Link</a></td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="assignments-due" class="level2">
-<h2 class="anchored" data-anchor-id="assignments-due">Assignments due</h2>
+    
+  
+    
+  </div>
+  
 
 
-</section>
+</header>
+
+
+<p>Use the differential equation below to find <span class="math inline">\(y\)</span> when <span class="math inline">\(t=2.5\)</span>:</p>
+<p><span class="math inline">\(y(t) = 1 - \frac{dy}{dt},\quad y(0) = 3\)</span></p>
+<p>Use <span class="math inline">\(\Delta t = 0.5\)</span></p>
+<section id="solution" class="level2">
+<h2 class="anchored" data-anchor-id="solution">Solution</h2>
+<p>Let’s rearrange the differential equation so we have a “function for the derivative”:</p>
+<p><span class="math inline">\(\frac{dy}{dt} = 1 - y(t)\)</span></p>
+<p>$ y(0) = 3$</p>
+<p><span class="math inline">\(\Delta t = 0.5\)</span></p>
+<div id="a4a3eae6" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>The analytical solution:</p>
+<p><span class="math inline">\(y(t) = 1 + (y_0 - 1) e^{-t}\)</span></p>
+<div id="32fce23e" class="cell" data-execution_count="12">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Define the derivative as a function of y, t</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> dydt(y):</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="dv">1</span> <span class="op">-</span> y</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Define Eyler's solution for the "next" value of y</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> euler(dydt, yn, dt):</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    ynp1 <span class="op">=</span> yn <span class="op">+</span> dt <span class="op">*</span> dydt(yn)</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> ynp1</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Set our step size</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>dt <span class="op">=</span> <span class="fl">0.0005</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Set our initial conditions</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>t <span class="op">=</span> [<span class="fl">0.0</span>]</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> [<span class="fl">3.0</span>]</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Set the stopping point</span></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>stop <span class="op">=</span> <span class="fl">2.5</span></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> t[<span class="op">-</span><span class="dv">1</span>] <span class="op">&lt;</span> <span class="fl">2.5</span>:</span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>    <span class="co"># define the "current" condition</span></span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>    yn <span class="op">=</span> y[<span class="op">-</span><span class="dv">1</span>]</span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>    tn <span class="op">=</span> t[<span class="op">-</span><span class="dv">1</span>]</span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>    <span class="co"># use Euler's method to get the next value of y</span></span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>    yn_plus_1 <span class="op">=</span> euler(dydt, yn, dt)</span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>    <span class="co"># also increment t (for plotting and loop control)</span></span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>    tn_plus_1 <span class="op">=</span> tn <span class="op">+</span> dt</span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>    <span class="co"># add these new points to the lists of y and t</span></span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a>    t.append(tn_plus_1)</span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a>    y.append(yn_plus_1)</span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a><span class="co"># For plotting reference, the analytical solution and a time array</span></span>
+<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> analytical(t, y0):</span>
+<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="dv">1</span> <span class="op">+</span> (y0 <span class="op">-</span> <span class="dv">1</span>) <span class="op">*</span> np.exp(<span class="op">-</span>t)</span>
+<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a>t_arr <span class="op">=</span> np.linspace(<span class="dv">0</span>,t[<span class="op">-</span><span class="dv">1</span>])</span>
+<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a>plt.plot(t_arr, analytical(t_arr,y[<span class="dv">0</span>]))</span>
+<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a>plt.plot(t,y, <span class="st">"--"</span>, c<span class="op">=</span><span class="st">"k"</span>)</span>
+<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a><span class="co"># plt.scatter(t, y,marker=".",c="k")</span></span>
+<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="euler_example_files/figure-html/cell-3-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+
+
 </section>
 
 </main> <!-- /main -->
@@ -732,4 +846,4 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/UWT-TME-310/TME_310_students/blob/main/website/weeks/week_6.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="https://github.com/UWT-TME-310/TME_310_students/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/UWT-TME-310/TME_310_students/blob/main/examples/euler_example.ipynb" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="https://github.com/UWT-TME-310/TME_310_students/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
