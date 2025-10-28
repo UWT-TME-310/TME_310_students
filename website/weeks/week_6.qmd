@@ -5,6 +5,7 @@ Course content will be added on a rolling basis
 
 | Topic | Video | Slides|
 |----|----|----|
-|   |   |   |  
+|  Euler's method |  [Link](https://uw.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=b66cf25f-cc41-4e86-a19d-b384016932d8) |  [Link](../../website/lectures/09_euler/euler.qmd) |  
+|  Euler's method example code|  [Link](https://uw.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=8fda7048-0eed-42f6-8b93-b38401693293) |  [Link](../../examples/euler_example.ipynb) |  
 
 ## Assignments due

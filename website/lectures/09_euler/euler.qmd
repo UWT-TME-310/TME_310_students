@@ -1,0 +1,302 @@
+---
+title: "TME 310 - Computational Physical Modeling"
+subtitle: "Euler's Method for ODEs"
+author: 
+  - "Lorne Arnold, PhD, PE"
+institute: "University of Washington Tacoma"
+format:
+  revealjs:
+      incremental: true
+revealjs-plugins:
+  - pointer
+---
+## What is a differential equation? 
+
+:::{.fragment}
+**Differential equation**
+
+> an equation that relates an unknown function to its own derivative.
+:::
+
+:::{.fragment}
+For example
+
+$$y(t) = 3t + \frac{dy}{dt}$$
+:::
+
+## Analytical solutions
+
+::: {.fragment }
+We've seen *analytical* solutions to differential equations.
+:::
+
+::: {.fragment}
+For example, in the parachute problem, we used the solution to this differential equation: 
+$$\frac{dv}{dt} = g -\frac{c}{m}v$$ 
+:::
+
+::: {.fragment}
+which was:
+
+$$ v(t) = \frac{gm}{c}(1 - e^{-ct/m})$$
+:::
+
+## Numerical solutions
+
+::: {.fragment }
+But many differential equations don't have closed-form (i.e., analytical) solutions.
+:::
+
+::: {.fragment }
+For those, we need **numerical methods** to approximate solutions.
+:::
+
+
+## Euler's Method {.smaller}
+
+::::{columns}
+::: {.column width="50%"}
+:::{.fragment}
+![](euler_portrait.jpg)
+:::
+:::
+
+::: {.column width="50%"}
+
+::: {.fragment }
+(1760's) Euler developed a method that *approximates* the solution to a differential equation.
+:::
+
+::: {.fragment }
+He realized that if
+:::
+
+1. I know the form of the differential equation ($dy/dt = f(y,t)$)
+2. I know the value at one point (initial condition)
+
+::: {.fragment }
+Then..
+:::
+
+- I can estimate the value at some other time, very close to the known point.
+- And I can keep doing that to get as many points as I want.
+:::
+
+::::
+
+## Visualizing Euler's method
+
+::: {.r-stack}
+![](euler_sketch_0.png){.fragment width="70%"}
+
+![](euler_sketch_1.png){.fragment width="70%"}
+
+![](euler_sketch_2.png){.fragment width="70%"}
+
+![](euler_sketch_3.png){.fragment width="70%"}
+
+:::
+
+
+## The key components
+
+To solve a differential equation with Euler's method we need to start with two things:
+
+::: incremental
+1.  A function describing the derivative of our parameter of interest
+2.  An initial condition
+:::
+
+
+## Euler algorithm
+
+Given:
+
+-   A function for the derivative: $f(t, y) = \frac{dy}{dt}$
+-   An initial condition: $y(t_0) = y_0$
+-   Step size: $\Delta t$
+
+::: {.fragment }
+For $n = 1, 2, 3 \ldots$: $$t_{n+1} = t_n + \Delta t$$ $$y_{n+1} = y_n + \Delta t \cdot f(t_n, y_n)$$
+:::
+
+
+## Example Problem {.smaller}
+
+Use the differential equation and initial condition below to find $y$ when $t=2.5$:
+
+$$y(t) = 1 - \frac{dy}{dt},\quad y(0) = 3$$
+
+::: {.fragment .fade-in}
+Let's use Euler's method with $\Delta t = 0.5$ to approximate $y(2.5)$.
+:::
+
+::: {.fragment .fade-in}
+Let's rearrange the differential equation so we have a "function for the derivative":
+
+$$\frac{dy}{dt} = 1 - y(t)$$
+
+
+:::
+
+## Solution
+
+:::: {.columns}
+
+::: {.column width="50%" style="font-size: 75%;"}
+Given:
+
+$y(0) = 3$
+
+$\Delta t = 0.5$
+
+$\frac{dy}{dt} = 1 - y(t)$
+
+Euler equations:
+
+
+$t_{n+1} = t_n + \Delta t$
+
+$y_{n+1} = y_n + \Delta t \cdot \frac{dy}{dt}$
+:::
+
+
+::: {.column width="50%"}
+```{python}
+#| echo: false
+
+def dydt(y):
+  return 1-y
+
+def euler(dydt,y, dt):
+  return y + dydt(y)*dt
+
+i = 0
+t = 0.
+dt = 0.5
+y = 3.0
+print(f"{'n':<7} {'t':<7} {'y':<7} {'dy/dt':<7}")
+
+```
+
+:::{.fragment}
+```{python}
+#| echo: false
+print(f"{i:<7} {t:<7} {y:<7} {dydt(y):<7}")
+i += 1
+t += dt
+```
+:::
+
+:::{.fragment}
+```{python}
+#| echo: false
+
+y = euler(dydt, y, dt)
+print(f"{i:<7} {t:<7} {y:<7} {dydt(y):<7}")
+i += 1
+t += dt
+```
+:::
+
+:::{.fragment}
+```{python}
+#| echo: false
+
+y = euler(dydt, y, dt)
+print(f"{i:<7} {t:<7} {y:<7} {dydt(y):<7}")
+i += 1
+t += dt
+```
+:::
+
+:::{.fragment}
+```{python}
+#| echo: false
+
+y = euler(dydt, y, dt)
+print(f"{i:<7} {t:<7} {y:<7} {dydt(y):<7}")
+i += 1
+t += dt
+```
+:::
+
+:::{.fragment}
+```{python}
+#| echo: false
+
+y = euler(dydt, y, dt)
+print(f"{i:<7} {t:<7} {y:<7} {dydt(y):<7}")
+i += 1
+t += dt
+```
+:::
+
+:::{.fragment}
+```{python}
+#| echo: false
+
+y = euler(dydt, y, dt)
+print(f"{i:<7} {t:<7} {y:<7} {dydt(y):<7}")
+i += 1
+t += dt
+```
+:::
+
+:::{.fragment}
+```{python}
+#| echo: false
+
+print(f"y(2.5) is approximately {y}")
+```
+:::
+
+:::
+
+::::
+
+## Visualizing the solution
+
+```{python}
+#| echo: false
+#| error: true
+import matplotlib.pyplot as plt
+import numpy as np
+```
+
+
+```{python}
+#| echo: false
+#| error: true
+
+def analytical(t, y0):
+  return 1 + (y0 -1)*np.exp(-t)
+
+def dydt(y):
+  return 1-y
+
+def euler(dydt,y, dt):
+  return y + dydt(y)*dt
+
+i = 0
+t = [0.]
+dt = 0.5
+y = [3.0]
+
+
+
+for i in range(6):
+  t.append(t[-1]+dt)
+  y.append(euler(dydt,y[i],dt))
+
+t_arr = np.linspace(0,t[-1])
+
+fig, ax = plt.subplots()
+ax.plot(t_arr,analytical(t_arr,y[0]))
+ax.scatter(t,y,marker="o",c="k")
+ax.set_xlim(-0.5, max(t)*1.1)
+ax.set_ylim(0, max(y)*1.1)
+
+plt.show()
+
+```

@@ -1,0 +1,50 @@
+---
+title: "Collaborating and GitHub"
+subtitle: "TME 310 - Computational Physical Modeling"
+author: 
+  - "Lorne Arnold, PhD, PE"
+institute: "University of Washington Tacoma"
+format:
+  revealjs:
+      incremental: true
+      scrollable: true  
+revealjs-plugins:
+  - pointer
+---
+
+
+## Group project work
+
+Ways your project groups can collaborate successfully:
+
+* Use "branches"
+  * This is the "right" way, but it assumes everyone knows how to pull, push, and merge changes.
+* Take turns
+  * This is safest, but it may slow your progress
+* Copy/paste
+  * This is fast and safe for git, but may cause Python errors (easier to resolve than git erros)
+
+
+## Use branches
+
+* Each member can start their own branch
+* Frequently pull, push, and merge back to `origin/main`
+* Copilot can help
+  * ![](branch.png)
+
+## Take turns
+
+* Huddle around one computer
+* Only open one codespace at a time
+* Commit and push after every change
+
+## Copy/paste
+
+* Work on things in your playground repo
+* Talk about what code or text needs to be copied from each group member and pasted into the assignment repo.
+* Paste everything in and confirm that it works when put together.
+
+## Which to use?
+
+* Decide within your group.
+* Make use of "office hours"

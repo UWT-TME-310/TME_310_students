@@ -12,3 +12,5 @@ The table below contains some example scripts using basic course concepts.
 | [Matplotlib quick reference](/examples/matplotlib_quick_ref.ipynb) | Plots with some styling options |
 | [Quiz corrections for extra credit](/examples/quiz_correction.ipynb) | An example to follow if doing extra credit to make up points lost on a quiz |
 | [Dartboard approximation of $\pi$](/examples/07_dartboard_pi.ipynb) | Convergence and error tolerance example with plots |
+| [Homework 3 notes](/examples/hw03_grading_notes.ipynb) | My notes on some of the common approaches I saw while grading homework 3. |
+| [Homework 4 notes](/examples/hw04_grading_notes.ipynb) | My notes on things I observed while grading homework 4. |

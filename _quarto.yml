@@ -43,6 +43,7 @@ website:
             - href: website/weeks/week_2.qmd
             - href: website/weeks/week_3.qmd
             - href: website/weeks/week_4.qmd
+            - href: website/weeks/week_5.qmd
         - text: ---   
         - section: "Project"
           contents:

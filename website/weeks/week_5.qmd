@@ -5,6 +5,8 @@ Course content will be added on a rolling basis
 
 | Topic | Video | Slides|
 |----|----|----|
-|   |   |   |    
+| Technical difficulties 😕 | N/A | [Link](../lectures/08_git_stuff/codespace_issues.qmd)|   
+| Collaborating with GitHub | N/A | [Link](../lectures/08_git_stuff/collaborating.qmd)|   
 
 ## Assignments due
+Homework 5

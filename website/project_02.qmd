@@ -1,5 +1,7 @@
 # Project Part 2 - basic pile-driving app
 
+Assignment repo: [project_02](https://github.com/UWT-TME-310/project_02)
+
 ## Purpose
 
 Demonstrate the coding skills learned in the course to develop a notebook that could be useful for engineering professionals working on pile-driving projects.
