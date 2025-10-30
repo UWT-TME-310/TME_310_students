@@ -552,340 +552,310 @@
     "text": "Assumptions\nLet’s say we have a model for this problem:\n\\[\\frac{dv}{dt} = g -\\frac{c}{m}v\\]\nwhere \\(g\\) is gravitational acceleration, \\(c\\) is a drag coefficient, \\(m\\) is the parachutist’s mass, and \\(v\\) is their velocity. The solution to this differential equation is:\n\\[ v(t) = \\frac{gm}{c}(1 - e^{ct/m})\\]\nUse the following parameters for the parachutist:\n\n\n\nParameter\nValue\n\n\n\n\nMass\n70 kg\n\n\nDrag coefficient\n12 kg/s\n\n\n\nSummarize the goal(s) of the problem in your own words.\nUse one of the provided equations to find the terminal velocity of a parachutist weighing 70 kg with a drag coefficient of 12 kg/s.\nDescribe your plan to solve the problem.\nIt looks like the second equation gives the velocity directly, so I’ll just use that one. If I plug a big value for \\(t\\) into the equation, it will probably show the terminal velocity. But I want to be able to check that, so I’ll calculate velocity for several values of \\(t\\) and confirm that the velocity stops changing (i.e., reaches it’s terminal value).\nSteps: * assign values to known parameters * use a for loop to calculate and print the velocity for several (maybe 10?) time values from 0 to 100.\n\n# Assign values to known parameters\ng = 9.81 # gravitational acceleration (m/s/s)\ne = 2.71828 # Euler's number\nm = 70 # parachutist's mass (kg)\nc = 12 # drag coefiecient (kg/s)\n\n# use a for loop to calculate and print the velocity for several (maybe 10?) \n# time values from 0 to 100.\nfor i in range(10):\n    t = 10*i # time in seconds\n    v = (g*m/c) * (1 - e**(-c*t/m))\n    print(f\"At time {t} sec, the velocity is {v:0.2f} m/s\")\n\nAt time 0 sec, the velocity is 0.00 m/s\nAt time 10 sec, the velocity is 46.92 m/s\nAt time 20 sec, the velocity is 55.37 m/s\nAt time 30 sec, the velocity is 56.89 m/s\nAt time 40 sec, the velocity is 57.16 m/s\nAt time 50 sec, the velocity is 57.21 m/s\nAt time 60 sec, the velocity is 57.22 m/s\nAt time 70 sec, the velocity is 57.22 m/s\nAt time 80 sec, the velocity is 57.22 m/s\nAt time 90 sec, the velocity is 57.22 m/s\n\n\n\nprint(f\"The terminal velocity is {v:0.2f} m/s\")\n\nThe terminal velocity is 57.22 m/s\n\n\nLooking back at your code and the resulting output, reflect on whether your code achieved the problem goal(s). To the extent the problem models a physical system, how realistic does the behavior seem? Are there any changes you would make to your approach if you were to solve this problem again (e.g., to make your code more re-usable or to avoid dead ends)?\nYes, the code achieves the problem goal. The behavior seems realistic because: * The sign of the velocity is the same as acceleration (falling downward). * After about 50 seconds, the velocity stays the same. * When the drag coefficient is small, the velocity increases linearly.\nI don’t know enough about parachuting to know if 57 m/s is a reasonable terminal velocity, but it sounds way too fast to be safe. A quick google search indicates a good landing speed for a parachute is around 7 m/s.\nIt would be nice if my code saved the velocity and time values so I could plot them. It would be hard to use this code to check the terminal velocity of several different combinations of mass and drag coefficient."
   },
   {
-    "objectID": "website/homework_format.html",
-    "href": "website/homework_format.html",
-    "title": "Homework format",
+    "objectID": "website/lectures/10_root-finding/slides_bisection.html#root-finding-methods",
+    "href": "website/lectures/10_root-finding/slides_bisection.html#root-finding-methods",
+    "title": "TME 310 - Computational Physical Modeling",
+    "section": "Root-finding methods",
+    "text": "Root-finding methods\n\nWe have a few options:\n\n\nGraphical methods\nBracketed methods\nOpen methods"
+  },
+  {
+    "objectID": "website/lectures/10_root-finding/slides_bisection.html#bracketed-methods",
+    "href": "website/lectures/10_root-finding/slides_bisection.html#bracketed-methods",
+    "title": "TME 310 - Computational Physical Modeling",
+    "section": "Bracketed methods",
+    "text": "Bracketed methods\nAlgorithms for searching within a specific range, bracketed by a lower and upper bound.\n\nBisection method:\n\nLook for the root at the range’s midpoint.\nDecide which half contains the root and set that half as the new search range.\nRepeat until tolerance is satisfied."
+  },
+  {
+    "objectID": "website/lectures/10_root-finding/slides_bisection.html#bisection",
+    "href": "website/lectures/10_root-finding/slides_bisection.html#bisection",
+    "title": "TME 310 - Computational Physical Modeling",
+    "section": "Bisection",
+    "text": "Bisection"
+  },
+  {
+    "objectID": "website/lectures/10_root-finding/slides_bisection.html#pros-and-cons-bisection",
+    "href": "website/lectures/10_root-finding/slides_bisection.html#pros-and-cons-bisection",
+    "title": "TME 310 - Computational Physical Modeling",
+    "section": "Pros and cons (bisection)",
+    "text": "Pros and cons (bisection)\n\nPros\n\n\nFast (compared to graphical)\nEasy to implement\nIf given valid bounds, it will find a solution\n\n\nCons\n\n\nRequires some knowledge of the root beforehand\nAssumes only one root\n\n\nBisection is great when you have a rough idea of where a single root is."
+  },
+  {
+    "objectID": "website/accessibility_accommodations.html",
+    "href": "website/accessibility_accommodations.html",
+    "title": "Accessibility and Accommodations",
     "section": "",
-    "text": "Homework assignments will be distributed through GitHub Classroom in the form of Jupyter Notebooks. In general, there will be 3 to 4 problems to solve in each assignment. The problems are intended to take 15 to 30 minutes of your time. Taking into consideration the coding skills and concepts presented throughout the course, you should expect the complexity of the problems to increase throughout the quarter.\n\n\nEach problem contains four sub-problems, which are based on the four phases of problem solving proposed by G. Polya.\n\nSummarize\nPlan\nCode\nReflect\n\nThree of the sections (1, 2, and 4) ask for text responses and one (3) asks for Python code.\n\n\nIn general, the summarize sub-problem will prompt you to:\n\nSummarize the goal(s) of the problem in your own words.\n\nAnswers to this sub-problem should be written in complete sentences and accurately reflect the goal(s) from the problem description. This is where students can demonstrate their understanding of the problem.\n\n\n\nIn general, the plan sub-problem will prompt you to:\n\nDescribe your plan to solve the problem.\n\nAnswers to this sub-problem may be in complete sentences, but a bullet list of steps or some combination of sentences and bullets will work well, too. Whatever the form, the plan should give enough detail to outline the code you’ll write to solve the problem.\n\n\n\nThis sub-problem is where you’re asked to write the Python code that will solve the problem. You can write all the code in the assignment notebook (recommended towards the beginning of the course) or in separate Python scripts that you import into your assignment notebook (we’ll do this towards the end of the course).\nIf your plan is well-written, simply copying it into your script (commented out, of course) will take you a long way toward a successful code solution. Feel free to ask GitHub Copilot “help me implement this plan”. This will often result in a good first pass at your coding solution.\n\n\n\nThe specific text of this sub-problem will vary, so please read it carefully. In general, the plan sub-problem will ask:\n\nLooking back at your code and the resulting output, reflect on whether your code achieved the problem goal(s). To the extent the problem models a physical system, how realistic does the behavior seem? Are there any changes you would make to your approach if you were to solve this problem again (e.g., to make your code more re-usable or to avoid dead ends)?\n\n\n\n\n\nAs described in the Grading policies page, you’ll be responsible for grading your own homework assignments. Use the rubric below to grade your homework. I’ll use the same rubric for check problems I grade.\n\n\n\n\n\n\n\n\n\n\nCategory\n2 Points\n1 Point\n0 Points\nScore\n\n\n\n\nSummarize\nThe problem goals are summarized accurately. The summary is written in complete sentences.\nProblem goals are inaccurately summarized or the summary is not in complete sentences.\nMissing or unclear summary\n__ / 2\n\n\nPlan\nA reasonable plan to solve the problem is described. The description provides enough detail for a coding outline.\nThe proposed plan contains logical errors or insufficient detail to start a coding outline.\nMissing or unclear plan\n__ / 2\n\n\nCode\nThe code solves the problem. The code runs without raising errors.\nThe code provides a partial solution to the problem or raises errors when executed\nMissing or irrelevant code\n__ / 2\n\n\nReflect\nThe reflection is thoughtful, relevant, and written in complete sentences. Problem-specific content is addressed.\nThe reflection is marginally relevant or not in complete sentences.\nMissing or unclear reflection\n__ / 2\n\n\nTotal\n\n\n\n__ / 8",
+    "text": "Accessibility and Accommodations\nIn addition to services offered by UW Tacoma’s Disability Resources for Students (DRS), I will attempt to make every effort to adjust assignments/materials to meet the needs of students who need alternative forms of access.\nIf you find yourself in need of additional assistance, please feel free to contact me directly or arrange to attend my virtual office hours.\nDRS Website: http://www.tacoma.uw.edu/drsuwt",
     "crumbs": [
       "TME 310A",
       "Course information",
-      "Homework format"
+      "Accessibility and Accommodations"
     ]
   },
   {
-    "objectID": "website/homework_format.html#anatomy-of-a-problem",
-    "href": "website/homework_format.html#anatomy-of-a-problem",
-    "title": "Homework format",
+    "objectID": "website/instructor.html",
+    "href": "website/instructor.html",
+    "title": "Instructor introduction",
     "section": "",
-    "text": "Each problem contains four sub-problems, which are based on the four phases of problem solving proposed by G. Polya.\n\nSummarize\nPlan\nCode\nReflect\n\nThree of the sections (1, 2, and 4) ask for text responses and one (3) asks for Python code.\n\n\nIn general, the summarize sub-problem will prompt you to:\n\nSummarize the goal(s) of the problem in your own words.\n\nAnswers to this sub-problem should be written in complete sentences and accurately reflect the goal(s) from the problem description. This is where students can demonstrate their understanding of the problem.\n\n\n\nIn general, the plan sub-problem will prompt you to:\n\nDescribe your plan to solve the problem.\n\nAnswers to this sub-problem may be in complete sentences, but a bullet list of steps or some combination of sentences and bullets will work well, too. Whatever the form, the plan should give enough detail to outline the code you’ll write to solve the problem.\n\n\n\nThis sub-problem is where you’re asked to write the Python code that will solve the problem. You can write all the code in the assignment notebook (recommended towards the beginning of the course) or in separate Python scripts that you import into your assignment notebook (we’ll do this towards the end of the course).\nIf your plan is well-written, simply copying it into your script (commented out, of course) will take you a long way toward a successful code solution. Feel free to ask GitHub Copilot “help me implement this plan”. This will often result in a good first pass at your coding solution.\n\n\n\nThe specific text of this sub-problem will vary, so please read it carefully. In general, the plan sub-problem will ask:\n\nLooking back at your code and the resulting output, reflect on whether your code achieved the problem goal(s). To the extent the problem models a physical system, how realistic does the behavior seem? Are there any changes you would make to your approach if you were to solve this problem again (e.g., to make your code more re-usable or to avoid dead ends)?",
+    "text": "My name is Lorne Arnold. I like to sail, listen to music, and take naps. Before I started teaching, I worked as a geotechnical engineer for many years, designing foundations for buildings, bridges, and ports. I’m looking forward to getting to know you all this term.\n\n\n\nI am here to guide you as you learn and practice new skills. We will spend a lot of time writing code together and learning from one another. I hope you will all be generous in helping one another during this class. Engineering is very collaborative, so that is an extra skill to practice.\nOnline Availability: I’m online between 8 AM and 5 PM most days, and I’ll try to keep Canvas and GitHub open when I’m not otherwise engaged. From time to time, I will check in after 5 PM, but family obligations will make evening responses from me hit or miss. You can expect to get responses to questions from me in less than one day. Graded quizzes and projects will be typically be returned in less than one week.\nIf you’re looking for help outside of the course’s normal office hours, you can book a meeting with me using my booking link.\nFeedback: I care a lot about improving my teaching. Teaching is not a formula to learn, so I am still working on my own methods in the classroom. I would love to hear from you frequently about how things are going so I can improve over time. Send me a note, a chat, or catch me after class if you have ideas for improvements.\nUnderstanding and flexibility: Every quarter, some students will encounter unavoidable problems that prevent them from completing course assignments on time. The course grading is structured to be fairly flexible. For example, we will drop your lowest in-person quiz score. Let me know if something comes up, and do the best you can to stay on track.",
     "crumbs": [
       "TME 310A",
       "Course information",
-      "Homework format"
+      "Instructor introduction"
     ]
   },
   {
-    "objectID": "website/homework_format.html#grading-rubric",
-    "href": "website/homework_format.html#grading-rubric",
-    "title": "Homework format",
+    "objectID": "website/instructor.html#my-role-in-this-course",
+    "href": "website/instructor.html#my-role-in-this-course",
+    "title": "Instructor introduction",
     "section": "",
-    "text": "As described in the Grading policies page, you’ll be responsible for grading your own homework assignments. Use the rubric below to grade your homework. I’ll use the same rubric for check problems I grade.\n\n\n\n\n\n\n\n\n\n\nCategory\n2 Points\n1 Point\n0 Points\nScore\n\n\n\n\nSummarize\nThe problem goals are summarized accurately. The summary is written in complete sentences.\nProblem goals are inaccurately summarized or the summary is not in complete sentences.\nMissing or unclear summary\n__ / 2\n\n\nPlan\nA reasonable plan to solve the problem is described. The description provides enough detail for a coding outline.\nThe proposed plan contains logical errors or insufficient detail to start a coding outline.\nMissing or unclear plan\n__ / 2\n\n\nCode\nThe code solves the problem. The code runs without raising errors.\nThe code provides a partial solution to the problem or raises errors when executed\nMissing or irrelevant code\n__ / 2\n\n\nReflect\nThe reflection is thoughtful, relevant, and written in complete sentences. Problem-specific content is addressed.\nThe reflection is marginally relevant or not in complete sentences.\nMissing or unclear reflection\n__ / 2\n\n\nTotal\n\n\n\n__ / 8",
+    "text": "I am here to guide you as you learn and practice new skills. We will spend a lot of time writing code together and learning from one another. I hope you will all be generous in helping one another during this class. Engineering is very collaborative, so that is an extra skill to practice.\nOnline Availability: I’m online between 8 AM and 5 PM most days, and I’ll try to keep Canvas and GitHub open when I’m not otherwise engaged. From time to time, I will check in after 5 PM, but family obligations will make evening responses from me hit or miss. You can expect to get responses to questions from me in less than one day. Graded quizzes and projects will be typically be returned in less than one week.\nIf you’re looking for help outside of the course’s normal office hours, you can book a meeting with me using my booking link.\nFeedback: I care a lot about improving my teaching. Teaching is not a formula to learn, so I am still working on my own methods in the classroom. I would love to hear from you frequently about how things are going so I can improve over time. Send me a note, a chat, or catch me after class if you have ideas for improvements.\nUnderstanding and flexibility: Every quarter, some students will encounter unavoidable problems that prevent them from completing course assignments on time. The course grading is structured to be fairly flexible. For example, we will drop your lowest in-person quiz score. Let me know if something comes up, and do the best you can to stay on track.",
     "crumbs": [
       "TME 310A",
       "Course information",
-      "Homework format"
+      "Instructor introduction"
     ]
   },
   {
-    "objectID": "website/start_here.html",
-    "href": "website/start_here.html",
-    "title": "Start here",
+    "objectID": "website/project_description.html",
+    "href": "website/project_description.html",
+    "title": "Course Project",
     "section": "",
-    "text": "Start here\nGo through this short “Start here” module for information about the course, the instructor, and being a successful student. At the very least, read the syllabus!\nSyllabus\nInstructor and my role in this course\nAccessibility and accommodations\nBeing a successful student\nGrading policies\nHomework format\nCoding platforms",
-    "crumbs": [
-      "TME 310A",
-      "Course information",
-      "Start here"
-    ]
-  },
-  {
-    "objectID": "website/project_01.html",
-    "href": "website/project_01.html",
-    "title": "Project Part 1 - group coordination",
-    "section": "",
-    "text": "Project Part 1 - group coordination\nYour project groups have been assigned - you can see your group number and fellow team members by looking at the People page on Canvas.\nThe task for Part 1 of the course project is simple:\n\nFind a time (using in-class time is encouraged!) to meet with your group and introduce yourselves to each other if you don’t already know one another.\nDecide amongst yourselves how your group will communicate and how often you plan to meet to work on the project for the rest of the quarter.\nWrite down what your group decided about communication and meeting frequency in the Canvas assignment text box.",
+    "text": "Project groups will be assigned randomly by the instructor. Each group will have 3 to 4 students.\n\n\n\nThe project topic is modeling the installation of driven piles with open-ended diesel hammers (the topic of Homework 3, Problem 1).\nEach team will build a jupyter notebook interactive app to predict the capacity of a driven pile based on data collected during installation.\nThere will be a baseline app to be delivered in Part 2 and then the groups will choose additional features to include to enhance their app for Part 3.\n\n\n\nThe project will have three deliverables:\n\nGroup coordination (due week 5)\nBasic pile-driving app (due week 7)\nEnhanced pile-driving app (due finals week)",
     "crumbs": [
       "TME 310A",
       "Project",
-      "Project Part 1 - group coordination"
+      "Course Project"
     ]
   },
   {
-    "objectID": "website/weeks/week_9.html",
-    "href": "website/weeks/week_9.html",
-    "title": "Week 9",
+    "objectID": "website/project_description.html#project-groups",
+    "href": "website/project_description.html#project-groups",
+    "title": "Course Project",
+    "section": "",
+    "text": "Project groups will be assigned randomly by the instructor. Each group will have 3 to 4 students.",
+    "crumbs": [
+      "TME 310A",
+      "Project",
+      "Course Project"
+    ]
+  },
+  {
+    "objectID": "website/project_description.html#topic",
+    "href": "website/project_description.html#topic",
+    "title": "Course Project",
+    "section": "",
+    "text": "The project topic is modeling the installation of driven piles with open-ended diesel hammers (the topic of Homework 3, Problem 1).\nEach team will build a jupyter notebook interactive app to predict the capacity of a driven pile based on data collected during installation.\nThere will be a baseline app to be delivered in Part 2 and then the groups will choose additional features to include to enhance their app for Part 3.",
+    "crumbs": [
+      "TME 310A",
+      "Project",
+      "Course Project"
+    ]
+  },
+  {
+    "objectID": "website/project_description.html#deliverables",
+    "href": "website/project_description.html#deliverables",
+    "title": "Course Project",
+    "section": "",
+    "text": "The project will have three deliverables:\n\nGroup coordination (due week 5)\nBasic pile-driving app (due week 7)\nEnhanced pile-driving app (due finals week)",
+    "crumbs": [
+      "TME 310A",
+      "Project",
+      "Course Project"
+    ]
+  },
+  {
+    "objectID": "website/project_02.html",
+    "href": "website/project_02.html",
+    "title": "Project Part 2 - basic pile-driving app",
+    "section": "",
+    "text": "Assignment repo: project_02\n\n\nDemonstrate the coding skills learned in the course to develop a notebook that could be useful for engineering professionals working on pile-driving projects.\n\n\n\nYour goal for Part 2 of the course project is to build a basic pile-driving app from a jupyter notebook. In this context, “app” doesn’t mean software that runs on a mobile device, it means software that someone could use to perform a particular task on a computer if they have access to your notebook and supporting Python scripts. The notebook itself should have minimal visible code. The majority of your code should live in one or more Python script files that are imported into the notebook. This helps separate the inner workings of the app from the user’s experience (and also helps prevent accidental changes to the code).\nThe app’s user should be able to:\n\nChoose a pile-driving log file from within the app’s file directory.\nSee a plot of the pile’s driving log data vs. elevation.\nSee a plot of the pile’s estimated capacity vs. elevation.\nSee a short text summary of the pile’s final condition, including:\n\nPile ID\nPile tip elevation\nPile load capacity\n\n\nThe purpose of the app and instructions for using it should be clearly described in the notebook. Any engineer who understands the basics of pile-driving and has a basic understanding of Jupyter notebooks should be able to use the notebook and understand its output.\nAdditionally, the supporting code should be well-documented with docstrings. Any individual who understands Python should be able to view the supporting code and understand how each function works by reading the docstrings. At a minimum, docstrings should include:\n\nA description of the function’s purpose.\nA list of the function’s input parameters, including whether they have default values and what units the should be in.\nA list of the function’s output parameters, including what units they will be in.\n\n\n\nThe way a user chooses a pile-driving log file can be as simple as typing the file name into the right place in a code cell in your notebook. Prompting the user for input or adding graphical user interface elements is not necessary.\nYour assignment repository will include a small number of properly formatted pile-driving logs for you to test your notebook with. You should assume that app users will want to add additional pile-driving logs and select them with your app. You may assume that any pile-driving logs the user adds will follow the same format as the sample logs.\n\n\n\nThe driving log data should show the blows per minute (BPM) and blows per foot (BPF) vs. pile tip elevation. The elevation should be shown on the vertical axis BPM and BPF can be included on a single plot or on two separate plots, but the elevations for both datasets should align visually. Since the elevation needs to be on the vertical axis, this means that if two plots are used, the two plots should be side-by-side.\n\n\n\nSimilar to the driving log data, the pile capacity should be plotted vs. pile tip elevation with elevation shown on the vertical axis.\nThe pile’s capacity should be estimated using the driving log and the \\(S_o\\) equation. The \\(S_o\\) equation provides a method of estimating capacity from the hammer energy and blow count. It is a simplification of the rational pile formula and is based on the impulse-momentum principles of the hammer/pile system.\nThe \\(S_o\\) equation is:\n\\[ Q = \\frac{a H W}{S + S_o}\\]\nWhere:\n\\[S_o = \\sqrt[]{\\frac{a H W L}{2 A E}} \\]\nAnd:\n\\(Q\\) = Ultimate pile capacity in pounds\n\\(H\\) = Height of hammer fall in feet\n\\(W\\) = weight of hammer in pounds\n\\(a\\) = Hammer efficiency\n\\(L\\) = Total pile length in feet\n\\(A\\) = Pile cross-sectional area in square inches\n\\(E\\) = Modulus of elasticity of pile material in pounds per square inch\n\\(S\\) = Pile penetration (in feet) per blow\nUse the following pile and hammer parameters for your app’s calculations:\n\n\n\nParameter\nValue\n\n\n\n\n\\(W\\)\n20,000 pounds\n\n\n\\(a\\)\n0.4\n\n\n\\(L\\)\n150 feet\n\n\n\\(A\\)\n477 square inches\n\n\n\\(E\\)\n6,000,000 psi\n\n\n\n\n\n\nThe text summary of the pile’s final condition should include the pile ID, final tip elevation, and final load capacity. An example is shown below (note - 1 “kip” = 1,000 pounds):\nPile ID: B-14\nPile tip elevation: -134 feet\nPile load capacity: 899 kips\n\n\n\n\nYour project will be submitted by pushing your work to GitHub (same as the homework submission procedure). At a minimum, the submission should include:\n\nYour app’s notebook (one .ipynb file)\nYour app’s support script (one or more .py files)\nAt least one of the pile-driving log data files (one or more .csv files)\n\n\n\n\n\n\n\nYour submission will be graded by the instructor with the following rubric:\n\n\n\n\n\n\n\n\nCategory\nCriteria\nPoints\n\n\n\n\nData reading\nUsers have a way to change which pile-driving log is being analyzed by the app. The app will work for any properly formatted pile-driving log in the directory that the sample log files are in so that if a user adds additional logs, they can be analyzed by the app\n__ / 10\n\n\nApp instructions\nThe app instructions are clearly written such that an informed (i.e., familiar with pile-driving and Jupyter notebooks) user would be able to use the app.\n__ / 10\n\n\nPlots\nPlots of BPM, BPF, and pile load capacity are generated from the log. All plots use elevation as the vertical axis. The units of data being plotted are included and correct.\n__ / 10\n\n\nOutput\nA short summary of the pile analysis is displayed when the app is run. The output summary includes the correct units. The information in the summary is consistent with the pile log file and the plots.\n__ / 10\n\n\nSupport code\nThe functions that perform the app’s calculations are imported into the app from one or more supporting Python files. The functions are well documented (purpose, inputs and outputs described in a docstring).\n__ / 10",
+    "crumbs": [
+      "TME 310A",
+      "Project",
+      "Project Part 2 - basic pile-driving app"
+    ]
+  },
+  {
+    "objectID": "website/project_02.html#purpose",
+    "href": "website/project_02.html#purpose",
+    "title": "Project Part 2 - basic pile-driving app",
+    "section": "",
+    "text": "Demonstrate the coding skills learned in the course to develop a notebook that could be useful for engineering professionals working on pile-driving projects.",
+    "crumbs": [
+      "TME 310A",
+      "Project",
+      "Project Part 2 - basic pile-driving app"
+    ]
+  },
+  {
+    "objectID": "website/project_02.html#instructions",
+    "href": "website/project_02.html#instructions",
+    "title": "Project Part 2 - basic pile-driving app",
+    "section": "",
+    "text": "Your goal for Part 2 of the course project is to build a basic pile-driving app from a jupyter notebook. In this context, “app” doesn’t mean software that runs on a mobile device, it means software that someone could use to perform a particular task on a computer if they have access to your notebook and supporting Python scripts. The notebook itself should have minimal visible code. The majority of your code should live in one or more Python script files that are imported into the notebook. This helps separate the inner workings of the app from the user’s experience (and also helps prevent accidental changes to the code).\nThe app’s user should be able to:\n\nChoose a pile-driving log file from within the app’s file directory.\nSee a plot of the pile’s driving log data vs. elevation.\nSee a plot of the pile’s estimated capacity vs. elevation.\nSee a short text summary of the pile’s final condition, including:\n\nPile ID\nPile tip elevation\nPile load capacity\n\n\nThe purpose of the app and instructions for using it should be clearly described in the notebook. Any engineer who understands the basics of pile-driving and has a basic understanding of Jupyter notebooks should be able to use the notebook and understand its output.\nAdditionally, the supporting code should be well-documented with docstrings. Any individual who understands Python should be able to view the supporting code and understand how each function works by reading the docstrings. At a minimum, docstrings should include:\n\nA description of the function’s purpose.\nA list of the function’s input parameters, including whether they have default values and what units the should be in.\nA list of the function’s output parameters, including what units they will be in.\n\n\n\nThe way a user chooses a pile-driving log file can be as simple as typing the file name into the right place in a code cell in your notebook. Prompting the user for input or adding graphical user interface elements is not necessary.\nYour assignment repository will include a small number of properly formatted pile-driving logs for you to test your notebook with. You should assume that app users will want to add additional pile-driving logs and select them with your app. You may assume that any pile-driving logs the user adds will follow the same format as the sample logs.\n\n\n\nThe driving log data should show the blows per minute (BPM) and blows per foot (BPF) vs. pile tip elevation. The elevation should be shown on the vertical axis BPM and BPF can be included on a single plot or on two separate plots, but the elevations for both datasets should align visually. Since the elevation needs to be on the vertical axis, this means that if two plots are used, the two plots should be side-by-side.\n\n\n\nSimilar to the driving log data, the pile capacity should be plotted vs. pile tip elevation with elevation shown on the vertical axis.\nThe pile’s capacity should be estimated using the driving log and the \\(S_o\\) equation. The \\(S_o\\) equation provides a method of estimating capacity from the hammer energy and blow count. It is a simplification of the rational pile formula and is based on the impulse-momentum principles of the hammer/pile system.\nThe \\(S_o\\) equation is:\n\\[ Q = \\frac{a H W}{S + S_o}\\]\nWhere:\n\\[S_o = \\sqrt[]{\\frac{a H W L}{2 A E}} \\]\nAnd:\n\\(Q\\) = Ultimate pile capacity in pounds\n\\(H\\) = Height of hammer fall in feet\n\\(W\\) = weight of hammer in pounds\n\\(a\\) = Hammer efficiency\n\\(L\\) = Total pile length in feet\n\\(A\\) = Pile cross-sectional area in square inches\n\\(E\\) = Modulus of elasticity of pile material in pounds per square inch\n\\(S\\) = Pile penetration (in feet) per blow\nUse the following pile and hammer parameters for your app’s calculations:\n\n\n\nParameter\nValue\n\n\n\n\n\\(W\\)\n20,000 pounds\n\n\n\\(a\\)\n0.4\n\n\n\\(L\\)\n150 feet\n\n\n\\(A\\)\n477 square inches\n\n\n\\(E\\)\n6,000,000 psi\n\n\n\n\n\n\nThe text summary of the pile’s final condition should include the pile ID, final tip elevation, and final load capacity. An example is shown below (note - 1 “kip” = 1,000 pounds):\nPile ID: B-14\nPile tip elevation: -134 feet\nPile load capacity: 899 kips",
+    "crumbs": [
+      "TME 310A",
+      "Project",
+      "Project Part 2 - basic pile-driving app"
+    ]
+  },
+  {
+    "objectID": "website/project_02.html#submission",
+    "href": "website/project_02.html#submission",
+    "title": "Project Part 2 - basic pile-driving app",
+    "section": "",
+    "text": "Your project will be submitted by pushing your work to GitHub (same as the homework submission procedure). At a minimum, the submission should include:\n\nYour app’s notebook (one .ipynb file)\nYour app’s support script (one or more .py files)\nAt least one of the pile-driving log data files (one or more .csv files)",
+    "crumbs": [
+      "TME 310A",
+      "Project",
+      "Project Part 2 - basic pile-driving app"
+    ]
+  },
+  {
+    "objectID": "website/project_02.html#grading-rubric",
+    "href": "website/project_02.html#grading-rubric",
+    "title": "Project Part 2 - basic pile-driving app",
+    "section": "",
+    "text": "Your submission will be graded by the instructor with the following rubric:\n\n\n\n\n\n\n\n\nCategory\nCriteria\nPoints\n\n\n\n\nData reading\nUsers have a way to change which pile-driving log is being analyzed by the app. The app will work for any properly formatted pile-driving log in the directory that the sample log files are in so that if a user adds additional logs, they can be analyzed by the app\n__ / 10\n\n\nApp instructions\nThe app instructions are clearly written such that an informed (i.e., familiar with pile-driving and Jupyter notebooks) user would be able to use the app.\n__ / 10\n\n\nPlots\nPlots of BPM, BPF, and pile load capacity are generated from the log. All plots use elevation as the vertical axis. The units of data being plotted are included and correct.\n__ / 10\n\n\nOutput\nA short summary of the pile analysis is displayed when the app is run. The output summary includes the correct units. The information in the summary is consistent with the pile log file and the plots.\n__ / 10\n\n\nSupport code\nThe functions that perform the app’s calculations are imported into the app from one or more supporting Python files. The functions are well documented (purpose, inputs and outputs described in a docstring).\n__ / 10",
+    "crumbs": [
+      "TME 310A",
+      "Project",
+      "Project Part 2 - basic pile-driving app"
+    ]
+  },
+  {
+    "objectID": "website/weeks/week_8.html",
+    "href": "website/weeks/week_8.html",
+    "title": "Week 8",
     "section": "",
     "text": "Course content will be added on a rolling basis\n\n\n\n\n\nTopic\nVideo\nSlides"
   },
   {
-    "objectID": "website/weeks/week_9.html#materials",
-    "href": "website/weeks/week_9.html#materials",
-    "title": "Week 9",
+    "objectID": "website/weeks/week_8.html#materials",
+    "href": "website/weeks/week_8.html#materials",
+    "title": "Week 8",
     "section": "",
     "text": "Topic\nVideo\nSlides"
   },
   {
-    "objectID": "website/weeks/week_11.html",
-    "href": "website/weeks/week_11.html",
-    "title": "Week 11",
+    "objectID": "website/weeks/week_10.html",
+    "href": "website/weeks/week_10.html",
+    "title": "Week 10",
     "section": "",
     "text": "Course content will be added on a rolling basis\n\n\n\n\n\nTopic\nVideo\nSlides"
   },
   {
-    "objectID": "website/weeks/week_11.html#materials",
-    "href": "website/weeks/week_11.html#materials",
-    "title": "Week 11",
+    "objectID": "website/weeks/week_10.html#materials",
+    "href": "website/weeks/week_10.html#materials",
+    "title": "Week 10",
     "section": "",
     "text": "Topic\nVideo\nSlides"
   },
   {
-    "objectID": "website/weeks/week_1.html",
-    "href": "website/weeks/week_1.html",
-    "title": "Week 1",
+    "objectID": "website/weeks/week_3.html",
+    "href": "website/weeks/week_3.html",
+    "title": "Week 3",
     "section": "",
-    "text": "Topic\nVideo\nSlides\n\n\n\n\nIntroduction\nN/A\nN/A\n\n\nPython basics\nLink\nN/A\n\n\n\n\n\n\nNone",
+    "text": "Course content will be added on a rolling basis\n\n\n\n\n\nTopic\nVideo\nSlides\n\n\n\n\nArrays\nLink\nLink\n\n\nArray logic\nLink\nLink\n\n\n\n\n\n\n\nHomework 2",
     "crumbs": [
       "TME 310A",
       "Weekly materials",
-      "Week 1"
+      "Week 3"
     ]
   },
   {
-    "objectID": "website/weeks/week_1.html#materials",
-    "href": "website/weeks/week_1.html#materials",
-    "title": "Week 1",
+    "objectID": "website/weeks/week_3.html#materials",
+    "href": "website/weeks/week_3.html#materials",
+    "title": "Week 3",
     "section": "",
-    "text": "Topic\nVideo\nSlides\n\n\n\n\nIntroduction\nN/A\nN/A\n\n\nPython basics\nLink\nN/A",
+    "text": "Topic\nVideo\nSlides\n\n\n\n\nArrays\nLink\nLink\n\n\nArray logic\nLink\nLink",
     "crumbs": [
       "TME 310A",
       "Weekly materials",
-      "Week 1"
+      "Week 3"
     ]
   },
   {
-    "objectID": "website/weeks/week_1.html#assignments-due",
-    "href": "website/weeks/week_1.html#assignments-due",
-    "title": "Week 1",
+    "objectID": "website/weeks/week_3.html#assignments-due",
+    "href": "website/weeks/week_3.html#assignments-due",
+    "title": "Week 3",
     "section": "",
-    "text": "None",
+    "text": "Homework 2",
     "crumbs": [
       "TME 310A",
       "Weekly materials",
-      "Week 1"
+      "Week 3"
     ]
   },
   {
-    "objectID": "website/weeks/week_2.html",
-    "href": "website/weeks/week_2.html",
-    "title": "Week 2",
+    "objectID": "website/weeks/week_6.html",
+    "href": "website/weeks/week_6.html",
+    "title": "Week 6",
     "section": "",
-    "text": "Course content will be added on a rolling basis\n\n\n\n\n\nTopic\nVideo\nSlides\n\n\n\n\nModeling framework\nLink\nLink\n\n\nApproaching problems\nLink\nLink\n\n\nFunctional programming\nLink\nLink\n\n\n\n\n\n\n\nHomework 1 (plus self-grading)",
+    "text": "Course content will be added on a rolling basis\n\n\n\n\n\nTopic\nVideo\nSlides\n\n\n\n\nEuler’s method\nLink\nLink\n\n\nEuler’s method example code\nLink\nLink",
     "crumbs": [
       "TME 310A",
       "Weekly materials",
-      "Week 2"
+      "Week 6"
     ]
   },
   {
-    "objectID": "website/weeks/week_2.html#materials",
-    "href": "website/weeks/week_2.html#materials",
-    "title": "Week 2",
+    "objectID": "website/weeks/week_6.html#materials",
+    "href": "website/weeks/week_6.html#materials",
+    "title": "Week 6",
     "section": "",
-    "text": "Topic\nVideo\nSlides\n\n\n\n\nModeling framework\nLink\nLink\n\n\nApproaching problems\nLink\nLink\n\n\nFunctional programming\nLink\nLink",
+    "text": "Topic\nVideo\nSlides\n\n\n\n\nEuler’s method\nLink\nLink\n\n\nEuler’s method example code\nLink\nLink",
     "crumbs": [
       "TME 310A",
       "Weekly materials",
-      "Week 2"
+      "Week 6"
     ]
   },
   {
-    "objectID": "website/weeks/week_2.html#assignments-due",
-    "href": "website/weeks/week_2.html#assignments-due",
-    "title": "Week 2",
+    "objectID": "website/weeks/week_5.html",
+    "href": "website/weeks/week_5.html",
+    "title": "Week 5",
     "section": "",
-    "text": "Homework 1 (plus self-grading)",
+    "text": "Course content will be added on a rolling basis\n\n\n\n\n\nTopic\nVideo\nSlides\n\n\n\n\nTechnical difficulties 😕\nN/A\nLink\n\n\nCollaborating with GitHub\nN/A\nLink\n\n\n\n\n\n\nHomework 5",
     "crumbs": [
       "TME 310A",
       "Weekly materials",
-      "Week 2"
+      "Week 5"
     ]
   },
   {
-    "objectID": "website/weeks/week_7.html",
-    "href": "website/weeks/week_7.html",
-    "title": "Week 7",
+    "objectID": "website/weeks/week_5.html#materials",
+    "href": "website/weeks/week_5.html#materials",
+    "title": "Week 5",
     "section": "",
-    "text": "Course content will be added on a rolling basis\n\n\n\n\n\nTopic\nVideo\nSlides"
-  },
-  {
-    "objectID": "website/weeks/week_7.html#materials",
-    "href": "website/weeks/week_7.html#materials",
-    "title": "Week 7",
-    "section": "",
-    "text": "Topic\nVideo\nSlides"
-  },
-  {
-    "objectID": "website/weeks/week_4.html",
-    "href": "website/weeks/week_4.html",
-    "title": "Week 4",
-    "section": "",
-    "text": "Course content will be added on a rolling basis\n\n\n\n\n\nTopic\nVideo\nSlides\n\n\n\n\nNumbers in Computers\nLink\nLink\n\n\nError definitions\nLink\nLink\n\n\nError tolerance\nLink\nLink\n\n\nDartboard approximation of \\(\\pi\\)\nLink\n\n\n\nPlotting the dartboard approximation of \\(\\pi\\)\nLink\nCode\n\n\n\n\n\n\n\nHomework 3",
+    "text": "Topic\nVideo\nSlides\n\n\n\n\nTechnical difficulties 😕\nN/A\nLink\n\n\nCollaborating with GitHub\nN/A\nLink",
     "crumbs": [
       "TME 310A",
       "Weekly materials",
-      "Week 4"
+      "Week 5"
     ]
   },
   {
-    "objectID": "website/weeks/week_4.html#materials",
-    "href": "website/weeks/week_4.html#materials",
-    "title": "Week 4",
+    "objectID": "website/weeks/week_5.html#assignments-due",
+    "href": "website/weeks/week_5.html#assignments-due",
+    "title": "Week 5",
     "section": "",
-    "text": "Topic\nVideo\nSlides\n\n\n\n\nNumbers in Computers\nLink\nLink\n\n\nError definitions\nLink\nLink\n\n\nError tolerance\nLink\nLink\n\n\nDartboard approximation of \\(\\pi\\)\nLink\n\n\n\nPlotting the dartboard approximation of \\(\\pi\\)\nLink\nCode",
+    "text": "Homework 5",
     "crumbs": [
       "TME 310A",
       "Weekly materials",
-      "Week 4"
+      "Week 5"
     ]
   },
   {
-    "objectID": "website/weeks/week_4.html#assignments-due",
-    "href": "website/weeks/week_4.html#assignments-due",
-    "title": "Week 4",
+    "objectID": "website/examples.html",
+    "href": "website/examples.html",
+    "title": "Example scripts",
     "section": "",
-    "text": "Homework 3",
+    "text": "Example scripts\nThe table below contains some example scripts using basic course concepts.\n\n\n\nScript link\nNotes\n\n\n\n\nPython basics\n\n\n\nPlotting a sine wave\nBasic use of matplotlib\n\n\nParachute problem\n\n\n\nParachute problem (copilot solution)\n\n\n\nParachute functions\n\n\n\nMatplotlib quick reference\nPlots with some styling options\n\n\nQuiz corrections for extra credit\nAn example to follow if doing extra credit to make up points lost on a quiz\n\n\nDartboard approximation of \\(\\pi\\)\nConvergence and error tolerance example with plots\n\n\nHomework 3 notes\nMy notes on some of the common approaches I saw while grading homework 3.\n\n\nHomework 4 notes\nMy notes on things I observed while grading homework 4.",
     "crumbs": [
       "TME 310A",
-      "Weekly materials",
-      "Week 4"
-    ]
-  },
-  {
-    "objectID": "website/project_03.html",
-    "href": "website/project_03.html",
-    "title": "Project Part 3 - enhanced pile-driving app",
-    "section": "",
-    "text": "Project Part 3 - enhanced pile-driving app\n\n\n\n\n\n\nNote\n\n\n\nThis page is incomplete. Details coming soon."
-  },
-  {
-    "objectID": "website/being_successful_student.html",
-    "href": "website/being_successful_student.html",
-    "title": "Being a Successful Student",
-    "section": "",
-    "text": "Being a Successful Student\nKeep Current with Course Notifications\nCanvas can automatically keep you informed about due dates, class changes, scheduled events, and much more through its notification system. Be sure to set them, so you are receiving each kind immediately, daily, or weekly, as you prefer.\nPeer Success Mentors\nA peer mentor can assist you in “using effective learning techniques to improve your study skills and gain confidence in your academic abilities.” Connect with one today!\nUW Tacoma Teaching & Learning Center\nHere you can schedule appointments with quantitative and writing lab tutors and access quantitative and writing help and resources.",
-    "crumbs": [
-      "TME 310A",
-      "Course information",
-      "Being a Successful Student"
-    ]
-  },
-  {
-    "objectID": "website/grading_policies.html",
-    "href": "website/grading_policies.html",
-    "title": "Grading policies",
-    "section": "",
-    "text": "Assignment categories and weights\n\nHomework (30%)\nQuizzes (30%) - lowest quiz score dropped\nProject (30%)\nLectures, etc. (10%)\n\n\n\nThe course has different late policies depending on the assignment type.\n\n\n\n\nMy goal for this late policy is to motivate students to complete their work on time whenever possible, but still encourage completing assignments if the due date has passed. Even if several days go by, getting some points is better than getting none! Of course, toward the end of the quarter, your flexibility runs out.\n\n\n\nHomework and Project assignments in Canvas will remain open for submissions after the deadline through the end of the quarter. I will grade late submissions like any other submission (except that it may take longer for me to get to them). Canvas will automatically deduct 10 percent of the possible grade for each day late up to 5 days. After 5 days, no further penalty is applied and Canvas will automatically deduct 50 percent of the possible grade from the graded assignment score. If there are unusual circumstances that you know about in advance, talk to me about them. For legitimate, pre-approved reasons, I can override Canvas’s deduction for late work.\n\n\n\n\n\n\nThis late policy is based on the in-person, timed nature of the assignment type.\n\n\n\nQuizzes are conducted in-person in class. In general, makeup quizzes will not be offered. If there are unusual circumstances that you know about in advance, talk to me about them. For legitimate, pre-approved reasons, I can allow you to arrange an alternative time to take a quiz. Course grade scale\nYour lowest quiz score for the quarter will be dropped.\n\n\n\n\n\nHomework assignments will be self-graded. I will provide the grading rubric and solution shortly after the assignment due date. Students will be responsible for assessing their work against the rubric and assignment solution and posting their self-assessments to Canvas.\nI will randomly select one problem per homework assignment to grade myself. These instructor-graded scores will take precedent over the self-graded score for that problem. If a student’s self-assigned grade for the problem varies significantly from the instructor’s score, it may trigger instructor grading of additional problems where the instructor’s score will also take precedent over the self-graded scores. Blatantly inflated self-assigned grades are considered an academic integrity violation and may result in loss of all points for the assignment.\n\n\n\nFinal grades will be calculated by determining the percentage of points received (rounding up or down to the nearest % point using conventional rounding standards) and converting to numerical grades as follows:\n\n\n\nLetter Grade\nOverall Score (%)\nGPA\n\n\n\n\nA\n100\n4\n\n\nA\n99\n4\n\n\nA\n98\n3.9\n\n\nA\n97\n3.9\n\n\nA-\n96\n3.8\n\n\nA-\n95\n3.8\n\n\nA-\n94\n3.7\n\n\nA-\n93\n3.7\n\n\nA-\n92\n3.6\n\n\nA-\n91\n3.6\n\n\nA-\n90\n3.5\n\n\nB+\n89\n3.4\n\n\nB+\n88\n3.3\n\n\nB+\n87\n3.2\n\n\nB\n86\n3.1\n\n\nB\n85\n3\n\n\nB\n84\n2.9\n\n\nB-\n83\n2.8\n\n\nB-\n82\n2.7\n\n\nB-\n81\n2.6\n\n\nB-\n80\n2.5\n\n\nC+\n79\n2.4\n\n\nC+\n78\n2.3\n\n\nC+\n77\n2.2\n\n\nC\n76\n2.1\n\n\nC\n75\n2\n\n\nC\n74\n1.9\n\n\nC-\n73\n1.8\n\n\nC-\n72\n1.7\n\n\nC-\n71\n1.6\n\n\nC-\n70\n1.5\n\n\nD+\n69\n1.4\n\n\nD+\n68\n1.3\n\n\nD+\n67\n1.2\n\n\nD\n66\n1.1\n\n\nD\n65\n1\n\n\nD\n64\n0.9\n\n\nD-\n63\n0.8\n\n\nD-\n62\n0.8\n\n\nD-\n61\n0.7\n\n\nD-\n60\n0.7\n\n\nE\n59\n&lt; 0.7",
-    "crumbs": [
-      "TME 310A",
-      "Course information",
-      "Grading policies"
-    ]
-  },
-  {
-    "objectID": "website/grading_policies.html#late-policies",
-    "href": "website/grading_policies.html#late-policies",
-    "title": "Grading policies",
-    "section": "",
-    "text": "The course has different late policies depending on the assignment type.\n\n\n\n\nMy goal for this late policy is to motivate students to complete their work on time whenever possible, but still encourage completing assignments if the due date has passed. Even if several days go by, getting some points is better than getting none! Of course, toward the end of the quarter, your flexibility runs out.\n\n\n\nHomework and Project assignments in Canvas will remain open for submissions after the deadline through the end of the quarter. I will grade late submissions like any other submission (except that it may take longer for me to get to them). Canvas will automatically deduct 10 percent of the possible grade for each day late up to 5 days. After 5 days, no further penalty is applied and Canvas will automatically deduct 50 percent of the possible grade from the graded assignment score. If there are unusual circumstances that you know about in advance, talk to me about them. For legitimate, pre-approved reasons, I can override Canvas’s deduction for late work.\n\n\n\n\n\n\nThis late policy is based on the in-person, timed nature of the assignment type.\n\n\n\nQuizzes are conducted in-person in class. In general, makeup quizzes will not be offered. If there are unusual circumstances that you know about in advance, talk to me about them. For legitimate, pre-approved reasons, I can allow you to arrange an alternative time to take a quiz. Course grade scale\nYour lowest quiz score for the quarter will be dropped.",
-    "crumbs": [
-      "TME 310A",
-      "Course information",
-      "Grading policies"
-    ]
-  },
-  {
-    "objectID": "website/grading_policies.html#self-grading-for-homework",
-    "href": "website/grading_policies.html#self-grading-for-homework",
-    "title": "Grading policies",
-    "section": "",
-    "text": "Homework assignments will be self-graded. I will provide the grading rubric and solution shortly after the assignment due date. Students will be responsible for assessing their work against the rubric and assignment solution and posting their self-assessments to Canvas.\nI will randomly select one problem per homework assignment to grade myself. These instructor-graded scores will take precedent over the self-graded score for that problem. If a student’s self-assigned grade for the problem varies significantly from the instructor’s score, it may trigger instructor grading of additional problems where the instructor’s score will also take precedent over the self-graded scores. Blatantly inflated self-assigned grades are considered an academic integrity violation and may result in loss of all points for the assignment.",
-    "crumbs": [
-      "TME 310A",
-      "Course information",
-      "Grading policies"
-    ]
-  },
-  {
-    "objectID": "website/grading_policies.html#grade-scale",
-    "href": "website/grading_policies.html#grade-scale",
-    "title": "Grading policies",
-    "section": "",
-    "text": "Final grades will be calculated by determining the percentage of points received (rounding up or down to the nearest % point using conventional rounding standards) and converting to numerical grades as follows:\n\n\n\nLetter Grade\nOverall Score (%)\nGPA\n\n\n\n\nA\n100\n4\n\n\nA\n99\n4\n\n\nA\n98\n3.9\n\n\nA\n97\n3.9\n\n\nA-\n96\n3.8\n\n\nA-\n95\n3.8\n\n\nA-\n94\n3.7\n\n\nA-\n93\n3.7\n\n\nA-\n92\n3.6\n\n\nA-\n91\n3.6\n\n\nA-\n90\n3.5\n\n\nB+\n89\n3.4\n\n\nB+\n88\n3.3\n\n\nB+\n87\n3.2\n\n\nB\n86\n3.1\n\n\nB\n85\n3\n\n\nB\n84\n2.9\n\n\nB-\n83\n2.8\n\n\nB-\n82\n2.7\n\n\nB-\n81\n2.6\n\n\nB-\n80\n2.5\n\n\nC+\n79\n2.4\n\n\nC+\n78\n2.3\n\n\nC+\n77\n2.2\n\n\nC\n76\n2.1\n\n\nC\n75\n2\n\n\nC\n74\n1.9\n\n\nC-\n73\n1.8\n\n\nC-\n72\n1.7\n\n\nC-\n71\n1.6\n\n\nC-\n70\n1.5\n\n\nD+\n69\n1.4\n\n\nD+\n68\n1.3\n\n\nD+\n67\n1.2\n\n\nD\n66\n1.1\n\n\nD\n65\n1\n\n\nD\n64\n0.9\n\n\nD-\n63\n0.8\n\n\nD-\n62\n0.8\n\n\nD-\n61\n0.7\n\n\nD-\n60\n0.7\n\n\nE\n59\n&lt; 0.7",
-    "crumbs": [
-      "TME 310A",
-      "Course information",
-      "Grading policies"
-    ]
-  },
-  {
-    "objectID": "website/github_codespace.html",
-    "href": "website/github_codespace.html",
-    "title": "Coding platform: GitHub Codespace",
-    "section": "",
-    "text": "The course is designed to be run through GitHub Codespaces, which provides a web-based coding environment with everything you need pre-installed. For every assignment, when you accept the assignment in GitHub Classroom, a new GitHub repo will be created for you automatically. You can start a codespace for the assignment by clicking on the “Code” dropdown and selecting “Create codespace on main.” You should only need to do this once for each assignment.\nThis will launch a new codespace with the assignment files.\n\n\n\n\n\n\nNote\n\n\n\nIt takes a few minutes for the codespace to get started and install all the requirements for the first time! Be patient - it’s essentially starting up a brand new computer from scratch. It will go faster the next time you open the codespace.\n\n\n\n\nAn un-graded “sandbox” assignment has been created so you can work on code independently of homework assignments if you’d like.\n\n\n\nThe codespaces run VS Code in a web browser. There are a few main areas you’ll want to navigate to use VS Code:\n\n\n\n\nPrimary sidebar: This area is set up to show the file explorer by default.\nActivity bar: The activity bar touches the primary sidebar and lets you select different content to show in the primary sidebar.\nSecondary sidebar: This area is set up to show the GitHub Copilot Chat. You can use this area to ask Copilot questions about your code.\nEditor: This is where your notebooks and scripts will open.\nPanel: This area sits beneath your editor and between the sidebars. This is where your Terminal and Jupyter Variables containers will be.\n\n\n\n\n\n\n\nNote\n\n\n\nThe positions of all the interface areas can be adjusted. Feel free to adjust them if you have a layout preference, but it can be a bit frustrating if you misplace something, so I recommend against it unless you’re familiar with VS Code and have a specific layout you prefer.\n\n\n\n\n\n\nThe way you submit your assignments with GitHub Classroom is by committing and pushing your changes. There are multiple ways to accomplish this, but I recommend using a few git commands in the terminal. The three commands are all you should need:\n\ngit add . This adds all the changes you’ve made to what will be committed.\ngit commit -m \"your message here\" This commits the changes in your codespaace and attaches a message to them. Of course, you can replace the text in the example with whatever message you want to include. In general, commit messages are supposed to be a brief description of the changes you made since the last commit.\ngit push This pushes your committed changes back to the repo.\n\nYou can create and push as many commits as you want. When grading, I’ll use whichever version existed at the time of the deadline unless you arrange something else with me. I recommend pushing your changes any time you’re planning to pause your work and close your codespace. The codespace should automatically save your changes and keep them, but it is possible to permanently lose changes if you delete the codespace (which is different than just closing the browser/tab) if they weren’t pushed to the repo.\n\n\n\nYour codespace includes the GitHub Copilot extension, which provides you with a powerful AI coding assistant. I encourage you to interact with Copilot and ask it questions about your code. It can write code for you based on instructions you provide and it can read your files to get additional context. In addition to experimenting with Copilot on your own, I encourage you to watch the Copilot videos listed on the Resources Page.\nRegardless of how you use copilot, you are responsible for all the code and text you submit.\n\n\nThere are some things Copilot can do that I’ve turned off on your codespaces. The features aren’t truly removed, just suppressed. They aren’t turned off to prevent you from using them, it’s more that I think they’re more likely to cause problems than be helpful.\nI’ve specifically configured Copilot to provide coding help based on where we’re at in the course. This is intended to prevent it from using Python language features we don’t cover in this class and may be difficult for you to interpret. If there are more advanced uses of Python you want to try, Copilot will help you with them if you ask it to “please override” the course’s coding assistance guidelines.\n\n\n\n\nThe codespace settings are all contained in the GitHub repos and you will have the ability to view, modify, and delete them. By default, I’ve set the codespace to hide these configuration files, but you’ll be able to see them in the repo. I’ve “hidden” them so that it’s difficult for you to accidentally break something about the codespace, not because I don’t want you to see them. If you have experience with the kinds of configuration files in the repo and you want to modify them, you may. But be warned: I can’t guarantee that I’ll be able to fix something if you break it and you’ll still be responsible for completing your assignments.",
-    "crumbs": [
-      "TME 310A",
-      "Course information",
-      "Coding platform: GitHub Codespace"
-    ]
-  },
-  {
-    "objectID": "website/github_codespace.html#vs-code",
-    "href": "website/github_codespace.html#vs-code",
-    "title": "Coding platform: GitHub Codespace",
-    "section": "",
-    "text": "The codespaces run VS Code in a web browser. There are a few main areas you’ll want to navigate to use VS Code:\n\n\n\n\nPrimary sidebar: This area is set up to show the file explorer by default.\nActivity bar: The activity bar touches the primary sidebar and lets you select different content to show in the primary sidebar.\nSecondary sidebar: This area is set up to show the GitHub Copilot Chat. You can use this area to ask Copilot questions about your code.\nEditor: This is where your notebooks and scripts will open.\nPanel: This area sits beneath your editor and between the sidebars. This is where your Terminal and Jupyter Variables containers will be.\n\n\n\n\n\n\n\nNote\n\n\n\nThe positions of all the interface areas can be adjusted. Feel free to adjust them if you have a layout preference, but it can be a bit frustrating if you misplace something, so I recommend against it unless you’re familiar with VS Code and have a specific layout you prefer.",
-    "crumbs": [
-      "TME 310A",
-      "Course information",
-      "Coding platform: GitHub Codespace"
-    ]
-  },
-  {
-    "objectID": "website/github_codespace.html#saving-and-submitting-your-work",
-    "href": "website/github_codespace.html#saving-and-submitting-your-work",
-    "title": "Coding platform: GitHub Codespace",
-    "section": "",
-    "text": "The way you submit your assignments with GitHub Classroom is by committing and pushing your changes. There are multiple ways to accomplish this, but I recommend using a few git commands in the terminal. The three commands are all you should need:\n\ngit add . This adds all the changes you’ve made to what will be committed.\ngit commit -m \"your message here\" This commits the changes in your codespaace and attaches a message to them. Of course, you can replace the text in the example with whatever message you want to include. In general, commit messages are supposed to be a brief description of the changes you made since the last commit.\ngit push This pushes your committed changes back to the repo.\n\nYou can create and push as many commits as you want. When grading, I’ll use whichever version existed at the time of the deadline unless you arrange something else with me. I recommend pushing your changes any time you’re planning to pause your work and close your codespace. The codespace should automatically save your changes and keep them, but it is possible to permanently lose changes if you delete the codespace (which is different than just closing the browser/tab) if they weren’t pushed to the repo.",
-    "crumbs": [
-      "TME 310A",
-      "Course information",
-      "Coding platform: GitHub Codespace"
-    ]
-  },
-  {
-    "objectID": "website/github_codespace.html#github-copilot",
-    "href": "website/github_codespace.html#github-copilot",
-    "title": "Coding platform: GitHub Codespace",
-    "section": "",
-    "text": "Your codespace includes the GitHub Copilot extension, which provides you with a powerful AI coding assistant. I encourage you to interact with Copilot and ask it questions about your code. It can write code for you based on instructions you provide and it can read your files to get additional context. In addition to experimenting with Copilot on your own, I encourage you to watch the Copilot videos listed on the Resources Page.\nRegardless of how you use copilot, you are responsible for all the code and text you submit.\n\n\nThere are some things Copilot can do that I’ve turned off on your codespaces. The features aren’t truly removed, just suppressed. They aren’t turned off to prevent you from using them, it’s more that I think they’re more likely to cause problems than be helpful.\nI’ve specifically configured Copilot to provide coding help based on where we’re at in the course. This is intended to prevent it from using Python language features we don’t cover in this class and may be difficult for you to interpret. If there are more advanced uses of Python you want to try, Copilot will help you with them if you ask it to “please override” the course’s coding assistance guidelines.",
-    "crumbs": [
-      "TME 310A",
-      "Course information",
-      "Coding platform: GitHub Codespace"
-    ]
-  },
-  {
-    "objectID": "website/github_codespace.html#breaking-things",
-    "href": "website/github_codespace.html#breaking-things",
-    "title": "Coding platform: GitHub Codespace",
-    "section": "",
-    "text": "The codespace settings are all contained in the GitHub repos and you will have the ability to view, modify, and delete them. By default, I’ve set the codespace to hide these configuration files, but you’ll be able to see them in the repo. I’ve “hidden” them so that it’s difficult for you to accidentally break something about the codespace, not because I don’t want you to see them. If you have experience with the kinds of configuration files in the repo and you want to modify them, you may. But be warned: I can’t guarantee that I’ll be able to fix something if you break it and you’ll still be responsible for completing your assignments.",
-    "crumbs": [
-      "TME 310A",
-      "Course information",
-      "Coding platform: GitHub Codespace"
+      "Example scripts"
     ]
   },
   {
@@ -997,283 +967,425 @@
     ]
   },
   {
-    "objectID": "website/examples.html",
-    "href": "website/examples.html",
-    "title": "Example scripts",
+    "objectID": "website/github_codespace.html",
+    "href": "website/github_codespace.html",
+    "title": "Coding platform: GitHub Codespace",
     "section": "",
-    "text": "Example scripts\nThe table below contains some example scripts using basic course concepts.\n\n\n\nScript link\nNotes\n\n\n\n\nPython basics\n\n\n\nPlotting a sine wave\nBasic use of matplotlib\n\n\nParachute problem\n\n\n\nParachute problem (copilot solution)\n\n\n\nParachute functions\n\n\n\nMatplotlib quick reference\nPlots with some styling options\n\n\nQuiz corrections for extra credit\nAn example to follow if doing extra credit to make up points lost on a quiz\n\n\nDartboard approximation of \\(\\pi\\)\nConvergence and error tolerance example with plots\n\n\nHomework 3 notes\nMy notes on some of the common approaches I saw while grading homework 3.\n\n\nHomework 4 notes\nMy notes on things I observed while grading homework 4.",
+    "text": "The course is designed to be run through GitHub Codespaces, which provides a web-based coding environment with everything you need pre-installed. For every assignment, when you accept the assignment in GitHub Classroom, a new GitHub repo will be created for you automatically. You can start a codespace for the assignment by clicking on the “Code” dropdown and selecting “Create codespace on main.” You should only need to do this once for each assignment.\nThis will launch a new codespace with the assignment files.\n\n\n\n\n\n\nNote\n\n\n\nIt takes a few minutes for the codespace to get started and install all the requirements for the first time! Be patient - it’s essentially starting up a brand new computer from scratch. It will go faster the next time you open the codespace.\n\n\n\n\nAn un-graded “sandbox” assignment has been created so you can work on code independently of homework assignments if you’d like.\n\n\n\nThe codespaces run VS Code in a web browser. There are a few main areas you’ll want to navigate to use VS Code:\n\n\n\n\nPrimary sidebar: This area is set up to show the file explorer by default.\nActivity bar: The activity bar touches the primary sidebar and lets you select different content to show in the primary sidebar.\nSecondary sidebar: This area is set up to show the GitHub Copilot Chat. You can use this area to ask Copilot questions about your code.\nEditor: This is where your notebooks and scripts will open.\nPanel: This area sits beneath your editor and between the sidebars. This is where your Terminal and Jupyter Variables containers will be.\n\n\n\n\n\n\n\nNote\n\n\n\nThe positions of all the interface areas can be adjusted. Feel free to adjust them if you have a layout preference, but it can be a bit frustrating if you misplace something, so I recommend against it unless you’re familiar with VS Code and have a specific layout you prefer.\n\n\n\n\n\n\nThe way you submit your assignments with GitHub Classroom is by committing and pushing your changes. There are multiple ways to accomplish this, but I recommend using a few git commands in the terminal. The three commands are all you should need:\n\ngit add . This adds all the changes you’ve made to what will be committed.\ngit commit -m \"your message here\" This commits the changes in your codespaace and attaches a message to them. Of course, you can replace the text in the example with whatever message you want to include. In general, commit messages are supposed to be a brief description of the changes you made since the last commit.\ngit push This pushes your committed changes back to the repo.\n\nYou can create and push as many commits as you want. When grading, I’ll use whichever version existed at the time of the deadline unless you arrange something else with me. I recommend pushing your changes any time you’re planning to pause your work and close your codespace. The codespace should automatically save your changes and keep them, but it is possible to permanently lose changes if you delete the codespace (which is different than just closing the browser/tab) if they weren’t pushed to the repo.\n\n\n\nYour codespace includes the GitHub Copilot extension, which provides you with a powerful AI coding assistant. I encourage you to interact with Copilot and ask it questions about your code. It can write code for you based on instructions you provide and it can read your files to get additional context. In addition to experimenting with Copilot on your own, I encourage you to watch the Copilot videos listed on the Resources Page.\nRegardless of how you use copilot, you are responsible for all the code and text you submit.\n\n\nThere are some things Copilot can do that I’ve turned off on your codespaces. The features aren’t truly removed, just suppressed. They aren’t turned off to prevent you from using them, it’s more that I think they’re more likely to cause problems than be helpful.\nI’ve specifically configured Copilot to provide coding help based on where we’re at in the course. This is intended to prevent it from using Python language features we don’t cover in this class and may be difficult for you to interpret. If there are more advanced uses of Python you want to try, Copilot will help you with them if you ask it to “please override” the course’s coding assistance guidelines.\n\n\n\n\nThe codespace settings are all contained in the GitHub repos and you will have the ability to view, modify, and delete them. By default, I’ve set the codespace to hide these configuration files, but you’ll be able to see them in the repo. I’ve “hidden” them so that it’s difficult for you to accidentally break something about the codespace, not because I don’t want you to see them. If you have experience with the kinds of configuration files in the repo and you want to modify them, you may. But be warned: I can’t guarantee that I’ll be able to fix something if you break it and you’ll still be responsible for completing your assignments.",
     "crumbs": [
       "TME 310A",
-      "Example scripts"
+      "Course information",
+      "Coding platform: GitHub Codespace"
     ]
   },
   {
-    "objectID": "website/weeks/week_5.html",
-    "href": "website/weeks/week_5.html",
-    "title": "Week 5",
+    "objectID": "website/github_codespace.html#vs-code",
+    "href": "website/github_codespace.html#vs-code",
+    "title": "Coding platform: GitHub Codespace",
     "section": "",
-    "text": "Course content will be added on a rolling basis\n\n\n\n\n\nTopic\nVideo\nSlides\n\n\n\n\nTechnical difficulties 😕\nN/A\nLink\n\n\nCollaborating with GitHub\nN/A\nLink\n\n\n\n\n\n\nHomework 5",
+    "text": "The codespaces run VS Code in a web browser. There are a few main areas you’ll want to navigate to use VS Code:\n\n\n\n\nPrimary sidebar: This area is set up to show the file explorer by default.\nActivity bar: The activity bar touches the primary sidebar and lets you select different content to show in the primary sidebar.\nSecondary sidebar: This area is set up to show the GitHub Copilot Chat. You can use this area to ask Copilot questions about your code.\nEditor: This is where your notebooks and scripts will open.\nPanel: This area sits beneath your editor and between the sidebars. This is where your Terminal and Jupyter Variables containers will be.\n\n\n\n\n\n\n\nNote\n\n\n\nThe positions of all the interface areas can be adjusted. Feel free to adjust them if you have a layout preference, but it can be a bit frustrating if you misplace something, so I recommend against it unless you’re familiar with VS Code and have a specific layout you prefer.",
+    "crumbs": [
+      "TME 310A",
+      "Course information",
+      "Coding platform: GitHub Codespace"
+    ]
+  },
+  {
+    "objectID": "website/github_codespace.html#saving-and-submitting-your-work",
+    "href": "website/github_codespace.html#saving-and-submitting-your-work",
+    "title": "Coding platform: GitHub Codespace",
+    "section": "",
+    "text": "The way you submit your assignments with GitHub Classroom is by committing and pushing your changes. There are multiple ways to accomplish this, but I recommend using a few git commands in the terminal. The three commands are all you should need:\n\ngit add . This adds all the changes you’ve made to what will be committed.\ngit commit -m \"your message here\" This commits the changes in your codespaace and attaches a message to them. Of course, you can replace the text in the example with whatever message you want to include. In general, commit messages are supposed to be a brief description of the changes you made since the last commit.\ngit push This pushes your committed changes back to the repo.\n\nYou can create and push as many commits as you want. When grading, I’ll use whichever version existed at the time of the deadline unless you arrange something else with me. I recommend pushing your changes any time you’re planning to pause your work and close your codespace. The codespace should automatically save your changes and keep them, but it is possible to permanently lose changes if you delete the codespace (which is different than just closing the browser/tab) if they weren’t pushed to the repo.",
+    "crumbs": [
+      "TME 310A",
+      "Course information",
+      "Coding platform: GitHub Codespace"
+    ]
+  },
+  {
+    "objectID": "website/github_codespace.html#github-copilot",
+    "href": "website/github_codespace.html#github-copilot",
+    "title": "Coding platform: GitHub Codespace",
+    "section": "",
+    "text": "Your codespace includes the GitHub Copilot extension, which provides you with a powerful AI coding assistant. I encourage you to interact with Copilot and ask it questions about your code. It can write code for you based on instructions you provide and it can read your files to get additional context. In addition to experimenting with Copilot on your own, I encourage you to watch the Copilot videos listed on the Resources Page.\nRegardless of how you use copilot, you are responsible for all the code and text you submit.\n\n\nThere are some things Copilot can do that I’ve turned off on your codespaces. The features aren’t truly removed, just suppressed. They aren’t turned off to prevent you from using them, it’s more that I think they’re more likely to cause problems than be helpful.\nI’ve specifically configured Copilot to provide coding help based on where we’re at in the course. This is intended to prevent it from using Python language features we don’t cover in this class and may be difficult for you to interpret. If there are more advanced uses of Python you want to try, Copilot will help you with them if you ask it to “please override” the course’s coding assistance guidelines.",
+    "crumbs": [
+      "TME 310A",
+      "Course information",
+      "Coding platform: GitHub Codespace"
+    ]
+  },
+  {
+    "objectID": "website/github_codespace.html#breaking-things",
+    "href": "website/github_codespace.html#breaking-things",
+    "title": "Coding platform: GitHub Codespace",
+    "section": "",
+    "text": "The codespace settings are all contained in the GitHub repos and you will have the ability to view, modify, and delete them. By default, I’ve set the codespace to hide these configuration files, but you’ll be able to see them in the repo. I’ve “hidden” them so that it’s difficult for you to accidentally break something about the codespace, not because I don’t want you to see them. If you have experience with the kinds of configuration files in the repo and you want to modify them, you may. But be warned: I can’t guarantee that I’ll be able to fix something if you break it and you’ll still be responsible for completing your assignments.",
+    "crumbs": [
+      "TME 310A",
+      "Course information",
+      "Coding platform: GitHub Codespace"
+    ]
+  },
+  {
+    "objectID": "website/grading_policies.html",
+    "href": "website/grading_policies.html",
+    "title": "Grading policies",
+    "section": "",
+    "text": "Assignment categories and weights\n\nHomework (30%)\nQuizzes (30%) - lowest quiz score dropped\nProject (30%)\nLectures, etc. (10%)\n\n\n\nThe course has different late policies depending on the assignment type.\n\n\n\n\nMy goal for this late policy is to motivate students to complete their work on time whenever possible, but still encourage completing assignments if the due date has passed. Even if several days go by, getting some points is better than getting none! Of course, toward the end of the quarter, your flexibility runs out.\n\n\n\nHomework and Project assignments in Canvas will remain open for submissions after the deadline through the end of the quarter. I will grade late submissions like any other submission (except that it may take longer for me to get to them). Canvas will automatically deduct 10 percent of the possible grade for each day late up to 5 days. After 5 days, no further penalty is applied and Canvas will automatically deduct 50 percent of the possible grade from the graded assignment score. If there are unusual circumstances that you know about in advance, talk to me about them. For legitimate, pre-approved reasons, I can override Canvas’s deduction for late work.\n\n\n\n\n\n\nThis late policy is based on the in-person, timed nature of the assignment type.\n\n\n\nQuizzes are conducted in-person in class. In general, makeup quizzes will not be offered. If there are unusual circumstances that you know about in advance, talk to me about them. For legitimate, pre-approved reasons, I can allow you to arrange an alternative time to take a quiz. Course grade scale\nYour lowest quiz score for the quarter will be dropped.\n\n\n\n\n\nHomework assignments will be self-graded. I will provide the grading rubric and solution shortly after the assignment due date. Students will be responsible for assessing their work against the rubric and assignment solution and posting their self-assessments to Canvas.\nI will randomly select one problem per homework assignment to grade myself. These instructor-graded scores will take precedent over the self-graded score for that problem. If a student’s self-assigned grade for the problem varies significantly from the instructor’s score, it may trigger instructor grading of additional problems where the instructor’s score will also take precedent over the self-graded scores. Blatantly inflated self-assigned grades are considered an academic integrity violation and may result in loss of all points for the assignment.\n\n\n\nFinal grades will be calculated by determining the percentage of points received (rounding up or down to the nearest % point using conventional rounding standards) and converting to numerical grades as follows:\n\n\n\nLetter Grade\nOverall Score (%)\nGPA\n\n\n\n\nA\n100\n4\n\n\nA\n99\n4\n\n\nA\n98\n3.9\n\n\nA\n97\n3.9\n\n\nA-\n96\n3.8\n\n\nA-\n95\n3.8\n\n\nA-\n94\n3.7\n\n\nA-\n93\n3.7\n\n\nA-\n92\n3.6\n\n\nA-\n91\n3.6\n\n\nA-\n90\n3.5\n\n\nB+\n89\n3.4\n\n\nB+\n88\n3.3\n\n\nB+\n87\n3.2\n\n\nB\n86\n3.1\n\n\nB\n85\n3\n\n\nB\n84\n2.9\n\n\nB-\n83\n2.8\n\n\nB-\n82\n2.7\n\n\nB-\n81\n2.6\n\n\nB-\n80\n2.5\n\n\nC+\n79\n2.4\n\n\nC+\n78\n2.3\n\n\nC+\n77\n2.2\n\n\nC\n76\n2.1\n\n\nC\n75\n2\n\n\nC\n74\n1.9\n\n\nC-\n73\n1.8\n\n\nC-\n72\n1.7\n\n\nC-\n71\n1.6\n\n\nC-\n70\n1.5\n\n\nD+\n69\n1.4\n\n\nD+\n68\n1.3\n\n\nD+\n67\n1.2\n\n\nD\n66\n1.1\n\n\nD\n65\n1\n\n\nD\n64\n0.9\n\n\nD-\n63\n0.8\n\n\nD-\n62\n0.8\n\n\nD-\n61\n0.7\n\n\nD-\n60\n0.7\n\n\nE\n59\n&lt; 0.7",
+    "crumbs": [
+      "TME 310A",
+      "Course information",
+      "Grading policies"
+    ]
+  },
+  {
+    "objectID": "website/grading_policies.html#late-policies",
+    "href": "website/grading_policies.html#late-policies",
+    "title": "Grading policies",
+    "section": "",
+    "text": "The course has different late policies depending on the assignment type.\n\n\n\n\nMy goal for this late policy is to motivate students to complete their work on time whenever possible, but still encourage completing assignments if the due date has passed. Even if several days go by, getting some points is better than getting none! Of course, toward the end of the quarter, your flexibility runs out.\n\n\n\nHomework and Project assignments in Canvas will remain open for submissions after the deadline through the end of the quarter. I will grade late submissions like any other submission (except that it may take longer for me to get to them). Canvas will automatically deduct 10 percent of the possible grade for each day late up to 5 days. After 5 days, no further penalty is applied and Canvas will automatically deduct 50 percent of the possible grade from the graded assignment score. If there are unusual circumstances that you know about in advance, talk to me about them. For legitimate, pre-approved reasons, I can override Canvas’s deduction for late work.\n\n\n\n\n\n\nThis late policy is based on the in-person, timed nature of the assignment type.\n\n\n\nQuizzes are conducted in-person in class. In general, makeup quizzes will not be offered. If there are unusual circumstances that you know about in advance, talk to me about them. For legitimate, pre-approved reasons, I can allow you to arrange an alternative time to take a quiz. Course grade scale\nYour lowest quiz score for the quarter will be dropped.",
+    "crumbs": [
+      "TME 310A",
+      "Course information",
+      "Grading policies"
+    ]
+  },
+  {
+    "objectID": "website/grading_policies.html#self-grading-for-homework",
+    "href": "website/grading_policies.html#self-grading-for-homework",
+    "title": "Grading policies",
+    "section": "",
+    "text": "Homework assignments will be self-graded. I will provide the grading rubric and solution shortly after the assignment due date. Students will be responsible for assessing their work against the rubric and assignment solution and posting their self-assessments to Canvas.\nI will randomly select one problem per homework assignment to grade myself. These instructor-graded scores will take precedent over the self-graded score for that problem. If a student’s self-assigned grade for the problem varies significantly from the instructor’s score, it may trigger instructor grading of additional problems where the instructor’s score will also take precedent over the self-graded scores. Blatantly inflated self-assigned grades are considered an academic integrity violation and may result in loss of all points for the assignment.",
+    "crumbs": [
+      "TME 310A",
+      "Course information",
+      "Grading policies"
+    ]
+  },
+  {
+    "objectID": "website/grading_policies.html#grade-scale",
+    "href": "website/grading_policies.html#grade-scale",
+    "title": "Grading policies",
+    "section": "",
+    "text": "Final grades will be calculated by determining the percentage of points received (rounding up or down to the nearest % point using conventional rounding standards) and converting to numerical grades as follows:\n\n\n\nLetter Grade\nOverall Score (%)\nGPA\n\n\n\n\nA\n100\n4\n\n\nA\n99\n4\n\n\nA\n98\n3.9\n\n\nA\n97\n3.9\n\n\nA-\n96\n3.8\n\n\nA-\n95\n3.8\n\n\nA-\n94\n3.7\n\n\nA-\n93\n3.7\n\n\nA-\n92\n3.6\n\n\nA-\n91\n3.6\n\n\nA-\n90\n3.5\n\n\nB+\n89\n3.4\n\n\nB+\n88\n3.3\n\n\nB+\n87\n3.2\n\n\nB\n86\n3.1\n\n\nB\n85\n3\n\n\nB\n84\n2.9\n\n\nB-\n83\n2.8\n\n\nB-\n82\n2.7\n\n\nB-\n81\n2.6\n\n\nB-\n80\n2.5\n\n\nC+\n79\n2.4\n\n\nC+\n78\n2.3\n\n\nC+\n77\n2.2\n\n\nC\n76\n2.1\n\n\nC\n75\n2\n\n\nC\n74\n1.9\n\n\nC-\n73\n1.8\n\n\nC-\n72\n1.7\n\n\nC-\n71\n1.6\n\n\nC-\n70\n1.5\n\n\nD+\n69\n1.4\n\n\nD+\n68\n1.3\n\n\nD+\n67\n1.2\n\n\nD\n66\n1.1\n\n\nD\n65\n1\n\n\nD\n64\n0.9\n\n\nD-\n63\n0.8\n\n\nD-\n62\n0.8\n\n\nD-\n61\n0.7\n\n\nD-\n60\n0.7\n\n\nE\n59\n&lt; 0.7",
+    "crumbs": [
+      "TME 310A",
+      "Course information",
+      "Grading policies"
+    ]
+  },
+  {
+    "objectID": "website/being_successful_student.html",
+    "href": "website/being_successful_student.html",
+    "title": "Being a Successful Student",
+    "section": "",
+    "text": "Being a Successful Student\nKeep Current with Course Notifications\nCanvas can automatically keep you informed about due dates, class changes, scheduled events, and much more through its notification system. Be sure to set them, so you are receiving each kind immediately, daily, or weekly, as you prefer.\nPeer Success Mentors\nA peer mentor can assist you in “using effective learning techniques to improve your study skills and gain confidence in your academic abilities.” Connect with one today!\nUW Tacoma Teaching & Learning Center\nHere you can schedule appointments with quantitative and writing lab tutors and access quantitative and writing help and resources.",
+    "crumbs": [
+      "TME 310A",
+      "Course information",
+      "Being a Successful Student"
+    ]
+  },
+  {
+    "objectID": "website/project_03.html",
+    "href": "website/project_03.html",
+    "title": "Project Part 3 - enhanced pile-driving app",
+    "section": "",
+    "text": "Project Part 3 - enhanced pile-driving app\n\n\n\n\n\n\nNote\n\n\n\nThis page is incomplete. Details coming soon."
+  },
+  {
+    "objectID": "website/weeks/week_4.html",
+    "href": "website/weeks/week_4.html",
+    "title": "Week 4",
+    "section": "",
+    "text": "Course content will be added on a rolling basis\n\n\n\n\n\nTopic\nVideo\nSlides\n\n\n\n\nNumbers in Computers\nLink\nLink\n\n\nError definitions\nLink\nLink\n\n\nError tolerance\nLink\nLink\n\n\nDartboard approximation of \\(\\pi\\)\nLink\n\n\n\nPlotting the dartboard approximation of \\(\\pi\\)\nLink\nCode\n\n\n\n\n\n\n\nHomework 3",
     "crumbs": [
       "TME 310A",
       "Weekly materials",
-      "Week 5"
+      "Week 4"
     ]
   },
   {
-    "objectID": "website/weeks/week_5.html#materials",
-    "href": "website/weeks/week_5.html#materials",
-    "title": "Week 5",
+    "objectID": "website/weeks/week_4.html#materials",
+    "href": "website/weeks/week_4.html#materials",
+    "title": "Week 4",
     "section": "",
-    "text": "Topic\nVideo\nSlides\n\n\n\n\nTechnical difficulties 😕\nN/A\nLink\n\n\nCollaborating with GitHub\nN/A\nLink",
+    "text": "Topic\nVideo\nSlides\n\n\n\n\nNumbers in Computers\nLink\nLink\n\n\nError definitions\nLink\nLink\n\n\nError tolerance\nLink\nLink\n\n\nDartboard approximation of \\(\\pi\\)\nLink\n\n\n\nPlotting the dartboard approximation of \\(\\pi\\)\nLink\nCode",
     "crumbs": [
       "TME 310A",
       "Weekly materials",
-      "Week 5"
+      "Week 4"
     ]
   },
   {
-    "objectID": "website/weeks/week_5.html#assignments-due",
-    "href": "website/weeks/week_5.html#assignments-due",
-    "title": "Week 5",
+    "objectID": "website/weeks/week_4.html#assignments-due",
+    "href": "website/weeks/week_4.html#assignments-due",
+    "title": "Week 4",
     "section": "",
-    "text": "Homework 5",
+    "text": "Homework 3",
     "crumbs": [
       "TME 310A",
       "Weekly materials",
-      "Week 5"
+      "Week 4"
     ]
   },
   {
-    "objectID": "website/weeks/week_6.html",
-    "href": "website/weeks/week_6.html",
-    "title": "Week 6",
+    "objectID": "website/weeks/week_7.html",
+    "href": "website/weeks/week_7.html",
+    "title": "Week 7",
     "section": "",
-    "text": "Course content will be added on a rolling basis\n\n\n\n\n\nTopic\nVideo\nSlides\n\n\n\n\nEuler’s method\nLink\nLink\n\n\nEuler’s method example code\nLink\nLink",
+    "text": "Course content will be added on a rolling basis\n\n\n\n\n\nTopic\nVideo\nSlides\n\n\n\n\nRoot-finding (graphical method)\nLink\nLink\n\n\nBracketed methods (bisection)\nLink\nLink\n\n\nOpen methods (Newton-Raphson and secant)\nLink\nLink"
+  },
+  {
+    "objectID": "website/weeks/week_7.html#materials",
+    "href": "website/weeks/week_7.html#materials",
+    "title": "Week 7",
+    "section": "",
+    "text": "Topic\nVideo\nSlides\n\n\n\n\nRoot-finding (graphical method)\nLink\nLink\n\n\nBracketed methods (bisection)\nLink\nLink\n\n\nOpen methods (Newton-Raphson and secant)\nLink\nLink"
+  },
+  {
+    "objectID": "website/weeks/week_2.html",
+    "href": "website/weeks/week_2.html",
+    "title": "Week 2",
+    "section": "",
+    "text": "Course content will be added on a rolling basis\n\n\n\n\n\nTopic\nVideo\nSlides\n\n\n\n\nModeling framework\nLink\nLink\n\n\nApproaching problems\nLink\nLink\n\n\nFunctional programming\nLink\nLink\n\n\n\n\n\n\n\nHomework 1 (plus self-grading)",
     "crumbs": [
       "TME 310A",
       "Weekly materials",
-      "Week 6"
+      "Week 2"
     ]
   },
   {
-    "objectID": "website/weeks/week_6.html#materials",
-    "href": "website/weeks/week_6.html#materials",
-    "title": "Week 6",
+    "objectID": "website/weeks/week_2.html#materials",
+    "href": "website/weeks/week_2.html#materials",
+    "title": "Week 2",
     "section": "",
-    "text": "Topic\nVideo\nSlides\n\n\n\n\nEuler’s method\nLink\nLink\n\n\nEuler’s method example code\nLink\nLink",
+    "text": "Topic\nVideo\nSlides\n\n\n\n\nModeling framework\nLink\nLink\n\n\nApproaching problems\nLink\nLink\n\n\nFunctional programming\nLink\nLink",
     "crumbs": [
       "TME 310A",
       "Weekly materials",
-      "Week 6"
+      "Week 2"
     ]
   },
   {
-    "objectID": "website/weeks/week_3.html",
-    "href": "website/weeks/week_3.html",
-    "title": "Week 3",
+    "objectID": "website/weeks/week_2.html#assignments-due",
+    "href": "website/weeks/week_2.html#assignments-due",
+    "title": "Week 2",
     "section": "",
-    "text": "Course content will be added on a rolling basis\n\n\n\n\n\nTopic\nVideo\nSlides\n\n\n\n\nArrays\nLink\nLink\n\n\nArray logic\nLink\nLink\n\n\n\n\n\n\n\nHomework 2",
+    "text": "Homework 1 (plus self-grading)",
     "crumbs": [
       "TME 310A",
       "Weekly materials",
-      "Week 3"
+      "Week 2"
     ]
   },
   {
-    "objectID": "website/weeks/week_3.html#materials",
-    "href": "website/weeks/week_3.html#materials",
-    "title": "Week 3",
+    "objectID": "website/weeks/week_1.html",
+    "href": "website/weeks/week_1.html",
+    "title": "Week 1",
     "section": "",
-    "text": "Topic\nVideo\nSlides\n\n\n\n\nArrays\nLink\nLink\n\n\nArray logic\nLink\nLink",
+    "text": "Topic\nVideo\nSlides\n\n\n\n\nIntroduction\nN/A\nN/A\n\n\nPython basics\nLink\nN/A\n\n\n\n\n\n\nNone",
     "crumbs": [
       "TME 310A",
       "Weekly materials",
-      "Week 3"
+      "Week 1"
     ]
   },
   {
-    "objectID": "website/weeks/week_3.html#assignments-due",
-    "href": "website/weeks/week_3.html#assignments-due",
-    "title": "Week 3",
+    "objectID": "website/weeks/week_1.html#materials",
+    "href": "website/weeks/week_1.html#materials",
+    "title": "Week 1",
     "section": "",
-    "text": "Homework 2",
+    "text": "Topic\nVideo\nSlides\n\n\n\n\nIntroduction\nN/A\nN/A\n\n\nPython basics\nLink\nN/A",
     "crumbs": [
       "TME 310A",
       "Weekly materials",
-      "Week 3"
+      "Week 1"
     ]
   },
   {
-    "objectID": "website/weeks/week_10.html",
-    "href": "website/weeks/week_10.html",
-    "title": "Week 10",
+    "objectID": "website/weeks/week_1.html#assignments-due",
+    "href": "website/weeks/week_1.html#assignments-due",
+    "title": "Week 1",
+    "section": "",
+    "text": "None",
+    "crumbs": [
+      "TME 310A",
+      "Weekly materials",
+      "Week 1"
+    ]
+  },
+  {
+    "objectID": "website/weeks/week_11.html",
+    "href": "website/weeks/week_11.html",
+    "title": "Week 11",
     "section": "",
     "text": "Course content will be added on a rolling basis\n\n\n\n\n\nTopic\nVideo\nSlides"
   },
   {
-    "objectID": "website/weeks/week_10.html#materials",
-    "href": "website/weeks/week_10.html#materials",
-    "title": "Week 10",
+    "objectID": "website/weeks/week_11.html#materials",
+    "href": "website/weeks/week_11.html#materials",
+    "title": "Week 11",
     "section": "",
     "text": "Topic\nVideo\nSlides"
   },
   {
-    "objectID": "website/weeks/week_8.html",
-    "href": "website/weeks/week_8.html",
-    "title": "Week 8",
+    "objectID": "website/weeks/week_9.html",
+    "href": "website/weeks/week_9.html",
+    "title": "Week 9",
     "section": "",
     "text": "Course content will be added on a rolling basis\n\n\n\n\n\nTopic\nVideo\nSlides"
   },
   {
-    "objectID": "website/weeks/week_8.html#materials",
-    "href": "website/weeks/week_8.html#materials",
-    "title": "Week 8",
+    "objectID": "website/weeks/week_9.html#materials",
+    "href": "website/weeks/week_9.html#materials",
+    "title": "Week 9",
     "section": "",
     "text": "Topic\nVideo\nSlides"
   },
   {
-    "objectID": "website/project_02.html",
-    "href": "website/project_02.html",
-    "title": "Project Part 2 - basic pile-driving app",
+    "objectID": "website/project_01.html",
+    "href": "website/project_01.html",
+    "title": "Project Part 1 - group coordination",
     "section": "",
-    "text": "Assignment repo: project_02\n\n\nDemonstrate the coding skills learned in the course to develop a notebook that could be useful for engineering professionals working on pile-driving projects.\n\n\n\nYour goal for Part 2 of the course project is to build a basic pile-driving app from a jupyter notebook. In this context, “app” doesn’t mean software that runs on a mobile device, it means software that someone could use to perform a particular task on a computer if they have access to your notebook and supporting Python scripts. The notebook itself should have minimal visible code. The majority of your code should live in one or more Python script files that are imported into the notebook. This helps separate the inner workings of the app from the user’s experience (and also helps prevent accidental changes to the code).\nThe app’s user should be able to:\n\nChoose a pile-driving log file from within the app’s file directory.\nSee a plot of the pile’s driving log data vs. elevation.\nSee a plot of the pile’s estimated capacity vs. elevation.\nSee a short text summary of the pile’s final condition, including:\n\nPile ID\nPile tip elevation\nPile load capacity\n\n\nThe purpose of the app and instructions for using it should be clearly described in the notebook. Any engineer who understands the basics of pile-driving and has a basic understanding of Jupyter notebooks should be able to use the notebook and understand its output.\nAdditionally, the supporting code should be well-documented with docstrings. Any individual who understands Python should be able to view the supporting code and understand how each function works by reading the docstrings. At a minimum, docstrings should include:\n\nA description of the function’s purpose.\nA list of the function’s input parameters, including whether they have default values and what units the should be in.\nA list of the function’s output parameters, including what units they will be in.\n\n\n\nThe way a user chooses a pile-driving log file can be as simple as typing the file name into the right place in a code cell in your notebook. Prompting the user for input or adding graphical user interface elements is not necessary.\nYour assignment repository will include a small number of properly formatted pile-driving logs for you to test your notebook with. You should assume that app users will want to add additional pile-driving logs and select them with your app. You may assume that any pile-driving logs the user adds will follow the same format as the sample logs.\n\n\n\nThe driving log data should show the blows per minute (BPM) and blows per foot (BPF) vs. pile tip elevation. The elevation should be shown on the vertical axis BPM and BPF can be included on a single plot or on two separate plots, but the elevations for both datasets should align visually. Since the elevation needs to be on the vertical axis, this means that if two plots are used, the two plots should be side-by-side.\n\n\n\nSimilar to the driving log data, the pile capacity should be plotted vs. pile tip elevation with elevation shown on the vertical axis.\nThe pile’s capacity should be estimated using the driving log and the \\(S_o\\) equation. The \\(S_o\\) equation provides a method of estimating capacity from the hammer energy and blow count. It is a simplification of the rational pile formula and is based on the impulse-momentum principles of the hammer/pile system.\nThe \\(S_o\\) equation is:\n\\[ Q = \\frac{a H W}{S + S_o}\\]\nWhere:\n\\[S_o = \\sqrt[]{\\frac{a H W L}{2 A E}} \\]\nAnd:\n\\(Q\\) = Ultimate pile capacity in pounds\n\\(H\\) = Height of hammer fall in feet\n\\(W\\) = weight of hammer in pounds\n\\(a\\) = Hammer efficiency\n\\(L\\) = Total pile length in feet\n\\(A\\) = Pile cross-sectional area in square inches\n\\(E\\) = Modulus of elasticity of pile material in pounds per square inch\n\\(S\\) = Pile penetration (in feet) per blow\nUse the following pile and hammer parameters for your app’s calculations:\n\n\n\nParameter\nValue\n\n\n\n\n\\(W\\)\n20,000 pounds\n\n\n\\(a\\)\n0.4\n\n\n\\(L\\)\n150 feet\n\n\n\\(A\\)\n477 square inches\n\n\n\\(E\\)\n6,000,000 psi\n\n\n\n\n\n\nThe text summary of the pile’s final condition should include the pile ID, final tip elevation, and final load capacity. An example is shown below (note - 1 “kip” = 1,000 pounds):\nPile ID: B-14\nPile tip elevation: -134 feet\nPile load capacity: 899 kips\n\n\n\n\nYour project will be submitted by pushing your work to GitHub (same as the homework submission procedure). At a minimum, the submission should include:\n\nYour app’s notebook (one .ipynb file)\nYour app’s support script (one or more .py files)\nAt least one of the pile-driving log data files (one or more .csv files)\n\n\n\n\n\n\n\nYour submission will be graded by the instructor with the following rubric:\n\n\n\n\n\n\n\n\nCategory\nCriteria\nPoints\n\n\n\n\nData reading\nUsers have a way to change which pile-driving log is being analyzed by the app. The app will work for any properly formatted pile-driving log in the directory that the sample log files are in so that if a user adds additional logs, they can be analyzed by the app\n__ / 10\n\n\nApp instructions\nThe app instructions are clearly written such that an informed (i.e., familiar with pile-driving and Jupyter notebooks) user would be able to use the app.\n__ / 10\n\n\nPlots\nPlots of BPM, BPF, and pile load capacity are generated from the log. All plots use elevation as the vertical axis. The units of data being plotted are included and correct.\n__ / 10\n\n\nOutput\nA short summary of the pile analysis is displayed when the app is run. The output summary includes the correct units. The information in the summary is consistent with the pile log file and the plots.\n__ / 10\n\n\nSupport code\nThe functions that perform the app’s calculations are imported into the app from one or more supporting Python files. The functions are well documented (purpose, inputs and outputs described in a docstring).\n__ / 10",
+    "text": "Project Part 1 - group coordination\nYour project groups have been assigned - you can see your group number and fellow team members by looking at the People page on Canvas.\nThe task for Part 1 of the course project is simple:\n\nFind a time (using in-class time is encouraged!) to meet with your group and introduce yourselves to each other if you don’t already know one another.\nDecide amongst yourselves how your group will communicate and how often you plan to meet to work on the project for the rest of the quarter.\nWrite down what your group decided about communication and meeting frequency in the Canvas assignment text box.",
     "crumbs": [
       "TME 310A",
       "Project",
-      "Project Part 2 - basic pile-driving app"
+      "Project Part 1 - group coordination"
     ]
   },
   {
-    "objectID": "website/project_02.html#purpose",
-    "href": "website/project_02.html#purpose",
-    "title": "Project Part 2 - basic pile-driving app",
+    "objectID": "website/start_here.html",
+    "href": "website/start_here.html",
+    "title": "Start here",
     "section": "",
-    "text": "Demonstrate the coding skills learned in the course to develop a notebook that could be useful for engineering professionals working on pile-driving projects.",
-    "crumbs": [
-      "TME 310A",
-      "Project",
-      "Project Part 2 - basic pile-driving app"
-    ]
-  },
-  {
-    "objectID": "website/project_02.html#instructions",
-    "href": "website/project_02.html#instructions",
-    "title": "Project Part 2 - basic pile-driving app",
-    "section": "",
-    "text": "Your goal for Part 2 of the course project is to build a basic pile-driving app from a jupyter notebook. In this context, “app” doesn’t mean software that runs on a mobile device, it means software that someone could use to perform a particular task on a computer if they have access to your notebook and supporting Python scripts. The notebook itself should have minimal visible code. The majority of your code should live in one or more Python script files that are imported into the notebook. This helps separate the inner workings of the app from the user’s experience (and also helps prevent accidental changes to the code).\nThe app’s user should be able to:\n\nChoose a pile-driving log file from within the app’s file directory.\nSee a plot of the pile’s driving log data vs. elevation.\nSee a plot of the pile’s estimated capacity vs. elevation.\nSee a short text summary of the pile’s final condition, including:\n\nPile ID\nPile tip elevation\nPile load capacity\n\n\nThe purpose of the app and instructions for using it should be clearly described in the notebook. Any engineer who understands the basics of pile-driving and has a basic understanding of Jupyter notebooks should be able to use the notebook and understand its output.\nAdditionally, the supporting code should be well-documented with docstrings. Any individual who understands Python should be able to view the supporting code and understand how each function works by reading the docstrings. At a minimum, docstrings should include:\n\nA description of the function’s purpose.\nA list of the function’s input parameters, including whether they have default values and what units the should be in.\nA list of the function’s output parameters, including what units they will be in.\n\n\n\nThe way a user chooses a pile-driving log file can be as simple as typing the file name into the right place in a code cell in your notebook. Prompting the user for input or adding graphical user interface elements is not necessary.\nYour assignment repository will include a small number of properly formatted pile-driving logs for you to test your notebook with. You should assume that app users will want to add additional pile-driving logs and select them with your app. You may assume that any pile-driving logs the user adds will follow the same format as the sample logs.\n\n\n\nThe driving log data should show the blows per minute (BPM) and blows per foot (BPF) vs. pile tip elevation. The elevation should be shown on the vertical axis BPM and BPF can be included on a single plot or on two separate plots, but the elevations for both datasets should align visually. Since the elevation needs to be on the vertical axis, this means that if two plots are used, the two plots should be side-by-side.\n\n\n\nSimilar to the driving log data, the pile capacity should be plotted vs. pile tip elevation with elevation shown on the vertical axis.\nThe pile’s capacity should be estimated using the driving log and the \\(S_o\\) equation. The \\(S_o\\) equation provides a method of estimating capacity from the hammer energy and blow count. It is a simplification of the rational pile formula and is based on the impulse-momentum principles of the hammer/pile system.\nThe \\(S_o\\) equation is:\n\\[ Q = \\frac{a H W}{S + S_o}\\]\nWhere:\n\\[S_o = \\sqrt[]{\\frac{a H W L}{2 A E}} \\]\nAnd:\n\\(Q\\) = Ultimate pile capacity in pounds\n\\(H\\) = Height of hammer fall in feet\n\\(W\\) = weight of hammer in pounds\n\\(a\\) = Hammer efficiency\n\\(L\\) = Total pile length in feet\n\\(A\\) = Pile cross-sectional area in square inches\n\\(E\\) = Modulus of elasticity of pile material in pounds per square inch\n\\(S\\) = Pile penetration (in feet) per blow\nUse the following pile and hammer parameters for your app’s calculations:\n\n\n\nParameter\nValue\n\n\n\n\n\\(W\\)\n20,000 pounds\n\n\n\\(a\\)\n0.4\n\n\n\\(L\\)\n150 feet\n\n\n\\(A\\)\n477 square inches\n\n\n\\(E\\)\n6,000,000 psi\n\n\n\n\n\n\nThe text summary of the pile’s final condition should include the pile ID, final tip elevation, and final load capacity. An example is shown below (note - 1 “kip” = 1,000 pounds):\nPile ID: B-14\nPile tip elevation: -134 feet\nPile load capacity: 899 kips",
-    "crumbs": [
-      "TME 310A",
-      "Project",
-      "Project Part 2 - basic pile-driving app"
-    ]
-  },
-  {
-    "objectID": "website/project_02.html#submission",
-    "href": "website/project_02.html#submission",
-    "title": "Project Part 2 - basic pile-driving app",
-    "section": "",
-    "text": "Your project will be submitted by pushing your work to GitHub (same as the homework submission procedure). At a minimum, the submission should include:\n\nYour app’s notebook (one .ipynb file)\nYour app’s support script (one or more .py files)\nAt least one of the pile-driving log data files (one or more .csv files)",
-    "crumbs": [
-      "TME 310A",
-      "Project",
-      "Project Part 2 - basic pile-driving app"
-    ]
-  },
-  {
-    "objectID": "website/project_02.html#grading-rubric",
-    "href": "website/project_02.html#grading-rubric",
-    "title": "Project Part 2 - basic pile-driving app",
-    "section": "",
-    "text": "Your submission will be graded by the instructor with the following rubric:\n\n\n\n\n\n\n\n\nCategory\nCriteria\nPoints\n\n\n\n\nData reading\nUsers have a way to change which pile-driving log is being analyzed by the app. The app will work for any properly formatted pile-driving log in the directory that the sample log files are in so that if a user adds additional logs, they can be analyzed by the app\n__ / 10\n\n\nApp instructions\nThe app instructions are clearly written such that an informed (i.e., familiar with pile-driving and Jupyter notebooks) user would be able to use the app.\n__ / 10\n\n\nPlots\nPlots of BPM, BPF, and pile load capacity are generated from the log. All plots use elevation as the vertical axis. The units of data being plotted are included and correct.\n__ / 10\n\n\nOutput\nA short summary of the pile analysis is displayed when the app is run. The output summary includes the correct units. The information in the summary is consistent with the pile log file and the plots.\n__ / 10\n\n\nSupport code\nThe functions that perform the app’s calculations are imported into the app from one or more supporting Python files. The functions are well documented (purpose, inputs and outputs described in a docstring).\n__ / 10",
-    "crumbs": [
-      "TME 310A",
-      "Project",
-      "Project Part 2 - basic pile-driving app"
-    ]
-  },
-  {
-    "objectID": "website/project_description.html",
-    "href": "website/project_description.html",
-    "title": "Course Project",
-    "section": "",
-    "text": "Project groups will be assigned randomly by the instructor. Each group will have 3 to 4 students.\n\n\n\nThe project topic is modeling the installation of driven piles with open-ended diesel hammers (the topic of Homework 3, Problem 1).\nEach team will build a jupyter notebook interactive app to predict the capacity of a driven pile based on data collected during installation.\nThere will be a baseline app to be delivered in Part 2 and then the groups will choose additional features to include to enhance their app for Part 3.\n\n\n\nThe project will have three deliverables:\n\nGroup coordination (due week 5)\nBasic pile-driving app (due week 7)\nEnhanced pile-driving app (due finals week)",
-    "crumbs": [
-      "TME 310A",
-      "Project",
-      "Course Project"
-    ]
-  },
-  {
-    "objectID": "website/project_description.html#project-groups",
-    "href": "website/project_description.html#project-groups",
-    "title": "Course Project",
-    "section": "",
-    "text": "Project groups will be assigned randomly by the instructor. Each group will have 3 to 4 students.",
-    "crumbs": [
-      "TME 310A",
-      "Project",
-      "Course Project"
-    ]
-  },
-  {
-    "objectID": "website/project_description.html#topic",
-    "href": "website/project_description.html#topic",
-    "title": "Course Project",
-    "section": "",
-    "text": "The project topic is modeling the installation of driven piles with open-ended diesel hammers (the topic of Homework 3, Problem 1).\nEach team will build a jupyter notebook interactive app to predict the capacity of a driven pile based on data collected during installation.\nThere will be a baseline app to be delivered in Part 2 and then the groups will choose additional features to include to enhance their app for Part 3.",
-    "crumbs": [
-      "TME 310A",
-      "Project",
-      "Course Project"
-    ]
-  },
-  {
-    "objectID": "website/project_description.html#deliverables",
-    "href": "website/project_description.html#deliverables",
-    "title": "Course Project",
-    "section": "",
-    "text": "The project will have three deliverables:\n\nGroup coordination (due week 5)\nBasic pile-driving app (due week 7)\nEnhanced pile-driving app (due finals week)",
-    "crumbs": [
-      "TME 310A",
-      "Project",
-      "Course Project"
-    ]
-  },
-  {
-    "objectID": "website/instructor.html",
-    "href": "website/instructor.html",
-    "title": "Instructor introduction",
-    "section": "",
-    "text": "My name is Lorne Arnold. I like to sail, listen to music, and take naps. Before I started teaching, I worked as a geotechnical engineer for many years, designing foundations for buildings, bridges, and ports. I’m looking forward to getting to know you all this term.\n\n\n\nI am here to guide you as you learn and practice new skills. We will spend a lot of time writing code together and learning from one another. I hope you will all be generous in helping one another during this class. Engineering is very collaborative, so that is an extra skill to practice.\nOnline Availability: I’m online between 8 AM and 5 PM most days, and I’ll try to keep Canvas and GitHub open when I’m not otherwise engaged. From time to time, I will check in after 5 PM, but family obligations will make evening responses from me hit or miss. You can expect to get responses to questions from me in less than one day. Graded quizzes and projects will be typically be returned in less than one week.\nIf you’re looking for help outside of the course’s normal office hours, you can book a meeting with me using my booking link.\nFeedback: I care a lot about improving my teaching. Teaching is not a formula to learn, so I am still working on my own methods in the classroom. I would love to hear from you frequently about how things are going so I can improve over time. Send me a note, a chat, or catch me after class if you have ideas for improvements.\nUnderstanding and flexibility: Every quarter, some students will encounter unavoidable problems that prevent them from completing course assignments on time. The course grading is structured to be fairly flexible. For example, we will drop your lowest in-person quiz score. Let me know if something comes up, and do the best you can to stay on track.",
+    "text": "Start here\nGo through this short “Start here” module for information about the course, the instructor, and being a successful student. At the very least, read the syllabus!\nSyllabus\nInstructor and my role in this course\nAccessibility and accommodations\nBeing a successful student\nGrading policies\nHomework format\nCoding platforms",
     "crumbs": [
       "TME 310A",
       "Course information",
-      "Instructor introduction"
+      "Start here"
     ]
   },
   {
-    "objectID": "website/instructor.html#my-role-in-this-course",
-    "href": "website/instructor.html#my-role-in-this-course",
-    "title": "Instructor introduction",
+    "objectID": "website/homework_format.html",
+    "href": "website/homework_format.html",
+    "title": "Homework format",
     "section": "",
-    "text": "I am here to guide you as you learn and practice new skills. We will spend a lot of time writing code together and learning from one another. I hope you will all be generous in helping one another during this class. Engineering is very collaborative, so that is an extra skill to practice.\nOnline Availability: I’m online between 8 AM and 5 PM most days, and I’ll try to keep Canvas and GitHub open when I’m not otherwise engaged. From time to time, I will check in after 5 PM, but family obligations will make evening responses from me hit or miss. You can expect to get responses to questions from me in less than one day. Graded quizzes and projects will be typically be returned in less than one week.\nIf you’re looking for help outside of the course’s normal office hours, you can book a meeting with me using my booking link.\nFeedback: I care a lot about improving my teaching. Teaching is not a formula to learn, so I am still working on my own methods in the classroom. I would love to hear from you frequently about how things are going so I can improve over time. Send me a note, a chat, or catch me after class if you have ideas for improvements.\nUnderstanding and flexibility: Every quarter, some students will encounter unavoidable problems that prevent them from completing course assignments on time. The course grading is structured to be fairly flexible. For example, we will drop your lowest in-person quiz score. Let me know if something comes up, and do the best you can to stay on track.",
+    "text": "Homework assignments will be distributed through GitHub Classroom in the form of Jupyter Notebooks. In general, there will be 3 to 4 problems to solve in each assignment. The problems are intended to take 15 to 30 minutes of your time. Taking into consideration the coding skills and concepts presented throughout the course, you should expect the complexity of the problems to increase throughout the quarter.\n\n\nEach problem contains four sub-problems, which are based on the four phases of problem solving proposed by G. Polya.\n\nSummarize\nPlan\nCode\nReflect\n\nThree of the sections (1, 2, and 4) ask for text responses and one (3) asks for Python code.\n\n\nIn general, the summarize sub-problem will prompt you to:\n\nSummarize the goal(s) of the problem in your own words.\n\nAnswers to this sub-problem should be written in complete sentences and accurately reflect the goal(s) from the problem description. This is where students can demonstrate their understanding of the problem.\n\n\n\nIn general, the plan sub-problem will prompt you to:\n\nDescribe your plan to solve the problem.\n\nAnswers to this sub-problem may be in complete sentences, but a bullet list of steps or some combination of sentences and bullets will work well, too. Whatever the form, the plan should give enough detail to outline the code you’ll write to solve the problem.\n\n\n\nThis sub-problem is where you’re asked to write the Python code that will solve the problem. You can write all the code in the assignment notebook (recommended towards the beginning of the course) or in separate Python scripts that you import into your assignment notebook (we’ll do this towards the end of the course).\nIf your plan is well-written, simply copying it into your script (commented out, of course) will take you a long way toward a successful code solution. Feel free to ask GitHub Copilot “help me implement this plan”. This will often result in a good first pass at your coding solution.\n\n\n\nThe specific text of this sub-problem will vary, so please read it carefully. In general, the plan sub-problem will ask:\n\nLooking back at your code and the resulting output, reflect on whether your code achieved the problem goal(s). To the extent the problem models a physical system, how realistic does the behavior seem? Are there any changes you would make to your approach if you were to solve this problem again (e.g., to make your code more re-usable or to avoid dead ends)?\n\n\n\n\n\nAs described in the Grading policies page, you’ll be responsible for grading your own homework assignments. Use the rubric below to grade your homework. I’ll use the same rubric for check problems I grade.\n\n\n\n\n\n\n\n\n\n\nCategory\n2 Points\n1 Point\n0 Points\nScore\n\n\n\n\nSummarize\nThe problem goals are summarized accurately. The summary is written in complete sentences.\nProblem goals are inaccurately summarized or the summary is not in complete sentences.\nMissing or unclear summary\n__ / 2\n\n\nPlan\nA reasonable plan to solve the problem is described. The description provides enough detail for a coding outline.\nThe proposed plan contains logical errors or insufficient detail to start a coding outline.\nMissing or unclear plan\n__ / 2\n\n\nCode\nThe code solves the problem. The code runs without raising errors.\nThe code provides a partial solution to the problem or raises errors when executed\nMissing or irrelevant code\n__ / 2\n\n\nReflect\nThe reflection is thoughtful, relevant, and written in complete sentences. Problem-specific content is addressed.\nThe reflection is marginally relevant or not in complete sentences.\nMissing or unclear reflection\n__ / 2\n\n\nTotal\n\n\n\n__ / 8",
     "crumbs": [
       "TME 310A",
       "Course information",
-      "Instructor introduction"
+      "Homework format"
     ]
   },
   {
-    "objectID": "website/accessibility_accommodations.html",
-    "href": "website/accessibility_accommodations.html",
-    "title": "Accessibility and Accommodations",
+    "objectID": "website/homework_format.html#anatomy-of-a-problem",
+    "href": "website/homework_format.html#anatomy-of-a-problem",
+    "title": "Homework format",
     "section": "",
-    "text": "Accessibility and Accommodations\nIn addition to services offered by UW Tacoma’s Disability Resources for Students (DRS), I will attempt to make every effort to adjust assignments/materials to meet the needs of students who need alternative forms of access.\nIf you find yourself in need of additional assistance, please feel free to contact me directly or arrange to attend my virtual office hours.\nDRS Website: http://www.tacoma.uw.edu/drsuwt",
+    "text": "Each problem contains four sub-problems, which are based on the four phases of problem solving proposed by G. Polya.\n\nSummarize\nPlan\nCode\nReflect\n\nThree of the sections (1, 2, and 4) ask for text responses and one (3) asks for Python code.\n\n\nIn general, the summarize sub-problem will prompt you to:\n\nSummarize the goal(s) of the problem in your own words.\n\nAnswers to this sub-problem should be written in complete sentences and accurately reflect the goal(s) from the problem description. This is where students can demonstrate their understanding of the problem.\n\n\n\nIn general, the plan sub-problem will prompt you to:\n\nDescribe your plan to solve the problem.\n\nAnswers to this sub-problem may be in complete sentences, but a bullet list of steps or some combination of sentences and bullets will work well, too. Whatever the form, the plan should give enough detail to outline the code you’ll write to solve the problem.\n\n\n\nThis sub-problem is where you’re asked to write the Python code that will solve the problem. You can write all the code in the assignment notebook (recommended towards the beginning of the course) or in separate Python scripts that you import into your assignment notebook (we’ll do this towards the end of the course).\nIf your plan is well-written, simply copying it into your script (commented out, of course) will take you a long way toward a successful code solution. Feel free to ask GitHub Copilot “help me implement this plan”. This will often result in a good first pass at your coding solution.\n\n\n\nThe specific text of this sub-problem will vary, so please read it carefully. In general, the plan sub-problem will ask:\n\nLooking back at your code and the resulting output, reflect on whether your code achieved the problem goal(s). To the extent the problem models a physical system, how realistic does the behavior seem? Are there any changes you would make to your approach if you were to solve this problem again (e.g., to make your code more re-usable or to avoid dead ends)?",
     "crumbs": [
       "TME 310A",
       "Course information",
-      "Accessibility and Accommodations"
+      "Homework format"
     ]
+  },
+  {
+    "objectID": "website/homework_format.html#grading-rubric",
+    "href": "website/homework_format.html#grading-rubric",
+    "title": "Homework format",
+    "section": "",
+    "text": "As described in the Grading policies page, you’ll be responsible for grading your own homework assignments. Use the rubric below to grade your homework. I’ll use the same rubric for check problems I grade.\n\n\n\n\n\n\n\n\n\n\nCategory\n2 Points\n1 Point\n0 Points\nScore\n\n\n\n\nSummarize\nThe problem goals are summarized accurately. The summary is written in complete sentences.\nProblem goals are inaccurately summarized or the summary is not in complete sentences.\nMissing or unclear summary\n__ / 2\n\n\nPlan\nA reasonable plan to solve the problem is described. The description provides enough detail for a coding outline.\nThe proposed plan contains logical errors or insufficient detail to start a coding outline.\nMissing or unclear plan\n__ / 2\n\n\nCode\nThe code solves the problem. The code runs without raising errors.\nThe code provides a partial solution to the problem or raises errors when executed\nMissing or irrelevant code\n__ / 2\n\n\nReflect\nThe reflection is thoughtful, relevant, and written in complete sentences. Problem-specific content is addressed.\nThe reflection is marginally relevant or not in complete sentences.\nMissing or unclear reflection\n__ / 2\n\n\nTotal\n\n\n\n__ / 8",
+    "crumbs": [
+      "TME 310A",
+      "Course information",
+      "Homework format"
+    ]
+  },
+  {
+    "objectID": "website/lectures/10_root-finding/slides_root-finding.html#roots-of-equations",
+    "href": "website/lectures/10_root-finding/slides_root-finding.html#roots-of-equations",
+    "title": "TME 310 - Computational Physical Modeling",
+    "section": "Roots of equations",
+    "text": "Roots of equations\n\nA root of an equation is a value of the independent variable that makes the equation equal to zero.\n\n\nFor example, the root of a linear equation with the form\n\\[ y = mx + b\\]\n\n\nis\n\\[-\\frac{b}{m}\\]"
+  },
+  {
+    "objectID": "website/lectures/10_root-finding/slides_root-finding.html#non-trivial-root-finding",
+    "href": "website/lectures/10_root-finding/slides_root-finding.html#non-trivial-root-finding",
+    "title": "TME 310 - Computational Physical Modeling",
+    "section": "Non-trivial root-finding",
+    "text": "Non-trivial root-finding\nWhat about more complicated examples?\n\nWe have a few options:\n\n\nGraphical methods\nBracketed methods\nOpen methods"
+  },
+  {
+    "objectID": "website/lectures/10_root-finding/slides_root-finding.html#graphical-methods",
+    "href": "website/lectures/10_root-finding/slides_root-finding.html#graphical-methods",
+    "title": "TME 310 - Computational Physical Modeling",
+    "section": "Graphical methods",
+    "text": "Graphical methods\nA brute force solution:\n\nPlot the function\nLook for where it equals zero"
+  },
+  {
+    "objectID": "website/lectures/10_root-finding/slides_root-finding.html#graphical-method",
+    "href": "website/lectures/10_root-finding/slides_root-finding.html#graphical-method",
+    "title": "TME 310 - Computational Physical Modeling",
+    "section": "Graphical method",
+    "text": "Graphical method"
+  },
+  {
+    "objectID": "website/lectures/10_root-finding/slides_root-finding.html#pros-and-cons-graphical-methods",
+    "href": "website/lectures/10_root-finding/slides_root-finding.html#pros-and-cons-graphical-methods",
+    "title": "TME 310 - Computational Physical Modeling",
+    "section": "Pros and cons (graphical methods)",
+    "text": "Pros and cons (graphical methods)\n\nPros\n\n\nReliable\n\n\nCons\n\n\nSlow\nImprecise\n\n\nGraphical methods are a great check for faster, automated methods."
+  },
+  {
+    "objectID": "website/lectures/10_root-finding/slides_open_methods.html#root-finding-methods",
+    "href": "website/lectures/10_root-finding/slides_open_methods.html#root-finding-methods",
+    "title": "TME 310 - Computational Physical Modeling",
+    "section": "Root-finding methods",
+    "text": "Root-finding methods\nWe have a few options:\n\nGraphical methods\nBracketed methods\nOpen methods\n\nNewton-Raphson\nSecant method"
+  },
+  {
+    "objectID": "website/lectures/10_root-finding/slides_open_methods.html#open-methods",
+    "href": "website/lectures/10_root-finding/slides_open_methods.html#open-methods",
+    "title": "TME 310 - Computational Physical Modeling",
+    "section": "Open methods",
+    "text": "Open methods\nAlgorithms for searching from a single starting point\n\nNewton-Raphson:\n\nChoose a starting point.\nLook for the root where a line tangent (i.e., local derivative) to the function intersects horizontal axis.\nRepeat until tolerance is satisfied.\n\nSecant method\n\nSame thing, but with a secant line from an approximate derivative."
+  },
+  {
+    "objectID": "website/lectures/10_root-finding/slides_open_methods.html#newton-raphson",
+    "href": "website/lectures/10_root-finding/slides_open_methods.html#newton-raphson",
+    "title": "TME 310 - Computational Physical Modeling",
+    "section": "Newton-Raphson",
+    "text": "Newton-Raphson"
+  },
+  {
+    "objectID": "website/lectures/10_root-finding/slides_open_methods.html#pros-and-cons-newton-raphson",
+    "href": "website/lectures/10_root-finding/slides_open_methods.html#pros-and-cons-newton-raphson",
+    "title": "TME 310 - Computational Physical Modeling",
+    "section": "Pros and cons (Newton-Raphson)",
+    "text": "Pros and cons (Newton-Raphson)\n\nPros\n\n\nFast convergence (faster than bisection)\nSimple\nUnbounded\n\n\nCons\n\n\nNeed to know the derivative!\nCan’t start where derivative is zero\nIt can get caught in a local maximum/minimum"
+  },
+  {
+    "objectID": "website/lectures/10_root-finding/slides_open_methods.html#local-maximaminima-problem",
+    "href": "website/lectures/10_root-finding/slides_open_methods.html#local-maximaminima-problem",
+    "title": "TME 310 - Computational Physical Modeling",
+    "section": "Local maxima/minima problem",
+    "text": "Local maxima/minima problem"
+  },
+  {
+    "objectID": "website/lectures/10_root-finding/slides_open_methods.html#secant-method",
+    "href": "website/lectures/10_root-finding/slides_open_methods.html#secant-method",
+    "title": "TME 310 - Computational Physical Modeling",
+    "section": "Secant method",
+    "text": "Secant method"
+  },
+  {
+    "objectID": "website/lectures/10_root-finding/slides_open_methods.html#pros-and-cons-secant",
+    "href": "website/lectures/10_root-finding/slides_open_methods.html#pros-and-cons-secant",
+    "title": "TME 310 - Computational Physical Modeling",
+    "section": "Pros and cons (secant)",
+    "text": "Pros and cons (secant)\n\nPros\n\n\nSame as Newton-Raphson, plus…\nDon’t need to know the derivative\nLess strict about starting points\n\n\nCons\n\n\nIt can get caught in a local maximum/minimum\n\n\nSecant method is great if local maxima/minima are not a concern"
   },
   {
     "objectID": "website/lectures/03_modeling_framework/03_modeling_framework.html#modeling-framework",
