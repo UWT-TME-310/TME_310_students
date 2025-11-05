@@ -396,9 +396,9 @@ window.Quarto = {
 <span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Repeat with new bounds</span></span>
 <span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>x_bs <span class="op">=</span> xg</span>
-<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"The Bisection method solution (to tolerance of </span><span class="sc">{</span>tol<span class="sc">:.0e}</span><span class="ss"> for the root is </span><span class="sc">{</span>x_bs<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"The Bisection method solution (to tolerance of </span><span class="sc">{</span>tol<span class="sc">:.0e}</span><span class="ss">) for the root is </span><span class="sc">{</span>x_bs<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>The Bisection method solution (to tolerance of 1e-14 for the root is 4.6415888336127775</code></pre>
+<pre><code>The Bisection method solution (to tolerance of 1e-14) for the root is 4.6415888336127775</code></pre>
 </div>
 </div>
 <div id="7d9dadb5" class="cell" data-execution_count="3">
@@ -422,9 +422,9 @@ window.Quarto = {
 <span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Repeat with new guess</span></span>
 <span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>x_nr <span class="op">=</span> x</span>
-<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"The Newton-Raphson solution (to tolerance of </span><span class="sc">{</span>tol<span class="sc">:.0e}</span><span class="ss"> for the root is </span><span class="sc">{</span>x_nr<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"The Newton-Raphson solution (to tolerance of </span><span class="sc">{</span>tol<span class="sc">:.0e}</span><span class="ss">) for the root is </span><span class="sc">{</span>x_nr<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>The Newton-Raphson solution (to tolerance of 1e-14 for the root is 4.641588833612778</code></pre>
+<pre><code>The Newton-Raphson solution (to tolerance of 1e-14) for the root is 4.641588833612778</code></pre>
 </div>
 </div>
 <div id="a8e84072" class="cell" data-execution_count="4">
@@ -449,9 +449,9 @@ window.Quarto = {
 <span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Repeat with new guess</span></span>
 <span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a>x_sm <span class="op">=</span> x</span>
-<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"The Secant method solution (to tolerance of </span><span class="sc">{</span>tol<span class="sc">:.0e}</span><span class="ss"> for the root is </span><span class="sc">{</span>x_sm<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"The Secant method solution (to tolerance of </span><span class="sc">{</span>tol<span class="sc">:.0e}</span><span class="ss">) for the root is </span><span class="sc">{</span>x_sm<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>The Secant method solution (to tolerance of 1e-14 for the root is 4.641588833612779</code></pre>
+<pre><code>The Secant method solution (to tolerance of 1e-14) for the root is 4.641588833612779</code></pre>
 </div>
 </div>
 <p>With a solution from all three root-finding methods, we could compare to see which approximation for the root is best by evaluating <span class="math inline">\(f(x)\)</span> for each guess. But since all the methods worked and were using the same tolerance, there’s little reason to expect the differences to be meaningful. What <em>would</em> be meaningful would be to evaluate which method took the most iterations… Can you modify the code to perform that check?</p>
