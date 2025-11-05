@@ -14,3 +14,4 @@ The table below contains some example scripts using basic course concepts.
 | [Dartboard approximation of $\pi$](/examples/07_dartboard_pi.ipynb) | Convergence and error tolerance example with plots |
 | [Homework 3 notes](/examples/hw03_grading_notes.ipynb) | My notes on some of the common approaches I saw while grading homework 3. |
 | [Homework 4 notes](/examples/hw04_grading_notes.ipynb) | My notes on things I observed while grading homework 4. |
+| [Root-finding example code](../../examples/root_finding_examples.ipynb) | |

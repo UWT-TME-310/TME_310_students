@@ -5,6 +5,10 @@ Course content will be added on a rolling basis
 
 | Topic | Video | Slides|
 |----|----|----|
-|   |   |   |    
+| Root-finding (graphical method) | [Link](https://uw.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=2aeae328-6722-42a7-949c-b3860147c306)  |  [Link](../../website/lectures/10_root-finding/slides_root-finding.qmd) | 
+| Bracketed methods (bisection) | [Link](https://uw.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=b33686e8-eae9-40a0-bbcc-b3860147c2c0)  | [Link](../../website/lectures/10_root-finding/slides_bisection.qmd)  |  
+| Open methods (Newton-Raphson and secant) |  [Link](https://uw.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=cd48e154-0ed2-454a-b6ad-b3860147c299) |  [Link](../../website/lectures/10_root-finding/slides_open_methods.qmd) |    
 
-## Assignments due
+[Example code](../../examples/root_finding_examples.ipynb)
+
+<!-- ## Assignments due -->

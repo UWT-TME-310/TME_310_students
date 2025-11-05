@@ -1,0 +1,81 @@
+---
+title: "TME 310 - Computational Physical Modeling"
+subtitle: "Root-finding"
+author: 
+  - "Lorne Arnold, PhD, PE"
+institute: "University of Washington Tacoma"
+format:
+  revealjs:
+      incremental: true
+revealjs-plugins:
+  - pointer
+---
+## Roots of equations 
+
+:::{.fragment}
+A **root** of an equation is a value of the **independent variable** that makes the equation equal to zero.
+
+:::
+
+:::{.fragment}
+For example, the root of a linear equation with the form
+
+$$ y = mx + b$$
+
+:::
+
+:::{.fragment}
+is
+
+$$-\frac{b}{m}$$
+
+:::
+
+## Non-trivial root-finding
+
+What about more complicated examples?
+
+::: {.fragment }
+We have a few options:
+:::
+
+1. Graphical methods 
+2. Bracketed methods
+3. Open methods
+
+## Graphical methods
+
+A brute force solution:
+
+* Plot the function
+* Look for where it equals zero
+
+
+## Graphical method
+::: {.r-stack}
+![](graphical_0.png){.absolute top=50 left=100 height="700"}
+
+![](graphical_1.png){.fragment .absolute top=50 left=100 height="700"}
+
+:::
+
+
+## Pros and cons (graphical methods)
+
+::: {.fragment }
+**Pros**
+:::
+
+* Reliable
+
+::: {.fragment }
+**Cons**
+
+:::
+
+* Slow
+* Imprecise
+
+::: {.fragment }
+Graphical methods are a great *check* for faster, automated methods.
+:::
