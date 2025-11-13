@@ -29,6 +29,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
+<link href="../website/project_02.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -80,7 +81,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../index.html">TME 310A</a></li><li class="breadcrumb-item"><a href="../website/project_description.html">Project</a></li><li class="breadcrumb-item"><a href="../website/project_03.html">Project Part 3 - enhanced pile-driving app</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -233,13 +234,13 @@ ul.task-list li input[type="checkbox"] {
           <li class="px-0"><hr class="sidebar-divider hi "></li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
  <span class="menu-text">Project</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 ">  
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../website/project_description.html" class="sidebar-item-text sidebar-link">
@@ -256,6 +257,12 @@ ul.task-list li input[type="checkbox"] {
   <div class="sidebar-item-container"> 
   <a href="../website/project_02.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Project Part 2 - basic pile-driving app</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../website/project_03.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Project Part 3 - enhanced pile-driving app</span></a>
   </div>
 </li>
       </ul>
@@ -286,40 +293,171 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#project-part-3---enhanced-pile-driving-app" id="toc-project-part-3---enhanced-pile-driving-app" class="nav-link active" data-scroll-target="#project-part-3---enhanced-pile-driving-app">Project Part 3 - enhanced pile-driving app</a></li>
+  <li><a href="#project-part-3---enhanced-pile-driving-app" id="toc-project-part-3---enhanced-pile-driving-app" class="nav-link active" data-scroll-target="#project-part-3---enhanced-pile-driving-app">Project Part 3 - enhanced pile-driving app</a>
+  <ul class="collapse">
+  <li><a href="#purpose" id="toc-purpose" class="nav-link" data-scroll-target="#purpose">Purpose</a></li>
+  <li><a href="#building-on-part-2" id="toc-building-on-part-2" class="nav-link" data-scroll-target="#building-on-part-2">Building on Part 2</a>
+  <ul class="collapse">
+  <li><a href="#enhancement-options" id="toc-enhancement-options" class="nav-link" data-scroll-target="#enhancement-options">Enhancement Options</a></li>
+  </ul></li>
+  <li><a href="#requirements" id="toc-requirements" class="nav-link" data-scroll-target="#requirements">Requirements</a>
+  <ul class="collapse">
+  <li><a href="#user-input" id="toc-user-input" class="nav-link" data-scroll-target="#user-input">User “input”</a></li>
+  <li><a href="#documentation" id="toc-documentation" class="nav-link" data-scroll-target="#documentation">Documentation</a></li>
+  <li><a href="#validation" id="toc-validation" class="nav-link" data-scroll-target="#validation">Validation</a></li>
+  <li><a href="#figures" id="toc-figures" class="nav-link" data-scroll-target="#figures">Figures</a></li>
+  </ul></li>
+  <li><a href="#submission" id="toc-submission" class="nav-link" data-scroll-target="#submission">Submission</a></li>
+  </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/UWT-TME-310/TME_310_students/blob/main/website/project_03.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="https://github.com/UWT-TME-310/TME_310_students/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../index.html">TME 310A</a></li><li class="breadcrumb-item"><a href="../website/project_description.html">Project</a></li><li class="breadcrumb-item"><a href="../website/project_03.html">Project Part 3 - enhanced pile-driving app</a></li></ol></nav></header>
 
 
 
 
 <section id="project-part-3---enhanced-pile-driving-app" class="level1">
 <h1>Project Part 3 - enhanced pile-driving app</h1>
-<div class="callout callout-style-default callout-caution callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>This page is incomplete. Details coming soon.</p>
-</div>
-</div>
-<!-- Purpose
+<!-- Assignment repo: [project_03]() -->
+<section id="purpose" class="level2">
+<h2 class="anchored" data-anchor-id="purpose">Purpose</h2>
+<p>Demonstrate the coding skills learned in the course to develop a notebook that could be <strong>useful for engineering professionals</strong> working on pile-driving projects.</p>
+</section>
+<section id="building-on-part-2" class="level2">
+<h2 class="anchored" data-anchor-id="building-on-part-2">Building on Part 2</h2>
+<p>Your goal for Part 3 of the course project is to enhance the a basic pile-driving app you developed in Part 2 (you are also allowed to use the Part 2 example submission as a starting point for Part 3). The app will produce an engineering report on a specific aspect of pile-driving based on the enhancement option selected by your group.</p>
+<p>There are several ways that the basic pile-driving app could be enhanced. Descriptions of suggested enhancements are listed below. Your project group should choose one of the suggested enhancements below OR propose an enhancement to be approved by your instructor.</p>
+<section id="enhancement-options" class="level3">
+<h3 class="anchored" data-anchor-id="enhancement-options">Enhancement Options</h3>
+<!-- 1. **Audio-video saximeter**
+   
+   A Saximeter is an instrument that uses sound to determine the timing of hammer blows during pile-driving. 
+   Traditionally, a field engineer uses a saximeter to record blows per minute (BPM) while watching for the pile to have been driven a certain length (usually one foot). 
+   By manually pressing a button on the saximeter, the field engineer records the time between 1-foot driving intervals, which the saximeter uses (in combination with its audio-based record of blows) to calculate blows per foot (BPF).
 
-Instructions
+   The *Audio-video saximeter* enhancement will involve using a video of a pile-driving installation to create the same data as are traditionally captured by the field engineer and saximeter.
+   The data interpreted from the video, will produce a pile-driving log and the associated plots from Part 2.
 
-Submission
+   The focus of this option is the audio/video analysis. -->
+<ol type="1">
+<li><p><strong>Diesel hammer combustion</strong></p>
+<p>Open-ended diesel hammers consist of a single cylinder containing a heavy piston called a ram. During operation, fuel ignition launches the ram up into the air. When the ram falls back down, it compresses and heats an air/fuel mixture in the piston, reaching its ignition temperature and starting the process over again.</p>
+<p>The <em>Diesel hammer combustion</em> enhancement will involve creating a model of the combustion process - the increasing pressure and temperature due to the falling piston, the energy released by fuel ignition, and the resulting displacement of the piston. The model will provide a means of calculating the fuel needed to achieve different piston heights. Combined with a pile-driving log containing blows per minute (BPM) and blows per foot (BPF), the model will show the fuel consumption during the pile-driving process. <strong>A mathematical framework for the combustion model will be provided to you.</strong></p>
+<p>The focus of this option is the fuel consumption and carbon emissions for pile installation.</p></li>
+<li><p><strong>Pile Driving Analysis (PDA) from instrumentation</strong></p>
+<p>Pile Driving Analysis (PDA) is the name of a specific set of instruments and calculations used to measure wave transmission through a pile as it’s driven and estimate its capacity. Generally, PDA is performed on only a small percentage of piles in a given project because it’s expensive to perform and slows down the construction (because of the instrument installation). PDA data contains measurements of <strong>strain</strong> and <strong>acceleration</strong> signals that can be used to calculate the force and speed of pressure waves traveling through the pile. This data can be interpreted to determine an estimate of the pile’s capacity, the maximum tension and compression stresses in the pile, and detect whether the pile has been damaged.</p>
+<p>The <em>PDA instrumentation</em> enhancement will use data from one or more blows at the end of driving to produce a capacity estimate to compare to the estimate from a pile-driving log. Additionally, the pile stresses and damage indications (if any) will be reported and compared to the material strength as a quality control check on the pile’s structural integrity. <strong>A mathematical framework for PDA analysis will be provided to you.</strong></p>
+<p>The focus of this option is quality control and capacity verification.</p></li>
+<li><p><strong>Environmental noise assessment</strong></p>
+<p>Pile-driving is a noisy process. The noise from pile-driving can be a nuisance to neighboring properties and disturbing (and even lethal) to wildlife. Sound from pile-driving comes from the impact between the pile and hammer and from the deformation of the pile as compression and tension waves travel through the pile. The noise from the waves traveling through the pile are particularly important under water, where they have the most impact on wildlife.</p>
+<p>The <em>Environmental noise assessment</em> enhancement will use the PDA strain and velocity measurements to estimate the volume in air and water from a single blow to the pile. The noise attenuation with distance from the pile will be compared to different thresholds, providing an estimate for the distance where various noise issues are of concern. Combined with a pile-driving log with blows per minute (BPM) and blows per foot (BPF), the noise model will provide a range of distances and time durations over which the noise issues are of concern. <strong>A mathematical framework for the sound volume model will be provided to you.</strong></p>
+<p>The focus of this option is environmental regulation compliance.</p></li>
+</ol>
+<!-- 
+1. **Subsurface interpretation using data clustering**
+   
+   The data in the pile-driving log can be used to estimate the final pile capacity, but it also shows how the capacity of the pile changed as it was driven through the soil.
+   Different soil layers are likely to have different levels of resistance to driving (and therefore different capacities).
+   For a pile-driving project with several piles, combining all the pile-driving logs may provide clues to the number of distinct geologic layers the piles were driven through.
 
-Rubric -->
+   The *Subsurface interpretation using data clustering* enhancement is **part of an active research project** on pile-driving data interpretation.
+   This enhancement will use multiple (~100) pile-driving logs to develop a dataset of pile-driving resistances across a project site.
+   Using data clustering techniques, an analysis of the dataset will produce a report on the number of distinct geologic layers at the site.
+
+   The focus of this option is research of new data interpretation methods. 
+   As such, it has the potential to be both exciting and challenging. 
+   Exciting because it may show a result that no one's seen before.
+   Challenging because there's less likely to be a "right" answer or a "best" approach to the problem. -->
+</section>
+</section>
+<section id="requirements" class="level2">
+<h2 class="anchored" data-anchor-id="requirements">Requirements</h2>
+<section id="user-input" class="level3">
+<h3 class="anchored" data-anchor-id="user-input">User “input”</h3>
+<p>User input should be limited to changing file names or variable values within the notebook. Do not use Python’s <code>input()</code> function to prompt the notebook user. The notebook should include valid values when submitted so that it can run without the user needing to change file names or variable values.</p>
+</section>
+<section id="documentation" class="level3">
+<h3 class="anchored" data-anchor-id="documentation">Documentation</h3>
+<section id="in-the-notebook" class="level4">
+<h4 class="anchored" data-anchor-id="in-the-notebook">In the notebook</h4>
+<p>The notebook should contain instructions for users and technical background on the analysis being performed. The instructions should tell the user what inputs are needed for the analysis to run (e.g., the name of a pile log file, or PDA data file). The technical background should explain how the input is used in the analysis and what the analysis results should be interpreted.</p>
+</section>
+<section id="in-the-support-files" class="level4">
+<h4 class="anchored" data-anchor-id="in-the-support-files">In the support files</h4>
+<p>At least one .py file should be used to perform the majority of the analysis. This file should contain Python <strong>functions</strong> with docstrings. Any individual who understands Python should be able to view the supporting code and understand how each function works by reading the docstrings. At a minimum, docstrings should include:</p>
+<ol type="1">
+<li>A description of the function’s purpose.</li>
+<li>A list of the function’s input parameters, including whether they have default values and what units the should be in.</li>
+<li>A list of the function’s output parameters, including what units they will be in.</li>
+</ol>
+</section>
+</section>
+<section id="validation" class="level3">
+<h3 class="anchored" data-anchor-id="validation">Validation</h3>
+<p>Your notebook should include a validation section where your analysis results are compared to some external source to check whether they’re reasonable. An external source will be provided for the <em>Diesiel hammer combusion</em> and <em>Environmental noise assessment</em> options. For the <em>PDA instrumentation</em> option, the “external” source will be the final capacity estimated from the pile-driving log.</p>
+</section>
+<section id="figures" class="level3">
+<h3 class="anchored" data-anchor-id="figures">Figures</h3>
+<p>The figures needed will depend on the enhancement option. All enhancement options will need to include BPM, BPF, and capacity plots with the same requirements as in Part 2.</p>
+<p>Additional figures needed for specific enhancement options are described below. All plots should have an accurate title and axes labeled with the appropriate units. <!-- 
+#### Audio-video saximeter
+
+Include plots of 
+
+- pile displacement (y-axis) vs. time (x-axis) 
+- pile displacement (y-axis) vs. number of pile blows (x-axis) --></p>
+<section id="diesel-hammer-combustion" class="level4">
+<h4 class="anchored" data-anchor-id="diesel-hammer-combustion">Diesel hammer combustion</h4>
+<p>Include plots of</p>
+<ul>
+<li>The relationship between piston height (y-axis) and fuel volume (x-axis)</li>
+<li>Pile tip elevation (y-axis) and fuel consumption (x-axis) for the driving log in the same orientation as the pile-driving log plots.</li>
+</ul>
+</section>
+<section id="pda-instrumentation" class="level4">
+<h4 class="anchored" data-anchor-id="pda-instrumentation">PDA instrumentation</h4>
+<p>Include plots of</p>
+<ul>
+<li>The PDA force and velocity (both on the y-axis) vs time (x-axis). Include markers on the plot that indicate the peaks of the downward traveling and upward traveling waves.</li>
+<li>The displacement (y-axis) and force (x-axis) in the pile from the hammer blow captured by the PDA data.</li>
+</ul>
+</section>
+<section id="environmental-noise-assessment" class="level4">
+<h4 class="anchored" data-anchor-id="environmental-noise-assessment">Environmental noise assessment</h4>
+<p>Include plots of</p>
+<ul>
+<li>The sound volume in air (y-axis) and water (y-axis) vs.&nbsp;distance (x-axis) from the pile from the hammer blow captured by the PDA data. The plot should include at least one environmental noise limit per medium.</li>
+<li>Pile tip elevation (y-axis) and distance to environmental thresholds (x-axis) for the driving log in the same orientation as the pile-driving log plots.</li>
+</ul>
+</section>
+</section>
+</section>
+<section id="submission" class="level2">
+<h2 class="anchored" data-anchor-id="submission">Submission</h2>
+<p>Your project will be submitted by pushing your work to GitHub (same as the homework submission procedure). At a minimum, the submission should include:</p>
+<ol type="1">
+<li>Your app’s notebook (one <code>.ipynb</code> file)</li>
+<li>Your app’s support script (one or more <code>.py</code> files)</li>
+<li>At least one of the pile-driving log data files (one or more <code>.csv</code> files)</li>
+</ol>
+<!-- ## Rubric
+## Grading rubric
+
+Your submission will be graded by the instructor with the following rubric:
 
 
+| Category | Criteria | Points |
+|----|----|----|
+| User input | asdf |  __ / 10  |
+| Documentation | docs |  __ / 10 |
+| Figures | asdf |  __ / 10 |
+| Validation | docs |  __ / 10 |
+| Support code |  The functions that perform the app's calculations are imported into the app from one or more supporting Python files. The functions are well documented (purpose, inputs and outputs described in a docstring). |  __ / 10 | -->
+
+
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -727,6 +865,15 @@ Rubric -->
     }
   });
   </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../website/project_02.html" class="pagination-link" aria-label="Project Part 2 - basic pile-driving app">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Project Part 2 - basic pile-driving app</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+  </div>
+</nav>
 </div> <!-- /content -->
 
 
