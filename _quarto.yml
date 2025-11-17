@@ -46,13 +46,15 @@ website:
             - href: website/weeks/week_5.qmd
             - href: website/weeks/week_6.qmd
             - href: website/weeks/week_7.qmd
+            - href: website/weeks/week_8.qmd
+            - href: website/weeks/week_9.qmd
         - text: ---   
         - section: "Project"
           contents:
             - href: website/project_description.qmd
             - href: website/project_01.qmd
             - href: website/project_02.qmd
-            # - href: website/project_03.qmd
+            - href: website/project_03.qmd
         - text: ---
         - section:
           href: website/examples.qmd

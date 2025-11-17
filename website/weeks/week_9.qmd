@@ -5,6 +5,6 @@ Course content will be added on a rolling basis
 
 | Topic | Video | Slides|
 |----|----|----|
-|   |   |   |     
+|  Numerical differentiation |  [Link](https://uw.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=c7148027-d50b-4c1d-b0e4-b39600160dde)  |  [Link](../../website/lectures/11_numerical_calculus/slides_differentiation.qmd) |   
+|  Numerical integration | [Link](https://uw.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=c5f3c884-a3c7-46f8-b817-b397005cca0f)   |  [Link](../../website/lectures/11_numerical_calculus/slides_integration.qmd) |  
 
-## Assignments due

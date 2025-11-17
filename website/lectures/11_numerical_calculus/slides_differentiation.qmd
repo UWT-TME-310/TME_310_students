@@ -1,0 +1,327 @@
+---
+title: "Numerical differentiation"
+subtitle: "TME 310 - Computational Physical Modeling"
+author: 
+  - "Lorne Arnold, PhD, PE"
+institute: "University of Washington Tacoma"
+format:
+  revealjs:
+      incremental: true
+revealjs-plugins:
+  - pointer
+---
+## Numerical differentiation
+
+:::{.fragment}
+What is a derivative?
+:::
+
+:::{.fragment}
+A function or value that describes
+:::
+
+* The "rate" of change of a function
+* The slope of a function
+* $\displaystyle f'(x) = \frac{df(x)}{dx} = \frac{dy}{dx}$
+
+:::{.fragment}
+In calculus, we learned how to find derivatives *analytically*.
+:::
+
+:::{.fragment}
+In this course, we'll approximate derivatives *numerically*
+:::
+
+## Basic numerical derivatives
+
+:::{.fragment}
+The definition of a derivative:
+:::
+
+:::{.fragment}
+$$f'(x) = \lim_{dx \to 0} \frac{f(x + dx) - f(x)}{dx}$$
+:::
+
+
+## Basic numerical derivatives
+::: {.r-stack}
+![](derivatives_0.png){.absolute top=50 left=100 height="700"}
+
+![](derivatives_1.png){.fragment .absolute top=50 left=100 height="700"}
+
+![](derivatives_2.png){.fragment .absolute top=50 left=100 height="700"}
+
+![](derivatives_3.png){.fragment .absolute top=50 left=100 height="700"}
+
+![](derivatives_4.png){.fragment .absolute top=50 left=100 height="700"}
+
+![](derivatives_5.png){.fragment .absolute top=50 left=100 height="700"}
+
+:::
+
+## Discritizing functions
+
+If we evaluate a function at intervals spaced at $dx$, we are essentially converting our continuous function into a set of discrete data points.
+
+
+## From smooth to discrete
+
+::: {.r-stack}
+![](discretize_0.png){.absolute top=50 left=100 height="700"}
+
+![](discretize_1.png){.fragment .absolute top=50 left=100 height="700"}
+
+:::
+
+## An example
+We discretize functions every time we plot them
+
+```{python}
+#| echo: false
+#| error: true
+import numpy as np
+import matplotlib.pyplot as plt
+```
+
+```{python}
+#| code-line-numbers: "1|2|3|"
+#| echo: true
+#| error: true
+dx = 0.5
+x = np.arange(0,2*np.pi,dx)
+y = np.sin(x)
+```
+
+:::{.fragment}
+```{python}
+#| echo: false
+#| error: true
+fig, ax = plt.subplots()
+ax.plot(x, y)
+ax.set_xlabel("x")
+ax.set_ylabel("y")
+plt.show()
+```
+:::
+
+## An example
+We discretize functions every time we plot them
+
+```{python}
+#| code-line-numbers: "1|"
+#| echo: true
+#| error: true
+dx = 0.05
+x = np.arange(0,2*np.pi,dx)
+y = np.sin(x)
+```
+
+:::{.fragment}
+```{python}
+#| echo: false
+#| error: true
+fig, ax = plt.subplots()
+ax.plot(x, y)
+ax.set_xlabel("x")
+ax.set_ylabel("y")
+plt.show()
+```
+:::
+
+## Numerical derivatives
+
+Let's apply these concepts to finding numerical derivatives using three simple approaches:
+
+1. Forward finite difference (FFD)
+2. Central finite difference (CFD)
+3. Backward finite difference (BFD)
+
+## Forward finite difference
+
+In the forward finite difference (FFD) method, from a given pair of points, $(x_i,y_i)$,
+we approximate the derivative by looking "forward" to the next pair of points, $(x_{i+1},y_{i+1})$
+
+
+:::{.fragment}
+$$ \left[\frac{dy}{dx}\right]_i = \frac{y_{i+1} - y_i}{x_{i+1} - x_i}$$
+:::
+
+## FFD
+
+
+
+::: {.r-stack}
+![](ffd_0.png){.absolute top=50 left=100 height="700"}
+
+![](basketball_trajectory.png){.fragment .absolute top=50 left=0 height="700"}
+
+[$(t_0, x_0, y_0)$]{.fragment .absolute top=475 left=0 style="font-size: 0.5em; background-color: white; padding: 10px;"}
+
+[$(t_1, x_1, y_1)$]{.fragment .absolute top=375 left=40 style="font-size: 0.5em; background-color: white; padding: 10px;"}
+
+[$(t_2, x_2, y_2)$]{.fragment .absolute top=300 left=90 style="font-size: 0.5em; background-color: white; padding: 10px;"}
+
+[$(t_n, x_n, y_n)$]{.fragment .absolute top=250 left=850 style="font-size: 0.5em; background-color: white; padding: 10px;"}
+:::
+
+
+
+
+
+
+## FFD
+
+
+
+::: {.r-stack}
+![](ffd_0.png){.absolute top=50 left=100 height="700"}
+
+![](ffd_1.png){.fragment .absolute top=50 left=100 height="700"}
+
+![](ffd_2.png){.fragment .absolute top=50 left=100 height="700"}
+
+![](ffd_3.png){.fragment .absolute top=50 left=100 height="700"}
+
+![](ffd_4.png){.fragment .absolute top=50 left=100 height="700"}
+
+![](ffd_5.png){.fragment .absolute top=50 left=100 height="700"}
+
+![](ffd_6.png){.fragment .absolute top=50 left=100 height="700"}
+:::
+
+## FFD problems
+
+As we step through the FFD, two problems are apparent:
+
+1. We can't estimate the derivative for our last data point!
+
+:::{.fragment}
+  For a dataset with $n$ points, FFD will give us $n-1$ estimates of the derivative.
+:::
+
+2. The estimate seems inaccurate in several places.
+
+:::{.fragment}
+Let's address issue 2 first
+:::
+
+## Central finite difference
+
+In the central finite difference (CFD) method, from a given pair of points, $(x_i,y_i)$,
+we approximate the derivative by looking at the *two* pairs of points on either side: $(x_{i-1},y_{i-1})$ *and* $(x_{i+1},y_{i+1})$
+
+:::{.fragment}
+$$ \left[\frac{dy}{dx}\right]_i = \frac{y_{i+1} - y_{i-1}}{x_{i+1} - x_{i-1}}$$
+:::
+
+## CFD
+
+::: {.r-stack}
+![](cfd_0.png){.absolute top=50 left=100 height="700"}
+
+![](cfd_1.png){.fragment .absolute top=50 left=100 height="700"}
+![](cfd_2.png){.fragment .absolute top=50 left=100 height="700"}
+
+![](cfd_3.png){.fragment .absolute top=50 left=100 height="700"}
+
+![](cfd_4.png){.fragment .absolute top=50 left=100 height="700"}
+
+![](cfd_5.png){.fragment .absolute top=50 left=100 height="700"}
+:::
+
+## A partial improvement...
+
+The central finite difference seems to 
+
+* improve the accuracy of the derivative estimate 
+* consider effect of data on both sides of the point of interest
+
+:::{.fragment}
+But it has an even more limited range than the forward finite difference method:
+
+For a dataset with $n$ points, CFD will give us $n-2$ estimates of the derivative.
+:::
+
+:::{.fragment}
+Solution: use CFD wherever possible, use FFD when needed
+:::
+
+
+## Backward finite difference
+
+That still leaves us with $n-1$ estimates...
+
+:::{.fragment}
+Enter the backward finite difference method
+:::
+
+:::{.fragment}
+In the backward finite difference (BFD) method, from a given pair of points, $(x_i,y_i)$,
+we approximate the derivative by looking "backward" at the previous pair of points, $(x_{i-1},y_{i-1})$
+:::
+
+:::{.fragment}
+$$ \left[\frac{dy}{dx}\right]_i = \frac{y_{i} - y_{i-1}}{x_{i} - x_{i-1}}$$
+:::
+
+## BFD
+
+::: {.r-stack}
+![](bfd_0.png){.absolute top=50 left=100 height="700"}
+
+![](bfd_1.png){.fragment .absolute top=50 left=100 height="700"}
+
+:::
+
+## Where to use each method
+
+:::{.fragment}
+Because it has the least error, the **central** finite difference method should be used wherever possible.
+:::
+
+* Use the **forward** finite difference method to estimate the derivative of the first point.
+* Use the **backward** finite difference method to estimate the derivative of the last point.
+* Use the **central** finite difference method everywhere else.
+
+## Finite different methods summary
+
+
+::: {.r-stack}
+![](fd_sum_0.png){.absolute top=50 left=100 height="700"}
+
+![](fd_sum_1.png){.fragment .absolute top=50 left=100 height="700"}
+![](fd_sum_2.png){.fragment .absolute top=50 left=100 height="700"}
+
+![](fd_sum_3.png){.fragment .absolute top=50 left=100 height="700"}
+
+:::
+
+## Differentiating with Numpy {.smaller}
+
+Numpy has a function for discrete differentiation: `numpy.gradient`
+
+```{python}
+#| code-line-numbers: "4"
+#| echo: true
+#| output-location: fragment
+#| error: true
+dx = 0.05
+x = np.arange(0,2*np.pi,dx)
+y = np.sin(x)
+dydx = np.gradient(y,x) # This should give an approx. derivative of sin(x)
+```
+
+:::{.fragment}
+```{python}
+#| echo: false
+#| error: true
+fig, ax = plt.subplots()
+ax.plot(x,y, label="sin(x)")
+ax.plot(x, dydx, label="d(sin(x))/dx)")
+ax.legend()
+ax.set_xlabel("x")
+ax.set_ylabel("y")
+plt.show()
+```
+:::
+
