@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Pile Driving Analysis (PDA) from instrumentation – TME 310 A - Fall 2025</title>
+<title>Environmental noise assessment – TME 310 A - Fall 2025</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -109,7 +109,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Pile Driving Analysis (PDA) from instrumentation</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Environmental noise assessment</li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -333,22 +333,22 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#pda-instruments" id="toc-pda-instruments" class="nav-link active" data-scroll-target="#pda-instruments">PDA instruments</a></li>
-  <li><a href="#the-case-method-for-pile-capacity" id="toc-the-case-method-for-pile-capacity" class="nav-link" data-scroll-target="#the-case-method-for-pile-capacity">The Case Method for pile capacity</a></li>
-  <li><a href="#static-soil-resistance-sources" id="toc-static-soil-resistance-sources" class="nav-link" data-scroll-target="#static-soil-resistance-sources">Static soil resistance sources</a>
+  <li><a href="#pda-data-and-instruments" id="toc-pda-data-and-instruments" class="nav-link active" data-scroll-target="#pda-data-and-instruments">PDA data and instruments</a></li>
+  <li><a href="#impact-induced-noise" id="toc-impact-induced-noise" class="nav-link" data-scroll-target="#impact-induced-noise">Impact-induced noise</a></li>
+  <li><a href="#acoustic-pressure-induced-in-adjacent-fluids" id="toc-acoustic-pressure-induced-in-adjacent-fluids" class="nav-link" data-scroll-target="#acoustic-pressure-induced-in-adjacent-fluids">Acoustic pressure induced in adjacent fluids</a>
   <ul class="collapse">
-  <li><a href="#pile-set" id="toc-pile-set" class="nav-link" data-scroll-target="#pile-set">Pile set</a></li>
-  <li><a href="#comparing-models" id="toc-comparing-models" class="nav-link" data-scroll-target="#comparing-models">Comparing models</a></li>
+  <li><a href="#volume-induced-by-acoustic-pressure" id="toc-volume-induced-by-acoustic-pressure" class="nav-link" data-scroll-target="#volume-induced-by-acoustic-pressure">Volume induced by acoustic pressure</a></li>
+  <li><a href="#environmental-effects" id="toc-environmental-effects" class="nav-link" data-scroll-target="#environmental-effects">Environmental effects</a></li>
   </ul></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/UWT-TME-310/TME_310_students/blob/main/website/03_PDA.ipynb" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="https://github.com/UWT-TME-310/TME_310_students/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/UWT-TME-310/TME_310_students/blob/main/website/03_environmental_noise.ipynb" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="https://github.com/UWT-TME-310/TME_310_students/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Pile Driving Analysis (PDA) from instrumentation</h1>
+<h1 class="title">Environmental noise assessment</h1>
 </div>
 
 
@@ -365,51 +365,78 @@ window.Quarto = {
 </header>
 
 
+<p>Pile-driving is a noisy process. The noise from pile-driving can be a nuisance to neighboring properties and disturbing (and even lethal) to wildlife. Sound from pile-driving comes from the impact between the pile and hammer and from the deformation of the pile as compression and tension waves travel through the pile. The noise from the waves traveling through the pile are particularly important under water, where they have the most impact on wildlife.</p>
+<p>The <em>Environmental noise assessment</em> enhancement will use the PDA strain and velocity measurements to estimate the volume in air and water from a single blow to the pile. The noise attenuation with distance from the pile will be compared to different thresholds, providing an estimate for the distance where various noise issues are of concern. Combined with a pile-driving log with blows per minute (BPM) and blows per foot (BPF), the noise model will provide a range of distances and time durations over which the noise issues are of concern. A mathematical framework for the combustion model will is described below.</p>
+<p>The focus of this option is environmental regulation compliance.</p>
+<section id="pda-data-and-instruments" class="level2">
+<h2 class="anchored" data-anchor-id="pda-data-and-instruments">PDA data and instruments</h2>
 <p>Pile Driving Analysis (PDA) is the name of a specific set of instruments and calculations used to measure wave transmission through a pile as it’s driven and estimate its capacity. Generally, PDA is performed on only a small percentage of piles in a given project because it’s expensive to perform and slows down the construction (because of the instrument installation). PDA data contains measurements of <strong>strain</strong> and <strong>acceleration</strong> signals that can be used to calculate the force and speed of pressure waves traveling through the pile. This data can be interpreted to determine an estimate of the pile’s capacity, the maximum tension and compression stresses in the pile, and detect whether the pile has been damaged.</p>
-<p>The <em>PDA instrumentation</em> enhancement will use data from one or more blows at the end of driving to produce a capacity estimate to compare to the estimate from a pile-driving log. Additionally, the pile stresses and damage indications (if any) will be reported and compared to the material strength as a quality control check on the pile’s structural integrity. A mathematical framework for the combustion model will is described below.</p>
-<p>The focus of this option is quality control and capacity verification.</p>
-<section id="pda-instruments" class="level2">
-<h2 class="anchored" data-anchor-id="pda-instruments">PDA instruments</h2>
 <p>The image below shows a typical PDA instrument setup on a steel pipe pile. <img src="pda_instruments.jpg" class="img-fluid"> The data collected during pile-driving is evaluated in detail on an individual blow basis. It’s common to evaluate one or two blows per pile for the analysis, with one of the analyzed blows always representing the condition at the end of driving. Fundamentally, PDA analysis involves interpreting the signals as compression and tension waves traveling down (and back up) the pile from the hammer impact.</p>
 <p>The figure below shows PDA data from a single blow on a pile. Although the instruments measure strain and acceleration, they are usually converted into force and velocity, respectively. Beneath the figure is a video of a simulation of the wave traveling through the pile after a hammer blow.</p>
 <p><img src="pda_signal.png" class="img-fluid" style="width:70.0%"></p>
 <video width="693" height="697" src="pda_video.mov" controls="">
 </video>
 </section>
-<section id="the-case-method-for-pile-capacity" class="level2">
-<h2 class="anchored" data-anchor-id="the-case-method-for-pile-capacity">The Case Method for pile capacity</h2>
-<p>The Case Method is a closed-form solution based on a few simplifying assumptions such as ideal plastic soil behavior and an ideally elastic and uniform pile. Given the measured pile top force, <span class="math inline">\(F(t)\)</span>, and pile top velocity, <span class="math inline">\(v(t)\)</span>, the total soil resistance is:</p>
-<p><span class="math display">\[R_{tot}(t) = \frac{1}{2} \left(F(t) + F(t_2) + Z\left[v(t)-v(t_2)\right]\right)\]</span></p>
+<section id="impact-induced-noise" class="level2">
+<h2 class="anchored" data-anchor-id="impact-induced-noise">Impact-induced noise</h2>
+<p>The stress wave induced by hammer impact causes a local length change (either extension or compression depending on the sign of the stress) in the pile as it passes through. As illustrated (and exaggerated) in the video, these stresses produce a change in the pile diameter due the the Poisson effect (illustrated in the figure below).</p>
+<p><img src="poisson.jpg" class="img-fluid"></p>
+<p>Poisson’s ratio is defined as:</p>
+<p><span class="math display">\[ \nu = -\frac{d\epsilon_{axial}}{d\epsilon_{trans}}\]</span></p>
 <p>where</p>
-<p><span class="math inline">\(t =\)</span> a point in time after impact</p>
-<p>$t_2 = $ time <span class="math inline">\(t + 2L/c\)</span></p>
-<p>$L = $ pile length below instruments</p>
-<p><span class="math inline">\(c = \sqrt{E/\rho}\)</span> is the speed of the stress wave</p>
-<p>$= $ pile mass density</p>
-<p><span class="math inline">\(Z = E A / c\)</span> is the pile impedance</p>
-<p><span class="math inline">\(E = \rho c^2\)</span> is the pile elastic modulus</p>
-<p>$A = $ pile cross sectional area</p>
-<p>The total soil resistance consists of a dynamic (<span class="math inline">\(R_d\)</span>) and a static (<span class="math inline">\(R_s\)</span>) component. The static component is therefore:</p>
-<p><span class="math display">\[R_s(t) = R_{tot}(t) - R_d(t)\]</span></p>
-<p>It is this <strong>static soil resistance</strong> we use to characterize the pile capacity for design. The dynamic component of soil resistance is not used because when the pile is used to support a structure, the loads are generally applied so slowly that the dynamic soil resistance is negligible.</p>
-<p>The dynamic component may be computed from a soil damping factor, J. Using wave considerations, this approach leads to the dynamic resistance:</p>
-<p><span class="math display">\[ R_d(t) = J \left[F(t) + Z v(t) - R_{tot}(t)\right]\]</span></p>
-<p>You may assume a damping factor of <span class="math inline">\(J = 0.5\)</span> (a common value for sandy soil) for your project. Most commonly, <span class="math inline">\(t\)</span> is set to that time at which the static resistance becomes maximum.</p>
+<p>$_{axial} = $ axial strain</p>
+<p>$_{trans} = $ transverse strain</p>
 </section>
-<section id="static-soil-resistance-sources" class="level1">
-<h1>Static soil resistance sources</h1>
-<p>The static soil resistance is often broken down into “friction” and “end bearing”. The frictional resistance comes from the soil’s interaction with the sides of the pile. The end bearing comes from the soil’s interaction with the pile tip.</p>
-<p>Because the wave speed of the pile is known, the time it takes for the wave to return to the instruments from the pile tip can be calculated (<span class="math inline">\(2L/c\)</span>). Any wave energy (and therefore any soil resistance) detected by the sensors before this time cannot have returned from the pile time. So the frictional resistance of the soil is taken as the static resistance at <span class="math inline">\(t = 2L/c\)</span> from the <em>start</em> of the impact wave.</p>
-<section id="pile-set" class="level2">
-<h2 class="anchored" data-anchor-id="pile-set">Pile set</h2>
-<p>The pile “set” is the amount of permanent displacement resulting from a single blow. The signal from the velocity signal can be integrated to estimate the displacement:</p>
-<p><span class="math display">\[ d(t) = \int v(t) dt\]</span></p>
-<p>The displacement at the end of the recorded data is the pile set.</p>
+<section id="acoustic-pressure-induced-in-adjacent-fluids" class="level1">
+<h1>Acoustic pressure induced in adjacent fluids</h1>
+<p>The rapid expansion/contraction of the pile surface creates a pressure wave in the adjacent media. For the project, we will focus on the fluids (air and water), but pressure waves are also transmitted through the soil.</p>
+<p>For a surface expanding/contracting with a transverse velocity, <span class="math inline">\(v_{trans}(t)\)</span>, the acoustic pressure at the surface is:</p>
+<p><span class="math display">\[p(t) = \rho_{0} c v_{trans}(t)\]</span></p>
+<p>where</p>
+<p>$_0 = $ the fluid density</p>
+<p>$c = $ the fluid sound speed</p>
+<p>The transverse velocity can be estimated from the change in transverse strain over time and the pile perimeter:</p>
+<p><span class="math display">\[v_{trans}(t) = b \frac{d\epsilon_{trans}}{dt} \]</span></p>
+<p>where $b = $ the pile perimeter.</p>
+<section id="volume-induced-by-acoustic-pressure" class="level2">
+<h2 class="anchored" data-anchor-id="volume-induced-by-acoustic-pressure">Volume induced by acoustic pressure</h2>
+<p>The sound pressure level (<span class="math inline">\(SPL\)</span> in decibels) induced by acoustic pressure is:</p>
+<p><span class="math display">\[SPL = 20 \log_{10}{\left(\frac{p}{ p_{ref}\sqrt{2}}\right)}\]</span></p>
+<p>where p_{ref} is a reference pressure of 20 <span class="math inline">\(\mu Pa\)</span> in air and 1 <span class="math inline">\(\mu Pa\)</span> in water.</p>
+<p>Assuming a cylindrical wave with only geometric decay, the acoustic pressure amplitude will decay at a rate of approximately <span class="math inline">\(1/\sqrt{r}\)</span> (where <span class="math inline">\(r\)</span> is the distance from the pile). The sound pressure level will therefore have the following distance relationship:</p>
+<p><span class="math display">\[ SPL(r) = SPL_0 + 10 \log_{10}{\left(\frac{1}{r}\right)}\]</span></p>
 </section>
-<section id="comparing-models" class="level2">
-<h2 class="anchored" data-anchor-id="comparing-models">Comparing models</h2>
-<p>The models described above allow us to estimate the pile capacity and the pile set. These same parameters can be estimated from the pile-driving log.</p>
-<p>In this project option, groups will compare the PDA-based estimates for capacity and pile set to the log-based estimates for one or two pile blows. The PDA-based capacity estimates will be plotted (as points) on the log-based pile capacity figures.</p>
+<section id="environmental-effects" class="level2">
+<h2 class="anchored" data-anchor-id="environmental-effects">Environmental effects</h2>
+<p>The models described above allow us to estimate the acoustic volume with distance from the pile-driving activity in air and water. Several marine species are sensitive to sound. In some cases, nuisance from sound can disrupt their feeding behavior. In others, the sound can even be lethal. The table below lists a handful of environmental noise thresholds for local marine life.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Species</th>
+<th>Nuisance threshold</th>
+<th>Lethal/injury threshold</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Marbled Murrelet</td>
+<td>150 dB</td>
+<td>202 dB</td>
+</tr>
+<tr class="even">
+<td>Fish</td>
+<td>132 dB</td>
+<td>194 dB</td>
+</tr>
+<tr class="odd">
+<td>Human</td>
+<td>85 dB (in air)</td>
+<td>120 dB (in air)</td>
+</tr>
+</tbody>
+</table>
+<p>Using these thresholds and the models above, determine the distance from the pile were the environmental thresholds are met and create a plot showing the distances.</p>
+<p>Assuming that the hammer stroke height is directly proportional to the acoustic pressure, use the pile-driving log to create an “environmental effects” log. This should look similar to the pile capacity log, but instead of capacity, it should show the distance from the pile (at different elevations during the driving process) where environmental thresholds were exceeded.</p>
 
 
 </section>
@@ -825,4 +852,4 @@ window.Quarto = {
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/UWT-TME-310/TME_310_students/blob/main/website/03_PDA.ipynb" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="https://github.com/UWT-TME-310/TME_310_students/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/UWT-TME-310/TME_310_students/blob/main/website/03_environmental_noise.ipynb" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="https://github.com/UWT-TME-310/TME_310_students/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>

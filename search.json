@@ -164,6 +164,34 @@
     "text": "Pile Driving Analysis (PDA) is the name of a specific set of instruments and calculations used to measure wave transmission through a pile as it’s driven and estimate its capacity. Generally, PDA is performed on only a small percentage of piles in a given project because it’s expensive to perform and slows down the construction (because of the instrument installation). PDA data contains measurements of strain and acceleration signals that can be used to calculate the force and speed of pressure waves traveling through the pile. This data can be interpreted to determine an estimate of the pile’s capacity, the maximum tension and compression stresses in the pile, and detect whether the pile has been damaged.\nThe PDA instrumentation enhancement will use data from one or more blows at the end of driving to produce a capacity estimate to compare to the estimate from a pile-driving log. Additionally, the pile stresses and damage indications (if any) will be reported and compared to the material strength as a quality control check on the pile’s structural integrity. A mathematical framework for the combustion model will is described below.\nThe focus of this option is quality control and capacity verification."
   },
   {
+    "objectID": "website/03_PDA.html#pda-instruments",
+    "href": "website/03_PDA.html#pda-instruments",
+    "title": "Pile Driving Analysis (PDA) from instrumentation",
+    "section": "PDA instruments",
+    "text": "PDA instruments\nThe image below shows a typical PDA instrument setup on a steel pipe pile.  The data collected during pile-driving is evaluated in detail on an individual blow basis. It’s common to evaluate one or two blows per pile for the analysis, with one of the analyzed blows always representing the condition at the end of driving. Fundamentally, PDA analysis involves interpreting the signals as compression and tension waves traveling down (and back up) the pile from the hammer impact.\nThe figure below shows PDA data from a single blow on a pile. Although the instruments measure strain and acceleration, they are usually converted into force and velocity, respectively. Beneath the figure is a video of a simulation of the wave traveling through the pile after a hammer blow."
+  },
+  {
+    "objectID": "website/03_PDA.html#the-case-method-for-pile-capacity",
+    "href": "website/03_PDA.html#the-case-method-for-pile-capacity",
+    "title": "Pile Driving Analysis (PDA) from instrumentation",
+    "section": "The Case Method for pile capacity",
+    "text": "The Case Method for pile capacity\nThe Case Method is a closed-form solution based on a few simplifying assumptions such as ideal plastic soil behavior and an ideally elastic and uniform pile. Given the measured pile top force, \\(F(t)\\), and pile top velocity, \\(v(t)\\), the total soil resistance is:\n\\[R_{tot}(t) = \\frac{1}{2} \\left(F(t) + F(t_2) + Z\\left[v(t)-v(t_2)\\right]\\right)\\]\nwhere\n\\(t =\\) a point in time after impact\n$t_2 = $ time \\(t + 2L/c\\)\n$L = $ pile length below instruments\n\\(c = \\sqrt{E/\\rho}\\) is the speed of the stress wave\n$= $ pile mass density\n\\(Z = E A / c\\) is the pile impedance\n\\(E = \\rho c^2\\) is the pile elastic modulus\n$A = $ pile cross sectional area\nThe total soil resistance consists of a dynamic (\\(R_d\\)) and a static (\\(R_s\\)) component. The static component is therefore:\n\\[R_s(t) = R_{tot}(t) - R_d(t)\\]\nIt is this static soil resistance we use to characterize the pile capacity for design. The dynamic component of soil resistance is not used because when the pile is used to support a structure, the loads are generally applied so slowly that the dynamic soil resistance is negligible.\nThe dynamic component may be computed from a soil damping factor, J. Using wave considerations, this approach leads to the dynamic resistance:\n\\[ R_d(t) = J \\left[F(t) + Z v(t) - R_{tot}(t)\\right]\\]\nYou may assume a damping factor of \\(J = 0.5\\) (a common value for sandy soil) for your project. Most commonly, \\(t\\) is set to that time at which the static resistance becomes maximum."
+  },
+  {
+    "objectID": "website/03_PDA.html#pile-set",
+    "href": "website/03_PDA.html#pile-set",
+    "title": "Pile Driving Analysis (PDA) from instrumentation",
+    "section": "Pile set",
+    "text": "Pile set\nThe pile “set” is the amount of permanent displacement resulting from a single blow. The signal from the velocity signal can be integrated to estimate the displacement:\n\\[ d(t) = \\int v(t) dt\\]\nThe displacement at the end of the recorded data is the pile set."
+  },
+  {
+    "objectID": "website/03_PDA.html#comparing-models",
+    "href": "website/03_PDA.html#comparing-models",
+    "title": "Pile Driving Analysis (PDA) from instrumentation",
+    "section": "Comparing models",
+    "text": "Comparing models\nThe models described above allow us to estimate the pile capacity and the pile set. These same parameters can be estimated from the pile-driving log.\nIn this project option, groups will compare the PDA-based estimates for capacity and pile set to the log-based estimates for one or two pile blows. The PDA-based capacity estimates will be plotted (as points) on the log-based pile capacity figures."
+  },
+  {
     "objectID": "website/lectures/11_numerical_calculus/diffs.html",
     "href": "website/lectures/11_numerical_calculus/diffs.html",
     "title": "TME 310 A - Fall 2025",
@@ -725,256 +753,377 @@
     ]
   },
   {
-    "objectID": "website/project_description.html",
-    "href": "website/project_description.html",
-    "title": "Course Project",
+    "objectID": "website/start_here.html",
+    "href": "website/start_here.html",
+    "title": "Start here",
     "section": "",
-    "text": "Project groups will be assigned randomly by the instructor. Each group will have 3 to 4 students.\n\n\n\nThe project topic is modeling the installation of driven piles with open-ended diesel hammers (the topic of Homework 3, Problem 1).\nEach team will build a jupyter notebook interactive app to predict the capacity of a driven pile based on data collected during installation.\nThere will be a baseline app to be delivered in Part 2 and then the groups will choose additional features to include to enhance their app for Part 3.\n\n\n\nThe project will have three deliverables:\n\nGroup coordination (due week 5)\nBasic pile-driving app (due week 7)\nEnhanced pile-driving app (due finals week)",
+    "text": "Start here\nGo through this short “Start here” module for information about the course, the instructor, and being a successful student. At the very least, read the syllabus!\nSyllabus\nInstructor and my role in this course\nAccessibility and accommodations\nBeing a successful student\nGrading policies\nHomework format\nCoding platforms",
     "crumbs": [
       "TME 310A",
-      "Project",
-      "Course Project"
+      "Course information",
+      "Start here"
     ]
   },
   {
-    "objectID": "website/project_description.html#project-groups",
-    "href": "website/project_description.html#project-groups",
-    "title": "Course Project",
+    "objectID": "website/project_01.html",
+    "href": "website/project_01.html",
+    "title": "Project Part 1 - group coordination",
     "section": "",
-    "text": "Project groups will be assigned randomly by the instructor. Each group will have 3 to 4 students.",
+    "text": "Project Part 1 - group coordination\nYour project groups have been assigned - you can see your group number and fellow team members by looking at the People page on Canvas.\nThe task for Part 1 of the course project is simple:\n\nFind a time (using in-class time is encouraged!) to meet with your group and introduce yourselves to each other if you don’t already know one another.\nDecide amongst yourselves how your group will communicate and how often you plan to meet to work on the project for the rest of the quarter.\nWrite down what your group decided about communication and meeting frequency in the Canvas assignment text box.",
     "crumbs": [
       "TME 310A",
       "Project",
-      "Course Project"
+      "Project Part 1 - group coordination"
     ]
   },
   {
-    "objectID": "website/project_description.html#topic",
-    "href": "website/project_description.html#topic",
-    "title": "Course Project",
+    "objectID": "website/weeks/week_9.html",
+    "href": "website/weeks/week_9.html",
+    "title": "Week 9",
     "section": "",
-    "text": "The project topic is modeling the installation of driven piles with open-ended diesel hammers (the topic of Homework 3, Problem 1).\nEach team will build a jupyter notebook interactive app to predict the capacity of a driven pile based on data collected during installation.\nThere will be a baseline app to be delivered in Part 2 and then the groups will choose additional features to include to enhance their app for Part 3.",
+    "text": "Course content will be added on a rolling basis\n\n\n\n\n\nTopic\nVideo\nSlides\n\n\n\n\nNumerical differentiation\nLink\nLink\n\n\nNumerical integration\nLink\nLink",
+    "crumbs": [
+      "TME 310A",
+      "Weekly materials",
+      "Week 9"
+    ]
+  },
+  {
+    "objectID": "website/weeks/week_9.html#materials",
+    "href": "website/weeks/week_9.html#materials",
+    "title": "Week 9",
+    "section": "",
+    "text": "Topic\nVideo\nSlides\n\n\n\n\nNumerical differentiation\nLink\nLink\n\n\nNumerical integration\nLink\nLink",
+    "crumbs": [
+      "TME 310A",
+      "Weekly materials",
+      "Week 9"
+    ]
+  },
+  {
+    "objectID": "website/weeks/week_11.html",
+    "href": "website/weeks/week_11.html",
+    "title": "Week 11",
+    "section": "",
+    "text": "Course content will be added on a rolling basis\n\n\n\n\n\nTopic\nVideo\nSlides"
+  },
+  {
+    "objectID": "website/weeks/week_11.html#materials",
+    "href": "website/weeks/week_11.html#materials",
+    "title": "Week 11",
+    "section": "",
+    "text": "Topic\nVideo\nSlides"
+  },
+  {
+    "objectID": "website/weeks/week_1.html",
+    "href": "website/weeks/week_1.html",
+    "title": "Week 1",
+    "section": "",
+    "text": "Topic\nVideo\nSlides\n\n\n\n\nIntroduction\nN/A\nN/A\n\n\nPython basics\nLink\nN/A\n\n\n\n\n\n\nNone",
+    "crumbs": [
+      "TME 310A",
+      "Weekly materials",
+      "Week 1"
+    ]
+  },
+  {
+    "objectID": "website/weeks/week_1.html#materials",
+    "href": "website/weeks/week_1.html#materials",
+    "title": "Week 1",
+    "section": "",
+    "text": "Topic\nVideo\nSlides\n\n\n\n\nIntroduction\nN/A\nN/A\n\n\nPython basics\nLink\nN/A",
+    "crumbs": [
+      "TME 310A",
+      "Weekly materials",
+      "Week 1"
+    ]
+  },
+  {
+    "objectID": "website/weeks/week_1.html#assignments-due",
+    "href": "website/weeks/week_1.html#assignments-due",
+    "title": "Week 1",
+    "section": "",
+    "text": "None",
+    "crumbs": [
+      "TME 310A",
+      "Weekly materials",
+      "Week 1"
+    ]
+  },
+  {
+    "objectID": "website/weeks/week_2.html",
+    "href": "website/weeks/week_2.html",
+    "title": "Week 2",
+    "section": "",
+    "text": "Course content will be added on a rolling basis\n\n\n\n\n\nTopic\nVideo\nSlides\n\n\n\n\nModeling framework\nLink\nLink\n\n\nApproaching problems\nLink\nLink\n\n\nFunctional programming\nLink\nLink\n\n\n\n\n\n\n\nHomework 1 (plus self-grading)",
+    "crumbs": [
+      "TME 310A",
+      "Weekly materials",
+      "Week 2"
+    ]
+  },
+  {
+    "objectID": "website/weeks/week_2.html#materials",
+    "href": "website/weeks/week_2.html#materials",
+    "title": "Week 2",
+    "section": "",
+    "text": "Topic\nVideo\nSlides\n\n\n\n\nModeling framework\nLink\nLink\n\n\nApproaching problems\nLink\nLink\n\n\nFunctional programming\nLink\nLink",
+    "crumbs": [
+      "TME 310A",
+      "Weekly materials",
+      "Week 2"
+    ]
+  },
+  {
+    "objectID": "website/weeks/week_2.html#assignments-due",
+    "href": "website/weeks/week_2.html#assignments-due",
+    "title": "Week 2",
+    "section": "",
+    "text": "Homework 1 (plus self-grading)",
+    "crumbs": [
+      "TME 310A",
+      "Weekly materials",
+      "Week 2"
+    ]
+  },
+  {
+    "objectID": "website/weeks/week_7.html",
+    "href": "website/weeks/week_7.html",
+    "title": "Week 7",
+    "section": "",
+    "text": "Course content will be added on a rolling basis\n\n\n\n\n\nTopic\nVideo\nSlides\n\n\n\n\nRoot-finding (graphical method)\nLink\nLink\n\n\nBracketed methods (bisection)\nLink\nLink\n\n\nOpen methods (Newton-Raphson and secant)\nLink\nLink\n\n\n\nExample code",
+    "crumbs": [
+      "TME 310A",
+      "Weekly materials",
+      "Week 7"
+    ]
+  },
+  {
+    "objectID": "website/weeks/week_7.html#materials",
+    "href": "website/weeks/week_7.html#materials",
+    "title": "Week 7",
+    "section": "",
+    "text": "Topic\nVideo\nSlides\n\n\n\n\nRoot-finding (graphical method)\nLink\nLink\n\n\nBracketed methods (bisection)\nLink\nLink\n\n\nOpen methods (Newton-Raphson and secant)\nLink\nLink\n\n\n\nExample code",
+    "crumbs": [
+      "TME 310A",
+      "Weekly materials",
+      "Week 7"
+    ]
+  },
+  {
+    "objectID": "website/weeks/week_4.html",
+    "href": "website/weeks/week_4.html",
+    "title": "Week 4",
+    "section": "",
+    "text": "Course content will be added on a rolling basis\n\n\n\n\n\nTopic\nVideo\nSlides\n\n\n\n\nNumbers in Computers\nLink\nLink\n\n\nError definitions\nLink\nLink\n\n\nError tolerance\nLink\nLink\n\n\nDartboard approximation of \\(\\pi\\)\nLink\n\n\n\nPlotting the dartboard approximation of \\(\\pi\\)\nLink\nCode\n\n\n\n\n\n\n\nHomework 3",
+    "crumbs": [
+      "TME 310A",
+      "Weekly materials",
+      "Week 4"
+    ]
+  },
+  {
+    "objectID": "website/weeks/week_4.html#materials",
+    "href": "website/weeks/week_4.html#materials",
+    "title": "Week 4",
+    "section": "",
+    "text": "Topic\nVideo\nSlides\n\n\n\n\nNumbers in Computers\nLink\nLink\n\n\nError definitions\nLink\nLink\n\n\nError tolerance\nLink\nLink\n\n\nDartboard approximation of \\(\\pi\\)\nLink\n\n\n\nPlotting the dartboard approximation of \\(\\pi\\)\nLink\nCode",
+    "crumbs": [
+      "TME 310A",
+      "Weekly materials",
+      "Week 4"
+    ]
+  },
+  {
+    "objectID": "website/weeks/week_4.html#assignments-due",
+    "href": "website/weeks/week_4.html#assignments-due",
+    "title": "Week 4",
+    "section": "",
+    "text": "Homework 3",
+    "crumbs": [
+      "TME 310A",
+      "Weekly materials",
+      "Week 4"
+    ]
+  },
+  {
+    "objectID": "website/project_03.html",
+    "href": "website/project_03.html",
+    "title": "Project Part 3 - enhanced pile-driving app",
+    "section": "",
+    "text": "Demonstrate the coding skills learned in the course to develop a notebook that could be useful for engineering professionals working on pile-driving projects.\n\n\n\nYour goal for Part 3 of the course project is to enhance the a basic pile-driving app you developed in Part 2 (you are also allowed to use the Part 2 example submission as a starting point for Part 3). The app will produce an engineering report on a specific aspect of pile-driving based on the enhancement option selected by your group.\nThere are several ways that the basic pile-driving app could be enhanced. Descriptions of suggested enhancements are listed below. Your project group should choose one of the suggested enhancements below OR propose an enhancement to be approved by your instructor.\n\n\n\n\nDiesel hammer combustion\nOpen-ended diesel hammers consist of a single cylinder containing a heavy piston called a ram. During operation, fuel ignition launches the ram up into the air. When the ram falls back down, it compresses and heats an air/fuel mixture in the piston, reaching its ignition temperature and starting the process over again.\nThe Diesel hammer combustion enhancement will involve creating a model of the combustion process - the increasing pressure and temperature due to the falling piston, the energy released by fuel ignition, and the resulting displacement of the piston. The model will provide a means of calculating the fuel needed to achieve different piston heights. Combined with a pile-driving log containing blows per minute (BPM) and blows per foot (BPF), the model will show the fuel consumption during the pile-driving process. A mathematical framework for the combustion model will be provided to you.\nThe focus of this option is the fuel consumption and carbon emissions for pile installation.\nPile Driving Analysis (PDA) from instrumentation\nPile Driving Analysis (PDA) is the name of a specific set of instruments and calculations used to measure wave transmission through a pile as it’s driven and estimate its capacity. Generally, PDA is performed on only a small percentage of piles in a given project because it’s expensive to perform and slows down the construction (because of the instrument installation). PDA data contains measurements of strain and acceleration signals that can be used to calculate the force and speed of pressure waves traveling through the pile. This data can be interpreted to determine an estimate of the pile’s capacity, the maximum tension and compression stresses in the pile, and detect whether the pile has been damaged.\nThe PDA instrumentation enhancement will use data from one or more blows at the end of driving to produce a capacity estimate to compare to the estimate from a pile-driving log. Additionally, the pile stresses and damage indications (if any) will be reported and compared to the material strength as a quality control check on the pile’s structural integrity. A mathematical framework for PDA analysis will be provided to you.\nThe focus of this option is quality control and capacity verification.\nEnvironmental noise assessment\nPile-driving is a noisy process. The noise from pile-driving can be a nuisance to neighboring properties and disturbing (and even lethal) to wildlife. Sound from pile-driving comes from the impact between the pile and hammer and from the deformation of the pile as compression and tension waves travel through the pile. The noise from the waves traveling through the pile are particularly important under water, where they have the most impact on wildlife.\nThe Environmental noise assessment enhancement will use the PDA strain and velocity measurements to estimate the volume in air and water from a single blow to the pile. The noise attenuation with distance from the pile will be compared to different thresholds, providing an estimate for the distance where various noise issues are of concern. Combined with a pile-driving log with blows per minute (BPM) and blows per foot (BPF), the noise model will provide a range of distances and time durations over which the noise issues are of concern. A mathematical framework for the sound volume model will be provided to you.\nThe focus of this option is environmental regulation compliance.\n\n\n\n\n\n\n\n\nUser input should be limited to changing file names or variable values within the notebook. Do not use Python’s input() function to prompt the notebook user. The notebook should include valid values when submitted so that it can run without the user needing to change file names or variable values.\n\n\n\n\n\nThe notebook should contain instructions for users and technical background on the analysis being performed. The instructions should tell the user what inputs are needed for the analysis to run (e.g., the name of a pile log file, or PDA data file). The technical background should explain how the input is used in the analysis and what the analysis results should be interpreted.\n\n\n\nAt least one .py file should be used to perform the majority of the analysis. This file should contain Python functions with docstrings. Any individual who understands Python should be able to view the supporting code and understand how each function works by reading the docstrings. At a minimum, docstrings should include:\n\nA description of the function’s purpose.\nA list of the function’s input parameters, including whether they have default values and what units the should be in.\nA list of the function’s output parameters, including what units they will be in.\n\n\n\n\n\nYour notebook should include a validation section where your analysis results are compared to some external source to check whether they’re reasonable. An external source will be provided for the Diesiel hammer combusion and Environmental noise assessment options. For the PDA instrumentation option, the “external” source will be the final capacity estimated from the pile-driving log.\n\n\n\nThe figures needed will depend on the enhancement option. All enhancement options will need to include BPM, BPF, and capacity plots with the same requirements as in Part 2.\nAdditional figures needed for specific enhancement options are described below. All plots should have an accurate title and axes labeled with the appropriate units. \n\n\nInclude plots of\n\nThe relationship between piston height (y-axis) and fuel volume (x-axis)\nPile tip elevation (y-axis) and fuel consumption (x-axis) for the driving log in the same orientation as the pile-driving log plots.\n\n\n\n\nInclude plots of\n\nThe PDA force and velocity (both on the y-axis) vs time (x-axis). Include markers on the plot that indicate the peaks of the downward traveling and upward traveling waves.\nThe displacement (y-axis) and force (x-axis) in the pile from the hammer blow captured by the PDA data.\n\n\n\n\nInclude plots of\n\nThe sound volume in air (y-axis) and water (y-axis) vs. distance (x-axis) from the pile from the hammer blow captured by the PDA data. The plot should include at least one environmental noise limit per medium.\nPile tip elevation (y-axis) and distance to environmental thresholds (x-axis) for the driving log in the same orientation as the pile-driving log plots.\n\n\n\n\n\n\nYour project will be submitted by pushing your work to GitHub (same as the homework submission procedure). At a minimum, the submission should include:\n\nYour app’s notebook (one .ipynb file)\nYour app’s support script (one or more .py files)\nAt least one of the pile-driving log data files (one or more .csv files)",
     "crumbs": [
       "TME 310A",
       "Project",
-      "Course Project"
+      "Project Part 3 - enhanced pile-driving app"
     ]
   },
   {
-    "objectID": "website/project_description.html#deliverables",
-    "href": "website/project_description.html#deliverables",
-    "title": "Course Project",
-    "section": "",
-    "text": "The project will have three deliverables:\n\nGroup coordination (due week 5)\nBasic pile-driving app (due week 7)\nEnhanced pile-driving app (due finals week)",
-    "crumbs": [
-      "TME 310A",
-      "Project",
-      "Course Project"
-    ]
-  },
-  {
-    "objectID": "website/project_02.html",
-    "href": "website/project_02.html",
-    "title": "Project Part 2 - basic pile-driving app",
-    "section": "",
-    "text": "Assignment repo: project_02\nExample solution:\n\nNotebook\npile_driving.py\n\n\n\nDemonstrate the coding skills learned in the course to develop a notebook that could be useful for engineering professionals working on pile-driving projects.\n\n\n\nYour goal for Part 2 of the course project is to build a basic pile-driving app from a jupyter notebook. In this context, “app” doesn’t mean software that runs on a mobile device, it means software that someone could use to perform a particular task on a computer if they have access to your notebook and supporting Python scripts. The notebook itself should have minimal visible code. The majority of your code should live in one or more Python script files that are imported into the notebook. This helps separate the inner workings of the app from the user’s experience (and also helps prevent accidental changes to the code).\nThe app’s user should be able to:\n\nChoose a pile-driving log file from within the app’s file directory.\nSee a plot of the pile’s driving log data vs. elevation.\nSee a plot of the pile’s estimated capacity vs. elevation.\nSee a short text summary of the pile’s final condition, including:\n\nPile ID\nPile tip elevation\nPile load capacity\n\n\nThe purpose of the app and instructions for using it should be clearly described in the notebook. Any engineer who understands the basics of pile-driving and has a basic understanding of Jupyter notebooks should be able to use the notebook and understand its output.\nAdditionally, the supporting code should be well-documented with docstrings. Any individual who understands Python should be able to view the supporting code and understand how each function works by reading the docstrings. At a minimum, docstrings should include:\n\nA description of the function’s purpose.\nA list of the function’s input parameters, including whether they have default values and what units the should be in.\nA list of the function’s output parameters, including what units they will be in.\n\n\n\nThe way a user chooses a pile-driving log file can be as simple as typing the file name into the right place in a code cell in your notebook. Prompting the user for input or adding graphical user interface elements is not necessary.\nYour assignment repository will include a small number of properly formatted pile-driving logs for you to test your notebook with. You should assume that app users will want to add additional pile-driving logs and select them with your app. You may assume that any pile-driving logs the user adds will follow the same format as the sample logs.\n\n\n\nThe driving log data should show the blows per minute (BPM) and blows per foot (BPF) vs. pile tip elevation. The elevation should be shown on the vertical axis BPM and BPF can be included on a single plot or on two separate plots, but the elevations for both datasets should align visually. Since the elevation needs to be on the vertical axis, this means that if two plots are used, the two plots should be side-by-side.\n\n\n\nSimilar to the driving log data, the pile capacity should be plotted vs. pile tip elevation with elevation shown on the vertical axis.\nThe pile’s capacity should be estimated using the driving log and the \\(S_o\\) equation. The \\(S_o\\) equation provides a method of estimating capacity from the hammer energy and blow count. It is a simplification of the rational pile formula and is based on the impulse-momentum principles of the hammer/pile system.\nThe \\(S_o\\) equation is:\n\\[ Q = \\frac{a H W}{S + S_o}\\]\nWhere:\n\\[S_o = \\sqrt[]{\\frac{a H W L}{2 A E}} \\]\nAnd:\n\\(Q\\) = Ultimate pile capacity in pounds\n\\(H\\) = Height of hammer fall in feet\n\\(W\\) = weight of hammer in pounds\n\\(a\\) = Hammer efficiency\n\\(L\\) = Total pile length in feet\n\\(A\\) = Pile cross-sectional area in square inches\n\\(E\\) = Modulus of elasticity of pile material in pounds per square inch\n\\(S\\) = Pile penetration (in feet) per blow\nUse the following pile and hammer parameters for your app’s calculations:\n\n\n\nParameter\nValue\n\n\n\n\n\\(W\\)\n20,000 pounds\n\n\n\\(a\\)\n0.4\n\n\n\\(L\\)\n150 feet\n\n\n\\(A\\)\n477 square inches\n\n\n\\(E\\)\n6,000,000 psi\n\n\n\n\n\n\nThe text summary of the pile’s final condition should include the pile ID, final tip elevation, and final load capacity. An example is shown below (note - 1 “kip” = 1,000 pounds):\nPile ID: B-14\nPile tip elevation: -134 feet\nPile load capacity: 899 kips\n\n\n\n\nYour project will be submitted by pushing your work to GitHub (same as the homework submission procedure). At a minimum, the submission should include:\n\nYour app’s notebook (one .ipynb file)\nYour app’s support script (one or more .py files)\nAt least one of the pile-driving log data files (one or more .csv files)\n\n\n\n\n\n\n\nYour submission will be graded by the instructor with the following rubric:\n\n\n\n\n\n\n\n\nCategory\nCriteria\nPoints\n\n\n\n\nData reading\nUsers have a way to change which pile-driving log is being analyzed by the app. The app will work for any properly formatted pile-driving log in the directory that the sample log files are in so that if a user adds additional logs, they can be analyzed by the app\n__ / 10\n\n\nApp instructions\nThe app instructions are clearly written such that an informed (i.e., familiar with pile-driving and Jupyter notebooks) user would be able to use the app.\n__ / 10\n\n\nPlots\nPlots of BPM, BPF, and pile load capacity are generated from the log. All plots use elevation as the vertical axis. The units of data being plotted are included and correct.\n__ / 10\n\n\nOutput\nA short summary of the pile analysis is displayed when the app is run. The output summary includes the correct units. The information in the summary is consistent with the pile log file and the plots.\n__ / 10\n\n\nSupport code\nThe functions that perform the app’s calculations are imported into the app from one or more supporting Python files. The functions are well documented (purpose, inputs and outputs described in a docstring).\n__ / 10",
-    "crumbs": [
-      "TME 310A",
-      "Project",
-      "Project Part 2 - basic pile-driving app"
-    ]
-  },
-  {
-    "objectID": "website/project_02.html#purpose",
-    "href": "website/project_02.html#purpose",
-    "title": "Project Part 2 - basic pile-driving app",
+    "objectID": "website/project_03.html#purpose",
+    "href": "website/project_03.html#purpose",
+    "title": "Project Part 3 - enhanced pile-driving app",
     "section": "",
     "text": "Demonstrate the coding skills learned in the course to develop a notebook that could be useful for engineering professionals working on pile-driving projects.",
     "crumbs": [
       "TME 310A",
       "Project",
-      "Project Part 2 - basic pile-driving app"
+      "Project Part 3 - enhanced pile-driving app"
     ]
   },
   {
-    "objectID": "website/project_02.html#instructions",
-    "href": "website/project_02.html#instructions",
-    "title": "Project Part 2 - basic pile-driving app",
+    "objectID": "website/project_03.html#building-on-part-2",
+    "href": "website/project_03.html#building-on-part-2",
+    "title": "Project Part 3 - enhanced pile-driving app",
     "section": "",
-    "text": "Your goal for Part 2 of the course project is to build a basic pile-driving app from a jupyter notebook. In this context, “app” doesn’t mean software that runs on a mobile device, it means software that someone could use to perform a particular task on a computer if they have access to your notebook and supporting Python scripts. The notebook itself should have minimal visible code. The majority of your code should live in one or more Python script files that are imported into the notebook. This helps separate the inner workings of the app from the user’s experience (and also helps prevent accidental changes to the code).\nThe app’s user should be able to:\n\nChoose a pile-driving log file from within the app’s file directory.\nSee a plot of the pile’s driving log data vs. elevation.\nSee a plot of the pile’s estimated capacity vs. elevation.\nSee a short text summary of the pile’s final condition, including:\n\nPile ID\nPile tip elevation\nPile load capacity\n\n\nThe purpose of the app and instructions for using it should be clearly described in the notebook. Any engineer who understands the basics of pile-driving and has a basic understanding of Jupyter notebooks should be able to use the notebook and understand its output.\nAdditionally, the supporting code should be well-documented with docstrings. Any individual who understands Python should be able to view the supporting code and understand how each function works by reading the docstrings. At a minimum, docstrings should include:\n\nA description of the function’s purpose.\nA list of the function’s input parameters, including whether they have default values and what units the should be in.\nA list of the function’s output parameters, including what units they will be in.\n\n\n\nThe way a user chooses a pile-driving log file can be as simple as typing the file name into the right place in a code cell in your notebook. Prompting the user for input or adding graphical user interface elements is not necessary.\nYour assignment repository will include a small number of properly formatted pile-driving logs for you to test your notebook with. You should assume that app users will want to add additional pile-driving logs and select them with your app. You may assume that any pile-driving logs the user adds will follow the same format as the sample logs.\n\n\n\nThe driving log data should show the blows per minute (BPM) and blows per foot (BPF) vs. pile tip elevation. The elevation should be shown on the vertical axis BPM and BPF can be included on a single plot or on two separate plots, but the elevations for both datasets should align visually. Since the elevation needs to be on the vertical axis, this means that if two plots are used, the two plots should be side-by-side.\n\n\n\nSimilar to the driving log data, the pile capacity should be plotted vs. pile tip elevation with elevation shown on the vertical axis.\nThe pile’s capacity should be estimated using the driving log and the \\(S_o\\) equation. The \\(S_o\\) equation provides a method of estimating capacity from the hammer energy and blow count. It is a simplification of the rational pile formula and is based on the impulse-momentum principles of the hammer/pile system.\nThe \\(S_o\\) equation is:\n\\[ Q = \\frac{a H W}{S + S_o}\\]\nWhere:\n\\[S_o = \\sqrt[]{\\frac{a H W L}{2 A E}} \\]\nAnd:\n\\(Q\\) = Ultimate pile capacity in pounds\n\\(H\\) = Height of hammer fall in feet\n\\(W\\) = weight of hammer in pounds\n\\(a\\) = Hammer efficiency\n\\(L\\) = Total pile length in feet\n\\(A\\) = Pile cross-sectional area in square inches\n\\(E\\) = Modulus of elasticity of pile material in pounds per square inch\n\\(S\\) = Pile penetration (in feet) per blow\nUse the following pile and hammer parameters for your app’s calculations:\n\n\n\nParameter\nValue\n\n\n\n\n\\(W\\)\n20,000 pounds\n\n\n\\(a\\)\n0.4\n\n\n\\(L\\)\n150 feet\n\n\n\\(A\\)\n477 square inches\n\n\n\\(E\\)\n6,000,000 psi\n\n\n\n\n\n\nThe text summary of the pile’s final condition should include the pile ID, final tip elevation, and final load capacity. An example is shown below (note - 1 “kip” = 1,000 pounds):\nPile ID: B-14\nPile tip elevation: -134 feet\nPile load capacity: 899 kips",
+    "text": "Your goal for Part 3 of the course project is to enhance the a basic pile-driving app you developed in Part 2 (you are also allowed to use the Part 2 example submission as a starting point for Part 3). The app will produce an engineering report on a specific aspect of pile-driving based on the enhancement option selected by your group.\nThere are several ways that the basic pile-driving app could be enhanced. Descriptions of suggested enhancements are listed below. Your project group should choose one of the suggested enhancements below OR propose an enhancement to be approved by your instructor.\n\n\n\n\nDiesel hammer combustion\nOpen-ended diesel hammers consist of a single cylinder containing a heavy piston called a ram. During operation, fuel ignition launches the ram up into the air. When the ram falls back down, it compresses and heats an air/fuel mixture in the piston, reaching its ignition temperature and starting the process over again.\nThe Diesel hammer combustion enhancement will involve creating a model of the combustion process - the increasing pressure and temperature due to the falling piston, the energy released by fuel ignition, and the resulting displacement of the piston. The model will provide a means of calculating the fuel needed to achieve different piston heights. Combined with a pile-driving log containing blows per minute (BPM) and blows per foot (BPF), the model will show the fuel consumption during the pile-driving process. A mathematical framework for the combustion model will be provided to you.\nThe focus of this option is the fuel consumption and carbon emissions for pile installation.\nPile Driving Analysis (PDA) from instrumentation\nPile Driving Analysis (PDA) is the name of a specific set of instruments and calculations used to measure wave transmission through a pile as it’s driven and estimate its capacity. Generally, PDA is performed on only a small percentage of piles in a given project because it’s expensive to perform and slows down the construction (because of the instrument installation). PDA data contains measurements of strain and acceleration signals that can be used to calculate the force and speed of pressure waves traveling through the pile. This data can be interpreted to determine an estimate of the pile’s capacity, the maximum tension and compression stresses in the pile, and detect whether the pile has been damaged.\nThe PDA instrumentation enhancement will use data from one or more blows at the end of driving to produce a capacity estimate to compare to the estimate from a pile-driving log. Additionally, the pile stresses and damage indications (if any) will be reported and compared to the material strength as a quality control check on the pile’s structural integrity. A mathematical framework for PDA analysis will be provided to you.\nThe focus of this option is quality control and capacity verification.\nEnvironmental noise assessment\nPile-driving is a noisy process. The noise from pile-driving can be a nuisance to neighboring properties and disturbing (and even lethal) to wildlife. Sound from pile-driving comes from the impact between the pile and hammer and from the deformation of the pile as compression and tension waves travel through the pile. The noise from the waves traveling through the pile are particularly important under water, where they have the most impact on wildlife.\nThe Environmental noise assessment enhancement will use the PDA strain and velocity measurements to estimate the volume in air and water from a single blow to the pile. The noise attenuation with distance from the pile will be compared to different thresholds, providing an estimate for the distance where various noise issues are of concern. Combined with a pile-driving log with blows per minute (BPM) and blows per foot (BPF), the noise model will provide a range of distances and time durations over which the noise issues are of concern. A mathematical framework for the sound volume model will be provided to you.\nThe focus of this option is environmental regulation compliance.",
     "crumbs": [
       "TME 310A",
       "Project",
-      "Project Part 2 - basic pile-driving app"
+      "Project Part 3 - enhanced pile-driving app"
     ]
   },
   {
-    "objectID": "website/project_02.html#submission",
-    "href": "website/project_02.html#submission",
-    "title": "Project Part 2 - basic pile-driving app",
+    "objectID": "website/project_03.html#requirements",
+    "href": "website/project_03.html#requirements",
+    "title": "Project Part 3 - enhanced pile-driving app",
+    "section": "",
+    "text": "User input should be limited to changing file names or variable values within the notebook. Do not use Python’s input() function to prompt the notebook user. The notebook should include valid values when submitted so that it can run without the user needing to change file names or variable values.\n\n\n\n\n\nThe notebook should contain instructions for users and technical background on the analysis being performed. The instructions should tell the user what inputs are needed for the analysis to run (e.g., the name of a pile log file, or PDA data file). The technical background should explain how the input is used in the analysis and what the analysis results should be interpreted.\n\n\n\nAt least one .py file should be used to perform the majority of the analysis. This file should contain Python functions with docstrings. Any individual who understands Python should be able to view the supporting code and understand how each function works by reading the docstrings. At a minimum, docstrings should include:\n\nA description of the function’s purpose.\nA list of the function’s input parameters, including whether they have default values and what units the should be in.\nA list of the function’s output parameters, including what units they will be in.\n\n\n\n\n\nYour notebook should include a validation section where your analysis results are compared to some external source to check whether they’re reasonable. An external source will be provided for the Diesiel hammer combusion and Environmental noise assessment options. For the PDA instrumentation option, the “external” source will be the final capacity estimated from the pile-driving log.\n\n\n\nThe figures needed will depend on the enhancement option. All enhancement options will need to include BPM, BPF, and capacity plots with the same requirements as in Part 2.\nAdditional figures needed for specific enhancement options are described below. All plots should have an accurate title and axes labeled with the appropriate units. \n\n\nInclude plots of\n\nThe relationship between piston height (y-axis) and fuel volume (x-axis)\nPile tip elevation (y-axis) and fuel consumption (x-axis) for the driving log in the same orientation as the pile-driving log plots.\n\n\n\n\nInclude plots of\n\nThe PDA force and velocity (both on the y-axis) vs time (x-axis). Include markers on the plot that indicate the peaks of the downward traveling and upward traveling waves.\nThe displacement (y-axis) and force (x-axis) in the pile from the hammer blow captured by the PDA data.\n\n\n\n\nInclude plots of\n\nThe sound volume in air (y-axis) and water (y-axis) vs. distance (x-axis) from the pile from the hammer blow captured by the PDA data. The plot should include at least one environmental noise limit per medium.\nPile tip elevation (y-axis) and distance to environmental thresholds (x-axis) for the driving log in the same orientation as the pile-driving log plots.",
+    "crumbs": [
+      "TME 310A",
+      "Project",
+      "Project Part 3 - enhanced pile-driving app"
+    ]
+  },
+  {
+    "objectID": "website/project_03.html#submission",
+    "href": "website/project_03.html#submission",
+    "title": "Project Part 3 - enhanced pile-driving app",
     "section": "",
     "text": "Your project will be submitted by pushing your work to GitHub (same as the homework submission procedure). At a minimum, the submission should include:\n\nYour app’s notebook (one .ipynb file)\nYour app’s support script (one or more .py files)\nAt least one of the pile-driving log data files (one or more .csv files)",
     "crumbs": [
       "TME 310A",
       "Project",
-      "Project Part 2 - basic pile-driving app"
+      "Project Part 3 - enhanced pile-driving app"
     ]
   },
   {
-    "objectID": "website/project_02.html#grading-rubric",
-    "href": "website/project_02.html#grading-rubric",
-    "title": "Project Part 2 - basic pile-driving app",
+    "objectID": "website/being_successful_student.html",
+    "href": "website/being_successful_student.html",
+    "title": "Being a Successful Student",
     "section": "",
-    "text": "Your submission will be graded by the instructor with the following rubric:\n\n\n\n\n\n\n\n\nCategory\nCriteria\nPoints\n\n\n\n\nData reading\nUsers have a way to change which pile-driving log is being analyzed by the app. The app will work for any properly formatted pile-driving log in the directory that the sample log files are in so that if a user adds additional logs, they can be analyzed by the app\n__ / 10\n\n\nApp instructions\nThe app instructions are clearly written such that an informed (i.e., familiar with pile-driving and Jupyter notebooks) user would be able to use the app.\n__ / 10\n\n\nPlots\nPlots of BPM, BPF, and pile load capacity are generated from the log. All plots use elevation as the vertical axis. The units of data being plotted are included and correct.\n__ / 10\n\n\nOutput\nA short summary of the pile analysis is displayed when the app is run. The output summary includes the correct units. The information in the summary is consistent with the pile log file and the plots.\n__ / 10\n\n\nSupport code\nThe functions that perform the app’s calculations are imported into the app from one or more supporting Python files. The functions are well documented (purpose, inputs and outputs described in a docstring).\n__ / 10",
+    "text": "Being a Successful Student\nKeep Current with Course Notifications\nCanvas can automatically keep you informed about due dates, class changes, scheduled events, and much more through its notification system. Be sure to set them, so you are receiving each kind immediately, daily, or weekly, as you prefer.\nPeer Success Mentors\nA peer mentor can assist you in “using effective learning techniques to improve your study skills and gain confidence in your academic abilities.” Connect with one today!\nUW Tacoma Teaching & Learning Center\nHere you can schedule appointments with quantitative and writing lab tutors and access quantitative and writing help and resources.",
     "crumbs": [
       "TME 310A",
-      "Project",
-      "Project Part 2 - basic pile-driving app"
+      "Course information",
+      "Being a Successful Student"
     ]
   },
   {
-    "objectID": "website/weeks/week_8.html",
-    "href": "website/weeks/week_8.html",
-    "title": "Week 8",
+    "objectID": "website/grading_policies.html",
+    "href": "website/grading_policies.html",
+    "title": "Grading policies",
     "section": "",
-    "text": "Course content will be added on a rolling basis\n\n\nProject Part 2 example solution:\n\nNotebook\npile_driving.py",
+    "text": "Assignment categories and weights\n\nHomework (30%)\nQuizzes (30%) - lowest quiz score dropped\nProject (30%)\nLectures, etc. (10%)\n\n\n\nThe course has different late policies depending on the assignment type.\n\n\n\n\nMy goal for this late policy is to motivate students to complete their work on time whenever possible, but still encourage completing assignments if the due date has passed. Even if several days go by, getting some points is better than getting none! Of course, toward the end of the quarter, your flexibility runs out.\n\n\n\nHomework and Project assignments in Canvas will remain open for submissions after the deadline through the end of the quarter. I will grade late submissions like any other submission (except that it may take longer for me to get to them). Canvas will automatically deduct 10 percent of the possible grade for each day late up to 5 days. After 5 days, no further penalty is applied and Canvas will automatically deduct 50 percent of the possible grade from the graded assignment score. If there are unusual circumstances that you know about in advance, talk to me about them. For legitimate, pre-approved reasons, I can override Canvas’s deduction for late work.\n\n\n\n\n\n\nThis late policy is based on the in-person, timed nature of the assignment type.\n\n\n\nQuizzes are conducted in-person in class. In general, makeup quizzes will not be offered. If there are unusual circumstances that you know about in advance, talk to me about them. For legitimate, pre-approved reasons, I can allow you to arrange an alternative time to take a quiz. Course grade scale\nYour lowest quiz score for the quarter will be dropped.\n\n\n\n\n\nHomework assignments will be self-graded. I will provide the grading rubric and solution shortly after the assignment due date. Students will be responsible for assessing their work against the rubric and assignment solution and posting their self-assessments to Canvas.\nI will randomly select one problem per homework assignment to grade myself. These instructor-graded scores will take precedent over the self-graded score for that problem. If a student’s self-assigned grade for the problem varies significantly from the instructor’s score, it may trigger instructor grading of additional problems where the instructor’s score will also take precedent over the self-graded scores. Blatantly inflated self-assigned grades are considered an academic integrity violation and may result in loss of all points for the assignment.\n\n\n\nFinal grades will be calculated by determining the percentage of points received (rounding up or down to the nearest % point using conventional rounding standards) and converting to numerical grades as follows:\n\n\n\nLetter Grade\nOverall Score (%)\nGPA\n\n\n\n\nA\n100\n4\n\n\nA\n99\n4\n\n\nA\n98\n3.9\n\n\nA\n97\n3.9\n\n\nA-\n96\n3.8\n\n\nA-\n95\n3.8\n\n\nA-\n94\n3.7\n\n\nA-\n93\n3.7\n\n\nA-\n92\n3.6\n\n\nA-\n91\n3.6\n\n\nA-\n90\n3.5\n\n\nB+\n89\n3.4\n\n\nB+\n88\n3.3\n\n\nB+\n87\n3.2\n\n\nB\n86\n3.1\n\n\nB\n85\n3\n\n\nB\n84\n2.9\n\n\nB-\n83\n2.8\n\n\nB-\n82\n2.7\n\n\nB-\n81\n2.6\n\n\nB-\n80\n2.5\n\n\nC+\n79\n2.4\n\n\nC+\n78\n2.3\n\n\nC+\n77\n2.2\n\n\nC\n76\n2.1\n\n\nC\n75\n2\n\n\nC\n74\n1.9\n\n\nC-\n73\n1.8\n\n\nC-\n72\n1.7\n\n\nC-\n71\n1.6\n\n\nC-\n70\n1.5\n\n\nD+\n69\n1.4\n\n\nD+\n68\n1.3\n\n\nD+\n67\n1.2\n\n\nD\n66\n1.1\n\n\nD\n65\n1\n\n\nD\n64\n0.9\n\n\nD-\n63\n0.8\n\n\nD-\n62\n0.8\n\n\nD-\n61\n0.7\n\n\nD-\n60\n0.7\n\n\nE\n59\n&lt; 0.7",
     "crumbs": [
       "TME 310A",
-      "Weekly materials",
-      "Week 8"
+      "Course information",
+      "Grading policies"
     ]
   },
   {
-    "objectID": "website/weeks/week_8.html#materials",
-    "href": "website/weeks/week_8.html#materials",
-    "title": "Week 8",
+    "objectID": "website/grading_policies.html#late-policies",
+    "href": "website/grading_policies.html#late-policies",
+    "title": "Grading policies",
     "section": "",
-    "text": "Project Part 2 example solution:\n\nNotebook\npile_driving.py",
+    "text": "The course has different late policies depending on the assignment type.\n\n\n\n\nMy goal for this late policy is to motivate students to complete their work on time whenever possible, but still encourage completing assignments if the due date has passed. Even if several days go by, getting some points is better than getting none! Of course, toward the end of the quarter, your flexibility runs out.\n\n\n\nHomework and Project assignments in Canvas will remain open for submissions after the deadline through the end of the quarter. I will grade late submissions like any other submission (except that it may take longer for me to get to them). Canvas will automatically deduct 10 percent of the possible grade for each day late up to 5 days. After 5 days, no further penalty is applied and Canvas will automatically deduct 50 percent of the possible grade from the graded assignment score. If there are unusual circumstances that you know about in advance, talk to me about them. For legitimate, pre-approved reasons, I can override Canvas’s deduction for late work.\n\n\n\n\n\n\nThis late policy is based on the in-person, timed nature of the assignment type.\n\n\n\nQuizzes are conducted in-person in class. In general, makeup quizzes will not be offered. If there are unusual circumstances that you know about in advance, talk to me about them. For legitimate, pre-approved reasons, I can allow you to arrange an alternative time to take a quiz. Course grade scale\nYour lowest quiz score for the quarter will be dropped.",
     "crumbs": [
       "TME 310A",
-      "Weekly materials",
-      "Week 8"
+      "Course information",
+      "Grading policies"
     ]
   },
   {
-    "objectID": "website/weeks/week_10.html",
-    "href": "website/weeks/week_10.html",
-    "title": "Week 10",
+    "objectID": "website/grading_policies.html#self-grading-for-homework",
+    "href": "website/grading_policies.html#self-grading-for-homework",
+    "title": "Grading policies",
     "section": "",
-    "text": "Course content will be added on a rolling basis\n\n\n\n\n\nTopic\nVideo\nSlides"
-  },
-  {
-    "objectID": "website/weeks/week_10.html#materials",
-    "href": "website/weeks/week_10.html#materials",
-    "title": "Week 10",
-    "section": "",
-    "text": "Topic\nVideo\nSlides"
-  },
-  {
-    "objectID": "website/weeks/week_3.html",
-    "href": "website/weeks/week_3.html",
-    "title": "Week 3",
-    "section": "",
-    "text": "Course content will be added on a rolling basis\n\n\n\n\n\nTopic\nVideo\nSlides\n\n\n\n\nArrays\nLink\nLink\n\n\nArray logic\nLink\nLink\n\n\n\n\n\n\n\nHomework 2",
+    "text": "Homework assignments will be self-graded. I will provide the grading rubric and solution shortly after the assignment due date. Students will be responsible for assessing their work against the rubric and assignment solution and posting their self-assessments to Canvas.\nI will randomly select one problem per homework assignment to grade myself. These instructor-graded scores will take precedent over the self-graded score for that problem. If a student’s self-assigned grade for the problem varies significantly from the instructor’s score, it may trigger instructor grading of additional problems where the instructor’s score will also take precedent over the self-graded scores. Blatantly inflated self-assigned grades are considered an academic integrity violation and may result in loss of all points for the assignment.",
     "crumbs": [
       "TME 310A",
-      "Weekly materials",
-      "Week 3"
+      "Course information",
+      "Grading policies"
     ]
   },
   {
-    "objectID": "website/weeks/week_3.html#materials",
-    "href": "website/weeks/week_3.html#materials",
-    "title": "Week 3",
+    "objectID": "website/grading_policies.html#grade-scale",
+    "href": "website/grading_policies.html#grade-scale",
+    "title": "Grading policies",
     "section": "",
-    "text": "Topic\nVideo\nSlides\n\n\n\n\nArrays\nLink\nLink\n\n\nArray logic\nLink\nLink",
+    "text": "Final grades will be calculated by determining the percentage of points received (rounding up or down to the nearest % point using conventional rounding standards) and converting to numerical grades as follows:\n\n\n\nLetter Grade\nOverall Score (%)\nGPA\n\n\n\n\nA\n100\n4\n\n\nA\n99\n4\n\n\nA\n98\n3.9\n\n\nA\n97\n3.9\n\n\nA-\n96\n3.8\n\n\nA-\n95\n3.8\n\n\nA-\n94\n3.7\n\n\nA-\n93\n3.7\n\n\nA-\n92\n3.6\n\n\nA-\n91\n3.6\n\n\nA-\n90\n3.5\n\n\nB+\n89\n3.4\n\n\nB+\n88\n3.3\n\n\nB+\n87\n3.2\n\n\nB\n86\n3.1\n\n\nB\n85\n3\n\n\nB\n84\n2.9\n\n\nB-\n83\n2.8\n\n\nB-\n82\n2.7\n\n\nB-\n81\n2.6\n\n\nB-\n80\n2.5\n\n\nC+\n79\n2.4\n\n\nC+\n78\n2.3\n\n\nC+\n77\n2.2\n\n\nC\n76\n2.1\n\n\nC\n75\n2\n\n\nC\n74\n1.9\n\n\nC-\n73\n1.8\n\n\nC-\n72\n1.7\n\n\nC-\n71\n1.6\n\n\nC-\n70\n1.5\n\n\nD+\n69\n1.4\n\n\nD+\n68\n1.3\n\n\nD+\n67\n1.2\n\n\nD\n66\n1.1\n\n\nD\n65\n1\n\n\nD\n64\n0.9\n\n\nD-\n63\n0.8\n\n\nD-\n62\n0.8\n\n\nD-\n61\n0.7\n\n\nD-\n60\n0.7\n\n\nE\n59\n&lt; 0.7",
     "crumbs": [
       "TME 310A",
-      "Weekly materials",
-      "Week 3"
+      "Course information",
+      "Grading policies"
     ]
   },
   {
-    "objectID": "website/weeks/week_3.html#assignments-due",
-    "href": "website/weeks/week_3.html#assignments-due",
-    "title": "Week 3",
+    "objectID": "website/github_codespace.html",
+    "href": "website/github_codespace.html",
+    "title": "Coding platform: GitHub Codespace",
     "section": "",
-    "text": "Homework 2",
+    "text": "The course is designed to be run through GitHub Codespaces, which provides a web-based coding environment with everything you need pre-installed. For every assignment, when you accept the assignment in GitHub Classroom, a new GitHub repo will be created for you automatically. You can start a codespace for the assignment by clicking on the “Code” dropdown and selecting “Create codespace on main.” You should only need to do this once for each assignment.\nThis will launch a new codespace with the assignment files.\n\n\n\n\n\n\nNote\n\n\n\nIt takes a few minutes for the codespace to get started and install all the requirements for the first time! Be patient - it’s essentially starting up a brand new computer from scratch. It will go faster the next time you open the codespace.\n\n\n\n\nAn un-graded “sandbox” assignment has been created so you can work on code independently of homework assignments if you’d like.\n\n\n\nThe codespaces run VS Code in a web browser. There are a few main areas you’ll want to navigate to use VS Code:\n\n\n\n\nPrimary sidebar: This area is set up to show the file explorer by default.\nActivity bar: The activity bar touches the primary sidebar and lets you select different content to show in the primary sidebar.\nSecondary sidebar: This area is set up to show the GitHub Copilot Chat. You can use this area to ask Copilot questions about your code.\nEditor: This is where your notebooks and scripts will open.\nPanel: This area sits beneath your editor and between the sidebars. This is where your Terminal and Jupyter Variables containers will be.\n\n\n\n\n\n\n\nNote\n\n\n\nThe positions of all the interface areas can be adjusted. Feel free to adjust them if you have a layout preference, but it can be a bit frustrating if you misplace something, so I recommend against it unless you’re familiar with VS Code and have a specific layout you prefer.\n\n\n\n\n\n\nThe way you submit your assignments with GitHub Classroom is by committing and pushing your changes. There are multiple ways to accomplish this, but I recommend using a few git commands in the terminal. The three commands are all you should need:\n\ngit add . This adds all the changes you’ve made to what will be committed.\ngit commit -m \"your message here\" This commits the changes in your codespaace and attaches a message to them. Of course, you can replace the text in the example with whatever message you want to include. In general, commit messages are supposed to be a brief description of the changes you made since the last commit.\ngit push This pushes your committed changes back to the repo.\n\nYou can create and push as many commits as you want. When grading, I’ll use whichever version existed at the time of the deadline unless you arrange something else with me. I recommend pushing your changes any time you’re planning to pause your work and close your codespace. The codespace should automatically save your changes and keep them, but it is possible to permanently lose changes if you delete the codespace (which is different than just closing the browser/tab) if they weren’t pushed to the repo.\n\n\n\nYour codespace includes the GitHub Copilot extension, which provides you with a powerful AI coding assistant. I encourage you to interact with Copilot and ask it questions about your code. It can write code for you based on instructions you provide and it can read your files to get additional context. In addition to experimenting with Copilot on your own, I encourage you to watch the Copilot videos listed on the Resources Page.\nRegardless of how you use copilot, you are responsible for all the code and text you submit.\n\n\nThere are some things Copilot can do that I’ve turned off on your codespaces. The features aren’t truly removed, just suppressed. They aren’t turned off to prevent you from using them, it’s more that I think they’re more likely to cause problems than be helpful.\nI’ve specifically configured Copilot to provide coding help based on where we’re at in the course. This is intended to prevent it from using Python language features we don’t cover in this class and may be difficult for you to interpret. If there are more advanced uses of Python you want to try, Copilot will help you with them if you ask it to “please override” the course’s coding assistance guidelines.\n\n\n\n\nThe codespace settings are all contained in the GitHub repos and you will have the ability to view, modify, and delete them. By default, I’ve set the codespace to hide these configuration files, but you’ll be able to see them in the repo. I’ve “hidden” them so that it’s difficult for you to accidentally break something about the codespace, not because I don’t want you to see them. If you have experience with the kinds of configuration files in the repo and you want to modify them, you may. But be warned: I can’t guarantee that I’ll be able to fix something if you break it and you’ll still be responsible for completing your assignments.",
     "crumbs": [
       "TME 310A",
-      "Weekly materials",
-      "Week 3"
+      "Course information",
+      "Coding platform: GitHub Codespace"
     ]
   },
   {
-    "objectID": "website/weeks/week_6.html",
-    "href": "website/weeks/week_6.html",
-    "title": "Week 6",
+    "objectID": "website/github_codespace.html#vs-code",
+    "href": "website/github_codespace.html#vs-code",
+    "title": "Coding platform: GitHub Codespace",
     "section": "",
-    "text": "Course content will be added on a rolling basis\n\n\n\n\n\nTopic\nVideo\nSlides\n\n\n\n\nEuler’s method\nLink\nLink\n\n\nEuler’s method example code\nLink\nLink",
+    "text": "The codespaces run VS Code in a web browser. There are a few main areas you’ll want to navigate to use VS Code:\n\n\n\n\nPrimary sidebar: This area is set up to show the file explorer by default.\nActivity bar: The activity bar touches the primary sidebar and lets you select different content to show in the primary sidebar.\nSecondary sidebar: This area is set up to show the GitHub Copilot Chat. You can use this area to ask Copilot questions about your code.\nEditor: This is where your notebooks and scripts will open.\nPanel: This area sits beneath your editor and between the sidebars. This is where your Terminal and Jupyter Variables containers will be.\n\n\n\n\n\n\n\nNote\n\n\n\nThe positions of all the interface areas can be adjusted. Feel free to adjust them if you have a layout preference, but it can be a bit frustrating if you misplace something, so I recommend against it unless you’re familiar with VS Code and have a specific layout you prefer.",
     "crumbs": [
       "TME 310A",
-      "Weekly materials",
-      "Week 6"
+      "Course information",
+      "Coding platform: GitHub Codespace"
     ]
   },
   {
-    "objectID": "website/weeks/week_6.html#materials",
-    "href": "website/weeks/week_6.html#materials",
-    "title": "Week 6",
+    "objectID": "website/github_codespace.html#saving-and-submitting-your-work",
+    "href": "website/github_codespace.html#saving-and-submitting-your-work",
+    "title": "Coding platform: GitHub Codespace",
     "section": "",
-    "text": "Topic\nVideo\nSlides\n\n\n\n\nEuler’s method\nLink\nLink\n\n\nEuler’s method example code\nLink\nLink",
+    "text": "The way you submit your assignments with GitHub Classroom is by committing and pushing your changes. There are multiple ways to accomplish this, but I recommend using a few git commands in the terminal. The three commands are all you should need:\n\ngit add . This adds all the changes you’ve made to what will be committed.\ngit commit -m \"your message here\" This commits the changes in your codespaace and attaches a message to them. Of course, you can replace the text in the example with whatever message you want to include. In general, commit messages are supposed to be a brief description of the changes you made since the last commit.\ngit push This pushes your committed changes back to the repo.\n\nYou can create and push as many commits as you want. When grading, I’ll use whichever version existed at the time of the deadline unless you arrange something else with me. I recommend pushing your changes any time you’re planning to pause your work and close your codespace. The codespace should automatically save your changes and keep them, but it is possible to permanently lose changes if you delete the codespace (which is different than just closing the browser/tab) if they weren’t pushed to the repo.",
     "crumbs": [
       "TME 310A",
-      "Weekly materials",
-      "Week 6"
+      "Course information",
+      "Coding platform: GitHub Codespace"
     ]
   },
   {
-    "objectID": "website/weeks/week_5.html",
-    "href": "website/weeks/week_5.html",
-    "title": "Week 5",
+    "objectID": "website/github_codespace.html#github-copilot",
+    "href": "website/github_codespace.html#github-copilot",
+    "title": "Coding platform: GitHub Codespace",
     "section": "",
-    "text": "Course content will be added on a rolling basis\n\n\n\n\n\nTopic\nVideo\nSlides\n\n\n\n\nTechnical difficulties 😕\nN/A\nLink\n\n\nCollaborating with GitHub\nN/A\nLink\n\n\n\n\n\n\nHomework 5",
+    "text": "Your codespace includes the GitHub Copilot extension, which provides you with a powerful AI coding assistant. I encourage you to interact with Copilot and ask it questions about your code. It can write code for you based on instructions you provide and it can read your files to get additional context. In addition to experimenting with Copilot on your own, I encourage you to watch the Copilot videos listed on the Resources Page.\nRegardless of how you use copilot, you are responsible for all the code and text you submit.\n\n\nThere are some things Copilot can do that I’ve turned off on your codespaces. The features aren’t truly removed, just suppressed. They aren’t turned off to prevent you from using them, it’s more that I think they’re more likely to cause problems than be helpful.\nI’ve specifically configured Copilot to provide coding help based on where we’re at in the course. This is intended to prevent it from using Python language features we don’t cover in this class and may be difficult for you to interpret. If there are more advanced uses of Python you want to try, Copilot will help you with them if you ask it to “please override” the course’s coding assistance guidelines.",
     "crumbs": [
       "TME 310A",
-      "Weekly materials",
-      "Week 5"
+      "Course information",
+      "Coding platform: GitHub Codespace"
     ]
   },
   {
-    "objectID": "website/weeks/week_5.html#materials",
-    "href": "website/weeks/week_5.html#materials",
-    "title": "Week 5",
+    "objectID": "website/github_codespace.html#breaking-things",
+    "href": "website/github_codespace.html#breaking-things",
+    "title": "Coding platform: GitHub Codespace",
     "section": "",
-    "text": "Topic\nVideo\nSlides\n\n\n\n\nTechnical difficulties 😕\nN/A\nLink\n\n\nCollaborating with GitHub\nN/A\nLink",
+    "text": "The codespace settings are all contained in the GitHub repos and you will have the ability to view, modify, and delete them. By default, I’ve set the codespace to hide these configuration files, but you’ll be able to see them in the repo. I’ve “hidden” them so that it’s difficult for you to accidentally break something about the codespace, not because I don’t want you to see them. If you have experience with the kinds of configuration files in the repo and you want to modify them, you may. But be warned: I can’t guarantee that I’ll be able to fix something if you break it and you’ll still be responsible for completing your assignments.",
     "crumbs": [
       "TME 310A",
-      "Weekly materials",
-      "Week 5"
-    ]
-  },
-  {
-    "objectID": "website/weeks/week_5.html#assignments-due",
-    "href": "website/weeks/week_5.html#assignments-due",
-    "title": "Week 5",
-    "section": "",
-    "text": "Homework 5",
-    "crumbs": [
-      "TME 310A",
-      "Weekly materials",
-      "Week 5"
-    ]
-  },
-  {
-    "objectID": "website/examples.html",
-    "href": "website/examples.html",
-    "title": "Example scripts",
-    "section": "",
-    "text": "Example scripts\nThe table below contains some example scripts using basic course concepts.\n\n\n\nScript link\nNotes\n\n\n\n\nPython basics\n\n\n\nPlotting a sine wave\nBasic use of matplotlib\n\n\nParachute problem\n\n\n\nParachute problem (copilot solution)\n\n\n\nParachute functions\n\n\n\nMatplotlib quick reference\nPlots with some styling options\n\n\nQuiz corrections for extra credit\nAn example to follow if doing extra credit to make up points lost on a quiz\n\n\nDartboard approximation of \\(\\pi\\)\nConvergence and error tolerance example with plots\n\n\nHomework 3 notes\nMy notes on some of the common approaches I saw while grading homework 3.\n\n\nHomework 4 notes\nMy notes on things I observed while grading homework 4.\n\n\nRoot-finding example code",
-    "crumbs": [
-      "TME 310A",
-      "Example scripts"
+      "Course information",
+      "Coding platform: GitHub Codespace"
     ]
   },
   {
@@ -1086,378 +1235,292 @@
     ]
   },
   {
-    "objectID": "website/github_codespace.html",
-    "href": "website/github_codespace.html",
-    "title": "Coding platform: GitHub Codespace",
+    "objectID": "website/examples.html",
+    "href": "website/examples.html",
+    "title": "Example scripts",
     "section": "",
-    "text": "The course is designed to be run through GitHub Codespaces, which provides a web-based coding environment with everything you need pre-installed. For every assignment, when you accept the assignment in GitHub Classroom, a new GitHub repo will be created for you automatically. You can start a codespace for the assignment by clicking on the “Code” dropdown and selecting “Create codespace on main.” You should only need to do this once for each assignment.\nThis will launch a new codespace with the assignment files.\n\n\n\n\n\n\nNote\n\n\n\nIt takes a few minutes for the codespace to get started and install all the requirements for the first time! Be patient - it’s essentially starting up a brand new computer from scratch. It will go faster the next time you open the codespace.\n\n\n\n\nAn un-graded “sandbox” assignment has been created so you can work on code independently of homework assignments if you’d like.\n\n\n\nThe codespaces run VS Code in a web browser. There are a few main areas you’ll want to navigate to use VS Code:\n\n\n\n\nPrimary sidebar: This area is set up to show the file explorer by default.\nActivity bar: The activity bar touches the primary sidebar and lets you select different content to show in the primary sidebar.\nSecondary sidebar: This area is set up to show the GitHub Copilot Chat. You can use this area to ask Copilot questions about your code.\nEditor: This is where your notebooks and scripts will open.\nPanel: This area sits beneath your editor and between the sidebars. This is where your Terminal and Jupyter Variables containers will be.\n\n\n\n\n\n\n\nNote\n\n\n\nThe positions of all the interface areas can be adjusted. Feel free to adjust them if you have a layout preference, but it can be a bit frustrating if you misplace something, so I recommend against it unless you’re familiar with VS Code and have a specific layout you prefer.\n\n\n\n\n\n\nThe way you submit your assignments with GitHub Classroom is by committing and pushing your changes. There are multiple ways to accomplish this, but I recommend using a few git commands in the terminal. The three commands are all you should need:\n\ngit add . This adds all the changes you’ve made to what will be committed.\ngit commit -m \"your message here\" This commits the changes in your codespaace and attaches a message to them. Of course, you can replace the text in the example with whatever message you want to include. In general, commit messages are supposed to be a brief description of the changes you made since the last commit.\ngit push This pushes your committed changes back to the repo.\n\nYou can create and push as many commits as you want. When grading, I’ll use whichever version existed at the time of the deadline unless you arrange something else with me. I recommend pushing your changes any time you’re planning to pause your work and close your codespace. The codespace should automatically save your changes and keep them, but it is possible to permanently lose changes if you delete the codespace (which is different than just closing the browser/tab) if they weren’t pushed to the repo.\n\n\n\nYour codespace includes the GitHub Copilot extension, which provides you with a powerful AI coding assistant. I encourage you to interact with Copilot and ask it questions about your code. It can write code for you based on instructions you provide and it can read your files to get additional context. In addition to experimenting with Copilot on your own, I encourage you to watch the Copilot videos listed on the Resources Page.\nRegardless of how you use copilot, you are responsible for all the code and text you submit.\n\n\nThere are some things Copilot can do that I’ve turned off on your codespaces. The features aren’t truly removed, just suppressed. They aren’t turned off to prevent you from using them, it’s more that I think they’re more likely to cause problems than be helpful.\nI’ve specifically configured Copilot to provide coding help based on where we’re at in the course. This is intended to prevent it from using Python language features we don’t cover in this class and may be difficult for you to interpret. If there are more advanced uses of Python you want to try, Copilot will help you with them if you ask it to “please override” the course’s coding assistance guidelines.\n\n\n\n\nThe codespace settings are all contained in the GitHub repos and you will have the ability to view, modify, and delete them. By default, I’ve set the codespace to hide these configuration files, but you’ll be able to see them in the repo. I’ve “hidden” them so that it’s difficult for you to accidentally break something about the codespace, not because I don’t want you to see them. If you have experience with the kinds of configuration files in the repo and you want to modify them, you may. But be warned: I can’t guarantee that I’ll be able to fix something if you break it and you’ll still be responsible for completing your assignments.",
+    "text": "Example scripts\nThe table below contains some example scripts using basic course concepts.\n\n\n\nScript link\nNotes\n\n\n\n\nPython basics\n\n\n\nPlotting a sine wave\nBasic use of matplotlib\n\n\nParachute problem\n\n\n\nParachute problem (copilot solution)\n\n\n\nParachute functions\n\n\n\nMatplotlib quick reference\nPlots with some styling options\n\n\nQuiz corrections for extra credit\nAn example to follow if doing extra credit to make up points lost on a quiz\n\n\nDartboard approximation of \\(\\pi\\)\nConvergence and error tolerance example with plots\n\n\nHomework 3 notes\nMy notes on some of the common approaches I saw while grading homework 3.\n\n\nHomework 4 notes\nMy notes on things I observed while grading homework 4.\n\n\nRoot-finding example code",
     "crumbs": [
       "TME 310A",
-      "Course information",
-      "Coding platform: GitHub Codespace"
+      "Example scripts"
     ]
   },
   {
-    "objectID": "website/github_codespace.html#vs-code",
-    "href": "website/github_codespace.html#vs-code",
-    "title": "Coding platform: GitHub Codespace",
+    "objectID": "website/weeks/week_5.html",
+    "href": "website/weeks/week_5.html",
+    "title": "Week 5",
     "section": "",
-    "text": "The codespaces run VS Code in a web browser. There are a few main areas you’ll want to navigate to use VS Code:\n\n\n\n\nPrimary sidebar: This area is set up to show the file explorer by default.\nActivity bar: The activity bar touches the primary sidebar and lets you select different content to show in the primary sidebar.\nSecondary sidebar: This area is set up to show the GitHub Copilot Chat. You can use this area to ask Copilot questions about your code.\nEditor: This is where your notebooks and scripts will open.\nPanel: This area sits beneath your editor and between the sidebars. This is where your Terminal and Jupyter Variables containers will be.\n\n\n\n\n\n\n\nNote\n\n\n\nThe positions of all the interface areas can be adjusted. Feel free to adjust them if you have a layout preference, but it can be a bit frustrating if you misplace something, so I recommend against it unless you’re familiar with VS Code and have a specific layout you prefer.",
+    "text": "Course content will be added on a rolling basis\n\n\n\n\n\nTopic\nVideo\nSlides\n\n\n\n\nTechnical difficulties 😕\nN/A\nLink\n\n\nCollaborating with GitHub\nN/A\nLink\n\n\n\n\n\n\nHomework 5",
     "crumbs": [
       "TME 310A",
-      "Course information",
-      "Coding platform: GitHub Codespace"
+      "Weekly materials",
+      "Week 5"
     ]
   },
   {
-    "objectID": "website/github_codespace.html#saving-and-submitting-your-work",
-    "href": "website/github_codespace.html#saving-and-submitting-your-work",
-    "title": "Coding platform: GitHub Codespace",
+    "objectID": "website/weeks/week_5.html#materials",
+    "href": "website/weeks/week_5.html#materials",
+    "title": "Week 5",
     "section": "",
-    "text": "The way you submit your assignments with GitHub Classroom is by committing and pushing your changes. There are multiple ways to accomplish this, but I recommend using a few git commands in the terminal. The three commands are all you should need:\n\ngit add . This adds all the changes you’ve made to what will be committed.\ngit commit -m \"your message here\" This commits the changes in your codespaace and attaches a message to them. Of course, you can replace the text in the example with whatever message you want to include. In general, commit messages are supposed to be a brief description of the changes you made since the last commit.\ngit push This pushes your committed changes back to the repo.\n\nYou can create and push as many commits as you want. When grading, I’ll use whichever version existed at the time of the deadline unless you arrange something else with me. I recommend pushing your changes any time you’re planning to pause your work and close your codespace. The codespace should automatically save your changes and keep them, but it is possible to permanently lose changes if you delete the codespace (which is different than just closing the browser/tab) if they weren’t pushed to the repo.",
+    "text": "Topic\nVideo\nSlides\n\n\n\n\nTechnical difficulties 😕\nN/A\nLink\n\n\nCollaborating with GitHub\nN/A\nLink",
     "crumbs": [
       "TME 310A",
-      "Course information",
-      "Coding platform: GitHub Codespace"
+      "Weekly materials",
+      "Week 5"
     ]
   },
   {
-    "objectID": "website/github_codespace.html#github-copilot",
-    "href": "website/github_codespace.html#github-copilot",
-    "title": "Coding platform: GitHub Codespace",
+    "objectID": "website/weeks/week_5.html#assignments-due",
+    "href": "website/weeks/week_5.html#assignments-due",
+    "title": "Week 5",
     "section": "",
-    "text": "Your codespace includes the GitHub Copilot extension, which provides you with a powerful AI coding assistant. I encourage you to interact with Copilot and ask it questions about your code. It can write code for you based on instructions you provide and it can read your files to get additional context. In addition to experimenting with Copilot on your own, I encourage you to watch the Copilot videos listed on the Resources Page.\nRegardless of how you use copilot, you are responsible for all the code and text you submit.\n\n\nThere are some things Copilot can do that I’ve turned off on your codespaces. The features aren’t truly removed, just suppressed. They aren’t turned off to prevent you from using them, it’s more that I think they’re more likely to cause problems than be helpful.\nI’ve specifically configured Copilot to provide coding help based on where we’re at in the course. This is intended to prevent it from using Python language features we don’t cover in this class and may be difficult for you to interpret. If there are more advanced uses of Python you want to try, Copilot will help you with them if you ask it to “please override” the course’s coding assistance guidelines.",
+    "text": "Homework 5",
     "crumbs": [
       "TME 310A",
-      "Course information",
-      "Coding platform: GitHub Codespace"
+      "Weekly materials",
+      "Week 5"
     ]
   },
   {
-    "objectID": "website/github_codespace.html#breaking-things",
-    "href": "website/github_codespace.html#breaking-things",
-    "title": "Coding platform: GitHub Codespace",
+    "objectID": "website/weeks/week_6.html",
+    "href": "website/weeks/week_6.html",
+    "title": "Week 6",
     "section": "",
-    "text": "The codespace settings are all contained in the GitHub repos and you will have the ability to view, modify, and delete them. By default, I’ve set the codespace to hide these configuration files, but you’ll be able to see them in the repo. I’ve “hidden” them so that it’s difficult for you to accidentally break something about the codespace, not because I don’t want you to see them. If you have experience with the kinds of configuration files in the repo and you want to modify them, you may. But be warned: I can’t guarantee that I’ll be able to fix something if you break it and you’ll still be responsible for completing your assignments.",
+    "text": "Course content will be added on a rolling basis\n\n\n\n\n\nTopic\nVideo\nSlides\n\n\n\n\nEuler’s method\nLink\nLink\n\n\nEuler’s method example code\nLink\nLink",
     "crumbs": [
       "TME 310A",
-      "Course information",
-      "Coding platform: GitHub Codespace"
+      "Weekly materials",
+      "Week 6"
     ]
   },
   {
-    "objectID": "website/grading_policies.html",
-    "href": "website/grading_policies.html",
-    "title": "Grading policies",
+    "objectID": "website/weeks/week_6.html#materials",
+    "href": "website/weeks/week_6.html#materials",
+    "title": "Week 6",
     "section": "",
-    "text": "Assignment categories and weights\n\nHomework (30%)\nQuizzes (30%) - lowest quiz score dropped\nProject (30%)\nLectures, etc. (10%)\n\n\n\nThe course has different late policies depending on the assignment type.\n\n\n\n\nMy goal for this late policy is to motivate students to complete their work on time whenever possible, but still encourage completing assignments if the due date has passed. Even if several days go by, getting some points is better than getting none! Of course, toward the end of the quarter, your flexibility runs out.\n\n\n\nHomework and Project assignments in Canvas will remain open for submissions after the deadline through the end of the quarter. I will grade late submissions like any other submission (except that it may take longer for me to get to them). Canvas will automatically deduct 10 percent of the possible grade for each day late up to 5 days. After 5 days, no further penalty is applied and Canvas will automatically deduct 50 percent of the possible grade from the graded assignment score. If there are unusual circumstances that you know about in advance, talk to me about them. For legitimate, pre-approved reasons, I can override Canvas’s deduction for late work.\n\n\n\n\n\n\nThis late policy is based on the in-person, timed nature of the assignment type.\n\n\n\nQuizzes are conducted in-person in class. In general, makeup quizzes will not be offered. If there are unusual circumstances that you know about in advance, talk to me about them. For legitimate, pre-approved reasons, I can allow you to arrange an alternative time to take a quiz. Course grade scale\nYour lowest quiz score for the quarter will be dropped.\n\n\n\n\n\nHomework assignments will be self-graded. I will provide the grading rubric and solution shortly after the assignment due date. Students will be responsible for assessing their work against the rubric and assignment solution and posting their self-assessments to Canvas.\nI will randomly select one problem per homework assignment to grade myself. These instructor-graded scores will take precedent over the self-graded score for that problem. If a student’s self-assigned grade for the problem varies significantly from the instructor’s score, it may trigger instructor grading of additional problems where the instructor’s score will also take precedent over the self-graded scores. Blatantly inflated self-assigned grades are considered an academic integrity violation and may result in loss of all points for the assignment.\n\n\n\nFinal grades will be calculated by determining the percentage of points received (rounding up or down to the nearest % point using conventional rounding standards) and converting to numerical grades as follows:\n\n\n\nLetter Grade\nOverall Score (%)\nGPA\n\n\n\n\nA\n100\n4\n\n\nA\n99\n4\n\n\nA\n98\n3.9\n\n\nA\n97\n3.9\n\n\nA-\n96\n3.8\n\n\nA-\n95\n3.8\n\n\nA-\n94\n3.7\n\n\nA-\n93\n3.7\n\n\nA-\n92\n3.6\n\n\nA-\n91\n3.6\n\n\nA-\n90\n3.5\n\n\nB+\n89\n3.4\n\n\nB+\n88\n3.3\n\n\nB+\n87\n3.2\n\n\nB\n86\n3.1\n\n\nB\n85\n3\n\n\nB\n84\n2.9\n\n\nB-\n83\n2.8\n\n\nB-\n82\n2.7\n\n\nB-\n81\n2.6\n\n\nB-\n80\n2.5\n\n\nC+\n79\n2.4\n\n\nC+\n78\n2.3\n\n\nC+\n77\n2.2\n\n\nC\n76\n2.1\n\n\nC\n75\n2\n\n\nC\n74\n1.9\n\n\nC-\n73\n1.8\n\n\nC-\n72\n1.7\n\n\nC-\n71\n1.6\n\n\nC-\n70\n1.5\n\n\nD+\n69\n1.4\n\n\nD+\n68\n1.3\n\n\nD+\n67\n1.2\n\n\nD\n66\n1.1\n\n\nD\n65\n1\n\n\nD\n64\n0.9\n\n\nD-\n63\n0.8\n\n\nD-\n62\n0.8\n\n\nD-\n61\n0.7\n\n\nD-\n60\n0.7\n\n\nE\n59\n&lt; 0.7",
+    "text": "Topic\nVideo\nSlides\n\n\n\n\nEuler’s method\nLink\nLink\n\n\nEuler’s method example code\nLink\nLink",
     "crumbs": [
       "TME 310A",
-      "Course information",
-      "Grading policies"
+      "Weekly materials",
+      "Week 6"
     ]
   },
   {
-    "objectID": "website/grading_policies.html#late-policies",
-    "href": "website/grading_policies.html#late-policies",
-    "title": "Grading policies",
+    "objectID": "website/weeks/week_3.html",
+    "href": "website/weeks/week_3.html",
+    "title": "Week 3",
     "section": "",
-    "text": "The course has different late policies depending on the assignment type.\n\n\n\n\nMy goal for this late policy is to motivate students to complete their work on time whenever possible, but still encourage completing assignments if the due date has passed. Even if several days go by, getting some points is better than getting none! Of course, toward the end of the quarter, your flexibility runs out.\n\n\n\nHomework and Project assignments in Canvas will remain open for submissions after the deadline through the end of the quarter. I will grade late submissions like any other submission (except that it may take longer for me to get to them). Canvas will automatically deduct 10 percent of the possible grade for each day late up to 5 days. After 5 days, no further penalty is applied and Canvas will automatically deduct 50 percent of the possible grade from the graded assignment score. If there are unusual circumstances that you know about in advance, talk to me about them. For legitimate, pre-approved reasons, I can override Canvas’s deduction for late work.\n\n\n\n\n\n\nThis late policy is based on the in-person, timed nature of the assignment type.\n\n\n\nQuizzes are conducted in-person in class. In general, makeup quizzes will not be offered. If there are unusual circumstances that you know about in advance, talk to me about them. For legitimate, pre-approved reasons, I can allow you to arrange an alternative time to take a quiz. Course grade scale\nYour lowest quiz score for the quarter will be dropped.",
+    "text": "Course content will be added on a rolling basis\n\n\n\n\n\nTopic\nVideo\nSlides\n\n\n\n\nArrays\nLink\nLink\n\n\nArray logic\nLink\nLink\n\n\n\n\n\n\n\nHomework 2",
     "crumbs": [
       "TME 310A",
-      "Course information",
-      "Grading policies"
+      "Weekly materials",
+      "Week 3"
     ]
   },
   {
-    "objectID": "website/grading_policies.html#self-grading-for-homework",
-    "href": "website/grading_policies.html#self-grading-for-homework",
-    "title": "Grading policies",
+    "objectID": "website/weeks/week_3.html#materials",
+    "href": "website/weeks/week_3.html#materials",
+    "title": "Week 3",
     "section": "",
-    "text": "Homework assignments will be self-graded. I will provide the grading rubric and solution shortly after the assignment due date. Students will be responsible for assessing their work against the rubric and assignment solution and posting their self-assessments to Canvas.\nI will randomly select one problem per homework assignment to grade myself. These instructor-graded scores will take precedent over the self-graded score for that problem. If a student’s self-assigned grade for the problem varies significantly from the instructor’s score, it may trigger instructor grading of additional problems where the instructor’s score will also take precedent over the self-graded scores. Blatantly inflated self-assigned grades are considered an academic integrity violation and may result in loss of all points for the assignment.",
+    "text": "Topic\nVideo\nSlides\n\n\n\n\nArrays\nLink\nLink\n\n\nArray logic\nLink\nLink",
     "crumbs": [
       "TME 310A",
-      "Course information",
-      "Grading policies"
+      "Weekly materials",
+      "Week 3"
     ]
   },
   {
-    "objectID": "website/grading_policies.html#grade-scale",
-    "href": "website/grading_policies.html#grade-scale",
-    "title": "Grading policies",
+    "objectID": "website/weeks/week_3.html#assignments-due",
+    "href": "website/weeks/week_3.html#assignments-due",
+    "title": "Week 3",
     "section": "",
-    "text": "Final grades will be calculated by determining the percentage of points received (rounding up or down to the nearest % point using conventional rounding standards) and converting to numerical grades as follows:\n\n\n\nLetter Grade\nOverall Score (%)\nGPA\n\n\n\n\nA\n100\n4\n\n\nA\n99\n4\n\n\nA\n98\n3.9\n\n\nA\n97\n3.9\n\n\nA-\n96\n3.8\n\n\nA-\n95\n3.8\n\n\nA-\n94\n3.7\n\n\nA-\n93\n3.7\n\n\nA-\n92\n3.6\n\n\nA-\n91\n3.6\n\n\nA-\n90\n3.5\n\n\nB+\n89\n3.4\n\n\nB+\n88\n3.3\n\n\nB+\n87\n3.2\n\n\nB\n86\n3.1\n\n\nB\n85\n3\n\n\nB\n84\n2.9\n\n\nB-\n83\n2.8\n\n\nB-\n82\n2.7\n\n\nB-\n81\n2.6\n\n\nB-\n80\n2.5\n\n\nC+\n79\n2.4\n\n\nC+\n78\n2.3\n\n\nC+\n77\n2.2\n\n\nC\n76\n2.1\n\n\nC\n75\n2\n\n\nC\n74\n1.9\n\n\nC-\n73\n1.8\n\n\nC-\n72\n1.7\n\n\nC-\n71\n1.6\n\n\nC-\n70\n1.5\n\n\nD+\n69\n1.4\n\n\nD+\n68\n1.3\n\n\nD+\n67\n1.2\n\n\nD\n66\n1.1\n\n\nD\n65\n1\n\n\nD\n64\n0.9\n\n\nD-\n63\n0.8\n\n\nD-\n62\n0.8\n\n\nD-\n61\n0.7\n\n\nD-\n60\n0.7\n\n\nE\n59\n&lt; 0.7",
+    "text": "Homework 2",
     "crumbs": [
       "TME 310A",
-      "Course information",
-      "Grading policies"
+      "Weekly materials",
+      "Week 3"
     ]
   },
   {
-    "objectID": "website/being_successful_student.html",
-    "href": "website/being_successful_student.html",
-    "title": "Being a Successful Student",
+    "objectID": "website/weeks/week_10.html",
+    "href": "website/weeks/week_10.html",
+    "title": "Week 10",
     "section": "",
-    "text": "Being a Successful Student\nKeep Current with Course Notifications\nCanvas can automatically keep you informed about due dates, class changes, scheduled events, and much more through its notification system. Be sure to set them, so you are receiving each kind immediately, daily, or weekly, as you prefer.\nPeer Success Mentors\nA peer mentor can assist you in “using effective learning techniques to improve your study skills and gain confidence in your academic abilities.” Connect with one today!\nUW Tacoma Teaching & Learning Center\nHere you can schedule appointments with quantitative and writing lab tutors and access quantitative and writing help and resources.",
+    "text": "Course content will be added on a rolling basis\n\n\n\n\n\nTopic\nVideo\nSlides"
+  },
+  {
+    "objectID": "website/weeks/week_10.html#materials",
+    "href": "website/weeks/week_10.html#materials",
+    "title": "Week 10",
+    "section": "",
+    "text": "Topic\nVideo\nSlides"
+  },
+  {
+    "objectID": "website/weeks/week_8.html",
+    "href": "website/weeks/week_8.html",
+    "title": "Week 8",
+    "section": "",
+    "text": "Course content will be added on a rolling basis\n\n\nProject Part 2 example solution:\n\nNotebook\npile_driving.py",
     "crumbs": [
       "TME 310A",
-      "Course information",
-      "Being a Successful Student"
+      "Weekly materials",
+      "Week 8"
     ]
   },
   {
-    "objectID": "website/project_03.html",
-    "href": "website/project_03.html",
-    "title": "Project Part 3 - enhanced pile-driving app",
+    "objectID": "website/weeks/week_8.html#materials",
+    "href": "website/weeks/week_8.html#materials",
+    "title": "Week 8",
     "section": "",
-    "text": "Demonstrate the coding skills learned in the course to develop a notebook that could be useful for engineering professionals working on pile-driving projects.\n\n\n\nYour goal for Part 3 of the course project is to enhance the a basic pile-driving app you developed in Part 2 (you are also allowed to use the Part 2 example submission as a starting point for Part 3). The app will produce an engineering report on a specific aspect of pile-driving based on the enhancement option selected by your group.\nThere are several ways that the basic pile-driving app could be enhanced. Descriptions of suggested enhancements are listed below. Your project group should choose one of the suggested enhancements below OR propose an enhancement to be approved by your instructor.\n\n\n\n\nDiesel hammer combustion\nOpen-ended diesel hammers consist of a single cylinder containing a heavy piston called a ram. During operation, fuel ignition launches the ram up into the air. When the ram falls back down, it compresses and heats an air/fuel mixture in the piston, reaching its ignition temperature and starting the process over again.\nThe Diesel hammer combustion enhancement will involve creating a model of the combustion process - the increasing pressure and temperature due to the falling piston, the energy released by fuel ignition, and the resulting displacement of the piston. The model will provide a means of calculating the fuel needed to achieve different piston heights. Combined with a pile-driving log containing blows per minute (BPM) and blows per foot (BPF), the model will show the fuel consumption during the pile-driving process. A mathematical framework for the combustion model will be provided to you.\nThe focus of this option is the fuel consumption and carbon emissions for pile installation.\nPile Driving Analysis (PDA) from instrumentation\nPile Driving Analysis (PDA) is the name of a specific set of instruments and calculations used to measure wave transmission through a pile as it’s driven and estimate its capacity. Generally, PDA is performed on only a small percentage of piles in a given project because it’s expensive to perform and slows down the construction (because of the instrument installation). PDA data contains measurements of strain and acceleration signals that can be used to calculate the force and speed of pressure waves traveling through the pile. This data can be interpreted to determine an estimate of the pile’s capacity, the maximum tension and compression stresses in the pile, and detect whether the pile has been damaged.\nThe PDA instrumentation enhancement will use data from one or more blows at the end of driving to produce a capacity estimate to compare to the estimate from a pile-driving log. Additionally, the pile stresses and damage indications (if any) will be reported and compared to the material strength as a quality control check on the pile’s structural integrity. A mathematical framework for PDA analysis will be provided to you.\nThe focus of this option is quality control and capacity verification.\nEnvironmental noise assessment\nPile-driving is a noisy process. The noise from pile-driving can be a nuisance to neighboring properties and disturbing (and even lethal) to wildlife. Sound from pile-driving comes from the impact between the pile and hammer and from the deformation of the pile as compression and tension waves travel through the pile. The noise from the waves traveling through the pile are particularly important under water, where they have the most impact on wildlife.\nThe Environmental noise assessment enhancement will use the PDA strain and velocity measurements to estimate the volume in air and water from a single blow to the pile. The noise attenuation with distance from the pile will be compared to different thresholds, providing an estimate for the distance where various noise issues are of concern. Combined with a pile-driving log with blows per minute (BPM) and blows per foot (BPF), the noise model will provide a range of distances and time durations over which the noise issues are of concern. A mathematical framework for the sound volume model will be provided to you.\nThe focus of this option is environmental regulation compliance.\n\n\n\n\n\n\n\n\nUser input should be limited to changing file names or variable values within the notebook. Do not use Python’s input() function to prompt the notebook user. The notebook should include valid values when submitted so that it can run without the user needing to change file names or variable values.\n\n\n\n\n\nThe notebook should contain instructions for users and technical background on the analysis being performed. The instructions should tell the user what inputs are needed for the analysis to run (e.g., the name of a pile log file, or PDA data file). The technical background should explain how the input is used in the analysis and what the analysis results should be interpreted.\n\n\n\nAt least one .py file should be used to perform the majority of the analysis. This file should contain Python functions with docstrings. Any individual who understands Python should be able to view the supporting code and understand how each function works by reading the docstrings. At a minimum, docstrings should include:\n\nA description of the function’s purpose.\nA list of the function’s input parameters, including whether they have default values and what units the should be in.\nA list of the function’s output parameters, including what units they will be in.\n\n\n\n\n\nYour notebook should include a validation section where your analysis results are compared to some external source to check whether they’re reasonable. An external source will be provided for the Diesiel hammer combusion and Environmental noise assessment options. For the PDA instrumentation option, the “external” source will be the final capacity estimated from the pile-driving log.\n\n\n\nThe figures needed will depend on the enhancement option. All enhancement options will need to include BPM, BPF, and capacity plots with the same requirements as in Part 2.\nAdditional figures needed for specific enhancement options are described below. All plots should have an accurate title and axes labeled with the appropriate units. \n\n\nInclude plots of\n\nThe relationship between piston height (y-axis) and fuel volume (x-axis)\nPile tip elevation (y-axis) and fuel consumption (x-axis) for the driving log in the same orientation as the pile-driving log plots.\n\n\n\n\nInclude plots of\n\nThe PDA force and velocity (both on the y-axis) vs time (x-axis). Include markers on the plot that indicate the peaks of the downward traveling and upward traveling waves.\nThe displacement (y-axis) and force (x-axis) in the pile from the hammer blow captured by the PDA data.\n\n\n\n\nInclude plots of\n\nThe sound volume in air (y-axis) and water (y-axis) vs. distance (x-axis) from the pile from the hammer blow captured by the PDA data. The plot should include at least one environmental noise limit per medium.\nPile tip elevation (y-axis) and distance to environmental thresholds (x-axis) for the driving log in the same orientation as the pile-driving log plots.\n\n\n\n\n\n\nYour project will be submitted by pushing your work to GitHub (same as the homework submission procedure). At a minimum, the submission should include:\n\nYour app’s notebook (one .ipynb file)\nYour app’s support script (one or more .py files)\nAt least one of the pile-driving log data files (one or more .csv files)",
+    "text": "Project Part 2 example solution:\n\nNotebook\npile_driving.py",
+    "crumbs": [
+      "TME 310A",
+      "Weekly materials",
+      "Week 8"
+    ]
+  },
+  {
+    "objectID": "website/project_02.html",
+    "href": "website/project_02.html",
+    "title": "Project Part 2 - basic pile-driving app",
+    "section": "",
+    "text": "Assignment repo: project_02\nExample solution:\n\nNotebook\npile_driving.py\n\n\n\nDemonstrate the coding skills learned in the course to develop a notebook that could be useful for engineering professionals working on pile-driving projects.\n\n\n\nYour goal for Part 2 of the course project is to build a basic pile-driving app from a jupyter notebook. In this context, “app” doesn’t mean software that runs on a mobile device, it means software that someone could use to perform a particular task on a computer if they have access to your notebook and supporting Python scripts. The notebook itself should have minimal visible code. The majority of your code should live in one or more Python script files that are imported into the notebook. This helps separate the inner workings of the app from the user’s experience (and also helps prevent accidental changes to the code).\nThe app’s user should be able to:\n\nChoose a pile-driving log file from within the app’s file directory.\nSee a plot of the pile’s driving log data vs. elevation.\nSee a plot of the pile’s estimated capacity vs. elevation.\nSee a short text summary of the pile’s final condition, including:\n\nPile ID\nPile tip elevation\nPile load capacity\n\n\nThe purpose of the app and instructions for using it should be clearly described in the notebook. Any engineer who understands the basics of pile-driving and has a basic understanding of Jupyter notebooks should be able to use the notebook and understand its output.\nAdditionally, the supporting code should be well-documented with docstrings. Any individual who understands Python should be able to view the supporting code and understand how each function works by reading the docstrings. At a minimum, docstrings should include:\n\nA description of the function’s purpose.\nA list of the function’s input parameters, including whether they have default values and what units the should be in.\nA list of the function’s output parameters, including what units they will be in.\n\n\n\nThe way a user chooses a pile-driving log file can be as simple as typing the file name into the right place in a code cell in your notebook. Prompting the user for input or adding graphical user interface elements is not necessary.\nYour assignment repository will include a small number of properly formatted pile-driving logs for you to test your notebook with. You should assume that app users will want to add additional pile-driving logs and select them with your app. You may assume that any pile-driving logs the user adds will follow the same format as the sample logs.\n\n\n\nThe driving log data should show the blows per minute (BPM) and blows per foot (BPF) vs. pile tip elevation. The elevation should be shown on the vertical axis BPM and BPF can be included on a single plot or on two separate plots, but the elevations for both datasets should align visually. Since the elevation needs to be on the vertical axis, this means that if two plots are used, the two plots should be side-by-side.\n\n\n\nSimilar to the driving log data, the pile capacity should be plotted vs. pile tip elevation with elevation shown on the vertical axis.\nThe pile’s capacity should be estimated using the driving log and the \\(S_o\\) equation. The \\(S_o\\) equation provides a method of estimating capacity from the hammer energy and blow count. It is a simplification of the rational pile formula and is based on the impulse-momentum principles of the hammer/pile system.\nThe \\(S_o\\) equation is:\n\\[ Q = \\frac{a H W}{S + S_o}\\]\nWhere:\n\\[S_o = \\sqrt[]{\\frac{a H W L}{2 A E}} \\]\nAnd:\n\\(Q\\) = Ultimate pile capacity in pounds\n\\(H\\) = Height of hammer fall in feet\n\\(W\\) = weight of hammer in pounds\n\\(a\\) = Hammer efficiency\n\\(L\\) = Total pile length in feet\n\\(A\\) = Pile cross-sectional area in square inches\n\\(E\\) = Modulus of elasticity of pile material in pounds per square inch\n\\(S\\) = Pile penetration (in feet) per blow\nUse the following pile and hammer parameters for your app’s calculations:\n\n\n\nParameter\nValue\n\n\n\n\n\\(W\\)\n20,000 pounds\n\n\n\\(a\\)\n0.4\n\n\n\\(L\\)\n150 feet\n\n\n\\(A\\)\n477 square inches\n\n\n\\(E\\)\n6,000,000 psi\n\n\n\n\n\n\nThe text summary of the pile’s final condition should include the pile ID, final tip elevation, and final load capacity. An example is shown below (note - 1 “kip” = 1,000 pounds):\nPile ID: B-14\nPile tip elevation: -134 feet\nPile load capacity: 899 kips\n\n\n\n\nYour project will be submitted by pushing your work to GitHub (same as the homework submission procedure). At a minimum, the submission should include:\n\nYour app’s notebook (one .ipynb file)\nYour app’s support script (one or more .py files)\nAt least one of the pile-driving log data files (one or more .csv files)\n\n\n\n\n\n\n\nYour submission will be graded by the instructor with the following rubric:\n\n\n\n\n\n\n\n\nCategory\nCriteria\nPoints\n\n\n\n\nData reading\nUsers have a way to change which pile-driving log is being analyzed by the app. The app will work for any properly formatted pile-driving log in the directory that the sample log files are in so that if a user adds additional logs, they can be analyzed by the app\n__ / 10\n\n\nApp instructions\nThe app instructions are clearly written such that an informed (i.e., familiar with pile-driving and Jupyter notebooks) user would be able to use the app.\n__ / 10\n\n\nPlots\nPlots of BPM, BPF, and pile load capacity are generated from the log. All plots use elevation as the vertical axis. The units of data being plotted are included and correct.\n__ / 10\n\n\nOutput\nA short summary of the pile analysis is displayed when the app is run. The output summary includes the correct units. The information in the summary is consistent with the pile log file and the plots.\n__ / 10\n\n\nSupport code\nThe functions that perform the app’s calculations are imported into the app from one or more supporting Python files. The functions are well documented (purpose, inputs and outputs described in a docstring).\n__ / 10",
     "crumbs": [
       "TME 310A",
       "Project",
-      "Project Part 3 - enhanced pile-driving app"
+      "Project Part 2 - basic pile-driving app"
     ]
   },
   {
-    "objectID": "website/project_03.html#purpose",
-    "href": "website/project_03.html#purpose",
-    "title": "Project Part 3 - enhanced pile-driving app",
+    "objectID": "website/project_02.html#purpose",
+    "href": "website/project_02.html#purpose",
+    "title": "Project Part 2 - basic pile-driving app",
     "section": "",
     "text": "Demonstrate the coding skills learned in the course to develop a notebook that could be useful for engineering professionals working on pile-driving projects.",
     "crumbs": [
       "TME 310A",
       "Project",
-      "Project Part 3 - enhanced pile-driving app"
+      "Project Part 2 - basic pile-driving app"
     ]
   },
   {
-    "objectID": "website/project_03.html#building-on-part-2",
-    "href": "website/project_03.html#building-on-part-2",
-    "title": "Project Part 3 - enhanced pile-driving app",
+    "objectID": "website/project_02.html#instructions",
+    "href": "website/project_02.html#instructions",
+    "title": "Project Part 2 - basic pile-driving app",
     "section": "",
-    "text": "Your goal for Part 3 of the course project is to enhance the a basic pile-driving app you developed in Part 2 (you are also allowed to use the Part 2 example submission as a starting point for Part 3). The app will produce an engineering report on a specific aspect of pile-driving based on the enhancement option selected by your group.\nThere are several ways that the basic pile-driving app could be enhanced. Descriptions of suggested enhancements are listed below. Your project group should choose one of the suggested enhancements below OR propose an enhancement to be approved by your instructor.\n\n\n\n\nDiesel hammer combustion\nOpen-ended diesel hammers consist of a single cylinder containing a heavy piston called a ram. During operation, fuel ignition launches the ram up into the air. When the ram falls back down, it compresses and heats an air/fuel mixture in the piston, reaching its ignition temperature and starting the process over again.\nThe Diesel hammer combustion enhancement will involve creating a model of the combustion process - the increasing pressure and temperature due to the falling piston, the energy released by fuel ignition, and the resulting displacement of the piston. The model will provide a means of calculating the fuel needed to achieve different piston heights. Combined with a pile-driving log containing blows per minute (BPM) and blows per foot (BPF), the model will show the fuel consumption during the pile-driving process. A mathematical framework for the combustion model will be provided to you.\nThe focus of this option is the fuel consumption and carbon emissions for pile installation.\nPile Driving Analysis (PDA) from instrumentation\nPile Driving Analysis (PDA) is the name of a specific set of instruments and calculations used to measure wave transmission through a pile as it’s driven and estimate its capacity. Generally, PDA is performed on only a small percentage of piles in a given project because it’s expensive to perform and slows down the construction (because of the instrument installation). PDA data contains measurements of strain and acceleration signals that can be used to calculate the force and speed of pressure waves traveling through the pile. This data can be interpreted to determine an estimate of the pile’s capacity, the maximum tension and compression stresses in the pile, and detect whether the pile has been damaged.\nThe PDA instrumentation enhancement will use data from one or more blows at the end of driving to produce a capacity estimate to compare to the estimate from a pile-driving log. Additionally, the pile stresses and damage indications (if any) will be reported and compared to the material strength as a quality control check on the pile’s structural integrity. A mathematical framework for PDA analysis will be provided to you.\nThe focus of this option is quality control and capacity verification.\nEnvironmental noise assessment\nPile-driving is a noisy process. The noise from pile-driving can be a nuisance to neighboring properties and disturbing (and even lethal) to wildlife. Sound from pile-driving comes from the impact between the pile and hammer and from the deformation of the pile as compression and tension waves travel through the pile. The noise from the waves traveling through the pile are particularly important under water, where they have the most impact on wildlife.\nThe Environmental noise assessment enhancement will use the PDA strain and velocity measurements to estimate the volume in air and water from a single blow to the pile. The noise attenuation with distance from the pile will be compared to different thresholds, providing an estimate for the distance where various noise issues are of concern. Combined with a pile-driving log with blows per minute (BPM) and blows per foot (BPF), the noise model will provide a range of distances and time durations over which the noise issues are of concern. A mathematical framework for the sound volume model will be provided to you.\nThe focus of this option is environmental regulation compliance.",
+    "text": "Your goal for Part 2 of the course project is to build a basic pile-driving app from a jupyter notebook. In this context, “app” doesn’t mean software that runs on a mobile device, it means software that someone could use to perform a particular task on a computer if they have access to your notebook and supporting Python scripts. The notebook itself should have minimal visible code. The majority of your code should live in one or more Python script files that are imported into the notebook. This helps separate the inner workings of the app from the user’s experience (and also helps prevent accidental changes to the code).\nThe app’s user should be able to:\n\nChoose a pile-driving log file from within the app’s file directory.\nSee a plot of the pile’s driving log data vs. elevation.\nSee a plot of the pile’s estimated capacity vs. elevation.\nSee a short text summary of the pile’s final condition, including:\n\nPile ID\nPile tip elevation\nPile load capacity\n\n\nThe purpose of the app and instructions for using it should be clearly described in the notebook. Any engineer who understands the basics of pile-driving and has a basic understanding of Jupyter notebooks should be able to use the notebook and understand its output.\nAdditionally, the supporting code should be well-documented with docstrings. Any individual who understands Python should be able to view the supporting code and understand how each function works by reading the docstrings. At a minimum, docstrings should include:\n\nA description of the function’s purpose.\nA list of the function’s input parameters, including whether they have default values and what units the should be in.\nA list of the function’s output parameters, including what units they will be in.\n\n\n\nThe way a user chooses a pile-driving log file can be as simple as typing the file name into the right place in a code cell in your notebook. Prompting the user for input or adding graphical user interface elements is not necessary.\nYour assignment repository will include a small number of properly formatted pile-driving logs for you to test your notebook with. You should assume that app users will want to add additional pile-driving logs and select them with your app. You may assume that any pile-driving logs the user adds will follow the same format as the sample logs.\n\n\n\nThe driving log data should show the blows per minute (BPM) and blows per foot (BPF) vs. pile tip elevation. The elevation should be shown on the vertical axis BPM and BPF can be included on a single plot or on two separate plots, but the elevations for both datasets should align visually. Since the elevation needs to be on the vertical axis, this means that if two plots are used, the two plots should be side-by-side.\n\n\n\nSimilar to the driving log data, the pile capacity should be plotted vs. pile tip elevation with elevation shown on the vertical axis.\nThe pile’s capacity should be estimated using the driving log and the \\(S_o\\) equation. The \\(S_o\\) equation provides a method of estimating capacity from the hammer energy and blow count. It is a simplification of the rational pile formula and is based on the impulse-momentum principles of the hammer/pile system.\nThe \\(S_o\\) equation is:\n\\[ Q = \\frac{a H W}{S + S_o}\\]\nWhere:\n\\[S_o = \\sqrt[]{\\frac{a H W L}{2 A E}} \\]\nAnd:\n\\(Q\\) = Ultimate pile capacity in pounds\n\\(H\\) = Height of hammer fall in feet\n\\(W\\) = weight of hammer in pounds\n\\(a\\) = Hammer efficiency\n\\(L\\) = Total pile length in feet\n\\(A\\) = Pile cross-sectional area in square inches\n\\(E\\) = Modulus of elasticity of pile material in pounds per square inch\n\\(S\\) = Pile penetration (in feet) per blow\nUse the following pile and hammer parameters for your app’s calculations:\n\n\n\nParameter\nValue\n\n\n\n\n\\(W\\)\n20,000 pounds\n\n\n\\(a\\)\n0.4\n\n\n\\(L\\)\n150 feet\n\n\n\\(A\\)\n477 square inches\n\n\n\\(E\\)\n6,000,000 psi\n\n\n\n\n\n\nThe text summary of the pile’s final condition should include the pile ID, final tip elevation, and final load capacity. An example is shown below (note - 1 “kip” = 1,000 pounds):\nPile ID: B-14\nPile tip elevation: -134 feet\nPile load capacity: 899 kips",
     "crumbs": [
       "TME 310A",
       "Project",
-      "Project Part 3 - enhanced pile-driving app"
+      "Project Part 2 - basic pile-driving app"
     ]
   },
   {
-    "objectID": "website/project_03.html#requirements",
-    "href": "website/project_03.html#requirements",
-    "title": "Project Part 3 - enhanced pile-driving app",
-    "section": "",
-    "text": "User input should be limited to changing file names or variable values within the notebook. Do not use Python’s input() function to prompt the notebook user. The notebook should include valid values when submitted so that it can run without the user needing to change file names or variable values.\n\n\n\n\n\nThe notebook should contain instructions for users and technical background on the analysis being performed. The instructions should tell the user what inputs are needed for the analysis to run (e.g., the name of a pile log file, or PDA data file). The technical background should explain how the input is used in the analysis and what the analysis results should be interpreted.\n\n\n\nAt least one .py file should be used to perform the majority of the analysis. This file should contain Python functions with docstrings. Any individual who understands Python should be able to view the supporting code and understand how each function works by reading the docstrings. At a minimum, docstrings should include:\n\nA description of the function’s purpose.\nA list of the function’s input parameters, including whether they have default values and what units the should be in.\nA list of the function’s output parameters, including what units they will be in.\n\n\n\n\n\nYour notebook should include a validation section where your analysis results are compared to some external source to check whether they’re reasonable. An external source will be provided for the Diesiel hammer combusion and Environmental noise assessment options. For the PDA instrumentation option, the “external” source will be the final capacity estimated from the pile-driving log.\n\n\n\nThe figures needed will depend on the enhancement option. All enhancement options will need to include BPM, BPF, and capacity plots with the same requirements as in Part 2.\nAdditional figures needed for specific enhancement options are described below. All plots should have an accurate title and axes labeled with the appropriate units. \n\n\nInclude plots of\n\nThe relationship between piston height (y-axis) and fuel volume (x-axis)\nPile tip elevation (y-axis) and fuel consumption (x-axis) for the driving log in the same orientation as the pile-driving log plots.\n\n\n\n\nInclude plots of\n\nThe PDA force and velocity (both on the y-axis) vs time (x-axis). Include markers on the plot that indicate the peaks of the downward traveling and upward traveling waves.\nThe displacement (y-axis) and force (x-axis) in the pile from the hammer blow captured by the PDA data.\n\n\n\n\nInclude plots of\n\nThe sound volume in air (y-axis) and water (y-axis) vs. distance (x-axis) from the pile from the hammer blow captured by the PDA data. The plot should include at least one environmental noise limit per medium.\nPile tip elevation (y-axis) and distance to environmental thresholds (x-axis) for the driving log in the same orientation as the pile-driving log plots.",
-    "crumbs": [
-      "TME 310A",
-      "Project",
-      "Project Part 3 - enhanced pile-driving app"
-    ]
-  },
-  {
-    "objectID": "website/project_03.html#submission",
-    "href": "website/project_03.html#submission",
-    "title": "Project Part 3 - enhanced pile-driving app",
+    "objectID": "website/project_02.html#submission",
+    "href": "website/project_02.html#submission",
+    "title": "Project Part 2 - basic pile-driving app",
     "section": "",
     "text": "Your project will be submitted by pushing your work to GitHub (same as the homework submission procedure). At a minimum, the submission should include:\n\nYour app’s notebook (one .ipynb file)\nYour app’s support script (one or more .py files)\nAt least one of the pile-driving log data files (one or more .csv files)",
     "crumbs": [
       "TME 310A",
       "Project",
-      "Project Part 3 - enhanced pile-driving app"
+      "Project Part 2 - basic pile-driving app"
     ]
   },
   {
-    "objectID": "website/weeks/week_4.html",
-    "href": "website/weeks/week_4.html",
-    "title": "Week 4",
+    "objectID": "website/project_02.html#grading-rubric",
+    "href": "website/project_02.html#grading-rubric",
+    "title": "Project Part 2 - basic pile-driving app",
     "section": "",
-    "text": "Course content will be added on a rolling basis\n\n\n\n\n\nTopic\nVideo\nSlides\n\n\n\n\nNumbers in Computers\nLink\nLink\n\n\nError definitions\nLink\nLink\n\n\nError tolerance\nLink\nLink\n\n\nDartboard approximation of \\(\\pi\\)\nLink\n\n\n\nPlotting the dartboard approximation of \\(\\pi\\)\nLink\nCode\n\n\n\n\n\n\n\nHomework 3",
-    "crumbs": [
-      "TME 310A",
-      "Weekly materials",
-      "Week 4"
-    ]
-  },
-  {
-    "objectID": "website/weeks/week_4.html#materials",
-    "href": "website/weeks/week_4.html#materials",
-    "title": "Week 4",
-    "section": "",
-    "text": "Topic\nVideo\nSlides\n\n\n\n\nNumbers in Computers\nLink\nLink\n\n\nError definitions\nLink\nLink\n\n\nError tolerance\nLink\nLink\n\n\nDartboard approximation of \\(\\pi\\)\nLink\n\n\n\nPlotting the dartboard approximation of \\(\\pi\\)\nLink\nCode",
-    "crumbs": [
-      "TME 310A",
-      "Weekly materials",
-      "Week 4"
-    ]
-  },
-  {
-    "objectID": "website/weeks/week_4.html#assignments-due",
-    "href": "website/weeks/week_4.html#assignments-due",
-    "title": "Week 4",
-    "section": "",
-    "text": "Homework 3",
-    "crumbs": [
-      "TME 310A",
-      "Weekly materials",
-      "Week 4"
-    ]
-  },
-  {
-    "objectID": "website/weeks/week_7.html",
-    "href": "website/weeks/week_7.html",
-    "title": "Week 7",
-    "section": "",
-    "text": "Course content will be added on a rolling basis\n\n\n\n\n\nTopic\nVideo\nSlides\n\n\n\n\nRoot-finding (graphical method)\nLink\nLink\n\n\nBracketed methods (bisection)\nLink\nLink\n\n\nOpen methods (Newton-Raphson and secant)\nLink\nLink\n\n\n\nExample code",
-    "crumbs": [
-      "TME 310A",
-      "Weekly materials",
-      "Week 7"
-    ]
-  },
-  {
-    "objectID": "website/weeks/week_7.html#materials",
-    "href": "website/weeks/week_7.html#materials",
-    "title": "Week 7",
-    "section": "",
-    "text": "Topic\nVideo\nSlides\n\n\n\n\nRoot-finding (graphical method)\nLink\nLink\n\n\nBracketed methods (bisection)\nLink\nLink\n\n\nOpen methods (Newton-Raphson and secant)\nLink\nLink\n\n\n\nExample code",
-    "crumbs": [
-      "TME 310A",
-      "Weekly materials",
-      "Week 7"
-    ]
-  },
-  {
-    "objectID": "website/weeks/week_2.html",
-    "href": "website/weeks/week_2.html",
-    "title": "Week 2",
-    "section": "",
-    "text": "Course content will be added on a rolling basis\n\n\n\n\n\nTopic\nVideo\nSlides\n\n\n\n\nModeling framework\nLink\nLink\n\n\nApproaching problems\nLink\nLink\n\n\nFunctional programming\nLink\nLink\n\n\n\n\n\n\n\nHomework 1 (plus self-grading)",
-    "crumbs": [
-      "TME 310A",
-      "Weekly materials",
-      "Week 2"
-    ]
-  },
-  {
-    "objectID": "website/weeks/week_2.html#materials",
-    "href": "website/weeks/week_2.html#materials",
-    "title": "Week 2",
-    "section": "",
-    "text": "Topic\nVideo\nSlides\n\n\n\n\nModeling framework\nLink\nLink\n\n\nApproaching problems\nLink\nLink\n\n\nFunctional programming\nLink\nLink",
-    "crumbs": [
-      "TME 310A",
-      "Weekly materials",
-      "Week 2"
-    ]
-  },
-  {
-    "objectID": "website/weeks/week_2.html#assignments-due",
-    "href": "website/weeks/week_2.html#assignments-due",
-    "title": "Week 2",
-    "section": "",
-    "text": "Homework 1 (plus self-grading)",
-    "crumbs": [
-      "TME 310A",
-      "Weekly materials",
-      "Week 2"
-    ]
-  },
-  {
-    "objectID": "website/weeks/week_1.html",
-    "href": "website/weeks/week_1.html",
-    "title": "Week 1",
-    "section": "",
-    "text": "Topic\nVideo\nSlides\n\n\n\n\nIntroduction\nN/A\nN/A\n\n\nPython basics\nLink\nN/A\n\n\n\n\n\n\nNone",
-    "crumbs": [
-      "TME 310A",
-      "Weekly materials",
-      "Week 1"
-    ]
-  },
-  {
-    "objectID": "website/weeks/week_1.html#materials",
-    "href": "website/weeks/week_1.html#materials",
-    "title": "Week 1",
-    "section": "",
-    "text": "Topic\nVideo\nSlides\n\n\n\n\nIntroduction\nN/A\nN/A\n\n\nPython basics\nLink\nN/A",
-    "crumbs": [
-      "TME 310A",
-      "Weekly materials",
-      "Week 1"
-    ]
-  },
-  {
-    "objectID": "website/weeks/week_1.html#assignments-due",
-    "href": "website/weeks/week_1.html#assignments-due",
-    "title": "Week 1",
-    "section": "",
-    "text": "None",
-    "crumbs": [
-      "TME 310A",
-      "Weekly materials",
-      "Week 1"
-    ]
-  },
-  {
-    "objectID": "website/weeks/week_11.html",
-    "href": "website/weeks/week_11.html",
-    "title": "Week 11",
-    "section": "",
-    "text": "Course content will be added on a rolling basis\n\n\n\n\n\nTopic\nVideo\nSlides"
-  },
-  {
-    "objectID": "website/weeks/week_11.html#materials",
-    "href": "website/weeks/week_11.html#materials",
-    "title": "Week 11",
-    "section": "",
-    "text": "Topic\nVideo\nSlides"
-  },
-  {
-    "objectID": "website/weeks/week_9.html",
-    "href": "website/weeks/week_9.html",
-    "title": "Week 9",
-    "section": "",
-    "text": "Course content will be added on a rolling basis\n\n\n\n\n\nTopic\nVideo\nSlides\n\n\n\n\nNumerical differentiation\nLink\nLink\n\n\nNumerical integration\nLink\nLink",
-    "crumbs": [
-      "TME 310A",
-      "Weekly materials",
-      "Week 9"
-    ]
-  },
-  {
-    "objectID": "website/weeks/week_9.html#materials",
-    "href": "website/weeks/week_9.html#materials",
-    "title": "Week 9",
-    "section": "",
-    "text": "Topic\nVideo\nSlides\n\n\n\n\nNumerical differentiation\nLink\nLink\n\n\nNumerical integration\nLink\nLink",
-    "crumbs": [
-      "TME 310A",
-      "Weekly materials",
-      "Week 9"
-    ]
-  },
-  {
-    "objectID": "website/project_01.html",
-    "href": "website/project_01.html",
-    "title": "Project Part 1 - group coordination",
-    "section": "",
-    "text": "Project Part 1 - group coordination\nYour project groups have been assigned - you can see your group number and fellow team members by looking at the People page on Canvas.\nThe task for Part 1 of the course project is simple:\n\nFind a time (using in-class time is encouraged!) to meet with your group and introduce yourselves to each other if you don’t already know one another.\nDecide amongst yourselves how your group will communicate and how often you plan to meet to work on the project for the rest of the quarter.\nWrite down what your group decided about communication and meeting frequency in the Canvas assignment text box.",
+    "text": "Your submission will be graded by the instructor with the following rubric:\n\n\n\n\n\n\n\n\nCategory\nCriteria\nPoints\n\n\n\n\nData reading\nUsers have a way to change which pile-driving log is being analyzed by the app. The app will work for any properly formatted pile-driving log in the directory that the sample log files are in so that if a user adds additional logs, they can be analyzed by the app\n__ / 10\n\n\nApp instructions\nThe app instructions are clearly written such that an informed (i.e., familiar with pile-driving and Jupyter notebooks) user would be able to use the app.\n__ / 10\n\n\nPlots\nPlots of BPM, BPF, and pile load capacity are generated from the log. All plots use elevation as the vertical axis. The units of data being plotted are included and correct.\n__ / 10\n\n\nOutput\nA short summary of the pile analysis is displayed when the app is run. The output summary includes the correct units. The information in the summary is consistent with the pile log file and the plots.\n__ / 10\n\n\nSupport code\nThe functions that perform the app’s calculations are imported into the app from one or more supporting Python files. The functions are well documented (purpose, inputs and outputs described in a docstring).\n__ / 10",
     "crumbs": [
       "TME 310A",
       "Project",
-      "Project Part 1 - group coordination"
+      "Project Part 2 - basic pile-driving app"
     ]
   },
   {
-    "objectID": "website/start_here.html",
-    "href": "website/start_here.html",
-    "title": "Start here",
+    "objectID": "website/project_description.html",
+    "href": "website/project_description.html",
+    "title": "Course Project",
     "section": "",
-    "text": "Start here\nGo through this short “Start here” module for information about the course, the instructor, and being a successful student. At the very least, read the syllabus!\nSyllabus\nInstructor and my role in this course\nAccessibility and accommodations\nBeing a successful student\nGrading policies\nHomework format\nCoding platforms",
+    "text": "Project groups will be assigned randomly by the instructor. Each group will have 3 to 4 students.\n\n\n\nThe project topic is modeling the installation of driven piles with open-ended diesel hammers (the topic of Homework 3, Problem 1).\nEach team will build a jupyter notebook interactive app to predict the capacity of a driven pile based on data collected during installation.\nThere will be a baseline app to be delivered in Part 2 and then the groups will choose additional features to include to enhance their app for Part 3.\n\n\n\nThe project will have three deliverables:\n\nGroup coordination (due week 5)\nBasic pile-driving app (due week 7)\nEnhanced pile-driving app (due finals week)",
     "crumbs": [
       "TME 310A",
-      "Course information",
-      "Start here"
+      "Project",
+      "Course Project"
     ]
+  },
+  {
+    "objectID": "website/project_description.html#project-groups",
+    "href": "website/project_description.html#project-groups",
+    "title": "Course Project",
+    "section": "",
+    "text": "Project groups will be assigned randomly by the instructor. Each group will have 3 to 4 students.",
+    "crumbs": [
+      "TME 310A",
+      "Project",
+      "Course Project"
+    ]
+  },
+  {
+    "objectID": "website/project_description.html#topic",
+    "href": "website/project_description.html#topic",
+    "title": "Course Project",
+    "section": "",
+    "text": "The project topic is modeling the installation of driven piles with open-ended diesel hammers (the topic of Homework 3, Problem 1).\nEach team will build a jupyter notebook interactive app to predict the capacity of a driven pile based on data collected during installation.\nThere will be a baseline app to be delivered in Part 2 and then the groups will choose additional features to include to enhance their app for Part 3.",
+    "crumbs": [
+      "TME 310A",
+      "Project",
+      "Course Project"
+    ]
+  },
+  {
+    "objectID": "website/project_description.html#deliverables",
+    "href": "website/project_description.html#deliverables",
+    "title": "Course Project",
+    "section": "",
+    "text": "The project will have three deliverables:\n\nGroup coordination (due week 5)\nBasic pile-driving app (due week 7)\nEnhanced pile-driving app (due finals week)",
+    "crumbs": [
+      "TME 310A",
+      "Project",
+      "Course Project"
+    ]
+  },
+  {
+    "objectID": "website/03_environmental_noise.html",
+    "href": "website/03_environmental_noise.html",
+    "title": "Environmental noise assessment",
+    "section": "",
+    "text": "Pile-driving is a noisy process. The noise from pile-driving can be a nuisance to neighboring properties and disturbing (and even lethal) to wildlife. Sound from pile-driving comes from the impact between the pile and hammer and from the deformation of the pile as compression and tension waves travel through the pile. The noise from the waves traveling through the pile are particularly important under water, where they have the most impact on wildlife.\nThe Environmental noise assessment enhancement will use the PDA strain and velocity measurements to estimate the volume in air and water from a single blow to the pile. The noise attenuation with distance from the pile will be compared to different thresholds, providing an estimate for the distance where various noise issues are of concern. Combined with a pile-driving log with blows per minute (BPM) and blows per foot (BPF), the noise model will provide a range of distances and time durations over which the noise issues are of concern. A mathematical framework for the combustion model will is described below.\nThe focus of this option is environmental regulation compliance."
+  },
+  {
+    "objectID": "website/03_environmental_noise.html#pda-data-and-instruments",
+    "href": "website/03_environmental_noise.html#pda-data-and-instruments",
+    "title": "Environmental noise assessment",
+    "section": "PDA data and instruments",
+    "text": "PDA data and instruments\nPile Driving Analysis (PDA) is the name of a specific set of instruments and calculations used to measure wave transmission through a pile as it’s driven and estimate its capacity. Generally, PDA is performed on only a small percentage of piles in a given project because it’s expensive to perform and slows down the construction (because of the instrument installation). PDA data contains measurements of strain and acceleration signals that can be used to calculate the force and speed of pressure waves traveling through the pile. This data can be interpreted to determine an estimate of the pile’s capacity, the maximum tension and compression stresses in the pile, and detect whether the pile has been damaged.\nThe image below shows a typical PDA instrument setup on a steel pipe pile.  The data collected during pile-driving is evaluated in detail on an individual blow basis. It’s common to evaluate one or two blows per pile for the analysis, with one of the analyzed blows always representing the condition at the end of driving. Fundamentally, PDA analysis involves interpreting the signals as compression and tension waves traveling down (and back up) the pile from the hammer impact.\nThe figure below shows PDA data from a single blow on a pile. Although the instruments measure strain and acceleration, they are usually converted into force and velocity, respectively. Beneath the figure is a video of a simulation of the wave traveling through the pile after a hammer blow."
+  },
+  {
+    "objectID": "website/03_environmental_noise.html#impact-induced-noise",
+    "href": "website/03_environmental_noise.html#impact-induced-noise",
+    "title": "Environmental noise assessment",
+    "section": "Impact-induced noise",
+    "text": "Impact-induced noise\nThe stress wave induced by hammer impact causes a local length change (either extension or compression depending on the sign of the stress) in the pile as it passes through. As illustrated (and exaggerated) in the video, these stresses produce a change in the pile diameter due the the Poisson effect (illustrated in the figure below).\n\nPoisson’s ratio is defined as:\n\\[ \\nu = -\\frac{d\\epsilon_{axial}}{d\\epsilon_{trans}}\\]\nwhere\n$_{axial} = $ axial strain\n$_{trans} = $ transverse strain"
+  },
+  {
+    "objectID": "website/03_environmental_noise.html#volume-induced-by-acoustic-pressure",
+    "href": "website/03_environmental_noise.html#volume-induced-by-acoustic-pressure",
+    "title": "Environmental noise assessment",
+    "section": "Volume induced by acoustic pressure",
+    "text": "Volume induced by acoustic pressure\nThe sound pressure level (\\(SPL\\) in decibels) induced by acoustic pressure is:\n\\[SPL = 20 \\log_{10}{\\left(\\frac{p}{ p_{ref}\\sqrt{2}}\\right)}\\]\nwhere p_{ref} is a reference pressure of 20 \\(\\mu Pa\\) in air and 1 \\(\\mu Pa\\) in water.\nAssuming a cylindrical wave with only geometric decay, the acoustic pressure amplitude will decay at a rate of approximately \\(1/\\sqrt{r}\\) (where \\(r\\) is the distance from the pile). The sound pressure level will therefore have the following distance relationship:\n\\[ SPL(r) = SPL_0 + 10 \\log_{10}{\\left(\\frac{1}{r}\\right)}\\]"
+  },
+  {
+    "objectID": "website/03_environmental_noise.html#environmental-effects",
+    "href": "website/03_environmental_noise.html#environmental-effects",
+    "title": "Environmental noise assessment",
+    "section": "Environmental effects",
+    "text": "Environmental effects\nThe models described above allow us to estimate the acoustic volume with distance from the pile-driving activity in air and water. Several marine species are sensitive to sound. In some cases, nuisance from sound can disrupt their feeding behavior. In others, the sound can even be lethal. The table below lists a handful of environmental noise thresholds for local marine life.\n\n\n\nSpecies\nNuisance threshold\nLethal/injury threshold\n\n\n\n\nMarbled Murrelet\n150 dB\n202 dB\n\n\nFish\n132 dB\n194 dB\n\n\nHuman\n85 dB (in air)\n120 dB (in air)\n\n\n\nUsing these thresholds and the models above, determine the distance from the pile were the environmental thresholds are met and create a plot showing the distances.\nAssuming that the hammer stroke height is directly proportional to the acoustic pressure, use the pile-driving log to create an “environmental effects” log. This should look similar to the pile capacity log, but instead of capacity, it should show the distance from the pile (at different elevations during the driving process) where environmental thresholds were exceeded."
   },
   {
     "objectID": "website/homework_format.html",
