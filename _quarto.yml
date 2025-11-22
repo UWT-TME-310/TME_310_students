@@ -55,6 +55,10 @@ website:
             - href: website/project_01.qmd
             - href: website/project_02.qmd
             - href: website/project_03.qmd
+            - href: website/03_diesel_hammer_combustion.ipynb
+            - href: website/03_PDA.ipynb
+            - href: website/03_environmental_noise.ipynb
+            - href: website/03_pile_hammer_specs.md
         - text: ---
         - section:
           href: website/examples.qmd

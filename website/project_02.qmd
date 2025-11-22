@@ -2,6 +2,11 @@
 
 Assignment repo: [project_02](https://github.com/UWT-TME-310/project_02)
 
+Example solution:
+
+* [Notebook](../examples/project_2/app_notebook.ipynb)
+* [`pile_driving.py`](../examples/project_2/pile_driving.qmd)
+
 ## Purpose
 
 Demonstrate the coding skills learned in the course to develop a notebook that could be useful for engineering professionals working on pile-driving projects.

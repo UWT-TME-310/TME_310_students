@@ -15,8 +15,9 @@ There are several ways that the basic pile-driving app could be enhanced.
 Descriptions of suggested enhancements are listed below.
 Your project group should choose one of the suggested enhancements below OR propose an enhancement to be approved by your instructor.
 
-
 ### Enhancement Options
+
+For all the enhancement options, refer to the [pile, hammer, PDA, and environmental parameters](03_pile_hammer_specs.md) for relevant values.
 
 <!-- 1. **Audio-video saximeter**
    
@@ -38,7 +39,7 @@ Your project group should choose one of the suggested enhancements below OR prop
    The *Diesel hammer combustion* enhancement will involve creating a model of the combustion process - the increasing pressure and temperature due to the falling piston, the energy released by fuel ignition, and the resulting displacement of the piston.
    The model will provide a means of calculating the fuel needed to achieve different piston heights.
    Combined with a pile-driving log containing blows per minute (BPM) and blows per foot (BPF), the model will show the fuel consumption during the pile-driving process.
-   **A mathematical framework for the combustion model will be provided to you.**
+   [**A mathematical framework for the combustion model will be provided to you.**](03_diesel_hammer_combustion.ipynb)
 
    The focus of this option is the fuel consumption and carbon emissions for pile installation.
 
@@ -52,7 +53,7 @@ Your project group should choose one of the suggested enhancements below OR prop
 
    The *PDA instrumentation* enhancement will use data from one or more blows at the end of driving to produce a capacity estimate to compare to the estimate from a pile-driving log. 
    Additionally, the pile stresses and damage indications (if any) will be reported and compared to the material strength as a quality control check on the pile's structural integrity. 
-   **A mathematical framework for PDA analysis will be provided to you.**
+   [**A mathematical framework for PDA analysis will be provided to you.**](03_PDA.ipynb)
 
    The focus of this option is quality control and capacity verification.
 
@@ -67,7 +68,7 @@ Your project group should choose one of the suggested enhancements below OR prop
    The *Environmental noise assessment* enhancement will use the PDA strain and velocity measurements to estimate the volume in air and water from a single blow to the pile.
    The noise attenuation with distance from the pile will be compared to different thresholds, providing an estimate for the distance where various noise issues are of concern.
    Combined with a pile-driving log with blows per minute (BPM) and blows per foot (BPF), the noise model will provide a range of distances and time durations over which the noise issues are of concern.
-   **A mathematical framework for the sound volume model will be provided to you.**
+   [**A mathematical framework for the sound volume model will be provided to you.**](03_environmental_noise.ipynb)
 
    The focus of this option is environmental regulation compliance.
 
@@ -115,8 +116,13 @@ At a minimum, docstrings should include:
 ### Validation
 
 Your notebook should include a validation section where your analysis results are compared to some external source to check whether they're reasonable.
-An external source will be provided for the *Diesiel hammer combusion* and *Environmental noise assessment* options.
-For the *PDA instrumentation* option, the "external" source will be the final capacity estimated from the pile-driving log.
+
+| Project option | Validation source | Validation goal | 
+|-------|-------|-------|
+| Diesel hammer combustion | [DELMAG Diesel Pile Hammers specifications](https://www.delmag.com/products.html?file=files/content/pdf_DELMAG_Prospekte/DELMAG_DB_deen.pdf&cid=19333)| Find a hammer from the catalogue that seems like a good match for the project hammer specs. Compare the fuel use from the specifications sheet (reported in Litres per hour) to your analysis. Which do you think is more accurate? |
+| PDA instrumentation | Pile capacity estimates from the pile-driving log. | Compare the capacity estimates at the appropriate elevations from the two data sources. Is the capacity from the log higher or lower than from the PDA data? What adjustment, if any, could your recommend to the $S_o$ capacity estimate to improve its accuracy? | 
+| Environmental noise assessment | [Marine mammal monitoring plan for NAVMAG Indian Island - Ammo Wharf Maintenance and Pile Replacement Program](https://www.fisheries.noaa.gov/s3/2023-10/USNAVYNAVMAGIndianIsland-2024LOA-DraftMonPlan-OPR1.pdf)| Compare the monitoring distances for concrete piles in the monitoring plan for any species relevant to your analysis. Are the monitoring distances closely related to the threshold distances from your analysis? What adjustments, if any would you recommend making to either the monitoring plan distances based on your analysis? | 
+
 
 
 ### Figures
@@ -143,9 +149,12 @@ Include plots of
 
 #### PDA instrumentation
 
-Include plots of
+Add the Case method capacity estimates at the appropriate elevations to the pile capacity plot for the validation component.
 
-- The PDA force and velocity (both on the y-axis) vs time (x-axis). Include markers on the plot that indicate the peaks of the downward traveling and upward traveling waves.
+For both PDA blows, include plots of:
+
+- The PDA force and velocity*Z (y-axis) vs time (x-axis).
+- The Case method total, dynamic, and static capacity (y-axis) vs. time (x-axis). Include markers to indicate the points on the plot corresponding to the peak static capacity and the frictional static capacity.
 - The displacement (y-axis) and force (x-axis) in the pile from the hammer blow captured by the PDA data.
 
 #### Environmental noise assessment
@@ -163,7 +172,7 @@ At a minimum, the submission should include:
 
 1. Your app's notebook (one `.ipynb` file)
 2. Your app's support script (one or more `.py` files)
-3. At least one of the pile-driving log data files (one or more `.csv` files)
+3. All the `.csv` files included in the project repository.
 
 
 <!-- ## Rubric

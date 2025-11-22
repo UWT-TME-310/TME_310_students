@@ -6,5 +6,5 @@ Course content will be added on a rolling basis
 Project Part 2 example solution:
 
 * [Notebook](../../examples/project_2/app_notebook.ipynb)
-* [`pile_driving.py`](../../examples/project_2/pile_driving.py)
+* [`pile_driving.py`](../../examples/project_2/pile_driving.qmd)
 
