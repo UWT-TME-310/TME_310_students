@@ -48,6 +48,7 @@ website:
             - href: website/weeks/week_7.qmd
             - href: website/weeks/week_8.qmd
             - href: website/weeks/week_9.qmd
+            - href: website/weeks/week_10.qmd
         - text: ---   
         - section: "Project"
           contents:

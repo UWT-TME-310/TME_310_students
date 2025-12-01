@@ -15,3 +15,5 @@ The table below contains some example scripts using basic course concepts.
 | [Homework 3 notes](/examples/hw03_grading_notes.ipynb) | My notes on some of the common approaches I saw while grading homework 3. |
 | [Homework 4 notes](/examples/hw04_grading_notes.ipynb) | My notes on things I observed while grading homework 4. |
 | [Root-finding example code](/examples/root_finding_examples.ipynb) | |
+| [Python structuring tips](/examples/python_structuring_tips.ipynb) | Several ways of dealing with a notebook with multiple parameters to keep track of. |
+| [Importing PDA data](/examples/importing_pda_data.ipynb) | Example of importing one of the PDA data files. |
