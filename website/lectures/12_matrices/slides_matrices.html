@@ -245,33 +245,14 @@ Lorne Arnold, PhD, PE
 <p>To create a 2-D Numpy array, we pass a list of lists to the <code>np.array()</code> function. Each sublist contains the elements in a single <strong>row</strong> of the matrix. The length of each sublist (which must all be equal) is the number of <strong>columns</strong> in the matrix.</p>
 </div>
 <div class="fragment">
-<div id="d66bcd37" class="cell" data-execution_count="1">
-<div class="cell-output cell-output-error">
-<div class="ansi-escaped-output">
-<pre><span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">ModuleNotFoundError</span>                       Traceback (most recent call last)
-<span class="ansi-cyan-fg">Cell</span><span class="ansi-cyan-fg"> </span><span class="ansi-green-fg">In[1]</span><span class="ansi-green-fg">, line 1</span>
-<span class="ansi-green-fg">----&gt; </span><span class="ansi-green-fg">1</span> <span style="font-weight:bold;color:rgb(0,135,0)">import</span><span style="color:rgb(188,188,188)"> </span><span class="ansi-blue-fg ansi-bold">numpy</span><span style="color:rgb(188,188,188)"> </span><span style="font-weight:bold;color:rgb(0,135,0)">as</span><span style="color:rgb(188,188,188)"> </span><span class="ansi-blue-fg ansi-bold">np</span>
-
-<span class="ansi-red-fg">ModuleNotFoundError</span>: No module named 'numpy'</pre>
-</div>
-</div>
-</div>
-<div id="1556673d" class="cell" data-execution_count="2">
+<div id="6c827d67" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a>A <span class="op">=</span> np.array([[<span class="dv">1</span>, <span class="dv">2</span>], [<span class="dv">3</span>, <span class="dv">4</span>]])</span>
 <span id="cb1-2"><a></a><span class="bu">print</span>(A)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell fragment" data-execution_count="2">
-<div class="cell-output cell-output-error">
-<div class="ansi-escaped-output">
-<pre><span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-cyan-fg">Cell</span><span class="ansi-cyan-fg"> </span><span class="ansi-green-fg">In[2]</span><span class="ansi-green-fg">, line 1</span>
-<span class="ansi-green-fg">----&gt; </span><span class="ansi-green-fg">1</span> A = <span class="ansi-yellow-bg">np</span>.array([[<span class="ansi-green-fg">1</span>, <span class="ansi-green-fg">2</span>], [<span class="ansi-green-fg">3</span>, <span class="ansi-green-fg">4</span>]])
-<span class="ansi-green-fg">      2</span> <span style="color:rgb(0,135,0)">print</span>(A)
-
-<span class="ansi-red-fg">NameError</span>: name 'np' is not defined</pre>
-</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[[1 2]
+ [3 4]]</code></pre>
 </div>
 </div>
 </div>
@@ -283,94 +264,59 @@ Lorne Arnold, PhD, PE
 <ul id="tabset-1" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-1-1">List and 1-D array indexing</a></li><li><a href="#tabset-1-2">Matrix indexing</a></li></ul>
 <div class="tab-content">
 <div id="tabset-1-1">
-<div id="a4b317f8" class="cell" data-execution_count="3">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.array([<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>, <span class="dv">10</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-error">
-<div class="ansi-escaped-output">
-<pre><span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-cyan-fg">Cell</span><span class="ansi-cyan-fg"> </span><span class="ansi-green-fg">In[3]</span><span class="ansi-green-fg">, line 1</span>
-<span class="ansi-green-fg">----&gt; </span><span class="ansi-green-fg">1</span> x = <span class="ansi-yellow-bg">np</span>.array([<span class="ansi-green-fg">0</span>, <span class="ansi-green-fg">1</span>, <span class="ansi-green-fg">2</span>, <span class="ansi-green-fg">3</span>, <span class="ansi-green-fg">4</span>, <span class="ansi-green-fg">5</span>, <span class="ansi-green-fg">6</span>, <span class="ansi-green-fg">7</span>, <span class="ansi-green-fg">8</span>, <span class="ansi-green-fg">9</span>, <span class="ansi-green-fg">10</span>])
-
-<span class="ansi-red-fg">NameError</span>: name 'np' is not defined</pre>
-</div>
-</div>
+<div id="78d14789" class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.array([<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>, <span class="dv">10</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="fragment">
-<div id="35ed8fba" class="cell columns column-output-location" data-execution_count="4">
+<div id="5f012f21" class="cell columns column-output-location" data-execution_count="4">
 <div class="column">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(x)</span>
-<span id="cb3-2"><a aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(x[<span class="dv">0</span>])</span>
-<span id="cb3-3"><a aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(x[<span class="dv">3</span>:])</span>
-<span id="cb3-4"><a aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(x[:<span class="dv">3</span>])</span>
-<span id="cb3-5"><a aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(x[<span class="dv">3</span>:<span class="dv">6</span>])</span>
-<span id="cb3-6"><a aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(x[<span class="dv">3</span>:<span class="op">-</span><span class="dv">3</span>])</span>
-<span id="cb3-7"><a aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(x[:])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(x)</span>
+<span id="cb4-2"><a aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(x[<span class="dv">0</span>])</span>
+<span id="cb4-3"><a aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(x[<span class="dv">3</span>:])</span>
+<span id="cb4-4"><a aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(x[:<span class="dv">3</span>])</span>
+<span id="cb4-5"><a aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(x[<span class="dv">3</span>:<span class="dv">6</span>])</span>
+<span id="cb4-6"><a aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(x[<span class="dv">3</span>:<span class="op">-</span><span class="dv">3</span>])</span>
+<span id="cb4-7"><a aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(x[:])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column fragment">
-<div class="cell-output cell-output-error">
-<div class="ansi-escaped-output">
-<pre><span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-cyan-fg">Cell</span><span class="ansi-cyan-fg"> </span><span class="ansi-green-fg">In[4]</span><span class="ansi-green-fg">, line 1</span>
-<span class="ansi-green-fg">----&gt; </span><span class="ansi-green-fg">1</span> <span style="color:rgb(0,135,0)">print</span>(<span class="ansi-yellow-bg">x</span>)
-<span class="ansi-green-fg">      2</span> <span style="color:rgb(0,135,0)">print</span>(x[<span class="ansi-green-fg">0</span>])
-<span class="ansi-green-fg">      3</span> <span style="color:rgb(0,135,0)">print</span>(x[<span class="ansi-green-fg">3</span>:])
-
-<span class="ansi-red-fg">NameError</span>: name 'x' is not defined</pre>
-</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[ 0  1  2  3  4  5  6  7  8  9 10]
+0
+[ 3  4  5  6  7  8  9 10]
+[0 1 2]
+[3 4 5]
+[3 4 5 6 7]
+[ 0  1  2  3  4  5  6  7  8  9 10]</code></pre>
 </div>
 </div></div>
 </div>
 </div>
 <div id="tabset-1-2">
-<div id="64880fe1" class="cell" data-execution_count="5">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a></a>A <span class="op">=</span> np.array([[<span class="dv">1</span>, <span class="dv">2</span>], [<span class="dv">3</span>, <span class="dv">4</span>]])</span>
-<span id="cb4-2"><a></a>A[:,<span class="dv">0</span>] <span class="co"># This should give all rows of the 0th column</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="9020a5b3" class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a></a>A <span class="op">=</span> np.array([[<span class="dv">1</span>, <span class="dv">2</span>], [<span class="dv">3</span>, <span class="dv">4</span>]])</span>
+<span id="cb6-2"><a></a>A[:,<span class="dv">0</span>] <span class="co"># This should give all rows of the 0th column</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell fragment" data-execution_count="5">
-<div class="cell-output cell-output-error">
-<div class="ansi-escaped-output">
-<pre><span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-cyan-fg">Cell</span><span class="ansi-cyan-fg"> </span><span class="ansi-green-fg">In[5]</span><span class="ansi-green-fg">, line 1</span>
-<span class="ansi-green-fg">----&gt; </span><span class="ansi-green-fg">1</span> A = <span class="ansi-yellow-bg">np</span>.array([[<span class="ansi-green-fg">1</span>, <span class="ansi-green-fg">2</span>], [<span class="ansi-green-fg">3</span>, <span class="ansi-green-fg">4</span>]])
-<span class="ansi-green-fg">      2</span> A[:,<span class="ansi-green-fg">0</span>] <span style="font-style:italic;color:rgb(95,135,135)"># This should give all rows of the 0th column</span>
-
-<span class="ansi-red-fg">NameError</span>: name 'np' is not defined</pre>
-</div>
+<div class="cell-output cell-output-display" data-execution_count="5">
+<pre><code>array([1, 3])</code></pre>
 </div>
 </div>
 <div class="fragment">
-<div id="d60f091f" class="cell" data-execution_count="6">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a></a>A[<span class="dv">0</span>,:] <span class="co"># This should give all columns of the 0th row</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="7a44913a" class="cell" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a></a>A[<span class="dv">0</span>,:] <span class="co"># This should give all columns of the 0th row</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell fragment" data-execution_count="6">
-<div class="cell-output cell-output-error">
-<div class="ansi-escaped-output">
-<pre><span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-cyan-fg">Cell</span><span class="ansi-cyan-fg"> </span><span class="ansi-green-fg">In[6]</span><span class="ansi-green-fg">, line 1</span>
-<span class="ansi-green-fg">----&gt; </span><span class="ansi-green-fg">1</span> <span class="ansi-yellow-bg">A</span>[<span class="ansi-green-fg">0</span>,:] <span style="font-style:italic;color:rgb(95,135,135)"># This should give all columns of the 0th row</span>
-
-<span class="ansi-red-fg">NameError</span>: name 'A' is not defined</pre>
-</div>
+<div class="cell-output cell-output-display" data-execution_count="6">
+<pre><code>array([1, 2])</code></pre>
 </div>
 </div>
 </div>
 <div class="fragment">
-<div id="87627b7d" class="cell" data-execution_count="7">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a></a>A[<span class="dv">0</span>,<span class="dv">1</span>] <span class="co"># This should the element from row 0 and column 1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="56fb4911" class="cell" data-execution_count="7">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a></a>A[<span class="dv">0</span>,<span class="dv">1</span>] <span class="co"># This should the element from row 0 and column 1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell fragment" data-execution_count="7">
-<div class="cell-output cell-output-error">
-<div class="ansi-escaped-output">
-<pre><span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-cyan-fg">Cell</span><span class="ansi-cyan-fg"> </span><span class="ansi-green-fg">In[7]</span><span class="ansi-green-fg">, line 1</span>
-<span class="ansi-green-fg">----&gt; </span><span class="ansi-green-fg">1</span> <span class="ansi-yellow-bg">A</span>[<span class="ansi-green-fg">0</span>,<span class="ansi-green-fg">1</span>] <span style="font-style:italic;color:rgb(95,135,135)"># This should the element from row 0 and column 1</span>
-
-<span class="ansi-red-fg">NameError</span>: name 'A' is not defined</pre>
-</div>
+<div class="cell-output cell-output-display" data-execution_count="7">
+<pre><code>np.int64(2)</code></pre>
 </div>
 </div>
 </div>
@@ -416,25 +362,16 @@ w \times a_{m1} &amp; w \times a_{m2} &amp; \cdots &amp; w \times a_{mn}
 3 &amp; 8 &amp; 1
 \end{bmatrix}\]</span></p>
 <div class="fragment">
-<div id="aa265e64" class="cell columns column-output-location" data-execution_count="8">
+<div id="7aa21daf" class="cell columns column-output-location" data-execution_count="8">
 <div class="column">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a></a>A <span class="op">=</span> np.array([[<span class="dv">2</span>, <span class="op">-</span><span class="dv">1</span>, <span class="dv">4</span>], </span>
-<span id="cb7-2"><a></a>              [<span class="dv">0</span>, <span class="dv">5</span>, <span class="op">-</span><span class="dv">2</span>]])</span>
-<span id="cb7-3"><a></a>w <span class="op">=</span> <span class="dv">3</span></span>
-<span id="cb7-4"><a></a><span class="bu">print</span>(w<span class="op">+</span>A)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a></a>A <span class="op">=</span> np.array([[<span class="dv">2</span>, <span class="op">-</span><span class="dv">1</span>, <span class="dv">4</span>], </span>
+<span id="cb12-2"><a></a>              [<span class="dv">0</span>, <span class="dv">5</span>, <span class="op">-</span><span class="dv">2</span>]])</span>
+<span id="cb12-3"><a></a>w <span class="op">=</span> <span class="dv">3</span></span>
+<span id="cb12-4"><a></a><span class="bu">print</span>(w<span class="op">+</span>A)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column fragment">
-<div class="cell-output cell-output-error">
-<div class="ansi-escaped-output">
-<pre><span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-cyan-fg">Cell</span><span class="ansi-cyan-fg"> </span><span class="ansi-green-fg">In[8]</span><span class="ansi-green-fg">, line 1</span>
-<span class="ansi-green-fg">----&gt; </span><span class="ansi-green-fg">1</span> A = <span class="ansi-yellow-bg">np</span>.array([[<span class="ansi-green-fg">2</span>, -<span class="ansi-green-fg">1</span>, <span class="ansi-green-fg">4</span>], 
-<span class="ansi-green-fg">      2</span>               [<span class="ansi-green-fg">0</span>, <span class="ansi-green-fg">5</span>, -<span class="ansi-green-fg">2</span>]])
-<span class="ansi-green-fg">      3</span> w = <span class="ansi-green-fg">3</span>
-<span class="ansi-green-fg">      4</span> <span style="color:rgb(0,135,0)">print</span>(w+A)
-
-<span class="ansi-red-fg">NameError</span>: name 'np' is not defined</pre>
-</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[[5 2 7]
+ [3 8 1]]</code></pre>
 </div>
 </div></div>
 </div>
@@ -448,25 +385,16 @@ w \times a_{m1} &amp; w \times a_{m2} &amp; \cdots &amp; w \times a_{mn}
 0 &amp; 0.5 &amp; -0.2
 \end{bmatrix}\]</span></p>
 <div class="fragment">
-<div id="b74accdd" class="cell columns column-output-location" data-execution_count="9">
+<div id="681a5079" class="cell columns column-output-location" data-execution_count="9">
 <div class="column">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a></a>A <span class="op">=</span> np.array([[<span class="dv">2</span>, <span class="op">-</span><span class="dv">1</span>, <span class="dv">4</span>], </span>
-<span id="cb8-2"><a></a>              [<span class="dv">0</span>, <span class="dv">5</span>, <span class="op">-</span><span class="dv">2</span>]])</span>
-<span id="cb8-3"><a></a>v <span class="op">=</span> <span class="fl">0.1</span></span>
-<span id="cb8-4"><a></a><span class="bu">print</span>(v<span class="op">*</span>A)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a></a>A <span class="op">=</span> np.array([[<span class="dv">2</span>, <span class="op">-</span><span class="dv">1</span>, <span class="dv">4</span>], </span>
+<span id="cb14-2"><a></a>              [<span class="dv">0</span>, <span class="dv">5</span>, <span class="op">-</span><span class="dv">2</span>]])</span>
+<span id="cb14-3"><a></a>v <span class="op">=</span> <span class="fl">0.1</span></span>
+<span id="cb14-4"><a></a><span class="bu">print</span>(v<span class="op">*</span>A)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column fragment">
-<div class="cell-output cell-output-error">
-<div class="ansi-escaped-output">
-<pre><span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-cyan-fg">Cell</span><span class="ansi-cyan-fg"> </span><span class="ansi-green-fg">In[9]</span><span class="ansi-green-fg">, line 1</span>
-<span class="ansi-green-fg">----&gt; </span><span class="ansi-green-fg">1</span> A = <span class="ansi-yellow-bg">np</span>.array([[<span class="ansi-green-fg">2</span>, -<span class="ansi-green-fg">1</span>, <span class="ansi-green-fg">4</span>], 
-<span class="ansi-green-fg">      2</span>               [<span class="ansi-green-fg">0</span>, <span class="ansi-green-fg">5</span>, -<span class="ansi-green-fg">2</span>]])
-<span class="ansi-green-fg">      3</span> v = <span class="ansi-green-fg">0.1</span>
-<span class="ansi-green-fg">      4</span> <span style="color:rgb(0,135,0)">print</span>(v*A)
-
-<span class="ansi-red-fg">NameError</span>: name 'np' is not defined</pre>
-</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[[ 0.2 -0.1  0.4]
+ [ 0.   0.5 -0.2]]</code></pre>
 </div>
 </div></div>
 </div>
@@ -503,72 +431,52 @@ a_{m1} + b_{m1} &amp; a_{m2}+ b_{m2} &amp; \cdots &amp; a_{mn}+ b_{mn}
 <ul id="tabset-3" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-3-1">Example 1</a></li><li><a href="#tabset-3-2">Example 2</a></li><li><a href="#tabset-3-3">Example 3</a></li></ul>
 <div class="tab-content">
 <div id="tabset-3-1">
-<div id="222bd8d5" class="cell columns column-output-location" data-execution_count="10">
+<div id="2f97045a" class="cell columns column-output-location" data-execution_count="10">
 <div class="column">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a></a>A <span class="op">=</span> np.array([[<span class="dv">2</span>, <span class="op">-</span><span class="dv">1</span>, <span class="dv">4</span>], </span>
-<span id="cb9-2"><a></a>              [<span class="dv">0</span>, <span class="dv">5</span>, <span class="op">-</span><span class="dv">2</span>]])</span>
-<span id="cb9-3"><a></a>B <span class="op">=</span> np.array([[<span class="dv">1</span>, <span class="op">-</span><span class="dv">1</span>, <span class="dv">2</span>], </span>
-<span id="cb9-4"><a></a>              [<span class="dv">7</span>, <span class="dv">0</span>, <span class="dv">8</span>]])</span>
-<span id="cb9-5"><a></a><span class="bu">print</span>(A<span class="op">+</span>B)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a></a>A <span class="op">=</span> np.array([[<span class="dv">2</span>, <span class="op">-</span><span class="dv">1</span>, <span class="dv">4</span>], </span>
+<span id="cb16-2"><a></a>              [<span class="dv">0</span>, <span class="dv">5</span>, <span class="op">-</span><span class="dv">2</span>]])</span>
+<span id="cb16-3"><a></a>B <span class="op">=</span> np.array([[<span class="dv">1</span>, <span class="op">-</span><span class="dv">1</span>, <span class="dv">2</span>], </span>
+<span id="cb16-4"><a></a>              [<span class="dv">7</span>, <span class="dv">0</span>, <span class="dv">8</span>]])</span>
+<span id="cb16-5"><a></a><span class="bu">print</span>(A<span class="op">+</span>B)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column fragment">
-<div class="cell-output cell-output-error">
-<div class="ansi-escaped-output">
-<pre><span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-cyan-fg">Cell</span><span class="ansi-cyan-fg"> </span><span class="ansi-green-fg">In[10]</span><span class="ansi-green-fg">, line 1</span>
-<span class="ansi-green-fg">----&gt; </span><span class="ansi-green-fg">1</span> A = <span class="ansi-yellow-bg">np</span>.array([[<span class="ansi-green-fg">2</span>, -<span class="ansi-green-fg">1</span>, <span class="ansi-green-fg">4</span>], 
-<span class="ansi-green-fg">      2</span>               [<span class="ansi-green-fg">0</span>, <span class="ansi-green-fg">5</span>, -<span class="ansi-green-fg">2</span>]])
-<span class="ansi-green-fg">      3</span> B = np.array([[<span class="ansi-green-fg">1</span>, -<span class="ansi-green-fg">1</span>, <span class="ansi-green-fg">2</span>], 
-<span class="ansi-green-fg">      4</span>               [<span class="ansi-green-fg">7</span>, <span class="ansi-green-fg">0</span>, <span class="ansi-green-fg">8</span>]])
-<span class="ansi-green-fg">      5</span> <span style="color:rgb(0,135,0)">print</span>(A+B)
-
-<span class="ansi-red-fg">NameError</span>: name 'np' is not defined</pre>
-</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[[ 3 -2  6]
+ [ 7  5  6]]</code></pre>
 </div>
 </div></div>
 </div>
 <div id="tabset-3-2">
-<div id="1975b278" class="cell columns column-output-location" data-execution_count="11">
+<div id="1dbf7956" class="cell columns column-output-location" data-execution_count="11">
 <div class="column">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a></a>A <span class="op">=</span> np.array([[<span class="dv">2</span>, <span class="op">-</span><span class="dv">1</span>, <span class="dv">4</span>], </span>
-<span id="cb10-2"><a></a>              [<span class="dv">0</span>, <span class="dv">5</span>, <span class="op">-</span><span class="dv">2</span>]])</span>
-<span id="cb10-3"><a></a>              </span>
-<span id="cb10-4"><a></a>B <span class="op">=</span> np.array([[<span class="dv">1</span>, <span class="op">-</span><span class="dv">1</span>, <span class="dv">2</span>], </span>
-<span id="cb10-5"><a></a>              [<span class="dv">7</span>, <span class="dv">0</span>, <span class="dv">8</span>]])</span>
-<span id="cb10-6"><a></a><span class="bu">print</span>(A<span class="op">*</span>B)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a></a>A <span class="op">=</span> np.array([[<span class="dv">2</span>, <span class="op">-</span><span class="dv">1</span>, <span class="dv">4</span>], </span>
+<span id="cb18-2"><a></a>              [<span class="dv">0</span>, <span class="dv">5</span>, <span class="op">-</span><span class="dv">2</span>]])</span>
+<span id="cb18-3"><a></a>              </span>
+<span id="cb18-4"><a></a>B <span class="op">=</span> np.array([[<span class="dv">1</span>, <span class="op">-</span><span class="dv">1</span>, <span class="dv">2</span>], </span>
+<span id="cb18-5"><a></a>              [<span class="dv">7</span>, <span class="dv">0</span>, <span class="dv">8</span>]])</span>
+<span id="cb18-6"><a></a><span class="bu">print</span>(A<span class="op">*</span>B)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column">
-<div class="cell-output cell-output-error">
-<div class="ansi-escaped-output">
-<pre><span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-cyan-fg">Cell</span><span class="ansi-cyan-fg"> </span><span class="ansi-green-fg">In[11]</span><span class="ansi-green-fg">, line 1</span>
-<span class="ansi-green-fg">----&gt; </span><span class="ansi-green-fg">1</span> A = <span class="ansi-yellow-bg">np</span>.array([[<span class="ansi-green-fg">2</span>, -<span class="ansi-green-fg">1</span>, <span class="ansi-green-fg">4</span>], 
-<span class="ansi-green-fg">      2</span>               [<span class="ansi-green-fg">0</span>, <span class="ansi-green-fg">5</span>, -<span class="ansi-green-fg">2</span>]])
-<span class="ansi-green-fg">      4</span> B = np.array([[<span class="ansi-green-fg">1</span>, -<span class="ansi-green-fg">1</span>, <span class="ansi-green-fg">2</span>], 
-<span class="ansi-green-fg">      5</span>               [<span class="ansi-green-fg">7</span>, <span class="ansi-green-fg">0</span>, <span class="ansi-green-fg">8</span>]])
-<span class="ansi-green-fg">      6</span> <span style="color:rgb(0,135,0)">print</span>(A*B)
-
-<span class="ansi-red-fg">NameError</span>: name 'np' is not defined</pre>
-</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[[  2   1   8]
+ [  0   0 -16]]</code></pre>
 </div>
 </div></div>
 <p>NOTE: this is <strong>elementwise</strong> multiplication, not <strong>matrix multiplication</strong></p>
 </div>
 <div id="tabset-3-3">
-<div id="324d6aa8" class="cell" data-execution_count="12">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a></a>B_2x2 <span class="op">=</span> np.array([[<span class="dv">1</span>, <span class="op">-</span><span class="dv">1</span>], </span>
-<span id="cb11-2"><a></a>                  [<span class="dv">7</span>, <span class="dv">0</span>]])</span>
-<span id="cb11-3"><a></a><span class="bu">print</span>(A<span class="op">+</span>B_2x2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="9edc02dd" class="cell" data-execution_count="12">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a></a>B_2x2 <span class="op">=</span> np.array([[<span class="dv">1</span>, <span class="op">-</span><span class="dv">1</span>], </span>
+<span id="cb20-2"><a></a>                  [<span class="dv">7</span>, <span class="dv">0</span>]])</span>
+<span id="cb20-3"><a></a><span class="bu">print</span>(A<span class="op">+</span>B_2x2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-error">
 <div class="ansi-escaped-output">
 <pre><span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-cyan-fg">Cell</span><span class="ansi-cyan-fg"> </span><span class="ansi-green-fg">In[12]</span><span class="ansi-green-fg">, line 1</span>
-<span class="ansi-green-fg">----&gt; </span><span class="ansi-green-fg">1</span> B_2x2 = <span class="ansi-yellow-bg">np</span>.array([[<span class="ansi-green-fg">1</span>, -<span class="ansi-green-fg">1</span>], 
+<span class="ansi-red-fg">ValueError</span>                                Traceback (most recent call last)
+<span class="ansi-cyan-fg">Cell</span><span class="ansi-cyan-fg"> </span><span class="ansi-green-fg">In[12]</span><span class="ansi-green-fg">, line 3</span>
+<span class="ansi-green-fg">      1</span> B_2x2 = np.array([[<span class="ansi-green-fg">1</span>, -<span class="ansi-green-fg">1</span>], 
 <span class="ansi-green-fg">      2</span>                   [<span class="ansi-green-fg">7</span>, <span class="ansi-green-fg">0</span>]])
-<span class="ansi-green-fg">      3</span> <span style="color:rgb(0,135,0)">print</span>(A+B_2x2)
+<span class="ansi-green-fg">----&gt; </span><span class="ansi-green-fg">3</span> <span style="color:rgb(0,135,0)">print</span>(<span class="ansi-yellow-bg">A</span><span class="ansi-yellow-bg">+</span><span class="ansi-yellow-bg">B_2x2</span>)
 
-<span class="ansi-red-fg">NameError</span>: name 'np' is not defined</pre>
+<span class="ansi-red-fg">ValueError</span>: operands could not be broadcast together with shapes (2,3) (2,2) </pre>
 </div>
 </div>
 </div>
@@ -656,195 +564,160 @@ c_{43} = a_{41}b_{13} + a_{42}b_{23}
 <ul id="tabset-4" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-4-1">Example 1</a></li><li><a href="#tabset-4-2">2</a></li><li><a href="#tabset-4-3">3</a></li><li><a href="#tabset-4-4">4</a></li><li><a href="#tabset-4-5">5</a></li><li><a href="#tabset-4-6">6</a></li></ul>
 <div class="tab-content">
 <div id="tabset-4-1">
-<div id="8ffcbb8d" class="cell columns column-output-location" data-execution_count="13">
+<div id="5680f3a5" class="cell columns column-output-location" data-execution_count="13">
 <div class="column">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a></a>A <span class="op">=</span> np.array([[<span class="dv">1</span>, <span class="dv">2</span>], </span>
-<span id="cb12-2"><a></a>              [<span class="dv">3</span>, <span class="dv">4</span>],</span>
-<span id="cb12-3"><a></a>              [<span class="dv">5</span>, <span class="dv">6</span>],</span>
-<span id="cb12-4"><a></a>              [<span class="dv">7</span>, <span class="dv">8</span>]])</span>
-<span id="cb12-5"><a></a>B <span class="op">=</span> np.array([[<span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">0</span>], </span>
-<span id="cb12-6"><a></a>              [<span class="dv">3</span>, <span class="dv">2</span>, <span class="dv">1</span>]])</span>
-<span id="cb12-7"><a></a><span class="bu">print</span>(<span class="ss">f"A has shape </span><span class="sc">{</span>A<span class="sc">.</span>shape<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb12-8"><a></a><span class="bu">print</span>(<span class="ss">f"B has shape </span><span class="sc">{</span>B<span class="sc">.</span>shape<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb12-9"><a></a>C <span class="op">=</span> A <span class="op">@</span> B</span>
-<span id="cb12-10"><a></a><span class="bu">print</span>(<span class="ss">f"C has shape </span><span class="sc">{</span>C<span class="sc">.</span>shape<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb12-11"><a></a><span class="bu">print</span>(C)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a></a>A <span class="op">=</span> np.array([[<span class="dv">1</span>, <span class="dv">2</span>], </span>
+<span id="cb21-2"><a></a>              [<span class="dv">3</span>, <span class="dv">4</span>],</span>
+<span id="cb21-3"><a></a>              [<span class="dv">5</span>, <span class="dv">6</span>],</span>
+<span id="cb21-4"><a></a>              [<span class="dv">7</span>, <span class="dv">8</span>]])</span>
+<span id="cb21-5"><a></a>B <span class="op">=</span> np.array([[<span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">0</span>], </span>
+<span id="cb21-6"><a></a>              [<span class="dv">3</span>, <span class="dv">2</span>, <span class="dv">1</span>]])</span>
+<span id="cb21-7"><a></a><span class="bu">print</span>(<span class="ss">f"A has shape </span><span class="sc">{</span>A<span class="sc">.</span>shape<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb21-8"><a></a><span class="bu">print</span>(<span class="ss">f"B has shape </span><span class="sc">{</span>B<span class="sc">.</span>shape<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb21-9"><a></a>C <span class="op">=</span> A <span class="op">@</span> B</span>
+<span id="cb21-10"><a></a><span class="bu">print</span>(<span class="ss">f"C has shape </span><span class="sc">{</span>C<span class="sc">.</span>shape<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb21-11"><a></a><span class="bu">print</span>(C)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column fragment">
-<div class="cell-output cell-output-error">
-<div class="ansi-escaped-output">
-<pre><span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-cyan-fg">Cell</span><span class="ansi-cyan-fg"> </span><span class="ansi-green-fg">In[13]</span><span class="ansi-green-fg">, line 1</span>
-<span class="ansi-green-fg">----&gt; </span><span class="ansi-green-fg">1</span> A = <span class="ansi-yellow-bg">np</span>.array([[<span class="ansi-green-fg">1</span>, <span class="ansi-green-fg">2</span>], 
-<span class="ansi-green-fg">      2</span>               [<span class="ansi-green-fg">3</span>, <span class="ansi-green-fg">4</span>],
-<span class="ansi-green-fg">      3</span>               [<span class="ansi-green-fg">5</span>, <span class="ansi-green-fg">6</span>],
-<span class="ansi-green-fg">      4</span>               [<span class="ansi-green-fg">7</span>, <span class="ansi-green-fg">8</span>]])
-<span class="ansi-green-fg">      5</span> B = np.array([[<span class="ansi-green-fg">2</span>, <span class="ansi-green-fg">1</span>, <span class="ansi-green-fg">0</span>], 
-<span class="ansi-green-fg">      6</span>               [<span class="ansi-green-fg">3</span>, <span class="ansi-green-fg">2</span>, <span class="ansi-green-fg">1</span>]])
-<span class="ansi-green-fg">      7</span> <span style="color:rgb(0,135,0)">print</span>(<span class="ansi-yellow-fg">f</span><span class="ansi-yellow-fg">"</span><span class="ansi-yellow-fg">A has shape </span><span style="font-weight:bold;color:rgb(175,95,135)">{</span>A.shape<span style="font-weight:bold;color:rgb(175,95,135)">}</span><span class="ansi-yellow-fg">"</span>)
-
-<span class="ansi-red-fg">NameError</span>: name 'np' is not defined</pre>
-</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>A has shape (4, 2)
+B has shape (2, 3)
+C has shape (4, 3)
+[[ 8  5  2]
+ [18 11  4]
+ [28 17  6]
+ [38 23  8]]</code></pre>
 </div>
 </div></div>
 </div>
 <div id="tabset-4-2">
-<div id="edc5d5ba" class="cell columns column-output-location" data-execution_count="14">
+<div id="ee4ad54c" class="cell columns column-output-location" data-execution_count="14">
 <div class="column">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a></a>A <span class="op">=</span> np.array([[<span class="dv">1</span>, <span class="dv">2</span>], </span>
-<span id="cb13-2"><a></a>              [<span class="dv">3</span>, <span class="dv">4</span>],</span>
-<span id="cb13-3"><a></a>              [<span class="dv">5</span>, <span class="dv">6</span>]])</span>
-<span id="cb13-4"><a></a>              </span>
-<span id="cb13-5"><a></a>B <span class="op">=</span> np.array([[<span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">0</span>], </span>
-<span id="cb13-6"><a></a>              [<span class="dv">3</span>, <span class="dv">2</span>, <span class="dv">1</span>]])</span>
-<span id="cb13-7"><a></a><span class="bu">print</span>(<span class="ss">f"A has shape </span><span class="sc">{</span>A<span class="sc">.</span>shape<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb13-8"><a></a><span class="bu">print</span>(<span class="ss">f"B has shape </span><span class="sc">{</span>B<span class="sc">.</span>shape<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb13-9"><a></a>C <span class="op">=</span> A <span class="op">@</span> B</span>
-<span id="cb13-10"><a></a><span class="bu">print</span>(<span class="ss">f"C has shape </span><span class="sc">{</span>C<span class="sc">.</span>shape<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb13-11"><a></a><span class="bu">print</span>(C)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a></a>A <span class="op">=</span> np.array([[<span class="dv">1</span>, <span class="dv">2</span>], </span>
+<span id="cb23-2"><a></a>              [<span class="dv">3</span>, <span class="dv">4</span>],</span>
+<span id="cb23-3"><a></a>              [<span class="dv">5</span>, <span class="dv">6</span>]])</span>
+<span id="cb23-4"><a></a>              </span>
+<span id="cb23-5"><a></a>B <span class="op">=</span> np.array([[<span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">0</span>], </span>
+<span id="cb23-6"><a></a>              [<span class="dv">3</span>, <span class="dv">2</span>, <span class="dv">1</span>]])</span>
+<span id="cb23-7"><a></a><span class="bu">print</span>(<span class="ss">f"A has shape </span><span class="sc">{</span>A<span class="sc">.</span>shape<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb23-8"><a></a><span class="bu">print</span>(<span class="ss">f"B has shape </span><span class="sc">{</span>B<span class="sc">.</span>shape<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb23-9"><a></a>C <span class="op">=</span> A <span class="op">@</span> B</span>
+<span id="cb23-10"><a></a><span class="bu">print</span>(<span class="ss">f"C has shape </span><span class="sc">{</span>C<span class="sc">.</span>shape<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb23-11"><a></a><span class="bu">print</span>(C)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column fragment">
-<div class="cell-output cell-output-error">
-<div class="ansi-escaped-output">
-<pre><span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-cyan-fg">Cell</span><span class="ansi-cyan-fg"> </span><span class="ansi-green-fg">In[14]</span><span class="ansi-green-fg">, line 1</span>
-<span class="ansi-green-fg">----&gt; </span><span class="ansi-green-fg">1</span> A = <span class="ansi-yellow-bg">np</span>.array([[<span class="ansi-green-fg">1</span>, <span class="ansi-green-fg">2</span>], 
-<span class="ansi-green-fg">      2</span>               [<span class="ansi-green-fg">3</span>, <span class="ansi-green-fg">4</span>],
-<span class="ansi-green-fg">      3</span>               [<span class="ansi-green-fg">5</span>, <span class="ansi-green-fg">6</span>]])
-<span class="ansi-green-fg">      5</span> B = np.array([[<span class="ansi-green-fg">2</span>, <span class="ansi-green-fg">1</span>, <span class="ansi-green-fg">0</span>], 
-<span class="ansi-green-fg">      6</span>               [<span class="ansi-green-fg">3</span>, <span class="ansi-green-fg">2</span>, <span class="ansi-green-fg">1</span>]])
-<span class="ansi-green-fg">      7</span> <span style="color:rgb(0,135,0)">print</span>(<span class="ansi-yellow-fg">f</span><span class="ansi-yellow-fg">"</span><span class="ansi-yellow-fg">A has shape </span><span style="font-weight:bold;color:rgb(175,95,135)">{</span>A.shape<span style="font-weight:bold;color:rgb(175,95,135)">}</span><span class="ansi-yellow-fg">"</span>)
-
-<span class="ansi-red-fg">NameError</span>: name 'np' is not defined</pre>
-</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>A has shape (3, 2)
+B has shape (2, 3)
+C has shape (3, 3)
+[[ 8  5  2]
+ [18 11  4]
+ [28 17  6]]</code></pre>
 </div>
 </div></div>
 </div>
 <div id="tabset-4-3">
-<div id="25ecc76a" class="cell columns column-output-location" data-execution_count="15">
+<div id="e646d2c7" class="cell columns column-output-location" data-execution_count="15">
 <div class="column">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a></a>A <span class="op">=</span> np.array([[<span class="dv">1</span>, <span class="dv">2</span>], </span>
-<span id="cb14-2"><a></a>              [<span class="dv">3</span>, <span class="dv">4</span>],</span>
-<span id="cb14-3"><a></a>              [<span class="dv">5</span>, <span class="dv">6</span>]])</span>
-<span id="cb14-4"><a></a>B <span class="op">=</span> np.array([[<span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">0</span>], </span>
-<span id="cb14-5"><a></a>              [<span class="dv">3</span>, <span class="dv">2</span>, <span class="dv">1</span>]])</span>
-<span id="cb14-6"><a></a><span class="bu">print</span>(<span class="ss">f"A has shape </span><span class="sc">{</span>A<span class="sc">.</span>shape<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb14-7"><a></a><span class="bu">print</span>(<span class="ss">f"B has shape </span><span class="sc">{</span>B<span class="sc">.</span>shape<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb14-8"><a></a>C <span class="op">=</span> B <span class="op">@</span> A <span class="co"># &lt;-- reversing order</span></span>
-<span id="cb14-9"><a></a><span class="bu">print</span>(<span class="ss">f"C has shape </span><span class="sc">{</span>C<span class="sc">.</span>shape<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb14-10"><a></a><span class="bu">print</span>(C)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a></a>A <span class="op">=</span> np.array([[<span class="dv">1</span>, <span class="dv">2</span>], </span>
+<span id="cb25-2"><a></a>              [<span class="dv">3</span>, <span class="dv">4</span>],</span>
+<span id="cb25-3"><a></a>              [<span class="dv">5</span>, <span class="dv">6</span>]])</span>
+<span id="cb25-4"><a></a>B <span class="op">=</span> np.array([[<span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">0</span>], </span>
+<span id="cb25-5"><a></a>              [<span class="dv">3</span>, <span class="dv">2</span>, <span class="dv">1</span>]])</span>
+<span id="cb25-6"><a></a><span class="bu">print</span>(<span class="ss">f"A has shape </span><span class="sc">{</span>A<span class="sc">.</span>shape<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb25-7"><a></a><span class="bu">print</span>(<span class="ss">f"B has shape </span><span class="sc">{</span>B<span class="sc">.</span>shape<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb25-8"><a></a>C <span class="op">=</span> B <span class="op">@</span> A <span class="co"># &lt;-- reversing order</span></span>
+<span id="cb25-9"><a></a><span class="bu">print</span>(<span class="ss">f"C has shape </span><span class="sc">{</span>C<span class="sc">.</span>shape<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb25-10"><a></a><span class="bu">print</span>(C)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column fragment">
-<div class="cell-output cell-output-error">
-<div class="ansi-escaped-output">
-<pre><span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-cyan-fg">Cell</span><span class="ansi-cyan-fg"> </span><span class="ansi-green-fg">In[15]</span><span class="ansi-green-fg">, line 1</span>
-<span class="ansi-green-fg">----&gt; </span><span class="ansi-green-fg">1</span> A = <span class="ansi-yellow-bg">np</span>.array([[<span class="ansi-green-fg">1</span>, <span class="ansi-green-fg">2</span>], 
-<span class="ansi-green-fg">      2</span>               [<span class="ansi-green-fg">3</span>, <span class="ansi-green-fg">4</span>],
-<span class="ansi-green-fg">      3</span>               [<span class="ansi-green-fg">5</span>, <span class="ansi-green-fg">6</span>]])
-<span class="ansi-green-fg">      4</span> B = np.array([[<span class="ansi-green-fg">2</span>, <span class="ansi-green-fg">1</span>, <span class="ansi-green-fg">0</span>], 
-<span class="ansi-green-fg">      5</span>               [<span class="ansi-green-fg">3</span>, <span class="ansi-green-fg">2</span>, <span class="ansi-green-fg">1</span>]])
-<span class="ansi-green-fg">      6</span> <span style="color:rgb(0,135,0)">print</span>(<span class="ansi-yellow-fg">f</span><span class="ansi-yellow-fg">"</span><span class="ansi-yellow-fg">A has shape </span><span style="font-weight:bold;color:rgb(175,95,135)">{</span>A.shape<span style="font-weight:bold;color:rgb(175,95,135)">}</span><span class="ansi-yellow-fg">"</span>)
-
-<span class="ansi-red-fg">NameError</span>: name 'np' is not defined</pre>
-</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>A has shape (3, 2)
+B has shape (2, 3)
+C has shape (2, 2)
+[[ 5  8]
+ [14 20]]</code></pre>
 </div>
 </div></div>
 </div>
 <div id="tabset-4-4">
-<div id="04301ad2" class="cell columns column-output-location" data-execution_count="16">
+<div id="41fd3f4e" class="cell columns column-output-location" data-execution_count="16">
 <div class="column">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a></a>A <span class="op">=</span> np.array([[<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">8</span>], </span>
-<span id="cb15-2"><a></a>              [<span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">4</span>],</span>
-<span id="cb15-3"><a></a>              [<span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">3</span>]])</span>
-<span id="cb15-4"><a></a>B <span class="op">=</span> np.array([[<span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">0</span>], </span>
-<span id="cb15-5"><a></a>              [<span class="dv">3</span>, <span class="dv">2</span>, <span class="dv">1</span>]])</span>
-<span id="cb15-6"><a></a><span class="bu">print</span>(<span class="ss">f"A has shape </span><span class="sc">{</span>A<span class="sc">.</span>shape<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb15-7"><a></a><span class="bu">print</span>(<span class="ss">f"B has shape </span><span class="sc">{</span>B<span class="sc">.</span>shape<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb15-8"><a></a>C <span class="op">=</span> A <span class="op">@</span> B</span>
-<span id="cb15-9"><a></a><span class="bu">print</span>(<span class="ss">f"C has shape </span><span class="sc">{</span>C<span class="sc">.</span>shape<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb15-10"><a></a><span class="bu">print</span>(C)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a></a>A <span class="op">=</span> np.array([[<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">8</span>], </span>
+<span id="cb27-2"><a></a>              [<span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">4</span>],</span>
+<span id="cb27-3"><a></a>              [<span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">3</span>]])</span>
+<span id="cb27-4"><a></a>B <span class="op">=</span> np.array([[<span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">0</span>], </span>
+<span id="cb27-5"><a></a>              [<span class="dv">3</span>, <span class="dv">2</span>, <span class="dv">1</span>]])</span>
+<span id="cb27-6"><a></a><span class="bu">print</span>(<span class="ss">f"A has shape </span><span class="sc">{</span>A<span class="sc">.</span>shape<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb27-7"><a></a><span class="bu">print</span>(<span class="ss">f"B has shape </span><span class="sc">{</span>B<span class="sc">.</span>shape<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb27-8"><a></a>C <span class="op">=</span> A <span class="op">@</span> B</span>
+<span id="cb27-9"><a></a><span class="bu">print</span>(<span class="ss">f"C has shape </span><span class="sc">{</span>C<span class="sc">.</span>shape<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb27-10"><a></a><span class="bu">print</span>(C)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column fragment">
+<div class="cell-output cell-output-stdout">
+<pre><code>A has shape (3, 3)
+B has shape (2, 3)</code></pre>
+</div>
 <div class="cell-output cell-output-error">
 <div class="ansi-escaped-output">
 <pre><span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-cyan-fg">Cell</span><span class="ansi-cyan-fg"> </span><span class="ansi-green-fg">In[16]</span><span class="ansi-green-fg">, line 1</span>
-<span class="ansi-green-fg">----&gt; </span><span class="ansi-green-fg">1</span> A = <span class="ansi-yellow-bg">np</span>.array([[<span class="ansi-green-fg">1</span>, <span class="ansi-green-fg">2</span>, <span class="ansi-green-fg">8</span>], 
-<span class="ansi-green-fg">      2</span>               [<span class="ansi-green-fg">3</span>, <span class="ansi-green-fg">4</span>, <span class="ansi-green-fg">4</span>],
-<span class="ansi-green-fg">      3</span>               [<span class="ansi-green-fg">5</span>, <span class="ansi-green-fg">6</span>, <span class="ansi-green-fg">3</span>]])
-<span class="ansi-green-fg">      4</span> B = np.array([[<span class="ansi-green-fg">2</span>, <span class="ansi-green-fg">1</span>, <span class="ansi-green-fg">0</span>], 
-<span class="ansi-green-fg">      5</span>               [<span class="ansi-green-fg">3</span>, <span class="ansi-green-fg">2</span>, <span class="ansi-green-fg">1</span>]])
+<span class="ansi-red-fg">ValueError</span>                                Traceback (most recent call last)
+<span class="ansi-cyan-fg">Cell</span><span class="ansi-cyan-fg"> </span><span class="ansi-green-fg">In[16]</span><span class="ansi-green-fg">, line 8</span>
 <span class="ansi-green-fg">      6</span> <span style="color:rgb(0,135,0)">print</span>(<span class="ansi-yellow-fg">f</span><span class="ansi-yellow-fg">"</span><span class="ansi-yellow-fg">A has shape </span><span style="font-weight:bold;color:rgb(175,95,135)">{</span>A.shape<span style="font-weight:bold;color:rgb(175,95,135)">}</span><span class="ansi-yellow-fg">"</span>)
+<span class="ansi-green-fg">      7</span> <span style="color:rgb(0,135,0)">print</span>(<span class="ansi-yellow-fg">f</span><span class="ansi-yellow-fg">"</span><span class="ansi-yellow-fg">B has shape </span><span style="font-weight:bold;color:rgb(175,95,135)">{</span>B.shape<span style="font-weight:bold;color:rgb(175,95,135)">}</span><span class="ansi-yellow-fg">"</span>)
+<span class="ansi-green-fg">----&gt; </span><span class="ansi-green-fg">8</span> C = <span class="ansi-yellow-bg">A</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">@</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">B</span>
+<span class="ansi-green-fg">      9</span> <span style="color:rgb(0,135,0)">print</span>(<span class="ansi-yellow-fg">f</span><span class="ansi-yellow-fg">"</span><span class="ansi-yellow-fg">C has shape </span><span style="font-weight:bold;color:rgb(175,95,135)">{</span>C.shape<span style="font-weight:bold;color:rgb(175,95,135)">}</span><span class="ansi-yellow-fg">"</span>)
+<span class="ansi-green-fg">     10</span> <span style="color:rgb(0,135,0)">print</span>(C)
 
-<span class="ansi-red-fg">NameError</span>: name 'np' is not defined</pre>
+<span class="ansi-red-fg">ValueError</span>: matmul: Input operand 1 has a mismatch in its core dimension 0, with gufunc signature (n?,k),(k,m?)-&gt;(n?,m?) (size 2 is different from 3)</pre>
 </div>
 </div>
 </div></div>
 </div>
 <div id="tabset-4-5">
-<div id="bab9f0bb" class="cell columns column-output-location" data-execution_count="17">
+<div id="f72fc6f6" class="cell columns column-output-location" data-execution_count="17">
 <div class="column">
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a></a>A <span class="op">=</span> np.array([[<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">8</span>], </span>
-<span id="cb16-2"><a></a>              [<span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">4</span>],</span>
-<span id="cb16-3"><a></a>              [<span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">3</span>]])</span>
-<span id="cb16-4"><a></a>B <span class="op">=</span> np.array([[<span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">0</span>], </span>
-<span id="cb16-5"><a></a>              [<span class="dv">3</span>, <span class="dv">2</span>, <span class="dv">1</span>],</span>
-<span id="cb16-6"><a></a>              [<span class="dv">0</span>, <span class="dv">9</span>, <span class="dv">7</span>]])</span>
-<span id="cb16-7"><a></a><span class="bu">print</span>(<span class="ss">f"A has shape </span><span class="sc">{</span>A<span class="sc">.</span>shape<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb16-8"><a></a><span class="bu">print</span>(<span class="ss">f"B has shape </span><span class="sc">{</span>B<span class="sc">.</span>shape<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb16-9"><a></a>C <span class="op">=</span> A <span class="op">@</span> B</span>
-<span id="cb16-10"><a></a><span class="bu">print</span>(<span class="ss">f"C has shape </span><span class="sc">{</span>C<span class="sc">.</span>shape<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb16-11"><a></a><span class="bu">print</span>(C)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a></a>A <span class="op">=</span> np.array([[<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">8</span>], </span>
+<span id="cb29-2"><a></a>              [<span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">4</span>],</span>
+<span id="cb29-3"><a></a>              [<span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">3</span>]])</span>
+<span id="cb29-4"><a></a>B <span class="op">=</span> np.array([[<span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">0</span>], </span>
+<span id="cb29-5"><a></a>              [<span class="dv">3</span>, <span class="dv">2</span>, <span class="dv">1</span>],</span>
+<span id="cb29-6"><a></a>              [<span class="dv">0</span>, <span class="dv">9</span>, <span class="dv">7</span>]])</span>
+<span id="cb29-7"><a></a><span class="bu">print</span>(<span class="ss">f"A has shape </span><span class="sc">{</span>A<span class="sc">.</span>shape<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb29-8"><a></a><span class="bu">print</span>(<span class="ss">f"B has shape </span><span class="sc">{</span>B<span class="sc">.</span>shape<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb29-9"><a></a>C <span class="op">=</span> A <span class="op">@</span> B</span>
+<span id="cb29-10"><a></a><span class="bu">print</span>(<span class="ss">f"C has shape </span><span class="sc">{</span>C<span class="sc">.</span>shape<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb29-11"><a></a><span class="bu">print</span>(C)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column fragment">
-<div class="cell-output cell-output-error">
-<div class="ansi-escaped-output">
-<pre><span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-cyan-fg">Cell</span><span class="ansi-cyan-fg"> </span><span class="ansi-green-fg">In[17]</span><span class="ansi-green-fg">, line 1</span>
-<span class="ansi-green-fg">----&gt; </span><span class="ansi-green-fg">1</span> A = <span class="ansi-yellow-bg">np</span>.array([[<span class="ansi-green-fg">1</span>, <span class="ansi-green-fg">2</span>, <span class="ansi-green-fg">8</span>], 
-<span class="ansi-green-fg">      2</span>               [<span class="ansi-green-fg">3</span>, <span class="ansi-green-fg">4</span>, <span class="ansi-green-fg">4</span>],
-<span class="ansi-green-fg">      3</span>               [<span class="ansi-green-fg">5</span>, <span class="ansi-green-fg">6</span>, <span class="ansi-green-fg">3</span>]])
-<span class="ansi-green-fg">      4</span> B = np.array([[<span class="ansi-green-fg">2</span>, <span class="ansi-green-fg">1</span>, <span class="ansi-green-fg">0</span>], 
-<span class="ansi-green-fg">      5</span>               [<span class="ansi-green-fg">3</span>, <span class="ansi-green-fg">2</span>, <span class="ansi-green-fg">1</span>],
-<span class="ansi-green-fg">      6</span>               [<span class="ansi-green-fg">0</span>, <span class="ansi-green-fg">9</span>, <span class="ansi-green-fg">7</span>]])
-<span class="ansi-green-fg">      7</span> <span style="color:rgb(0,135,0)">print</span>(<span class="ansi-yellow-fg">f</span><span class="ansi-yellow-fg">"</span><span class="ansi-yellow-fg">A has shape </span><span style="font-weight:bold;color:rgb(175,95,135)">{</span>A.shape<span style="font-weight:bold;color:rgb(175,95,135)">}</span><span class="ansi-yellow-fg">"</span>)
-
-<span class="ansi-red-fg">NameError</span>: name 'np' is not defined</pre>
-</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>A has shape (3, 3)
+B has shape (3, 3)
+C has shape (3, 3)
+[[ 8 77 58]
+ [18 47 32]
+ [28 44 27]]</code></pre>
 </div>
 </div></div>
 </div>
 <div id="tabset-4-6">
-<div id="c24745ce" class="cell columns column-output-location" data-execution_count="18">
+<div id="5e5cd4b7" class="cell columns column-output-location" data-execution_count="18">
 <div class="column">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a></a>A <span class="op">=</span> np.array([[<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">8</span>], </span>
-<span id="cb17-2"><a></a>              [<span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">4</span>],</span>
-<span id="cb17-3"><a></a>              [<span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">3</span>]])</span>
-<span id="cb17-4"><a></a>B <span class="op">=</span> np.array([[<span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">0</span>], </span>
-<span id="cb17-5"><a></a>              [<span class="dv">3</span>, <span class="dv">2</span>, <span class="dv">1</span>],</span>
-<span id="cb17-6"><a></a>              [<span class="dv">0</span>, <span class="dv">9</span>, <span class="dv">7</span>]])</span>
-<span id="cb17-7"><a></a><span class="bu">print</span>(<span class="ss">f"A has shape </span><span class="sc">{</span>A<span class="sc">.</span>shape<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb17-8"><a></a><span class="bu">print</span>(<span class="ss">f"B has shape </span><span class="sc">{</span>B<span class="sc">.</span>shape<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb17-9"><a></a>C <span class="op">=</span> B <span class="op">@</span> A <span class="co"># &lt;-- reversing order</span></span>
-<span id="cb17-10"><a></a><span class="bu">print</span>(<span class="ss">f"C has shape </span><span class="sc">{</span>C<span class="sc">.</span>shape<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb17-11"><a></a><span class="bu">print</span>(C)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a></a>A <span class="op">=</span> np.array([[<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">8</span>], </span>
+<span id="cb31-2"><a></a>              [<span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">4</span>],</span>
+<span id="cb31-3"><a></a>              [<span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">3</span>]])</span>
+<span id="cb31-4"><a></a>B <span class="op">=</span> np.array([[<span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">0</span>], </span>
+<span id="cb31-5"><a></a>              [<span class="dv">3</span>, <span class="dv">2</span>, <span class="dv">1</span>],</span>
+<span id="cb31-6"><a></a>              [<span class="dv">0</span>, <span class="dv">9</span>, <span class="dv">7</span>]])</span>
+<span id="cb31-7"><a></a><span class="bu">print</span>(<span class="ss">f"A has shape </span><span class="sc">{</span>A<span class="sc">.</span>shape<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb31-8"><a></a><span class="bu">print</span>(<span class="ss">f"B has shape </span><span class="sc">{</span>B<span class="sc">.</span>shape<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb31-9"><a></a>C <span class="op">=</span> B <span class="op">@</span> A <span class="co"># &lt;-- reversing order</span></span>
+<span id="cb31-10"><a></a><span class="bu">print</span>(<span class="ss">f"C has shape </span><span class="sc">{</span>C<span class="sc">.</span>shape<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb31-11"><a></a><span class="bu">print</span>(C)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column fragment">
-<div class="cell-output cell-output-error">
-<div class="ansi-escaped-output">
-<pre><span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-cyan-fg">Cell</span><span class="ansi-cyan-fg"> </span><span class="ansi-green-fg">In[18]</span><span class="ansi-green-fg">, line 1</span>
-<span class="ansi-green-fg">----&gt; </span><span class="ansi-green-fg">1</span> A = <span class="ansi-yellow-bg">np</span>.array([[<span class="ansi-green-fg">1</span>, <span class="ansi-green-fg">2</span>, <span class="ansi-green-fg">8</span>], 
-<span class="ansi-green-fg">      2</span>               [<span class="ansi-green-fg">3</span>, <span class="ansi-green-fg">4</span>, <span class="ansi-green-fg">4</span>],
-<span class="ansi-green-fg">      3</span>               [<span class="ansi-green-fg">5</span>, <span class="ansi-green-fg">6</span>, <span class="ansi-green-fg">3</span>]])
-<span class="ansi-green-fg">      4</span> B = np.array([[<span class="ansi-green-fg">2</span>, <span class="ansi-green-fg">1</span>, <span class="ansi-green-fg">0</span>], 
-<span class="ansi-green-fg">      5</span>               [<span class="ansi-green-fg">3</span>, <span class="ansi-green-fg">2</span>, <span class="ansi-green-fg">1</span>],
-<span class="ansi-green-fg">      6</span>               [<span class="ansi-green-fg">0</span>, <span class="ansi-green-fg">9</span>, <span class="ansi-green-fg">7</span>]])
-<span class="ansi-green-fg">      7</span> <span style="color:rgb(0,135,0)">print</span>(<span class="ansi-yellow-fg">f</span><span class="ansi-yellow-fg">"</span><span class="ansi-yellow-fg">A has shape </span><span style="font-weight:bold;color:rgb(175,95,135)">{</span>A.shape<span style="font-weight:bold;color:rgb(175,95,135)">}</span><span class="ansi-yellow-fg">"</span>)
-
-<span class="ansi-red-fg">NameError</span>: name 'np' is not defined</pre>
-</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>A has shape (3, 3)
+B has shape (3, 3)
+C has shape (3, 3)
+[[ 5  8 20]
+ [14 20 35]
+ [62 78 57]]</code></pre>
 </div>
 </div></div>
 </div>
@@ -897,12 +770,12 @@ c_{43} = a_{41}b_{13} + a_{42}b_{23}
 <div class="columns">
 <div class="column">
 <div class="fragment">
-<div class="sourceCode" id="cb18"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a></a><span class="im">from</span> scipy <span class="im">import</span> linalg</span>
-<span id="cb18-2"><a></a>A <span class="op">=</span> np.array([[<span class="dv">1</span>, <span class="dv">2</span>], </span>
-<span id="cb18-3"><a></a>              [<span class="dv">3</span>, <span class="dv">4</span>],</span>
-<span id="cb18-4"><a></a>              [<span class="dv">5</span>, <span class="dv">6</span>],</span>
-<span id="cb18-5"><a></a>              [<span class="dv">7</span>, <span class="dv">8</span>]])</span>
-<span id="cb18-6"><a></a><span class="bu">print</span>(linalg.inv(A))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb33"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a></a><span class="im">from</span> scipy <span class="im">import</span> linalg</span>
+<span id="cb33-2"><a></a>A <span class="op">=</span> np.array([[<span class="dv">1</span>, <span class="dv">2</span>], </span>
+<span id="cb33-3"><a></a>              [<span class="dv">3</span>, <span class="dv">4</span>],</span>
+<span id="cb33-4"><a></a>              [<span class="dv">5</span>, <span class="dv">6</span>],</span>
+<span id="cb33-5"><a></a>              [<span class="dv">7</span>, <span class="dv">8</span>]])</span>
+<span id="cb33-6"><a></a><span class="bu">print</span>(linalg.inv(A))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div><div class="column">
 <div class="fragment">
@@ -910,29 +783,19 @@ c_{43} = a_{41}b_{13} + a_{42}b_{23}
 </div>
 </div></div>
 <div class="fragment">
-<div id="a179bc34" class="cell" data-execution_count="19">
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a></a><span class="im">from</span> scipy <span class="im">import</span> linalg</span>
-<span id="cb19-2"><a></a>A <span class="op">=</span> np.array([</span>
-<span id="cb19-3"><a></a>    [<span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">4</span>], </span>
-<span id="cb19-4"><a></a>    [<span class="dv">4</span>, <span class="op">-</span><span class="dv">1</span>, <span class="dv">8</span>],</span>
-<span id="cb19-5"><a></a>    [<span class="op">-</span><span class="dv">1</span>, <span class="op">-</span><span class="dv">4</span>, <span class="dv">1</span>]])</span>
-<span id="cb19-6"><a></a><span class="bu">print</span>(linalg.inv(A))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="3bd2ae40" class="cell" data-execution_count="19">
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a></a><span class="im">from</span> scipy <span class="im">import</span> linalg</span>
+<span id="cb34-2"><a></a>A <span class="op">=</span> np.array([</span>
+<span id="cb34-3"><a></a>    [<span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">4</span>], </span>
+<span id="cb34-4"><a></a>    [<span class="dv">4</span>, <span class="op">-</span><span class="dv">1</span>, <span class="dv">8</span>],</span>
+<span id="cb34-5"><a></a>    [<span class="op">-</span><span class="dv">1</span>, <span class="op">-</span><span class="dv">4</span>, <span class="dv">1</span>]])</span>
+<span id="cb34-6"><a></a><span class="bu">print</span>(linalg.inv(A))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell fragment" data-execution_count="19">
-<div class="cell-output cell-output-error">
-<div class="ansi-escaped-output">
-<pre><span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">ModuleNotFoundError</span>                       Traceback (most recent call last)
-<span class="ansi-cyan-fg">Cell</span><span class="ansi-cyan-fg"> </span><span class="ansi-green-fg">In[19]</span><span class="ansi-green-fg">, line 1</span>
-<span class="ansi-green-fg">----&gt; </span><span class="ansi-green-fg">1</span> <span style="font-weight:bold;color:rgb(0,135,0)">from</span><span style="color:rgb(188,188,188)"> </span><span class="ansi-blue-fg ansi-bold">scipy</span><span style="color:rgb(188,188,188)"> </span><span style="font-weight:bold;color:rgb(0,135,0)">import</span> linalg
-<span class="ansi-green-fg">      2</span> A = np.array([
-<span class="ansi-green-fg">      3</span>     [<span class="ansi-green-fg">1</span>, <span class="ansi-green-fg">3</span>, <span class="ansi-green-fg">4</span>], 
-<span class="ansi-green-fg">      4</span>     [<span class="ansi-green-fg">4</span>, -<span class="ansi-green-fg">1</span>, <span class="ansi-green-fg">8</span>],
-<span class="ansi-green-fg">      5</span>     [-<span class="ansi-green-fg">1</span>, -<span class="ansi-green-fg">4</span>, <span class="ansi-green-fg">1</span>]])
-<span class="ansi-green-fg">      6</span> <span style="color:rgb(0,135,0)">print</span>(linalg.inv(A))
-
-<span class="ansi-red-fg">ModuleNotFoundError</span>: No module named 'scipy'</pre>
-</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[[-0.42465753  0.26027397 -0.38356164]
+ [ 0.16438356 -0.06849315 -0.10958904]
+ [ 0.23287671 -0.01369863  0.17808219]]</code></pre>
 </div>
 </div>
 </div>
@@ -940,50 +803,34 @@ c_{43} = a_{41}b_{13} + a_{42}b_{23}
 <section id="off-diagonal-zeros" class="slide level2">
 <h2>Off-diagonal “zeros”</h2>
 <div class="fragment">
-<div id="4dc59a79" class="cell" data-execution_count="20">
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a></a><span class="im">from</span> scipy <span class="im">import</span> linalg</span>
-<span id="cb20-2"><a></a>A <span class="op">=</span> np.array([</span>
-<span id="cb20-3"><a></a>    [<span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">4</span>], </span>
-<span id="cb20-4"><a></a>    [<span class="dv">4</span>, <span class="op">-</span><span class="dv">1</span>, <span class="dv">8</span>],</span>
-<span id="cb20-5"><a></a>    [<span class="op">-</span><span class="dv">1</span>, <span class="op">-</span><span class="dv">4</span>, <span class="dv">1</span>]])</span>
-<span id="cb20-6"><a></a>    </span>
-<span id="cb20-7"><a></a>A_inv <span class="op">=</span> linalg.inv(A)</span>
-<span id="cb20-8"><a></a><span class="bu">print</span>(A <span class="op">@</span> A_inv)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="e6f259d8" class="cell" data-execution_count="20">
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb36-1"><a></a><span class="im">from</span> scipy <span class="im">import</span> linalg</span>
+<span id="cb36-2"><a></a>A <span class="op">=</span> np.array([</span>
+<span id="cb36-3"><a></a>    [<span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">4</span>], </span>
+<span id="cb36-4"><a></a>    [<span class="dv">4</span>, <span class="op">-</span><span class="dv">1</span>, <span class="dv">8</span>],</span>
+<span id="cb36-5"><a></a>    [<span class="op">-</span><span class="dv">1</span>, <span class="op">-</span><span class="dv">4</span>, <span class="dv">1</span>]])</span>
+<span id="cb36-6"><a></a>    </span>
+<span id="cb36-7"><a></a>A_inv <span class="op">=</span> linalg.inv(A)</span>
+<span id="cb36-8"><a></a><span class="bu">print</span>(A <span class="op">@</span> A_inv)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell fragment" data-execution_count="20">
-<div class="cell-output cell-output-error">
-<div class="ansi-escaped-output">
-<pre><span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">ModuleNotFoundError</span>                       Traceback (most recent call last)
-<span class="ansi-cyan-fg">Cell</span><span class="ansi-cyan-fg"> </span><span class="ansi-green-fg">In[20]</span><span class="ansi-green-fg">, line 1</span>
-<span class="ansi-green-fg">----&gt; </span><span class="ansi-green-fg">1</span> <span style="font-weight:bold;color:rgb(0,135,0)">from</span><span style="color:rgb(188,188,188)"> </span><span class="ansi-blue-fg ansi-bold">scipy</span><span style="color:rgb(188,188,188)"> </span><span style="font-weight:bold;color:rgb(0,135,0)">import</span> linalg
-<span class="ansi-green-fg">      2</span> A = np.array([
-<span class="ansi-green-fg">      3</span>     [<span class="ansi-green-fg">1</span>, <span class="ansi-green-fg">3</span>, <span class="ansi-green-fg">4</span>], 
-<span class="ansi-green-fg">      4</span>     [<span class="ansi-green-fg">4</span>, -<span class="ansi-green-fg">1</span>, <span class="ansi-green-fg">8</span>],
-<span class="ansi-green-fg">      5</span>     [-<span class="ansi-green-fg">1</span>, -<span class="ansi-green-fg">4</span>, <span class="ansi-green-fg">1</span>]])
-<span class="ansi-green-fg">      7</span> A_inv = linalg.inv(A)
-
-<span class="ansi-red-fg">ModuleNotFoundError</span>: No module named 'scipy'</pre>
-</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[[ 1.00000000e+00 -2.77555756e-17 -1.11022302e-16]
+ [ 0.00000000e+00  1.00000000e+00 -2.22044605e-16]
+ [ 8.32667268e-17 -6.93889390e-18  1.00000000e+00]]</code></pre>
 </div>
 </div>
 </div>
 <div class="fragment">
-<div id="f45ed2e9" class="cell columns column-output-location" data-execution_count="21">
+<div id="4d0f28d9" class="cell columns column-output-location" data-execution_count="21">
 <div class="column">
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a></a>I <span class="op">=</span> np.identity(<span class="dv">3</span>)</span>
-<span id="cb21-2"><a></a><span class="bu">print</span>(I)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a></a>I <span class="op">=</span> np.identity(<span class="dv">3</span>)</span>
+<span id="cb38-2"><a></a><span class="bu">print</span>(I)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column fragment">
-<div class="cell-output cell-output-error">
-<div class="ansi-escaped-output">
-<pre><span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-cyan-fg">Cell</span><span class="ansi-cyan-fg"> </span><span class="ansi-green-fg">In[21]</span><span class="ansi-green-fg">, line 1</span>
-<span class="ansi-green-fg">----&gt; </span><span class="ansi-green-fg">1</span> I = <span class="ansi-yellow-bg">np</span>.identity(<span class="ansi-green-fg">3</span>)
-<span class="ansi-green-fg">      2</span> <span style="color:rgb(0,135,0)">print</span>(I)
-
-<span class="ansi-red-fg">NameError</span>: name 'np' is not defined</pre>
-</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[[1. 0. 0.]
+ [0. 1. 0.]
+ [0. 0. 1.]]</code></pre>
 </div>
 </div></div>
 </div>

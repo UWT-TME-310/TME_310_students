@@ -215,7 +215,7 @@ Lorne Arnold, PhD, PE
 <span id="cb1-2"><a></a>    <span class="co"># execute something</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Logical expressions evaluate whether something is true or false. They result in a <strong>boolean</strong> value (<code>True</code> or <code>False</code> in Python).</p>
 <div class="fragment">
-<div id="f3ff668e" class="cell" data-execution_count="1">
+<div id="b1ad273a" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb2" data-code-line-numbers=",|2|,"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a></a>x <span class="op">=</span> <span class="dv">0</span></span>
 <span id="cb2-2"><a></a><span class="cf">while</span> x <span class="op">&lt;</span> <span class="dv">2</span>:</span>
 <span id="cb2-3"><a></a>    <span class="bu">print</span>(x)</span>
@@ -232,7 +232,7 @@ Lorne Arnold, PhD, PE
 <section id="array-indexing" class="slide level2">
 <h2>Array indexing</h2>
 <p>We’ve also seen that we can access specific portions of arrays with <strong>indexing</strong>.</p>
-<div id="d2675a43" class="cell" data-execution_count="2">
+<div id="a2bc7e45" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb4-2"><a></a>x <span class="op">=</span> np.linspace(<span class="dv">0</span>,<span class="dv">100</span>,<span class="dv">6</span>)</span>
 <span id="cb4-3"><a></a><span class="bu">print</span>(x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -246,21 +246,21 @@ Lorne Arnold, PhD, PE
 <p>We can access individual elements or slices:</p>
 </div>
 <div class="fragment">
-<div id="05176033" class="cell" data-execution_count="3">
+<div id="527e4403" class="cell" data-execution_count="3">
 <div class="cell-output cell-output-stdout">
 <pre><code>x[0]: 0.0</code></pre>
 </div>
 </div>
 </div>
 <div class="fragment">
-<div id="00127c78" class="cell" data-execution_count="4">
+<div id="a1194f3e" class="cell" data-execution_count="4">
 <div class="cell-output cell-output-stdout">
 <pre><code>x[-1]: 100.0</code></pre>
 </div>
 </div>
 </div>
 <div class="fragment">
-<div id="ce2af5ee" class="cell" data-execution_count="5">
+<div id="cbec0e28" class="cell" data-execution_count="5">
 <div class="cell-output cell-output-stdout">
 <pre><code>x[2:4]: [40. 60.]</code></pre>
 </div>
@@ -274,7 +274,7 @@ Lorne Arnold, PhD, PE
 <li>A <strong>logical expression</strong> with an array results in a <strong>logical array</strong> (sometimes called a <strong>mask</strong>):</li>
 </ul>
 <div class="fragment">
-<div id="99170713" class="cell" data-execution_count="6">
+<div id="1bd001a0" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb9" data-code-line-numbers=","><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a></a>x <span class="op">=</span> np.array([<span class="fl">1.32</span>, <span class="fl">1.1</span>, <span class="fl">0.3</span>, <span class="fl">3.8</span>, <span class="op">-</span><span class="fl">5.2</span>]) <span class="co"># &lt;-- an array of random numbers</span></span>
 <span id="cb9-2"><a></a>logical_array <span class="op">=</span> x <span class="op">&lt;</span> <span class="dv">1</span></span>
 <span id="cb9-3"><a></a><span class="bu">print</span>(<span class="ss">f"logical_array: </span><span class="sc">{</span>logical_array<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -291,7 +291,7 @@ Lorne Arnold, PhD, PE
 </ul>
 </div>
 <div class="fragment">
-<div id="2eee8fed" class="cell" data-execution_count="7">
+<div id="e1786b34" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb11" data-code-line-numbers=","><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a></a>x[logical_array]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell fragment" data-execution_count="7">
@@ -308,7 +308,7 @@ Lorne Arnold, PhD, PE
 <p>The result of logical tests connected by <code>&amp;</code> is only <code>True</code> if BOTH statements are true. The result of logical tests connected by <code>|</code> is <code>True</code> if EITHER statements are true.</p>
 </div>
 <div class="fragment">
-<div id="d66fed17" class="cell" data-execution_count="8">
+<div id="ca40b7c1" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb13" data-code-line-numbers=","><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a></a>arr <span class="op">=</span> np.array([<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>, <span class="dv">10</span>])</span>
 <span id="cb13-2"><a></a><span class="co"># What values of arr are greater than 3 AND less than 7?</span></span>
 <span id="cb13-3"><a></a><span class="bu">print</span>(arr[(arr <span class="op">&gt;</span> <span class="dv">3</span>) <span class="op">&amp;</span> (arr <span class="op">&lt;</span> <span class="dv">7</span>)]) <span class="co"># &lt;--- each test in ()!</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -318,7 +318,7 @@ Lorne Arnold, PhD, PE
 <pre><code>[4 5 6]</code></pre>
 </div>
 </div>
-<div id="8a64061d" class="cell" data-execution_count="9">
+<div id="3ad3291a" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb15" data-code-line-numbers=","><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a></a><span class="co"># What values of arr are greater than 6 OR less than 2?</span></span>
 <span id="cb15-2"><a></a><span class="bu">print</span>(arr[(arr <span class="op">&gt;</span> <span class="dv">6</span>) <span class="op">|</span> (arr <span class="op">&lt;</span> <span class="dv">2</span>)])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -346,7 +346,7 @@ Lorne Arnold, PhD, PE
 <aside><ol class="aside-footnotes"><li id="fn1"><p>Or last, depending on how the mask and test condition are applied</p></li></ol></aside></section>
 <section id="solve-with-logical-array" class="slide level2">
 <h2>Solve with logical array</h2>
-<div id="0b25476c" class="cell" data-execution_count="10">
+<div id="1f48bc87" class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb17" data-code-line-numbers="1,2,3|4,5|6,7|8,9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a></a><span class="co"># Initial arrays x and y:</span></span>
 <span id="cb17-2"><a></a>x <span class="op">=</span> np.linspace(<span class="dv">0</span>,<span class="dv">4</span>)</span>
 <span id="cb17-3"><a></a>y <span class="op">=</span> <span class="fl">1.27</span><span class="op">**</span>(<span class="fl">2.3</span><span class="op">*</span>x)</span>
@@ -379,7 +379,7 @@ answer: 2.53</code></pre>
 <ul id="tabset-1" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-1-1">Example 1</a></li><li><a href="#tabset-1-2">Example 2</a></li><li><a href="#tabset-1-3">Example 3</a></li><li><a href="#tabset-1-4">Example 4</a></li></ul>
 <div class="tab-content">
 <div id="tabset-1-1">
-<div id="1c180732" class="cell" data-execution_count="12">
+<div id="c4e32eb5" class="cell" data-execution_count="12">
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure>
@@ -390,7 +390,7 @@ answer: 2.53</code></pre>
 </div>
 </div>
 <div id="tabset-1-2">
-<div id="362d1435" class="cell" data-execution_count="13">
+<div id="bb54586b" class="cell" data-execution_count="13">
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure>
@@ -401,7 +401,7 @@ answer: 2.53</code></pre>
 </div>
 </div>
 <div id="tabset-1-3">
-<div id="33f4297f" class="cell" data-execution_count="14">
+<div id="16630084" class="cell" data-execution_count="14">
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure>
@@ -412,7 +412,7 @@ answer: 2.53</code></pre>
 </div>
 </div>
 <div id="tabset-1-4">
-<div id="99774c50" class="cell" data-execution_count="15">
+<div id="16fd64eb" class="cell" data-execution_count="15">
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure>

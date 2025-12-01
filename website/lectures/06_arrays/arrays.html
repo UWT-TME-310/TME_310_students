@@ -221,7 +221,7 @@ Lorne Arnold, PhD, PE
 <section id="list-contents" class="slide level2">
 <h2>List contents</h2>
 <p>Recall that lists are <strong>ordered collections of objects</strong>:</p>
-<div id="fa09dcaf" class="cell" data-execution_count="1">
+<div id="4f070223" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1" data-code-line-numbers="1|2,3,4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a>my_list <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="st">"three"</span>, <span class="dv">4</span>, <span class="va">False</span>]</span>
 <span id="cb1-2"><a></a><span class="bu">print</span>(<span class="st">"A)"</span>, my_list[<span class="dv">0</span>])</span>
 <span id="cb1-3"><a></a><span class="bu">print</span>(<span class="st">"B)"</span>, my_list[<span class="op">-</span><span class="dv">1</span>])</span>
@@ -250,7 +250,7 @@ C) [2, 'three']</code></pre>
 <section id="a-mixed-type-issue" class="slide level2">
 <h2>A mixed type issue</h2>
 <p>Even though lists can <strong>contain</strong> mixed data types, not every operation we do will <strong>work</strong> with every data type</p>
-<div id="6e355eb3" class="cell" data-execution_count="2">
+<div id="83674275" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb4" data-code-line-numbers="1,2|3,4,5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a></a>x <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="st">"nine"</span>]  <span class="op">&lt;---</span> mixed data types</span>
 <span id="cb4-2"><a></a>y <span class="op">=</span> []</span>
 <span id="cb4-3"><a></a><span class="cf">for</span> x_value <span class="kw">in</span> x:</span>
@@ -260,8 +260,8 @@ C) [2, 'three']</code></pre>
 <div class="cell fragment" data-execution_count="2">
 <div class="cell-output cell-output-error">
 <div class="ansi-escaped-output">
-<pre><span class="ansi-cyan-fg">  Cell </span><span class="ansi-green-fg">In[2], line 1</span>
-<span class="ansi-red-fg">    x = [1, 2, 3, 4, 5, 6, 7, 8, "nine"]  &lt;--- mixed data types</span>
+<pre>  <span class="ansi-cyan-fg">Cell</span><span class="ansi-cyan-fg"> </span><span class="ansi-green-fg">In[2]</span><span class="ansi-green-fg">, line 1</span>
+<span class="ansi-red-fg">    </span><span class="ansi-red-fg">x = [1, 2, 3, 4, 5, 6, 7, 8, "nine"]  &lt;--- mixed data types</span>
                                                      ^
 <span class="ansi-red-fg">SyntaxError</span><span class="ansi-red-fg">:</span> invalid syntax
 </pre>
@@ -293,7 +293,7 @@ C) [2, 'three']</code></pre>
 <h2>Creating arrays from lists</h2>
 <p>Numpy arrays can be created from lists using the <code>numpy.array()</code> function. Numpy will automatically convert data into compatible <code>dtype</code>s if possible.</p>
 <div class="fragment fade-in">
-<div id="a4b2aa92" class="cell" data-execution_count="3">
+<div id="76c88b8c" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb6" data-code-line-numbers="|2,4,6|3,5,7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb6-2"><a></a>list_a <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>]       <span class="co"># &lt;--- all integers</span></span>
 <span id="cb6-3"><a></a>list_b <span class="op">=</span> [<span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>, <span class="fl">10.</span>]     <span class="co"># &lt;--- mixed int/float</span></span>
@@ -313,7 +313,7 @@ C) [2, 'three']</code></pre>
 <section id="other-ways-to-create-arrays" class="slide level2">
 <h2>Other ways to create arrays</h2>
 <p>Numpy has built in functions to create arrays:</p>
-<div id="ab13665b" class="cell" data-execution_count="4">
+<div id="226a4f21" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb8" data-code-line-numbers="|2,3|4,5,6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb8-2"><a></a><span class="co"># np.linspace(start, stop, number of points)</span></span>
 <span id="cb8-3"><a></a>x <span class="op">=</span> np.linspace(<span class="dv">0</span>,<span class="dv">100</span>,<span class="dv">6</span>)</span>
@@ -333,12 +333,12 @@ C) [2, 'three']</code></pre>
 <section id="array-contents" class="slide level2">
 <h2>Array contents</h2>
 <p>We can access array contents via <em>indexing</em> just like lists:</p>
-<div id="39fe1e47" class="cell" data-execution_count="5">
+<div id="08888f70" class="cell" data-execution_count="5">
 <div class="cell-output cell-output-stdout">
 <pre><code>x: [  0.  20.  40.  60.  80. 100.] &lt;--- defined on previous slide</code></pre>
 </div>
 </div>
-<div id="d75efa71" class="cell" data-execution_count="6">
+<div id="44c30cd2" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a></a><span class="co"># Get the first element of x:</span></span>
 <span id="cb11-2"><a></a>x[<span class="dv">0</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -348,7 +348,7 @@ C) [2, 'three']</code></pre>
 </div>
 </div>
 <div class="fragment">
-<div id="b1d6f755" class="cell" data-execution_count="7">
+<div id="ea864833" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a></a><span class="co"># Get the last element of x:</span></span>
 <span id="cb13-2"><a></a>x[<span class="op">-</span><span class="dv">1</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -359,7 +359,7 @@ C) [2, 'three']</code></pre>
 </div>
 </div>
 <div class="fragment">
-<div id="49934862" class="cell" data-execution_count="8">
+<div id="c3dd0d9a" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a></a><span class="co"># Get a slice of x from the second to the fourth element</span></span>
 <span id="cb15-2"><a></a>x[<span class="dv">1</span>:<span class="dv">5</span>]  <span class="co"># &lt;--- Notice the ending index in a slice is NOT inclusive</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -373,7 +373,7 @@ C) [2, 'three']</code></pre>
 <section id="working-with-arrays" class="slide level2">
 <h2>Working with arrays</h2>
 <p>Unlike lists, we can perform operations on <strong>entire arrays at once</strong>.</p>
-<div id="8eb036bb" class="cell" data-execution_count="9">
+<div id="b0445213" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb17" data-code-line-numbers="1-6|8-10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a></a><span class="co">########## List version #########</span></span>
 <span id="cb17-2"><a></a>x <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>]</span>
 <span id="cb17-3"><a></a>y <span class="op">=</span> []</span>
@@ -394,7 +394,7 @@ C) [2, 'three']</code></pre>
 </section>
 <section id="section" class="slide level2">
 <h2></h2>
-<div id="da9b6815" class="cell" data-execution_count="10">
+<div id="01725bb3" class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb19" data-code-line-numbers="2|3|4,5,6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt </span>
 <span id="cb19-2"><a></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb19-3"><a></a>time <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">3</span>, <span class="dv">500</span>)</span>

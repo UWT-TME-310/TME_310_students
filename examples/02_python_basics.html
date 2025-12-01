@@ -538,8 +538,8 @@ window.Quarto = {
 <span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="bu">type</span>(<span class="st">'mismatch")</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-error">
 <div class="ansi-escaped-output">
-<pre><span class="ansi-cyan-fg">  Cell </span><span class="ansi-green-fg">In[9], line 2</span>
-<span class="ansi-red-fg">    type('mismatch")</span>
+<pre>  <span class="ansi-cyan-fg">Cell</span><span class="ansi-cyan-fg"> </span><span class="ansi-green-fg">In[9]</span><span class="ansi-green-fg">, line 2</span>
+<span class="ansi-red-fg">    </span><span class="ansi-red-fg">type('mismatch")</span>
          ^
 <span class="ansi-red-fg">SyntaxError</span><span class="ansi-red-fg">:</span> unterminated string literal (detected at line 2)
 </pre>
@@ -739,8 +739,8 @@ Caution
 <div class="ansi-escaped-output">
 <pre><span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">TypeError</span>                                 Traceback (most recent call last)
-Cell <span class="ansi-green-fg">In[28], line 1</span>
-<span class="ansi-green-fg">----&gt; 1</span> <span style="color:rgb(175,0,0)" class="ansi-yellow-bg">"</span><span style="color:rgb(175,0,0)" class="ansi-yellow-bg">hello</span><span style="color:rgb(175,0,0)" class="ansi-yellow-bg">"</span><span class="ansi-yellow-bg"> </span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">-</span><span class="ansi-yellow-bg"> </span><span style="color:rgb(175,0,0)" class="ansi-yellow-bg">"</span><span style="color:rgb(175,0,0)" class="ansi-yellow-bg"> world</span><span style="color:rgb(175,0,0)" class="ansi-yellow-bg">"</span>  <span style="font-style:italic;color:rgb(95,135,135)"># This will cause an error</span>
+<span class="ansi-cyan-fg">Cell</span><span class="ansi-cyan-fg"> </span><span class="ansi-green-fg">In[28]</span><span class="ansi-green-fg">, line 1</span>
+<span class="ansi-green-fg">----&gt; </span><span class="ansi-green-fg">1</span> <span class="ansi-yellow-fg ansi-yellow-bg">"</span><span class="ansi-yellow-fg ansi-yellow-bg">hello</span><span class="ansi-yellow-fg ansi-yellow-bg">"</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">-</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-fg ansi-yellow-bg">"</span><span class="ansi-yellow-fg ansi-yellow-bg"> world</span><span class="ansi-yellow-fg ansi-yellow-bg">"</span>  <span style="font-style:italic;color:rgb(95,135,135)"># This will cause an error</span>
 
 <span class="ansi-red-fg">TypeError</span>: unsupported operand type(s) for -: 'str' and 'str'</pre>
 </div>
@@ -787,9 +787,9 @@ Cell <span class="ansi-green-fg">In[28], line 1</span>
 <div class="ansi-escaped-output">
 <pre><span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">IndexError</span>                                Traceback (most recent call last)
-Cell <span class="ansi-green-fg">In[33], line 2</span>
-<span class="ansi-green-fg ansi-bold">      1</span> too_far <span style="color:rgb(98,98,98)">=</span> <span style="color:rgb(0,135,0)">len</span>(my_string)
-<span class="ansi-green-fg">----&gt; 2</span> <span class="ansi-yellow-bg">my_string</span><span class="ansi-yellow-bg">[</span><span class="ansi-yellow-bg">too_far</span><span class="ansi-yellow-bg">]</span> <span style="font-style:italic;color:rgb(95,135,135)"># This will cause an error</span>
+<span class="ansi-cyan-fg">Cell</span><span class="ansi-cyan-fg"> </span><span class="ansi-green-fg">In[33]</span><span class="ansi-green-fg">, line 2</span>
+<span class="ansi-green-fg">      1</span> too_far = <span style="color:rgb(0,135,0)">len</span>(my_string)
+<span class="ansi-green-fg">----&gt; </span><span class="ansi-green-fg">2</span> <span class="ansi-yellow-bg">my_string</span><span class="ansi-yellow-bg">[</span><span class="ansi-yellow-bg">too_far</span><span class="ansi-yellow-bg">]</span> <span style="font-style:italic;color:rgb(95,135,135)"># This will cause an error</span>
 
 <span class="ansi-red-fg">IndexError</span>: string index out of range</pre>
 </div>
@@ -839,9 +839,9 @@ Cell <span class="ansi-green-fg">In[33], line 2</span>
 <div class="ansi-escaped-output">
 <pre><span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">TypeError</span>                                 Traceback (most recent call last)
-Cell <span class="ansi-green-fg">In[38], line 2</span>
-<span class="ansi-green-fg ansi-bold">      1</span> <span style="font-style:italic;color:rgb(95,135,135)"># Trying to change one of the characters in a string will cause an error:</span>
-<span class="ansi-green-fg">----&gt; 2</span> <span class="ansi-yellow-bg">my_string</span><span class="ansi-yellow-bg">[</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">0</span><span class="ansi-yellow-bg">]</span> <span style="color:rgb(98,98,98)">=</span> <span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">A</span><span style="color:rgb(175,0,0)">"</span> <span style="font-style:italic;color:rgb(95,135,135)"># This will cause an error</span>
+<span class="ansi-cyan-fg">Cell</span><span class="ansi-cyan-fg"> </span><span class="ansi-green-fg">In[38]</span><span class="ansi-green-fg">, line 2</span>
+<span class="ansi-green-fg">      1</span> <span style="font-style:italic;color:rgb(95,135,135)"># Trying to change one of the characters in a string will cause an error:</span>
+<span class="ansi-green-fg">----&gt; </span><span class="ansi-green-fg">2</span> <span class="ansi-yellow-bg">my_string</span><span class="ansi-yellow-bg">[</span><span class="ansi-green-fg ansi-yellow-bg">0</span><span class="ansi-yellow-bg">]</span> = <span class="ansi-yellow-fg">"</span><span class="ansi-yellow-fg">A</span><span class="ansi-yellow-fg">"</span> <span style="font-style:italic;color:rgb(95,135,135)"># This will cause an error</span>
 
 <span class="ansi-red-fg">TypeError</span>: 'str' object does not support item assignment</pre>
 </div>
