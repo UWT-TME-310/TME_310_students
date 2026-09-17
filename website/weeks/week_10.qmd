@@ -1,9 +1,0 @@
-# Week 10
-Course content will be added on a rolling basis
-
-## Materials
-
-| Topic | Video | Slides|
-|----|----|----|
-|Matrices|  [Link](https://uw.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=4ac47edb-6a74-4b44-befc-b3a6002b2f73) |  [Link](../lectures/12_matrices/slides_matrices.qmd) |
-| Systems of equations| [Link](https://uw.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=a2baa147-7e8b-4385-a0b9-b3a6002b2f33)| [Link](../lectures/12_matrices/slides_systems_of_equations.qmd)     
