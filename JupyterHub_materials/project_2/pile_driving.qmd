@@ -1,7 +1,0 @@
----
-title: "Project part 2 supporting Python file (`pile_driving.py`)"
----
-
-```{.python filename="pile_driving.py"}
-{{< include pile_driving.py >}}
-```
